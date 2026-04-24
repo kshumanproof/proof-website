@@ -183,13 +183,10 @@
 
 </section>
 
+</section> <!-- your last section -->
+
 <!-- TO TOP BUTTON -->
-<button 
-  id="toTopBtn"
-  class="fixed bottom-6 right-6 bg-[#0066FF] w-10 h-10 rounded-md flex items-center justify-center text-white opacity-0 pointer-events-none transition"
->
-  ↑
-</button>
+<button ...>↑</button>
 
 <script>
   const btn = document.getElementById("toTopBtn");
@@ -205,12 +202,22 @@
   });
 
   btn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
+
+  // ✅ HAMBURGER CODE
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  }
 </script>
+
+</body>
+</html>
 
 </body>
 </html>
