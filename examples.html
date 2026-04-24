@@ -299,7 +299,9 @@ document.querySelectorAll('.example-card').forEach(card => {
 
     if (!videoSrc) return;
 
-    modalVideo.src = videoSrc;
+    modalVideo.pause();
+modalVideo.src = videoSrc;
+modalVideo.load(); // 🔥 important
 
     modal.classList.remove("hidden");
     modal.classList.add("flex");
