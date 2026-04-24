@@ -603,11 +603,15 @@ document.addEventListener("DOMContentLoaded", () => {
   closeBtn.addEventListener("click", () => {
     popup.classList.add("hidden");
   });
-  document.getElementById("emailPopup").addEventListener("click", (e) => {
-  if (e.target.id === "emailPopup") {
-    e.currentTarget.classList.add("hidden");
-  }
-});
+
+  // CLICK OUTSIDE TO CLOSE
+  popup.addEventListener("click", (e) => {
+    if (e.target.id === "emailPopup") {
+      popup.classList.add("hidden");
+    }
+  });
+
+}); // 👈 THIS WAS MISSING
 </script>
 
 <script>
