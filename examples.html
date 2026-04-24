@@ -1,49 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PROOF: Examples</title>
-<script src="https://cdn.tailwindcss.com"></script>
-
-<style>
-html {
-  scroll-snap-type: y mandatory;
-}
-
-.snap-section {
-  scroll-snap-align: start;
-}
-
-.fade-up {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
-}
-
-.fade-up.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PROOF: Sizzle</title>
+  <link rel="icon" href="favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-black text-white font-sans overflow-x-hidden">
+<body class="bg-[#0A0A0A] text-white font-sans">
 
 <!-- NAV -->
-<header class="fixed top-0 w-full bg-black/60 backdrop-blur z-50">
+<header class="fixed top-0 w-full bg-black/70 backdrop-blur z-50">
   <div class="max-w-6xl mx-auto flex justify-between items-center py-3 px-4">
-    <img src="Proof_header_good.png" class="h-[40px] md:h-[60px] scale-[2.5] origin-left"/>
-  </div>
-</header>
+    
+    <!-- LOGO -->
+    <a href="index.html">
+      <img 
+        src="Proof_header_good.png" 
+        alt="PROOF Logo" 
+        class="h-[40px] md:h-[60px] w-auto object-contain scale-[2.5] origin-left"
+      />
+    </a>
 
+    <!-- HAMBURGER -->
+    <button id="menuBtn" class="md:hidden text-white text-2xl">
+      ☰
+    </button>
+
+    <!-- DESKTOP NAV -->
+    <nav class="hidden md:flex space-x-6 text-sm text-white">
+      <a href="examples.html" class="hover:text-gray-300">Examples</a>
+      <a href="index.html#products" class="hover:text-gray-300">Products</a>
+      <a href="index.html#how-it-works" class="hover:text-gray-300">How It Works</a>
+      <a href="business.html" class="hover:text-gray-300">For Business</a>
+      <a href="index.html#products" class="text-[#0066FF]">Get Started</a>
+    </nav>
+
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="hidden md:hidden bg-black/95 text-center py-6 space-y-4">
+    <a href="examples.html" class="block">Examples</a>
+    <a href="index.html#products" class="block">Products</a>
+    <a href="index.html#how-it-works" class="block">How It Works</a>
+    <a href="business.html" class="block">For Business</a>
+    <a href="index.html#products" class="block text-[#0066FF]">Get Started</a>
+  </div>
+
+</header>
 <!-- HERO -->
-<section class="snap-section min-h-screen flex items-center justify-center text-center px-4">
-  <div class="fade-up">
-    <h1 class="text-[32px] md:text-[56px] mb-4">Examples</h1>
-    <p class="text-gray-400 max-w-xl mx-auto">
-      Watch ideas become something real.
-    </p>
+<section class="pt-28 pb-20 text-center">
+
+  <!-- MEDIA -->
+  <div class="max-w-6xl mx-auto px-4 mb-4">
+    <img 
+      src="u3318617226_a_man_and_a_woman_sitting_on_the_hood_of_a_car_ov_0d457327-ee1e-4041-8108-e9890b431d17_2.png"
+      alt="Proof Sizzle Preview"
+      class="w-full rounded-lg opacity-95"
+    />
   </div>
 </section>
 
