@@ -5,32 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>You're In — PROOF</title>
 
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tally -->
   <script async src="https://tally.so/widgets/embed.js"></script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" />
 </head>
 
 <body class="bg-[#0A0A0A] text-white">
 
-  <section class="max-w-3xl mx-auto px-4 pt-20 pb-20">
+  <!-- ================= NAV ================= -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="/" class="font-semibold text-lg">PROOF</a>
 
-    <!-- CONFIRMATION -->
-    <div class="text-center mb-12">
-      <h1 class="text-3xl md:text-5xl font-semibold mb-4">
+      <nav class="space-x-6 text-sm text-gray-300">
+        <a href="/index.html" class="hover:text-white">Home</a>
+        <a href="/sizzle.html" class="hover:text-white">Sizzle</a>
+        <a href="/scene.html" class="hover:text-white">Scene</a>
+        <a href="/business.html" class="hover:text-white">Business</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section class="relative pt-32 pb-20 overflow-hidden">
+
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+      <img 
+        src="/images/success-bg.jpg" 
+        class="w-full h-full object-cover opacity-30"
+        alt=""
+      />
+      <div class="absolute inset-0 bg-black/70"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative max-w-3xl mx-auto px-4 text-center">
+
+      <h1 class="text-4xl md:text-5xl font-semibold mb-4">
         You're in.
       </h1>
-      <p class="text-gray-400 text-lg">
+
+      <p class="text-gray-300 text-lg">
         Your PROOF is officially in motion.
       </p>
+
       <p class="text-gray-500 text-sm mt-2">
         We’ll review your submission and follow up within 24 hours.
       </p>
-    </div>
 
-    <!-- INSTRUCTIONS -->
-    <div class="bg-[#18181B] rounded-lg p-6 mb-12">
+      <!-- Optional return CTA -->
+      <div class="mt-6">
+        <a href="/index.html" class="text-sm text-[#0066FF] hover:underline">
+          ← Back to site
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CONTENT ================= -->
+  <section class="max-w-3xl mx-auto px-4 pb-20 space-y-12">
+
+    <!-- Instruction Card -->
+    <div class="bg-[#18181B] rounded-lg p-6">
       <h2 class="text-xl font-semibold mb-3">
         Next step: Tell us about your project
       </h2>
+
       <p class="text-gray-400 mb-4">
         This takes 2–3 minutes. The more detail you give, the stronger your PROOF will be.
       </p>
@@ -42,22 +89,30 @@
       </ul>
     </div>
 
-    <!-- FORM -->
-    <div class="bg-[#18181B] rounded-lg p-2">
+    <!-- Form -->
+    <div class="bg-[#18181B] rounded-lg p-2 shadow-lg">
       <iframe 
         data-tally-src="https://tally.so/r/Pd2Ozd"
         loading="lazy"
         width="100%" 
         height="650" 
-        frameborder="0" 
-        marginheight="0" 
-        marginwidth="0" 
-        title="Project Intake Form"
+        frameborder="0"
         class="rounded-lg bg-white">
       </iframe>
     </div>
 
   </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-t border-gray-800 py-10 text-center text-sm text-gray-500">
+    <p>© PROOF. All rights reserved.</p>
+  </footer>
+
+  <!-- ================= TO TOP BUTTON ================= -->
+  <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    class="fixed bottom-6 right-6 bg-[#0066FF] text-white px-3 py-2 rounded shadow-lg">
+    ↑
+  </button>
 
 </body>
 </html>
