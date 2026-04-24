@@ -21,11 +21,11 @@
     <button id="menuBtn" class="md:hidden text-white text-2xl">☰</button>
 
     <nav class="hidden md:flex space-x-6 text-sm">
-      <a href="examples.html">Examples</a>
+      <a href="examples.html" class="text-[#0066FF]">Examples</a>
       <a href="index.html#products">Products</a>
       <a href="index.html#how-it-works">How It Works</a>
       <a href="business.html">For Business</a>
-      <a href="index.html#products" class="text-[#0066FF]">Get Started</a>
+      <a href="index.html#products">Get Started</a>
     </nav>
   </div>
 
@@ -51,33 +51,27 @@
 
   <div class="max-w-6xl mx-auto px-4 mt-6">
     <div class="flex flex-col md:flex-row justify-between items-start gap-10 text-left">
-
       <div class="flex-1 max-w-xl">
         <h1 class="text-5xl mb-4">Examples</h1>
-
         <p class="text-xl text-gray-200 mb-6">
-          This is what your idea looks like when it becomes real.
+          Ideas don’t sell. Proof does.
         </p>
-
         <p class="text-sm text-gray-500">
           Real outputs. Real use cases. Built to move projects forward.
         </p>
       </div>
-
       <div class="hidden md:block w-[260px]"></div>
-
     </div>
   </div>
 
 </section>
 
-<!-- ================= EXAMPLES GRID ================= -->
+<!-- GRID -->
 <section class="max-w-6xl mx-auto px-4 pb-20">
-
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-    <!-- CARD 1 -->
-    <div class="example-card bg-[#18181B] rounded-lg overflow-hidden transition transform hover:-translate-y-1 hover:shadow-lg">
+    <!-- CARD -->
+    <div class="example-card bg-[#18181B] rounded-lg overflow-hidden cursor-pointer">
       <video muted playsinline class="example-video w-full h-56 md:h-64 object-cover">
         <source src="LaunchBox_Main.mp4" type="video/mp4">
       </video>
@@ -88,8 +82,8 @@
       </div>
     </div>
 
-    <!-- CARD 2 -->
-    <div class="example-card bg-[#18181B] rounded-lg overflow-hidden transition transform hover:-translate-y-1 hover:shadow-lg">
+    <!-- COPY CARD 3 MORE TIMES -->
+    <div class="example-card bg-[#18181B] rounded-lg overflow-hidden cursor-pointer">
       <video muted playsinline class="example-video w-full h-56 md:h-64 object-cover">
         <source src="LaunchBox_Main.mp4" type="video/mp4">
       </video>
@@ -100,8 +94,7 @@
       </div>
     </div>
 
-    <!-- CARD 3 -->
-    <div class="example-card bg-[#18181B] rounded-lg overflow-hidden transition transform hover:-translate-y-1 hover:shadow-lg">
+    <div class="example-card bg-[#18181B] rounded-lg overflow-hidden cursor-pointer">
       <video muted playsinline class="example-video w-full h-56 md:h-64 object-cover">
         <source src="LaunchBox_Main.mp4" type="video/mp4">
       </video>
@@ -112,8 +105,7 @@
       </div>
     </div>
 
-    <!-- CARD 4 -->
-    <div class="example-card bg-[#18181B] rounded-lg overflow-hidden transition transform hover:-translate-y-1 hover:shadow-lg">
+    <div class="example-card bg-[#18181B] rounded-lg overflow-hidden cursor-pointer">
       <video muted playsinline class="example-video w-full h-56 md:h-64 object-cover">
         <source src="LaunchBox_Main.mp4" type="video/mp4">
       </video>
@@ -125,12 +117,24 @@
     </div>
 
   </div>
-
 </section>
+
+<!-- MODAL -->
+<div id="videoModal" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50">
+  <div class="relative w-full max-w-4xl px-4">
+    
+    <button id="closeModal" class="absolute top-2 right-2 text-white text-3xl">✕</button>
+
+    <video id="modalVideo" controls class="w-full rounded-lg">
+      <source src="" type="video/mp4">
+    </video>
+
+  </div>
+</div>
 
 <!-- CTA -->
 <section class="py-16 text-center">
-  <h2 class="text-3xl mb-4">Ready to build your PROOF?</h2>
+  <h2 class="text-3xl mb-4">Ready to turn your idea into something real?</h2>
   <a href="index.html#products" class="bg-[#0066FF] px-6 py-3 rounded-md">
     Get Started
   </a>
@@ -150,28 +154,6 @@ class="fixed bottom-6 right-6 bg-[#0066FF] w-10 h-10 rounded-md flex items-cente
 
 <script>
 
-<script>
-
-// TO TOP BUTTON
-const btn = document.getElementById("toTopBtn");
-
-window.addEventListener("scroll", () => {
-  const scrollPosition = document.documentElement.scrollTop;
-
-  if (scrollPosition > 300) {
-    btn.classList.remove("opacity-0", "pointer-events-none");
-    btn.classList.add("opacity-100");
-  } else {
-    btn.classList.add("opacity-0", "pointer-events-none");
-    btn.classList.remove("opacity-100");
-  }
-});
-
-btn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
-
-
 // MENU
 const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
@@ -187,8 +169,23 @@ document.addEventListener("click", (e) => {
   }
 });
 
+// TO TOP
+const btn = document.getElementById("toTopBtn");
 
-// ================= HOVER VIDEO CONTROL =================
+window.addEventListener("scroll", () => {
+  const scrollPosition = document.documentElement.scrollTop;
+  if (scrollPosition > 300) {
+    btn.classList.remove("opacity-0", "pointer-events-none");
+  } else {
+    btn.classList.add("opacity-0", "pointer-events-none");
+  }
+});
+
+btn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// HOVER PLAY
 const videos = document.querySelectorAll('.example-video');
 
 videos.forEach(video => {
@@ -196,16 +193,18 @@ videos.forEach(video => {
 
   card.addEventListener('mouseenter', () => {
     video.currentTime = 0;
-    video.play();
+    video.muted = true;
+    video.play().catch(()=>{});
   });
 
   card.addEventListener('mouseleave', () => {
     video.pause();
     video.currentTime = 0;
   });
+
 });
 
-// MOBILE (autoplay fallback)
+// MOBILE AUTOPLAY
 if (window.innerWidth < 768) {
   videos.forEach(video => {
     video.setAttribute("autoplay", "");
@@ -214,6 +213,30 @@ if (window.innerWidth < 768) {
   });
 }
 
+// MODAL VIDEO
+const modal = document.getElementById("videoModal");
+const modalVideo = document.getElementById("modalVideo");
+const closeModal = document.getElementById("closeModal");
+
+document.querySelectorAll('.example-card').forEach(card => {
+  card.addEventListener('click', () => {
+    const videoSrc = card.querySelector("video source").src;
+    modalVideo.src = videoSrc;
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+    modalVideo.muted = false;
+    modalVideo.play();
+  });
+});
+
+closeModal.addEventListener('click', () => {
+  modal.classList.add("hidden");
+  modal.classList.remove("flex");
+  modalVideo.pause();
+  modalVideo.src = "";
+});
+
 </script>
+
 </body>
 </html>
