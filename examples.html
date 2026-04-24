@@ -71,66 +71,117 @@
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
     <!-- CARD -->
-    <div class="example-card bg-[#18181B] rounded-lg overflow-hidden cursor-pointer">
-      <video muted playsinline class="example-video w-full h-56 md:h-64 object-cover">
-        <source src="LaunchBox_Main.mp4" type="video/mp4">
-      </video>
+    <div class="example-card bg-[#18181B] rounded-lg overflow-hidden cursor-pointer transition transform duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+
+      <div class="relative group">
+
+        <video muted playsinline class="example-video w-full h-56 md:h-64 object-cover">
+          <source src="LaunchBox_Main.mp4" type="video/mp4">
+        </video>
+
+        <!-- DARK OVERLAY -->
+        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition duration-300"></div>
+
+        <!-- PLAY ICON -->
+        <div class="absolute inset-0 flex items-center justify-center opacity-70 group-hover:opacity-0 transition duration-300">
+          <div class="w-12 h-12 border border-white rounded-full flex items-center justify-center text-white text-sm">
+            ▶
+          </div>
+        </div>
+
+      </div>
+
       <div class="p-5">
         <h3 class="text-xl mb-2">Project Title</h3>
         <p class="text-gray-300 text-sm mb-2">Cinematic tone built for emotional impact</p>
         <p class="text-gray-400 text-sm">Used in investor-facing pitch materials</p>
       </div>
+
     </div>
 
-    <!-- COPY CARD 3 MORE TIMES -->
-    <div class="example-card bg-[#18181B] rounded-lg overflow-hidden cursor-pointer">
-      <video muted playsinline class="example-video w-full h-56 md:h-64 object-cover">
-        <source src="LaunchBox_Main.mp4" type="video/mp4">
-      </video>
+    <!-- CARD -->
+    <div class="example-card bg-[#18181B] rounded-lg overflow-hidden cursor-pointer transition transform duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+
+      <div class="relative group">
+
+        <video muted playsinline class="example-video w-full h-56 md:h-64 object-cover">
+          <source src="LaunchBox_Main.mp4" type="video/mp4">
+        </video>
+
+        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition duration-300"></div>
+
+        <div class="absolute inset-0 flex items-center justify-center opacity-70 group-hover:opacity-0 transition duration-300">
+          <div class="w-12 h-12 border border-white rounded-full flex items-center justify-center text-white text-sm">
+            ▶
+          </div>
+        </div>
+
+      </div>
+
       <div class="p-5">
         <h3 class="text-xl mb-2">Project Title</h3>
         <p class="text-gray-300 text-sm mb-2">High-energy visual designed to create momentum</p>
         <p class="text-gray-400 text-sm">Used for concept validation</p>
       </div>
+
     </div>
 
-    <div class="example-card bg-[#18181B] rounded-lg overflow-hidden cursor-pointer">
-      <video muted playsinline class="example-video w-full h-56 md:h-64 object-cover">
-        <source src="LaunchBox_Main.mp4" type="video/mp4">
-      </video>
+    <!-- CARD -->
+    <div class="example-card bg-[#18181B] rounded-lg overflow-hidden cursor-pointer transition transform duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+
+      <div class="relative group">
+
+        <video muted playsinline class="example-video w-full h-56 md:h-64 object-cover">
+          <source src="LaunchBox_Main.mp4" type="video/mp4">
+        </video>
+
+        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition duration-300"></div>
+
+        <div class="absolute inset-0 flex items-center justify-center opacity-70 group-hover:opacity-0 transition duration-300">
+          <div class="w-12 h-12 border border-white rounded-full flex items-center justify-center text-white text-sm">
+            ▶
+          </div>
+        </div>
+
+      </div>
+
       <div class="p-5">
         <h3 class="text-xl mb-2">Project Title</h3>
         <p class="text-gray-300 text-sm mb-2">Narrative-driven tone built for story clarity</p>
         <p class="text-gray-400 text-sm">Used for funding + pitching</p>
       </div>
+
     </div>
 
-    <div class="example-card bg-[#18181B] rounded-lg overflow-hidden cursor-pointer">
-      <video muted playsinline class="example-video w-full h-56 md:h-64 object-cover">
-        <source src="LaunchBox_Main.mp4" type="video/mp4">
-      </video>
+    <!-- CARD -->
+    <div class="example-card bg-[#18181B] rounded-lg overflow-hidden cursor-pointer transition transform duration-300 hover:-translate-y-1 hover:scale-[1.02]">
+
+      <div class="relative group">
+
+        <video muted playsinline class="example-video w-full h-56 md:h-64 object-cover">
+          <source src="LaunchBox_Main.mp4" type="video/mp4">
+        </video>
+
+        <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition duration-300"></div>
+
+        <div class="absolute inset-0 flex items-center justify-center opacity-70 group-hover:opacity-0 transition duration-300">
+          <div class="w-12 h-12 border border-white rounded-full flex items-center justify-center text-white text-sm">
+            ▶
+          </div>
+        </div>
+
+      </div>
+
       <div class="p-5">
         <h3 class="text-xl mb-2">Project Title</h3>
         <p class="text-gray-300 text-sm mb-2">Clean execution focused on clarity</p>
         <p class="text-gray-400 text-sm">Used for early-stage storytelling</p>
       </div>
+
     </div>
 
   </div>
 </section>
-
-<!-- MODAL -->
-<div id="videoModal" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50">
-  <div class="relative w-full max-w-4xl px-4">
-    
-    <button id="closeModal" class="absolute top-2 right-2 text-white text-3xl">✕</button>
-
-    <video id="modalVideo" controls class="w-full rounded-lg">
-      <source src="" type="video/mp4">
-    </video>
-
-  </div>
-</div>
 
 <!-- CTA -->
 <section class="py-16 text-center">
