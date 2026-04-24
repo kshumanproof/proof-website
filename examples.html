@@ -17,103 +17,57 @@
     <a href="index.html">
       <img 
         src="Proof_header_good.png" 
-        alt="PROOF Logo" 
-        class="h-[40px] md:h-[60px] w-auto object-contain scale-[2.5] origin-left"
+        class="h-[40px] md:h-[60px] scale-[2.5] origin-left"
       />
     </a>
 
-    <button id="menuBtn" class="md:hidden text-white text-2xl">☰</button>
+    <button id="menuBtn" class="md:hidden text-2xl">☰</button>
 
-     <nav class="hidden md:flex space-x-6 text-sm text-white">
-      <a href="examples.html" class="hover:text-gray-300">Examples</a>
-      <a href="index.html#products" class="hover:text-gray-300">Products</a>
-      <a href="index.html#how-it-works" class="hover:text-gray-300">How It Works</a>
-      <a href="business.html" class="hover:text-gray-300">For Business</a>
-      <a href="index.html#products" class="text-[#0066FF]">Get Started</a>
+    <nav class="hidden md:flex space-x-6 text-sm">
+      <a href="examples.html" class="text-[#0066FF]">Examples</a>
+      <a href="index.html#products">Products</a>
+      <a href="index.html#how-it-works">How It Works</a>
+      <a href="business.html">For Business</a>
+      <a href="index.html#products">Get Started</a>
     </nav>
 
   </div>
 
- <div id="mobileMenu" class="hidden md:hidden bg-black/95 text-center py-6 space-y-4">
-    <a href="examples.html" class="block">Examples</a>
-    <a href="index.html#products" class="block">Products</a>
-    <a href="index.html#how-it-works" class="block">How It Works</a>
-    <a href="business.html" class="block">For Business</a>
-    <a href="index.html#products" class="block text-[#0066FF]">Get Started</a>
+  <div id="mobileMenu" class="hidden md:hidden bg-black text-center py-6 space-y-4">
+    <a href="examples.html">Examples</a>
+    <a href="index.html#products">Products</a>
+    <a href="index.html#how-it-works">How It Works</a>
+    <a href="business.html">For Business</a>
+    <a href="index.html#products" class="text-[#0066FF]">Get Started</a>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="pt-28 pb-20 text-center">
-
-  <!-- MEDIA -->
-  <div class="max-w-6xl mx-auto px-4 mb-4">
-    <img 
-      src="u3318617226_a_man_and_a_woman_sitting_on_the_hood_of_a_car_ov_0d457327-ee1e-4041-8108-e9890b431d17_2.png"
-      alt="Proof Sizzle Preview"
-      class="w-full rounded-lg opacity-95"
-    />
-  </div>
-
-  <div class="max-w-6xl mx-auto px-4">
-    <h1 class="text-3xl md:text-5xl mb-4">Examples</h1>
-
-    <p class="text-gray-300 max-w-xl mx-auto">
-      Real outputs. Real momentum. See what PROOF actually looks like in action.
-    </p>
-  </div>
-
+<section class="pt-28 pb-16 text-center">
+  <h1 class="text-[28px] md:text-[48px] mb-4">Examples</h1>
+  <p class="text-gray-400 max-w-xl mx-auto">
+    This is what your idea looks like when it becomes real.
+  </p>
 </section>
 
-<!-- ================= EXAMPLES EXPERIENCE ================= -->
+<!-- ================= EXPERIENCE ================= -->
 
 <!-- EXAMPLE 1 -->
-<section class="relative min-h-[70vh] md:h-[80vh] flex items-end">
+<section class="relative min-h-[70vh] md:h-[85vh] flex items-end group cursor-pointer">
 
   <video autoplay muted loop playsinline 
-    class="absolute inset-0 w-full h-full object-cover opacity-60">
+    class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105">
     <source src="LaunchBox_Main.mp4" type="video/mp4">
   </video>
 
-  <div class="absolute inset-0 bg-black/50"></div>
+  <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition"></div>
 
   <div class="relative z-10 max-w-6xl mx-auto px-4 pb-16">
 
-    <h2 class="text-2xl md:text-4xl mb-3">
-      PROOF: Sizzle
-    </h2>
+    <h2 class="text-[22px] md:text-[36px] mb-3">PROOF: Scene</h2>
 
-    <p class="text-gray-300 max-w-md mb-6">
-      A cinematic moment designed to show tone, pacing, and character instantly.
-    </p>
-
-    <a href="sizzle.html" class="bg-[#0066FF] px-6 py-3 rounded-md inline-block">
-      View Product
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- EXAMPLE 2 -->
-<section class="relative min-h-[70vh] md:h-[80vh] flex items-end">
-
-  <video autoplay muted loop playsinline 
-    class="absolute inset-0 w-full h-full object-cover opacity-60">
-    <source src="Bad Bella Animated Logo.mp4" type="video/mp4">
-  </video>
-
-  <div class="absolute inset-0 bg-black/50"></div>
-
-  <div class="relative z-10 max-w-6xl mx-auto px-4 pb-16 text-right ml-auto>
-
-    <h2 class="text-2xl md:text-4xl mb-3">
-      PROOF: Scene
-    </h2>
-
-    <p class="text-gray-300 max-w-md ml-auto mb-6">
-      Fast visual proof built to create immediate momentum.
+    <p class="text-gray-300 text-[15px] md:text-[17px] max-w-md mb-6">
+      Tone. pacing. character. This is where people stop reading and start seeing.
     </p>
 
     <a href="scene.html" class="bg-[#0066FF] px-6 py-3 rounded-md inline-block">
@@ -125,23 +79,49 @@
 </section>
 
 
-<!-- EXAMPLE 3 -->
-<section class="relative min-h-[70vh] md:h-[80vh] flex items-end">
+<!-- EXAMPLE 2 -->
+<section class="relative min-h-[70vh] md:h-[85vh] flex items-end group cursor-pointer">
+
   <video autoplay muted loop playsinline 
-    class="absolute inset-0 w-full h-full object-cover opacity-60">
-    <source src="LaunchBox_Main.mp4" type="video/mp4">
+    class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105">
+    <source src="Bad Bella Animated Logo.mp4" type="video/mp4">
   </video>
 
-  <div class="absolute inset-0 bg-black/50"></div>
+  <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition"></div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-4 pb-16 text-left md:text-right md:ml-auto">
+
+    <h2 class="text-[22px] md:text-[36px] mb-3">PROOF: Sizzle</h2>
+
+    <p class="text-gray-300 text-[15px] md:text-[17px] max-w-md md:ml-auto mb-6">
+      Fast, visual proof that makes people lean forward immediately.
+    </p>
+
+    <a href="sizzle.html" class="bg-[#0066FF] px-6 py-3 rounded-md inline-block">
+      View Product
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- EXAMPLE 3 -->
+<section class="relative min-h-[70vh] md:h-[85vh] flex items-end group cursor-pointer">
+
+  <video autoplay muted loop playsinline 
+    class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105">
+    <source src="Bad Ass Raven.mp4" type="video/mp4">
+  </video>
+
+  <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition"></div>
 
   <div class="relative z-10 max-w-6xl mx-auto px-4 pb-16">
 
-    <h2 class="text-2xl md:text-4xl mb-3">
-      PROOF: Trailer
-    </h2>
+    <h2 class="text-[22px] md:text-[36px] mb-3">PROOF: Trailer</h2>
 
-    <p class="text-gray-300 max-w-md mb-6">
-      A full cinematic pitch asset designed to move projects forward.
+    <p class="text-gray-300 text-[15px] md:text-[17px] max-w-md mb-6">
+      A full cinematic asset that turns interest into belief.
     </p>
 
     <a href="index.html#products" class="bg-[#0066FF] px-6 py-3 rounded-md inline-block">
@@ -152,82 +132,33 @@
 
 </section>
 
-<!-- FINAL CTA -->
+<!-- CTA -->
 <section class="pt-16 pb-12 text-center">
-
   <h2 class="text-3xl mb-4">Ready to build your PROOF?</h2>
-
-  <p class="text-gray-200 mb-6">
-    Turn your idea into something real people can see.
-  </p>
-
-  <a 
-    href="index.html#products"
-    class="bg-[#0066FF] px-6 py-3 rounded-md inline-block"
-  >
+  <a href="index.html#products" class="bg-[#0066FF] px-6 py-3 rounded-md">
     Get Started
   </a>
-
 </section>
 
 <!-- FOOTER -->
 <section class="py-12 text-center">
-
-  <img
-    src="Proof_lab_footer.png"
-    alt="Built on the Proof Lab system"
-    class="w-full max-w-xl mx-auto opacity-70 mb-6"
-  />
-
-  <p class="text-xs text-gray-500">
-    © 2026 PROOF, LLC. All rights reserved.
-  </p>
-
+  <img src="Proof_lab_footer.png" class="max-w-xl mx-auto opacity-70 mb-6"/>
+  <p class="text-xs text-gray-500">© 2026 PROOF, LLC</p>
 </section>
 
-<!-- TO TOP BUTTON -->
-<button 
-  id="toTopBtn"
-  class="fixed bottom-6 right-6 bg-[#0066FF] w-10 h-10 rounded-md flex items-center justify-center text-white opacity-0 pointer-events-none transition"
->
-  ↑
-</button>
-
 <script>
-document.addEventListener("DOMContentLoaded", () => {
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
 
-  const btn = document.getElementById("toTopBtn");
+menuBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  mobileMenu.classList.toggle("hidden");
+});
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 400) {
-      btn.classList.remove("opacity-0", "pointer-events-none");
-      btn.classList.add("opacity-100");
-    } else {
-      btn.classList.add("opacity-0", "pointer-events-none");
-      btn.classList.remove("opacity-100");
-    }
-  });
-
-  btn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
-  const menuBtn = document.getElementById("menuBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
-
-  if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      mobileMenu.classList.toggle("hidden");
-    });
-
-    document.addEventListener("click", (e) => {
-      if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
-        mobileMenu.classList.add("hidden");
-      }
-    });
+document.addEventListener("click", (e) => {
+  if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+    mobileMenu.classList.add("hidden");
   }
-
 });
 </script>
 
