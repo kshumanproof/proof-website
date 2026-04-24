@@ -205,6 +205,22 @@
 class="fixed bottom-6 right-6 bg-[#0066FF] w-10 h-10 rounded-md flex items-center justify-center text-white opacity-0 pointer-events-none transition">
 ↑
 </button>
+  <!-- MODAL -->
+<div id="videoModal" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50">
+
+  <div class="relative w-full max-w-4xl px-4">
+
+    <!-- CLOSE -->
+    <button id="closeModal" class="absolute top-2 right-2 text-white text-3xl z-10">
+      ✕
+    </button>
+
+    <!-- VIDEO -->
+    <video id="modalVideo" controls class="w-full max-h-[80vh] rounded-lg"></video>
+
+  </div>
+
+</div>
 
 <script>
 
@@ -267,27 +283,51 @@ if (window.innerWidth < 768) {
   });
 }
 
-// MODAL VIDEO
+// MODAL VIDEO (FIXED)
 const modal = document.getElementById("videoModal");
 const modalVideo = document.getElementById("modalVideo");
 const closeModal = document.getElementById("closeModal");
 
 document.querySelectorAll('.example-card').forEach(card => {
+
   card.addEventListener('click', () => {
-    const videoSrc = card.querySelector("video source").src;
+
+    const video = card.querySelector("video");
+    const source = video.querySelector("source");
+
+    const videoSrc = source.getAttribute("src"); // ✅ THIS IS THE FIX
+
+    if (!videoSrc) return;
+
     modalVideo.src = videoSrc;
+
     modal.classList.remove("hidden");
     modal.classList.add("flex");
+
     modalVideo.muted = false;
-    modalVideo.play();
+
+    modalVideo.play().catch(() => {});
+
   });
+
 });
 
+// CLOSE BUTTON
 closeModal.addEventListener('click', () => {
   modal.classList.add("hidden");
   modal.classList.remove("flex");
   modalVideo.pause();
   modalVideo.src = "";
+});
+
+// CLICK OUTSIDE TO CLOSE (adds polish + helps debugging)
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+    modalVideo.pause();
+    modalVideo.src = "";
+  }
 });
 
 </script>
