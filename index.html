@@ -291,36 +291,45 @@
     <div class="flex flex-col md:flex-row items-start gap-8">
 
       <!-- ================= LEFT: MEDIA ================= -->
-      <div class="flex-1">
+<div class="flex-1">
 
-        <div class="w-full aspect-video rounded-md overflow-hidden bg-[#18181B] flex items-center justify-center text-gray-600 text-sm">
+  <div class="relative w-full rounded-md overflow-hidden bg-[#18181B] mb-6" style="padding-top:56.25%;">
 
-          <!-- ========= DEFAULT (PLACEHOLDER ON) ========= -->
-          <!-- TURN OFF when using image or video -->
-          <!-- <span>Concept Preview</span> -->
-
-
-          <!-- ========= IMAGE VERSION ========= -->
-          <!-- TO USE: remove <!-- and --> -->
-          <!--
-          <img 
-            src="your-image.png" 
-            class="w-full h-full object-cover"
-          >
-          -->
+    <!-- ========= DEFAULT (PLACEHOLDER) ========= -->
+    <!-- TURN ON by removing comment -->
+    <!--
+    <div class="absolute inset-0 flex items-center justify-center text-gray-600 text-sm">
+      Concept Preview
+    </div>
+    -->
 
 
-          <!-- ========= VIDEO VERSION ========= -->
-          <!-- TO USE: remove <!-- and --> -->
-          
-          <video autoplay muted loop playsinline class="w-full h-full object-cover">
-            <source src="Bad Bella Animated Logo.mp4" type="video/mp4">
-          </video>
-          
+    <!-- ========= IMAGE VERSION ========= -->
+    <!-- TO USE: remove <!-- and --> -->
+    <!--
+    <img 
+      src="your-image.png" 
+      class="absolute top-0 left-0 w-full h-full object-cover"
+    >
+    -->
 
-        </div>
 
-      </div>
+    <!-- ========= VIDEO VERSION ========= -->
+    <!-- TO USE: remove <!-- and --> -->
+    
+    <video 
+      autoplay 
+      muted 
+      loop 
+      playsinline 
+      class="absolute top-0 left-0 w-full h-full object-cover"
+    >
+      <source src="Bad Bella Animated Logo.mp4" type="video/mp4">
+    </video>
+
+  </div>
+
+</div>
 
       <!-- ================= RIGHT: CONTENT ================= -->
       <div class="flex flex-col md:w-[300px] w-full h-full">
