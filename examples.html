@@ -254,7 +254,7 @@ videos.forEach(video => {
 
     video.currentTime = 0;
     video.muted = true;
-    video.play().catch(()=>{});
+    video.play().catch(() => {});
   });
 
   card.addEventListener('mouseleave', () => {
@@ -262,10 +262,15 @@ videos.forEach(video => {
 
     video.pause();
     video.currentTime = 0;
-    video.load(); // ✅ clean poster reset
+
+    // ✅ THIS is the correct reset (no load)
+    video.removeAttribute("src");
+    const source = video.querySelector("source");
+    if (source) {
+      video.appendChild(source); // reattach source
+    }
   });
 });
-
 
 // ================= MOBILE AUTOPLAY =================
 if (window.innerWidth < 768) {
@@ -313,7 +318,13 @@ function resetGridVideos() {
   document.querySelectorAll('.example-video').forEach(video => {
     video.pause();
     video.currentTime = 0;
-    video.load(); // 🔥 THIS is what brings posters back after modal
+
+    // same safe reset
+    video.removeAttribute("src");
+    const source = video.querySelector("source");
+    if (source) {
+      video.appendChild(source);
+    }
   });
 }
 
