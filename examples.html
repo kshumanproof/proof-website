@@ -1,165 +1,145 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>PROOF: Examples</title>
-  <link rel="icon" href="favicon.ico">
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PROOF: Examples</title>
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+html {
+  scroll-snap-type: y mandatory;
+}
+
+.snap-section {
+  scroll-snap-align: start;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+</style>
 </head>
 
-<body class="bg-[#0A0A0A] text-white font-sans">
+<body class="bg-black text-white font-sans overflow-x-hidden">
 
 <!-- NAV -->
-<header class="fixed top-0 w-full bg-black/70 backdrop-blur z-50">
+<header class="fixed top-0 w-full bg-black/60 backdrop-blur z-50">
   <div class="max-w-6xl mx-auto flex justify-between items-center py-3 px-4">
-    
-    <a href="index.html">
-      <img 
-        src="Proof_header_good.png" 
-        class="h-[40px] md:h-[60px] scale-[2.5] origin-left"
-      />
-    </a>
-
-    <button id="menuBtn" class="md:hidden text-2xl">☰</button>
-
-    <nav class="hidden md:flex space-x-6 text-sm">
-      <a href="examples.html" class="text-[#0066FF]">Examples</a>
-      <a href="index.html#products">Products</a>
-      <a href="index.html#how-it-works">How It Works</a>
-      <a href="business.html">For Business</a>
-      <a href="index.html#products">Get Started</a>
-    </nav>
-
-  </div>
-
-  <div id="mobileMenu" class="hidden md:hidden bg-black text-center py-6 space-y-4">
-    <a href="examples.html">Examples</a>
-    <a href="index.html#products">Products</a>
-    <a href="index.html#how-it-works">How It Works</a>
-    <a href="business.html">For Business</a>
-    <a href="index.html#products" class="text-[#0066FF]">Get Started</a>
+    <img src="Proof_header_good.png" class="h-[40px] md:h-[60px] scale-[2.5] origin-left"/>
   </div>
 </header>
 
 <!-- HERO -->
-<section class="pt-28 pb-16 text-center">
-  <h1 class="text-[28px] md:text-[48px] mb-4">Examples</h1>
-  <p class="text-gray-400 max-w-xl mx-auto">
-    This is what your idea looks like when it becomes real.
-  </p>
+<section class="snap-section min-h-screen flex items-center justify-center text-center px-4">
+  <div class="fade-up">
+    <h1 class="text-[32px] md:text-[56px] mb-4">Examples</h1>
+    <p class="text-gray-400 max-w-xl mx-auto">
+      Watch ideas become something real.
+    </p>
+  </div>
 </section>
 
-<!-- ================= EXPERIENCE ================= -->
+<!-- SECTION 1 -->
+<section class="snap-section relative min-h-screen flex items-end">
 
-<!-- EXAMPLE 1 -->
-<section class="relative min-h-[70vh] md:h-[85vh] flex items-end group cursor-pointer">
-
-  <video autoplay muted loop playsinline 
-    class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105">
+  <video muted loop playsinline class="video-bg absolute inset-0 w-full h-full object-cover opacity-70">
     <source src="LaunchBox_Main.mp4" type="video/mp4">
   </video>
 
-  <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition"></div>
+  <div class="absolute inset-0 bg-black/50"></div>
 
-  <div class="relative z-10 max-w-6xl mx-auto px-4 pb-16">
-
-    <h2 class="text-[22px] md:text-[36px] mb-3">PROOF: Scene</h2>
-
-    <p class="text-gray-300 text-[15px] md:text-[17px] max-w-md mb-6">
-      Tone. pacing. character. This is where people stop reading and start seeing.
+  <div class="relative z-10 max-w-6xl mx-auto px-6 pb-20 fade-up">
+    <h2 class="text-[28px] md:text-[48px] mb-4">PROOF: Scene</h2>
+    <p class="text-gray-300 max-w-md mb-6">
+      Experience tone, pacing, and character instantly.
     </p>
-
-    <a href="scene.html" class="bg-[#0066FF] px-6 py-3 rounded-md inline-block">
-      View Product
-    </a>
-
+    <a href="scene.html" class="bg-[#0066FF] px-6 py-3 rounded-md">View Product</a>
   </div>
 
 </section>
 
+<!-- SECTION 2 -->
+<section class="snap-section relative min-h-screen flex items-end">
 
-<!-- EXAMPLE 2 -->
-<section class="relative min-h-[70vh] md:h-[85vh] flex items-end group cursor-pointer">
-
-  <video autoplay muted loop playsinline 
-    class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105">
+  <video muted loop playsinline class="video-bg absolute inset-0 w-full h-full object-cover opacity-70">
     <source src="Bad Bella Animated Logo.mp4" type="video/mp4">
   </video>
 
-  <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition"></div>
+  <div class="absolute inset-0 bg-black/50"></div>
 
-  <div class="relative z-10 max-w-6xl mx-auto px-4 pb-16 text-left md:text-right md:ml-auto">
-
-    <h2 class="text-[22px] md:text-[36px] mb-3">PROOF: Sizzle</h2>
-
-    <p class="text-gray-300 text-[15px] md:text-[17px] max-w-md md:ml-auto mb-6">
-      Fast, visual proof that makes people lean forward immediately.
+  <div class="relative z-10 max-w-6xl mx-auto px-6 pb-20 text-left md:text-right md:ml-auto fade-up">
+    <h2 class="text-[28px] md:text-[48px] mb-4">PROOF: Sizzle</h2>
+    <p class="text-gray-300 max-w-md md:ml-auto mb-6">
+      Fast visual proof that creates immediate momentum.
     </p>
-
-    <a href="sizzle.html" class="bg-[#0066FF] px-6 py-3 rounded-md inline-block">
-      View Product
-    </a>
-
+    <a href="sizzle.html" class="bg-[#0066FF] px-6 py-3 rounded-md">View Product</a>
   </div>
 
 </section>
 
+<!-- SECTION 3 -->
+<section class="snap-section relative min-h-screen flex items-end">
 
-<!-- EXAMPLE 3 -->
-<section class="relative min-h-[70vh] md:h-[85vh] flex items-end group cursor-pointer">
-
-  <video autoplay muted loop playsinline 
-    class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105">
-    <source src="LaunchBox_Main.mp4" type="video/mp4">
+  <video muted loop playsinline class="video-bg absolute inset-0 w-full h-full object-cover opacity-70">
+    <source src="Bad Ass Raven.mp4" type="video/mp4">
   </video>
 
-  <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition"></div>
+  <div class="absolute inset-0 bg-black/50"></div>
 
-  <div class="relative z-10 max-w-6xl mx-auto px-4 pb-16">
-
-    <h2 class="text-[22px] md:text-[36px] mb-3">PROOF: Trailer</h2>
-
-    <p class="text-gray-300 text-[15px] md:text-[17px] max-w-md mb-6">
-      A full cinematic asset that turns interest into belief.
+  <div class="relative z-10 max-w-6xl mx-auto px-6 pb-20 fade-up">
+    <h2 class="text-[28px] md:text-[48px] mb-4">PROOF: Trailer</h2>
+    <p class="text-gray-300 max-w-md mb-6">
+      Turn interest into belief with a full cinematic asset.
     </p>
-
-    <a href="index.html#products" class="bg-[#0066FF] px-6 py-3 rounded-md inline-block">
+    <a href="index.html#products" class="bg-[#0066FF] px-6 py-3 rounded-md">
       Get Started
     </a>
-
   </div>
 
 </section>
 
-<!-- CTA -->
-<section class="pt-16 pb-12 text-center">
-  <h2 class="text-3xl mb-4">Ready to build your PROOF?</h2>
-  <a href="index.html#products" class="bg-[#0066FF] px-6 py-3 rounded-md">
-    Get Started
-  </a>
-</section>
-
-<!-- FOOTER -->
-<section class="py-12 text-center">
-  <img src="Proof_lab_footer.png" class="max-w-xl mx-auto opacity-70 mb-6"/>
-  <p class="text-xs text-gray-500">© 2026 PROOF, LLC</p>
-</section>
-
+<!-- SCRIPT -->
 <script>
-const menuBtn = document.getElementById("menuBtn");
-const mobileMenu = document.getElementById("mobileMenu");
 
-menuBtn.addEventListener("click", (e) => {
-  e.stopPropagation();
-  mobileMenu.classList.toggle("hidden");
-});
+// FADE IN TEXT
+const faders = document.querySelectorAll('.fade-up');
 
-document.addEventListener("click", (e) => {
-  if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
-    mobileMenu.classList.add("hidden");
-  }
-});
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    }
+  });
+}, { threshold: 0.4 });
+
+faders.forEach(el => observer.observe(el));
+
+
+// VIDEO PLAY/PAUSE BASED ON VIEW
+const videos = document.querySelectorAll('.video-bg');
+
+const videoObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const video = entry.target;
+
+    if (entry.isIntersecting) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
+}, { threshold: 0.6 });
+
+videos.forEach(video => videoObserver.observe(video));
+
 </script>
 
 </body>
