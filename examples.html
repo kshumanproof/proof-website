@@ -242,17 +242,16 @@ if (btn) {
 }
 
 
-// ================= HOVER PLAY (FIXED) =================
+// ================= HOVER PLAY (CORRECT) =================
 const videos = document.querySelectorAll('.example-video');
 
 videos.forEach(video => {
   const card = video.closest('.example-card');
-
   if (!card) return;
 
   // DESKTOP HOVER
   card.addEventListener('mouseenter', () => {
-    if (window.innerWidth < 768) return; // skip mobile
+    if (window.innerWidth < 768) return;
 
     video.currentTime = 0;
     video.muted = true;
@@ -260,15 +259,16 @@ videos.forEach(video => {
   });
 
   card.addEventListener('mouseleave', () => {
-    if (window.innerWidth < 768) return;
+  if (window.innerWidth < 768) return;
 
-    video.pause();
+  video.pause();
+  video.currentTime = 0;
 
-    // 🔥 THIS FIXES POSTER RETURN
-    video.removeAttribute("src");   // clears video frame
-    video.load();                  // reloads → poster shows again
-  });
-
+  // 🔥 FORCE poster repaint (this is the real fix)
+  video.style.display = "none";
+  video.offsetHeight; // trigger reflow
+  video.style.display = "";
+});
 });
 
 
