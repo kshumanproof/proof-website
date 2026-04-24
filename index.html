@@ -288,14 +288,15 @@
 
   <div class="bg-[#18181B] p-6 rounded-lg border border-white/10">
 
-    <div class="flex flex-col md:flex-row items-stretch gap-8">
+    <div class="flex flex-col md:flex-row gap-8">
 
       <!-- ================= LEFT: MEDIA ================= -->
       <div class="flex-1">
 
-        <div class="relative w-full rounded-md overflow-hidden bg-[#18181B] mb-6" style="padding-top:56.25%;">
+        <div class="relative w-full rounded-md overflow-hidden bg-[#18181B]" style="padding-top:56.25%;">
 
           <!-- ========= PLACEHOLDER ========= -->
+          <!-- TURN ON by removing comment -->
           <!--
           <div class="absolute inset-0 flex items-center justify-center text-gray-600 text-sm">
             Concept Preview
@@ -303,6 +304,7 @@
           -->
 
           <!-- ========= IMAGE ========= -->
+          <!-- TO USE: remove <!-- and --> -->
           <!--
           <img 
             src="your-image.png" 
@@ -311,6 +313,7 @@
           -->
 
           <!-- ========= VIDEO ========= -->
+          <!-- TO USE: remove <!-- and --> -->
           <video 
             autoplay 
             muted 
@@ -326,43 +329,45 @@
       </div>
 
       <!-- ================= RIGHT: CONTENT ================= -->
-      <div class="flex flex-col md:w-[300px] w-full md:self-stretch">
+      <div class="flex flex-col justify-between md:w-[300px] w-full">
 
-  <div class="flex flex-col h-full">
+        <!-- TOP CONTENT -->
+        <div>
 
-    <!-- TEXT -->
-    <div>
+          <h3 class="text-xl mb-2">PROOF: Concept</h3>
 
-      <h3 class="text-xl mb-2">PROOF: Concept</h3>
+          <p class="text-gray-200 mb-4">
+            Develop a full short-form proof-of-concept with narrative, tone, and execution.
+          </p>
 
-      <p class="text-gray-200 mb-4">
-        Develop a full short-form proof-of-concept with narrative, tone, and execution.
-      </p>
+          <p class="text-2xl leading-tight mb-0">Custom Pricing</p>
+          <p class="text-xs text-gray-500 mb-4">*Scope-based project</p>
 
-      <p class="text-2xl leading-tight mb-0">Custom Pricing</p>
-      <p class="text-xs text-gray-500 mb-4">*Scope-based project</p>
+          <ul class="text-sm text-gray-300 mb-6 space-y-1">
+            <li>• Multi-scene narrative</li>
+            <li>• Cinematic execution</li>
+            <li>• Designed for pitching & funding</li>
+          </ul>
 
-      <ul class="text-sm text-gray-300 mb-6 space-y-1">
-        <li>• Multi-scene narrative</li>
-        <li>• Cinematic execution</li>
-        <li>• Designed for pitching & funding</li>
-      </ul>
+          <p class="text-sm text-gray-400">
+            We'll define this together.
+          </p>
 
-      <p class="text-sm text-gray-400 mb-6">
-        We'll define this together.
-      </p>
+        </div>
+
+        <!-- BUTTON -->
+        <a 
+          href="https://calendly.com/hello-prooflab/30min" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="mt-6 block bg-[#0066FF] w-full py-3 rounded-md text-white font-medium text-center"
+        >
+          Book a Call
+        </a>
+
+      </div>
 
     </div>
-
-    <!-- BUTTON (LOCKED PERFECTLY) -->
-    <a 
-      href="https://calendly.com/hello-prooflab/30min" 
-      target="_blank" 
-      rel="noopener noreferrer"
-      class="mt-auto block bg-[#0066FF] w-full py-3 rounded-md text-white font-medium text-center"
-    >
-      Book a Call
-    </a>
 
   </div>
 
