@@ -522,42 +522,53 @@ document.addEventListener("DOMContentLoaded", () => {
   <div class="bg-[#18181B] p-6 md:p-8 rounded-lg border border-white/10 max-w-md w-full text-center relative">
 
     <!-- CLOSE -->
-    <button id="closePopup" class="absolute top-3 right-3 text-gray-400 text-xl">&times;</button>
+    <button id="closePopup" class="absolute top-3 right-3 text-gray-400 text-2xl">
+      &times;
+    </button>
 
     <!-- CONTENT -->
     <h2 class="text-xl md:text-2xl mb-3">
       Not ready to build your PROOF yet?
     </h2>
 
-    <p class="text-gray-400 text-sm mb-6">
+    <p class="text-gray-400 text-sm mb-5">
       See how ideas turn into something real. Get examples, insights, and early access.
     </p>
 
     <!-- FORM -->
-   <form action="https://app.kit.com/forms/9363800/subscriptions" method="post" class="flex flex-col gap-3">
+    <form 
+      action="https://app.kit.com/forms/9363800/subscriptions" 
+      method="post" 
+      data-remote="true"
+      class="flex flex-col gap-3"
+    >
       <input
-    type="email"
-    name="email_address"
-    placeholder="Your email"
-    required
-    class="px-4 py-3 rounded-md bg-black border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-[#0066FF]"
-  />
+        type="email"
+        name="email_address"
+        placeholder="Your email"
+        required
+        class="px-4 py-3 rounded-md bg-black border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-[#0066FF]"
+      />
 
-  <button
-    type="submit"
-    class="bg-[#0066FF] py-3 rounded-md text-white font-medium hover:bg-blue-600 transition"
-  >
-    Get Updates
-  </button>
+      <button
+        type="submit"
+        class="bg-[#0066FF] py-3 rounded-md text-white font-medium hover:bg-blue-600 transition w-full"
+      >
+        Get Updates
+      </button>
+    </form>
 
-</form>
+    <!-- SUCCESS -->
+    <div id="emailSuccess" class="hidden text-green-400 text-sm mt-4">
+      You're in. Check your inbox to confirm and start building your PROOF.
+    </div>
 
   </div>
-
 </div>
-  <script>
-document.addEventListener("DOMContentLoaded", () => {
 
+<!-- ================= SCRIPTS ================= -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
   const popup = document.getElementById("emailPopup");
   const closeBtn = document.getElementById("closePopup");
 
@@ -571,7 +582,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // MOBILE TIMER FALLBACK
+  // MOBILE TIMER
   setTimeout(() => {
     if (!shown) {
       popup.classList.remove("hidden");
@@ -583,9 +594,37 @@ document.addEventListener("DOMContentLoaded", () => {
   closeBtn.addEventListener("click", () => {
     popup.classList.add("hidden");
   });
-
 });
 </script>
 
+<script>
+document.addEventListener("submit", function (e) {
+  if (e.target.matches('form[action*="kit.com"]')) {
+    e.preventDefault();
+
+    const form = e.target;
+    const data = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: {
+        "Accept": "application/json"
+      }
+    })
+    .then(() => {
+      form.style.display = "none";
+      document.getElementById("emailSuccess").classList.remove("hidden");
+
+      setTimeout(() => {
+        document.getElementById("emailPopup").classList.add("hidden");
+      }, 2500);
+    })
+    .catch(() => {
+      alert("Something went wrong. Try again.");
+    });
+  }
+});
+</script>
 </body>
 </html>
