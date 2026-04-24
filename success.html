@@ -17,77 +17,66 @@
     <a href="index.html">
       <img 
         src="Proof_header_good.png" 
-        alt="PROOF Logo" 
-        class="h-[40px] md:h-[60px] w-auto object-contain scale-[2.5] origin-left"
+        class="h-[40px] md:h-[60px] scale-[2.5] origin-left"
       />
     </a>
 
-    <button id="menuBtn" class="md:hidden text-white text-2xl">
-      ☰
-    </button>
+    <button id="menuBtn" class="md:hidden text-white text-2xl">☰</button>
 
     <nav class="hidden md:flex space-x-6 text-sm text-white">
-      <a href="index.html#products" class="hover:text-gray-300">Examples</a>
-      <a href="index.html#products" class="hover:text-gray-300">Products</a>
-      <a href="index.html#how-it-works" class="hover:text-gray-300">How It Works</a>
-      <a href="business.html" class="hover:text-gray-300">For Business</a>
+      <a href="index.html#products">Examples</a>
+      <a href="index.html#products">Products</a>
+      <a href="index.html#how-it-works">How It Works</a>
+      <a href="business.html">For Business</a>
       <a href="index.html#products" class="text-[#0066FF]">Get Started</a>
     </nav>
-
   </div>
 
-  <!-- Mobile Menu -->
   <div id="mobileMenu" class="hidden md:hidden bg-black/95 text-center py-6 space-y-4">
-    <a href="index.html#products" class="block">Examples</a>
-    <a href="index.html#products" class="block">Products</a>
-    <a href="index.html#how-it-works" class="block">How It Works</a>
-    <a href="business.html" class="block">For Business</a>
-    <a href="index.html#products" class="block text-[#0066FF]">Get Started</a>
+    <a href="index.html#products">Examples</a>
+    <a href="index.html#products">Products</a>
+    <a href="index.html#how-it-works">How It Works</a>
+    <a href="business.html">For Business</a>
+    <a href="index.html#products" class="text-[#0066FF]">Get Started</a>
   </div>
 </header>
 
 <!-- ================= HERO ================= -->
-<section class="pt-28 pb-12">
+<section class="pt-24 sm:pt-28 pb-10">
 
   <div class="relative max-w-6xl mx-auto px-4">
 
     <!-- IMAGE -->
     <img 
-      src="u3318617226_a_family_gathered_around_a_dinner_table_in_a_cozy_6217fbcd-0771-4433-9410-8e5ef4f120bd_2.png"
-      alt="Success moment"
-      class="w-full rounded-lg"
+      src="your-success-image.png"
+      class="w-full rounded-lg max-h-[70vh] object-cover"
     />
 
-    <!-- GRADIENT OVERLAY -->
+    <!-- GRADIENT -->
     <div class="absolute inset-0 rounded-lg 
-                bg-gradient-to-t from-black/85 via-black/40 to-transparent">
+      bg-gradient-to-t from-black/85 via-black/40 to-transparent">
     </div>
 
-    <!-- TEXT OVERLAY -->
-    <div class="absolute inset-0 flex flex-col items-center justify-end text-center px-4 pb-10 md:pb-14">
+    <!-- TEXT -->
+    <div class="absolute inset-0 flex flex-col items-center justify-end text-center px-4 pb-8 sm:pb-10 md:pb-14">
 
-      <!-- BOOM -->
-      <h2 class="text-4xl md:text-6xl font-bold text-[#0066FF] mb-2 tracking-tight">
+      <h2 class="text-3xl sm:text-4xl md:text-6xl font-bold text-[#0066FF] mb-2">
         BOOM!
       </h2>
 
-      <!-- MAIN -->
-      <h1 class="text-3xl md:text-5xl font-semibold mb-3 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+      <h1 class="text-2xl sm:text-3xl md:text-5xl font-semibold mb-3">
         You're in.
       </h1>
 
-      <!-- SUB -->
-      <p class="text-gray-200 text-base md:text-lg">
+      <p class="text-gray-200 text-sm sm:text-base md:text-lg">
         Your PROOF is officially in motion.
       </p>
 
-      <!-- SUPPORT -->
-      <p class="text-gray-400 text-sm mt-2">
+      <p class="text-gray-400 text-xs sm:text-sm mt-2">
         We’ll review your submission and follow up within 24 hours.
       </p>
 
-      <!-- BACK LINK -->
-      <div class="mt-5">
+      <div class="mt-4">
         <a href="index.html" class="text-sm text-[#0066FF] hover:underline">
           ← Back to site
         </a>
@@ -100,9 +89,10 @@
 </section>
 
 <!-- ================= INSTRUCTIONS ================= -->
-<section class="max-w-4xl mx-auto px-4 -mt-12 md:-mt-16 relative z-10">
-  <div class="bg-[#18181B]/90 backdrop-blur rounded-lg p-5 md:p-6 border border-white/10 shadow-xl">
-    
+<section class="max-w-4xl mx-auto px-4 mt-6">
+
+  <div class="bg-[#18181B] p-5 md:p-6 rounded-lg border border-white/10">
+
     <h2 class="text-base md:text-lg mb-3">
       Next step: Tell us about your project
     </h2>
@@ -118,6 +108,7 @@
     </ul>
 
   </div>
+
 </section>
 
 <!-- ================= FORM ================= -->
@@ -138,7 +129,6 @@
 
   <img
     src="Proof_lab_footer.png"
-    alt="Built on the Proof Lab system"
     class="w-full max-w-xl mx-auto opacity-70 mb-6"
   />
 
@@ -184,17 +174,16 @@ document.addEventListener("DOMContentLoaded", () => {
       mobileMenu.classList.toggle("hidden");
     });
 
-    const links = mobileMenu.querySelectorAll("a");
-    links.forEach(link => {
-      link.addEventListener("click", () => {
-        mobileMenu.classList.add("hidden");
-      });
-    });
-
     document.addEventListener("click", (e) => {
       if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
         mobileMenu.classList.add("hidden");
       }
+    });
+
+    mobileMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
     });
   }
 
