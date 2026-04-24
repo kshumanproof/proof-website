@@ -14,7 +14,7 @@
 <header class="fixed top-0 w-full bg-black/70 backdrop-blur z-50">
   <div class="max-w-6xl mx-auto flex justify-between items-center py-3 px-4">
     
-    <!-- LOGO (clickable) -->
+    <!-- LOGO -->
     <a href="index.html">
       <img 
         src="Proof_header_good.png" 
@@ -23,34 +23,32 @@
       />
     </a>
 
-    <!-- NAV -->
-    <nav class="space-x-6 text-sm text-white">
+    <!-- HAMBURGER -->
+    <button id="menuBtn" class="md:hidden text-white text-2xl">
+      ☰
+    </button>
 
-  <a href="index.html#examples" class="hover:text-gray-300">
-    Examples
-  </a>
-
-  <a href="index.html#examples" class="hover:text-gray-300">
-    Products
-  </a>
-
-  <a href="index.html#how-it-works" class="hover:text-gray-300">
-    How It Works
-  </a>
-
-  <a href="business.html" class="hover:text-gray-300">
-    For Business
-  </a>
-
-  <a href="index.html#examples" class="text-[#0066FF]">
-    Get Started
-  </a>
-
-</nav>
+    <!-- DESKTOP NAV -->
+    <nav class="hidden md:flex space-x-6 text-sm text-white">
+      <a href="index.html#examples" class="hover:text-gray-300">Examples</a>
+      <a href="index.html#examples" class="hover:text-gray-300">Products</a>
+      <a href="index.html#how-it-works" class="hover:text-gray-300">How It Works</a>
+      <a href="business.html" class="hover:text-gray-300">For Business</a>
+      <a href="index.html#examples" class="text-[#0066FF]">Get Started</a>
+    </nav>
 
   </div>
-</header>
 
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="hidden md:hidden bg-black/95 text-center py-6 space-y-4">
+    <a href="index.html#examples" class="block">Examples</a>
+    <a href="index.html#examples" class="block">Products</a>
+    <a href="index.html#how-it-works" class="block">How It Works</a>
+    <a href="business.html" class="block">For Business</a>
+    <a href="index.html#examples" class="block text-[#0066FF]">Get Started</a>
+  </div>
+
+</header>
 <!-- HERO -->
 <section class="pt-28 pb-20 text-center">
 
@@ -208,7 +206,6 @@
   ↑
 </button>
 
-<!-- SCRIPT -->
 <script>
   const btn = document.getElementById("toTopBtn");
 
@@ -229,6 +226,15 @@
     });
   });
 </script>
+  const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+if (menuBtn && mobileMenu) {
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+  });
+}
+
 
 
 </body>
