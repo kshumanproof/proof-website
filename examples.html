@@ -70,7 +70,7 @@
 <section class="max-w-6xl mx-auto px-4 pb-20">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-    <!-- CARD -->
+    <!-- CARD 1 -->
     <div class="example-card bg-[#18181B] rounded-lg overflow-hidden cursor-pointer transition transform duration-300 hover:-translate-y-1 hover:scale-[1.02]">
       <div class="relative group">
         <video muted playsinline poster="Bad Ass Raven.png" class="example-video w-full h-56 md:h-64 object-cover">
@@ -80,7 +80,7 @@
         <div class="absolute inset-0 bg-black/40 group-hover:bg-black/10 transition duration-300 pointer-events-none"></div>
 
         <div class="absolute inset-0 flex items-center justify-center opacity-70 group-hover:opacity-0 transition duration-300 pointer-events-none">
-          <div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur flex items-center justify-center border border-white/30 shadow-xl group-hover:scale-110 transition duration-300">
+          <div class="w-16 h-16 rounded-full bg-white/20 backdrop-blur flex items-center justify-center border border-white/30 shadow-xl">
             <div class="w-0 h-0 border-l-[14px] border-l-white border-y-[8px] border-y-transparent ml-[2px]"></div>
           </div>
         </div>
@@ -93,7 +93,7 @@
       </div>
     </div>
 
-    <!-- CARD -->
+    <!-- CARD 2 -->
     <div class="example-card bg-[#18181B] rounded-lg overflow-hidden cursor-pointer transition transform duration-300 hover:-translate-y-1 hover:scale-[1.02]">
       <div class="relative group">
         <video muted playsinline poster="Bad Ass Raven.png" class="example-video w-full h-56 md:h-64 object-cover">
@@ -116,7 +116,7 @@
       </div>
     </div>
 
-    <!-- CARD -->
+    <!-- CARD 3 -->
     <div class="example-card bg-[#18181B] rounded-lg overflow-hidden cursor-pointer transition transform duration-300 hover:-translate-y-1 hover:scale-[1.02]">
       <div class="relative group">
         <video muted playsinline poster="Bad Ass Raven.png" class="example-video w-full h-56 md:h-64 object-cover">
@@ -139,7 +139,7 @@
       </div>
     </div>
 
-    <!-- CARD -->
+    <!-- CARD 4 -->
     <div class="example-card bg-[#18181B] rounded-lg overflow-hidden cursor-pointer transition transform duration-300 hover:-translate-y-1 hover:scale-[1.02]">
       <div class="relative group">
         <video muted playsinline poster="Bad Ass Raven.png" class="example-video w-full h-56 md:h-64 object-cover">
@@ -185,22 +185,17 @@ class="fixed bottom-6 right-6 bg-[#0066FF] w-10 h-10 rounded-md flex items-cente
 </button>
   <!-- MODAL -->
 <div id="videoModal" class="fixed inset-0 bg-black/90 hidden items-center justify-center z-50">
-
   <div class="relative w-full max-w-4xl px-4">
 
-    <!-- CLOSE -->
     <button id="closeModal" class="absolute top-2 right-2 text-white text-3xl z-10">
       ✕
     </button>
 
-    <!-- VIDEO -->
     <video id="modalVideo" controls class="w-full max-h-[80vh] rounded-lg"></video>
 
   </div>
-
 </div>
 
-<script>
 
 <script>
 
@@ -247,14 +242,12 @@ const videos = document.querySelectorAll('.example-video');
 
 videos.forEach(video => {
   const card = video.closest('.example-card');
-  if (!card) return;
 
   card.addEventListener('mouseenter', () => {
     if (window.innerWidth < 768) return;
 
     video.currentTime = 0;
-    video.muted = true;
-    video.play().catch(() => {});
+    video.play().catch(()=>{});
   });
 
   card.addEventListener('mouseleave', () => {
@@ -262,15 +255,9 @@ videos.forEach(video => {
 
     video.pause();
     video.currentTime = 0;
-
-    // ✅ THIS is the correct reset (no load)
-    video.removeAttribute("src");
-    const source = video.querySelector("source");
-    if (source) {
-      video.appendChild(source); // reattach source
-    }
   });
 });
+
 
 // ================= MOBILE AUTOPLAY =================
 if (window.innerWidth < 768) {
@@ -282,79 +269,58 @@ if (window.innerWidth < 768) {
 }
 
 
-// ================= MODAL VIDEO =================
+// ================= MODAL =================
 const modal = document.getElementById("videoModal");
 const modalVideo = document.getElementById("modalVideo");
 const closeModal = document.getElementById("closeModal");
 
 document.querySelectorAll('.example-card').forEach(card => {
 
-  card.addEventListener('click', (e) => {
+  card.addEventListener('click', () => {
 
-    e.stopPropagation();
+    const source = card.querySelector("source").getAttribute("src");
 
-    const video = card.querySelector("video");
-    const source = video.querySelector("source");
-    const videoSrc = source.getAttribute("src");
-
-    if (!videoSrc) return;
-
-    modalVideo.pause();
-    modalVideo.src = videoSrc;
+    modalVideo.src = source;
     modalVideo.load();
 
     modal.classList.remove("hidden");
     modal.classList.add("flex");
 
     modalVideo.muted = false;
-    modalVideo.play().catch(() => {});
+    modalVideo.play().catch(()=>{});
   });
 
 });
 
+// ================= CLOSE MODAL =================
+closeModal.addEventListener('click', () => {
+  modal.classList.add("hidden");
+  modal.classList.remove("flex");
 
-// ================= RESET ALL GRID VIDEOS =================
-function resetGridVideos() {
+  modalVideo.pause();
+  modalVideo.src = "";
+
+  // reset grid videos
   document.querySelectorAll('.example-video').forEach(video => {
     video.pause();
     video.currentTime = 0;
-
-    // same safe reset
-    video.removeAttribute("src");
-    const source = video.querySelector("source");
-    if (source) {
-      video.appendChild(source);
-    }
   });
-}
+});
 
-
-// ================= CLOSE MODAL =================
-if (closeModal && modal && modalVideo) {
-
-  closeModal.addEventListener('click', () => {
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
     modal.classList.add("hidden");
     modal.classList.remove("flex");
 
     modalVideo.pause();
     modalVideo.src = "";
 
-    resetGridVideos(); // ✅ KEY FIX
-  });
-
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) {
-      modal.classList.add("hidden");
-      modal.classList.remove("flex");
-
-      modalVideo.pause();
-      modalVideo.src = "";
-
-      resetGridVideos(); // ✅ KEY FIX
-    }
-  });
-
-}
+    document.querySelectorAll('.example-video').forEach(video => {
+      video.pause();
+      video.currentTime = 0;
+    });
+  }
+});
 
 </script>
 </body>
