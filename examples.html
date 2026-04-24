@@ -202,113 +202,140 @@ class="fixed bottom-6 right-6 bg-[#0066FF] w-10 h-10 rounded-md flex items-cente
 
 <script>
 
-// MENU
+<script>
+
+// ================= MENU =================
 const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 
-menuBtn.addEventListener("click", (e) => {
-  e.stopPropagation();
-  mobileMenu.classList.toggle("hidden");
-});
+if (menuBtn && mobileMenu) {
+  menuBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    mobileMenu.classList.toggle("hidden");
+  });
 
-document.addEventListener("click", (e) => {
-  if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
-    mobileMenu.classList.add("hidden");
-  }
-});
+  document.addEventListener("click", (e) => {
+    if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+      mobileMenu.classList.add("hidden");
+    }
+  });
+}
 
-// TO TOP
+
+// ================= TO TOP =================
 const btn = document.getElementById("toTopBtn");
 
-window.addEventListener("scroll", () => {
-  const scrollPosition = document.documentElement.scrollTop;
-  if (scrollPosition > 300) {
-    btn.classList.remove("opacity-0", "pointer-events-none");
-  } else {
-    btn.classList.add("opacity-0", "pointer-events-none");
-  }
-});
+if (btn) {
+  window.addEventListener("scroll", () => {
+    const scrollPosition = document.documentElement.scrollTop;
 
-btn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+    if (scrollPosition > 300) {
+      btn.classList.remove("opacity-0", "pointer-events-none");
+    } else {
+      btn.classList.add("opacity-0", "pointer-events-none");
+    }
+  });
 
-// HOVER PLAY
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
+
+// ================= HOVER PLAY (FIXED) =================
 const videos = document.querySelectorAll('.example-video');
 
 videos.forEach(video => {
   const card = video.closest('.example-card');
 
+  if (!card) return;
+
+  // DESKTOP HOVER
   card.addEventListener('mouseenter', () => {
+    if (window.innerWidth < 768) return; // skip mobile
+
     video.currentTime = 0;
     video.muted = true;
     video.play().catch(()=>{});
   });
 
   card.addEventListener('mouseleave', () => {
+    if (window.innerWidth < 768) return;
+
     video.pause();
-    video.currentTime = 0;
+
+    // 🔥 THIS FIXES POSTER RETURN
+    video.removeAttribute("src");   // clears video frame
+    video.load();                  // reloads → poster shows again
   });
 
 });
 
-// MOBILE AUTOPLAY
+
+// ================= MOBILE AUTOPLAY =================
 if (window.innerWidth < 768) {
   videos.forEach(video => {
     video.setAttribute("autoplay", "");
     video.setAttribute("loop", "");
-    video.play();
+    video.play().catch(()=>{});
   });
 }
 
-// MODAL VIDEO (FIXED)
+
+// ================= MODAL VIDEO (FULLY FIXED) =================
 const modal = document.getElementById("videoModal");
 const modalVideo = document.getElementById("modalVideo");
 const closeModal = document.getElementById("closeModal");
 
 document.querySelectorAll('.example-card').forEach(card => {
 
-  card.addEventListener('click', () => {
+  card.addEventListener('click', (e) => {
+
+    // 🔥 prevent hover conflict
+    e.stopPropagation();
 
     const video = card.querySelector("video");
     const source = video.querySelector("source");
 
-    const videoSrc = source.getAttribute("src"); // ✅ THIS IS THE FIX
+    const videoSrc = source.getAttribute("src");
 
     if (!videoSrc) return;
 
+    // reset modal video cleanly
     modalVideo.pause();
-modalVideo.src = videoSrc;
-modalVideo.load(); // 🔥 important
+    modalVideo.src = videoSrc;
+    modalVideo.load();
 
     modal.classList.remove("hidden");
     modal.classList.add("flex");
 
     modalVideo.muted = false;
-
     modalVideo.play().catch(() => {});
-
   });
 
 });
 
-// CLOSE BUTTON
-closeModal.addEventListener('click', () => {
-  modal.classList.add("hidden");
-  modal.classList.remove("flex");
-  modalVideo.pause();
-  modalVideo.src = "";
-});
 
-// CLICK OUTSIDE TO CLOSE (adds polish + helps debugging)
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) {
+// ================= CLOSE MODAL =================
+if (closeModal && modal && modalVideo) {
+
+  closeModal.addEventListener('click', () => {
     modal.classList.add("hidden");
     modal.classList.remove("flex");
     modalVideo.pause();
     modalVideo.src = "";
-  }
-});
+  });
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      modalVideo.pause();
+      modalVideo.src = "";
+    }
+  });
+
+}
 
 </script>
 
