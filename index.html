@@ -603,6 +603,10 @@ document.addEventListener("DOMContentLoaded", () => {
   closeBtn.addEventListener("click", () => {
     popup.classList.add("hidden");
   });
+  document.getElementById("emailPopup").addEventListener("click", (e) => {
+  if (e.target.id === "emailPopup") {
+    e.currentTarget.classList.add("hidden");
+  }
 });
 </script>
 
@@ -624,10 +628,6 @@ document.addEventListener("submit", function (e) {
     .then(() => {
       form.style.display = "none";
       document.getElementById("emailSuccess").classList.remove("hidden");
-
-      setTimeout(() => {
-        document.getElementById("emailPopup").classList.add("hidden");
-      }, 2500);
     })
     .catch(() => {
       alert("Something went wrong. Try again.");
