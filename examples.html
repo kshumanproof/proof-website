@@ -10,7 +10,7 @@
 <style>
 /* SNAP (SAFE — DOES NOT BREAK YOUR SITE) */
 html {
-  scroll-snap-type: y proximity;
+  scroll-snap-type: y mandatory;
 }
 
 .snap-section {
@@ -18,7 +18,9 @@ html {
   scroll-snap-stop: always;
   scroll-margin-top: 80px;
 }
-
+.no-snap {
+  scroll-snap-align: none;
+}
 /* FADE */
 .fade-up {
   opacity: 0;
@@ -67,7 +69,7 @@ html {
 </header>
 
 <!-- HERO -->
-<section class="pt-28 pb-20 text-center snap-section snap-top relative">
+<section class="pt-28 pb-20 text-center snap-top no-snap relative">
 
   <!-- MEDIA -->
   <div class="max-w-6xl mx-auto px-4 mb-4 relative">
@@ -115,7 +117,7 @@ html {
   <!-- SCROLL CUE (SUBTLE BUT IMPORTANT) -->
   <div class="mt-12 flex justify-center">
 
-  <div class="flex flex-col items-center animate-bounce">
+  <button id="scrollTrigger" class="flex flex-col items-center animate-bounce">
 
     <span class="text-gray-400 text-xs mb-2 tracking-widest">
       SCROLL
@@ -125,16 +127,15 @@ html {
       ↓
     </span>
 
-  </div>
+  </button>
 
 </div>
-
 </section>
 
 <!-- ================= EXAMPLES (THIS IS THE ONLY NEW PART) ================= -->
 
 <!-- EXAMPLE 1 -->
-<section class="snap-section relative min-h-screen flex items-end">
+<section id="firstExample" class="snap-section relative min-h-screen flex items-end">
 
   <video muted loop playsinline 
     class="scroll-video absolute inset-0 w-full h-full object-cover">
@@ -212,7 +213,7 @@ html {
 </section>
 
 <!-- CTA -->
-<section class="py-16 text-center">
+<section class="py-16 text-center no-snap">
   <h2 class="text-3xl mb-4">Ready to build your PROOF?</h2>
   <a href="index.html#products" class="bg-[#0066FF] px-6 py-3 rounded-md">
     Get Started
@@ -220,7 +221,7 @@ html {
 </section>
 
 <!-- FOOTER (UNCHANGED) -->
-<section class="py-12 text-center">
+<section class="py-12 text-center no-snap">
   <img src="Proof_lab_footer.png" class="max-w-md md:max-w-xl mx-auto opacity-70 mb-6 px-4"/>
   <p class="text-xs text-gray-500">© 2026 PROOF, LLC</p>
 </section>
@@ -245,6 +246,19 @@ const fadeObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.4 });
 
 faders.forEach(el => fadeObserver.observe(el));
+
+
+// 🔥 SCROLL TRIGGER (HERO → FIRST EXAMPLE)
+const trigger = document.getElementById("scrollTrigger");
+const firstExample = document.getElementById("firstExample");
+
+if (trigger && firstExample) {
+  trigger.addEventListener("click", () => {
+    firstExample.scrollIntoView({
+      behavior: "smooth"
+    });
+  });
+}
 
 // VIDEO CONTROL
 const videos = document.querySelectorAll('.scroll-video');
