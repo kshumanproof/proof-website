@@ -1,122 +1,186 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>You're In — PROOF</title>
-
-  <!-- Tailwind -->
+  <link rel="icon" href="favicon.ico">
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Tally -->
-  <script async src="https://tally.so/widgets/embed.js"></script>
-
-  <!-- Favicon -->
-  <link rel="icon" href="/favicon.ico" />
 </head>
 
-<body class="bg-[#0A0A0A] text-white">
+<body class="bg-[#0A0A0A] text-white font-sans">
 
-  <!-- ================= NAV ================= -->
-  <header class="fixed top-0 left-0 w-full z-50 bg-black/70 backdrop-blur">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="/" class="font-semibold text-lg">PROOF</a>
-
-      <nav class="space-x-6 text-sm text-gray-300">
-        <a href="/index.html" class="hover:text-white">Home</a>
-        <a href="/sizzle.html" class="hover:text-white">Sizzle</a>
-        <a href="/scene.html" class="hover:text-white">Scene</a>
-        <a href="/business.html" class="hover:text-white">Business</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- ================= HERO ================= -->
-  <section class="relative pt-32 pb-20 overflow-hidden">
-
-    <!-- Background Image -->
-    <div class="absolute inset-0">
+<!-- NAV (EXACT MATCH) -->
+<header class="fixed top-0 w-full bg-black/70 backdrop-blur z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center py-3 px-4">
+    
+    <a href="index.html">
       <img 
-        src="/images/success-bg.jpg" 
-        class="w-full h-full object-cover opacity-30"
-        alt=""
+        src="Proof_header_good.png" 
+        alt="PROOF Logo" 
+        class="h-[40px] md:h-[60px] w-auto object-contain scale-[2.5] origin-left"
       />
-      <div class="absolute inset-0 bg-black/70"></div>
+    </a>
+
+    <button id="menuBtn" class="md:hidden text-white text-2xl">
+      ☰
+    </button>
+
+    <nav class="hidden md:flex space-x-6 text-sm text-white">
+      <a href="index.html#products" class="hover:text-gray-300">Examples</a>
+      <a href="index.html#products" class="hover:text-gray-300">Products</a>
+      <a href="index.html#how-it-works" class="hover:text-gray-300">How It Works</a>
+      <a href="business.html" class="hover:text-gray-300">For Business</a>
+      <a href="index.html#products" class="text-[#0066FF]">Get Started</a>
+    </nav>
+
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden bg-black/95 text-center py-6 space-y-4">
+    <a href="index.html#products" class="block">Examples</a>
+    <a href="index.html#products" class="block">Products</a>
+    <a href="index.html#how-it-works" class="block">How It Works</a>
+    <a href="business.html" class="block">For Business</a>
+    <a href="index.html#products" class="block text-[#0066FF]">Get Started</a>
+  </div>
+
+</header>
+
+<!-- HERO -->
+<section class="relative pt-28 pb-16 text-center overflow-hidden">
+
+  <!-- BACKGROUND -->
+  <div class="absolute inset-0">
+    <img 
+      src="success-bg.jpg" 
+      class="w-full h-full object-cover opacity-30"
+      alt=""
+    />
+    <div class="absolute inset-0 bg-black/70"></div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="relative max-w-3xl mx-auto px-4">
+
+    <h1 class="text-4xl md:text-5xl font-semibold mb-4">
+      You're in.
+    </h1>
+
+    <p class="text-gray-300 text-lg">
+      Your PROOF is officially in motion.
+    </p>
+
+    <p class="text-gray-500 text-sm mt-2">
+      We’ll review your submission and follow up within 24 hours.
+    </p>
+
+    <div class="mt-6">
+      <a href="index.html" class="text-sm text-[#0066FF] hover:underline">
+        ← Back to site
+      </a>
     </div>
 
-    <!-- Content -->
-    <div class="relative max-w-3xl mx-auto px-4 text-center">
+  </div>
+</section>
 
-      <h1 class="text-sm tracking-widest text-[#0066FF] mb-2">
-  BOOM.
-</h1>
+<!-- CONTENT -->
+<section class="max-w-6xl mx-auto px-4 pb-20">
 
-<h1 class="text-4xl md:text-5xl font-semibold mb-4">
-  You're in.
-</h1>
+  <!-- INSTRUCTIONS -->
+  <div class="bg-[#18181B] p-6 rounded-lg border border-white/10 mb-10 text-left max-w-3xl mx-auto">
+    <h2 class="text-lg mb-3">Next step: Tell us about your project</h2>
 
-      <p class="text-gray-300 text-lg">
-        Your PROOF is officially in motion.
-      </p>
+    <p class="text-gray-200 mb-4 text-sm">
+      This takes 2–3 minutes. The more detail you give, the stronger your PROOF will be.
+    </p>
 
-      <p class="text-gray-500 text-sm mt-2">
-        We’ll review your submission and follow up within 24 hours.
-      </p>
+    <ul class="text-gray-200 space-y-2 text-sm">
+      <li>• What you're trying to make</li>
+      <li>• Tone, references, or inspirations</li>
+      <li>• Upload files OR paste a Drive/Dropbox link</li>
+    </ul>
+  </div>
 
-      <!-- Optional return CTA -->
-      <div class="mt-6">
-        <a href="/index.html" class="text-sm text-[#0066FF] hover:underline">
-          ← Back to site
-        </a>
-      </div>
+  <!-- FORM -->
+  <div class="max-w-3xl mx-auto bg-[#18181B] rounded-lg border border-white/10 p-2">
+    <iframe 
+      src="https://tally.so/r/Pd2Ozd"
+      width="100%" 
+      height="700"
+      frameborder="0"
+      class="rounded-lg bg-white w-full">
+    </iframe>
+  </div>
 
-    </div>
-  </section>
+</section>
 
-  <!-- ================= CONTENT ================= -->
-  <section class="max-w-3xl mx-auto px-4 pb-20 space-y-12">
+<!-- FOOTER (EXACT MATCH) -->
+<section class="py-12 text-center">
 
-    <!-- Instruction Card -->
-    <div class="bg-[#18181B] rounded-lg p-6">
-      <h2 class="text-xl font-semibold mb-3">
-        Next step: Tell us about your project
-      </h2>
+  <img
+    src="Proof_lab_footer.png"
+    alt="Built on the Proof Lab system"
+    class="w-full max-w-xl mx-auto opacity-70 mb-6"
+  />
 
-      <p class="text-gray-400 mb-4">
-        This takes 2–3 minutes. The more detail you give, the stronger your PROOF will be.
-      </p>
+  <p class="text-xs text-gray-500">
+    © 2026 PROOF, LLC. All rights reserved.
+  </p>
 
-      <ul class="text-gray-400 space-y-2 text-sm">
-        <li>• What you're trying to make</li>
-        <li>• Tone, references, or inspirations</li>
-        <li>• Upload files OR paste a Drive/Dropbox link</li>
-      </ul>
-    </div>
+</section>
 
-    <!-- Form -->
-    <div class="bg-[#18181B] rounded-lg p-2 shadow-lg">
-      <iframe 
-        data-tally-src="https://tally.so/r/Pd2Ozd"
-        loading="lazy"
-        width="100%" 
-        height="650" 
-        frameborder="0"
-        class="rounded-lg bg-white">
-      </iframe>
-    </div>
+<!-- TO TOP BUTTON -->
+<button 
+  id="toTopBtn"
+  class="fixed bottom-6 right-6 bg-[#0066FF] w-10 h-10 rounded-md flex items-center justify-center text-white opacity-0 pointer-events-none transition"
+>
+  ↑
+</button>
 
-  </section>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
 
-  <!-- ================= FOOTER ================= -->
-  <footer class="border-t border-gray-800 py-10 text-center text-sm text-gray-500">
-    <p>© PROOF. All rights reserved.</p>
-  </footer>
+  const btn = document.getElementById("toTopBtn");
 
-  <!-- ================= TO TOP BUTTON ================= -->
-  <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-    class="fixed bottom-6 right-6 bg-[#0066FF] text-white px-3 py-2 rounded shadow-lg">
-    ↑
-  </button>
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 400) {
+      btn.classList.remove("opacity-0", "pointer-events-none");
+      btn.classList.add("opacity-100");
+    } else {
+      btn.classList.add("opacity-0", "pointer-events-none");
+      btn.classList.remove("opacity-100");
+    }
+  });
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    const links = mobileMenu.querySelectorAll("a");
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+        mobileMenu.classList.add("hidden");
+      }
+    });
+  }
+
+});
+</script>
 
 </body>
 </html>
