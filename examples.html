@@ -9,6 +9,9 @@
 
 <style>
 /* SNAP (SAFE — DOES NOT BREAK YOUR SITE) */
+  .snap-container {
+  scroll-snap-type: y mandatory;
+}
 
 .snap-section {
   scroll-snap-align: start;
@@ -112,22 +115,18 @@
   </div>
 
   <!-- SCROLL CUE (SUBTLE BUT IMPORTANT) -->
-  <div class="mt-12 flex justify-center">
+ <div class="snap-container">
 
-  <button id="scrollTrigger" class="flex flex-col items-center animate-bounce">
+  <section id="firstExample" class="snap-section ...">
+  </section>
 
-    <span class="text-gray-400 text-xs mb-2 tracking-widest">
-      SCROLL
-    </span>
+  <section class="snap-section ...">
+  </section>
 
-    <span class="text-white text-2xl opacity-80">
-      ↓
-    </span>
-
-  </button>
+  <section class="snap-section ...">
+  </section>
 
 </div>
-</section>
 
 <!-- ================= EXAMPLES ================= -->
 <div class="snap-container">
