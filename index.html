@@ -283,7 +283,7 @@
 
   </div><!-- END grid -->
 
-    <!-- POC (FULL WIDTH INSIDE GRID) -->
+    <!-- POC (WITH VIDEO) -->
 <div class="mt-8">
 
   <div class="bg-[#18181B] p-6 rounded-lg border border-white/10">
@@ -291,42 +291,66 @@
     <div class="flex flex-col md:flex-row items-stretch gap-8">
 
       <!-- LEFT SIDE -->
-      <div class="flex-1">
-        <h3 class="text-xl mb-2">PROOF: Concept</h3>
+<div class="flex-1">
 
-        <p class="text-gray-200 mb-4">
-          Develop a full short-form proof-of-concept with narrative, tone, and execution.
-        </p>
+  <!-- MEDIA SLOT -->
+  <div class="w-full h-48 md:h-56 rounded-md mb-6 overflow-hidden bg-[#18181B] flex items-center justify-center text-gray-600 text-sm">
 
-        <ul class="text-sm text-gray-300 mb-6 space-y-1">
-          <li>• Multi-scene narrative</li>
-          <li>• Cinematic execution</li>
-          <li>• Designed for pitching & funding</li>
-        </ul>
-      </div>
+    <!-- OPTION 1: PLACEHOLDER (DEFAULT) -->
+    <span>Concept Preview</span>
 
-     <!-- RIGHT SIDE -->
-<div class="flex flex-col md:w-[300px] w-full">
+    <!-- OPTION 2: IMAGE (UNCOMMENT WHEN READY) -->
+    <!-- 
+    <img 
+      src="your-image.png" 
+      class="w-full h-full object-cover"
+    >
+    -->
 
-  <!-- TOP: Pricing -->
-  <div>
-    <p class="text-2xl leading-tight mb-0">Custom Pricing</p>
-    <p class="text-xs text-gray-500 mb-4">*Scope-based project</p>
+    <!-- OPTION 3: VIDEO (UNCOMMENT WHEN READY) -->
+    <!-- 
+    <video autoplay muted loop playsinline class="w-full h-full object-cover">
+      <source src="your-video.mp4" type="video/mp4">
+    </video>
+    -->
 
-    <p class="text-s text-gray-400 mb-4">
-      We'll define this together.
-    </p>
+  </div>
 
-    <!-- BOTTOM: Button -->
-  <a 
-  href="https://calendly.com/hello-prooflab/30min" 
-  target="_blank" 
-  rel="noopener noreferrer"
-  class="block bg-[#0066FF] w-full py-3 rounded-md text-white font-medium text-center"
->
-  Book a Call
+  <h3 class="text-xl mb-2">PROOF: Concept</h3>
+
+  <p class="text-gray-200 mb-4">
+    Develop a full short-form proof-of-concept with narrative, tone, and execution.
+  </p>
+
+  <ul class="text-sm text-gray-300 mb-6 space-y-1">
+    <li>• Multi-scene narrative</li>
+    <li>• Cinematic execution</li>
+    <li>• Designed for pitching & funding</li>
+  </ul>
+
+</div>
+
+      <!-- RIGHT SIDE (UNCHANGED) -->
+      <div class="flex flex-col md:w-[300px] w-full">
+
+        <div>
+          <p class="text-2xl leading-tight mb-0">Custom Pricing</p>
+          <p class="text-xs text-gray-500 mb-4">*Scope-based project</p>
+
+          <p class="text-sm text-gray-400 mb-4">
+            We'll define this together.
+          </p>
+
+          <a 
+            href="https://calendly.com/hello-prooflab/30min" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="block bg-[#0066FF] w-full py-3 rounded-md text-white font-medium text-center"
+          >
+            Book a Call
           </a>
         </div>
+
       </div>
 
     </div>
@@ -334,7 +358,6 @@
   </div>
 
 </div>
-
 <!-- HOW IT WORKS -->
 <section id="how-it-works" class="py-20 text-center">
 
