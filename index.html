@@ -516,5 +516,77 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
+  <!-- ================= EMAIL POPUP ================= -->
+<div id="emailPopup" class="fixed inset-0 bg-black/80 flex items-center justify-center z-[999] hidden">
+
+  <div class="bg-[#18181B] p-6 md:p-8 rounded-lg border border-white/10 max-w-md w-full text-center relative">
+
+    <!-- CLOSE -->
+    <button id="closePopup" class="absolute top-3 right-3 text-gray-400 text-xl">&times;</button>
+
+    <!-- CONTENT -->
+    <h2 class="text-xl md:text-2xl mb-3">
+      Not ready to build your PROOF yet?
+    </h2>
+
+    <p class="text-gray-400 text-sm mb-6">
+      See how ideas turn into something real. Get examples, insights, and early access.
+    </p>
+
+    <!-- FORM -->
+    <form action="https://YOUR-CONVERTKIT-URL" method="post" class="flex flex-col gap-3">
+
+      <input
+    type="email"
+    name="email_address"
+    placeholder="Your email"
+    required
+    class="px-4 py-3 rounded-md bg-black border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-[#0066FF]"
+  />
+
+  <button
+    type="submit"
+    class="bg-[#0066FF] py-3 rounded-md text-white font-medium hover:bg-blue-600 transition"
+  >
+    Get Updates
+  </button>
+
+</form>
+
+  </div>
+
+</div>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const popup = document.getElementById("emailPopup");
+  const closeBtn = document.getElementById("closePopup");
+
+  let shown = false;
+
+  // DESKTOP EXIT INTENT
+  document.addEventListener("mouseleave", (e) => {
+    if (e.clientY < 10 && !shown) {
+      popup.classList.remove("hidden");
+      shown = true;
+    }
+  });
+
+  // MOBILE TIMER FALLBACK
+  setTimeout(() => {
+    if (!shown) {
+      popup.classList.remove("hidden");
+      shown = true;
+    }
+  }, 25000);
+
+  // CLOSE BUTTON
+  closeBtn.addEventListener("click", () => {
+    popup.classList.add("hidden");
+  });
+
+});
+</script>
+
 </body>
 </html>
