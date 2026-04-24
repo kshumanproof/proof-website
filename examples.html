@@ -202,6 +202,8 @@ class="fixed bottom-6 right-6 bg-[#0066FF] w-10 h-10 rounded-md flex items-cente
 
 <script>
 
+<script>
+
 // ================= MENU =================
 const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
@@ -240,14 +242,13 @@ if (btn) {
 }
 
 
-// ================= HOVER PLAY (CORRECT) =================
+// ================= HOVER PLAY =================
 const videos = document.querySelectorAll('.example-video');
 
 videos.forEach(video => {
   const card = video.closest('.example-card');
   if (!card) return;
 
-  // DESKTOP HOVER
   card.addEventListener('mouseenter', () => {
     if (window.innerWidth < 768) return;
 
@@ -257,16 +258,12 @@ videos.forEach(video => {
   });
 
   card.addEventListener('mouseleave', () => {
-  if (window.innerWidth < 768) return;
+    if (window.innerWidth < 768) return;
 
-  video.pause();
-  video.currentTime = 0;
-
-  // 🔥 FORCE poster repaint (this is the real fix)
-  video.style.display = "none";
-  video.offsetHeight; // trigger reflow
-  video.style.display = "";
-});
+    video.pause();
+    video.currentTime = 0;
+    video.load(); // ✅ clean poster reset
+  });
 });
 
 
@@ -280,7 +277,7 @@ if (window.innerWidth < 768) {
 }
 
 
-// ================= MODAL VIDEO (FULLY FIXED) =================
+// ================= MODAL VIDEO =================
 const modal = document.getElementById("videoModal");
 const modalVideo = document.getElementById("modalVideo");
 const closeModal = document.getElementById("closeModal");
@@ -289,17 +286,14 @@ document.querySelectorAll('.example-card').forEach(card => {
 
   card.addEventListener('click', (e) => {
 
-    // 🔥 prevent hover conflict
     e.stopPropagation();
 
     const video = card.querySelector("video");
     const source = video.querySelector("source");
-
     const videoSrc = source.getAttribute("src");
 
     if (!videoSrc) return;
 
-    // reset modal video cleanly
     modalVideo.pause();
     modalVideo.src = videoSrc;
     modalVideo.load();
@@ -314,28 +308,43 @@ document.querySelectorAll('.example-card').forEach(card => {
 });
 
 
+// ================= RESET ALL GRID VIDEOS =================
+function resetGridVideos() {
+  document.querySelectorAll('.example-video').forEach(video => {
+    video.pause();
+    video.currentTime = 0;
+    video.load(); // 🔥 THIS is what brings posters back after modal
+  });
+}
+
+
 // ================= CLOSE MODAL =================
 if (closeModal && modal && modalVideo) {
 
   closeModal.addEventListener('click', () => {
     modal.classList.add("hidden");
     modal.classList.remove("flex");
+
     modalVideo.pause();
     modalVideo.src = "";
+
+    resetGridVideos(); // ✅ KEY FIX
   });
 
   modal.addEventListener('click', (e) => {
     if (e.target === modal) {
       modal.classList.add("hidden");
       modal.classList.remove("flex");
+
       modalVideo.pause();
       modalVideo.src = "";
+
+      resetGridVideos(); // ✅ KEY FIX
     }
   });
 
 }
 
 </script>
-
 </body>
 </html>
