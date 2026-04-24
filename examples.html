@@ -78,9 +78,9 @@
 
     <!-- CARD 1 -->
     <div class="bg-[#18181B] rounded-lg overflow-hidden transition transform hover:-translate-y-1 hover:shadow-lg">
-      <video autoplay muted loop playsinline class="w-full h-56 object-cover">
-        <source src="LaunchBox_Main.mp4" type="video/mp4">
-      </video>
+      <video muted loop playsinline class="example-video w-full h-56 object-cover">
+  <source src="LaunchBox_Main.mp4" type="video/mp4">
+</video>
       <div class="p-5">
         <h3 class="text-xl mb-2">Project Title</h3>
         <p class="text-gray-300 text-sm mb-2">Tone: Cinematic / Emotional</p>
@@ -90,9 +90,9 @@
 
     <!-- CARD 2 -->
     <div class="bg-[#18181B] rounded-lg overflow-hidden transition transform hover:-translate-y-1 hover:shadow-lg">
-      <video autoplay muted loop playsinline class="w-full h-56 object-cover">
-        <source src="Bad Bella Animated Logo.mp4" type="video/mp4">
-      </video>
+      <video muted loop playsinline class="example-video w-full h-56 object-cover">
+  <source src="LaunchBox_Main.mp4" type="video/mp4">
+</video>
       <div class="p-5">
         <h3 class="text-xl mb-2">Project Title</h3>
         <p class="text-gray-300 text-sm mb-2">Tone: High energy / Stylized</p>
@@ -102,9 +102,9 @@
 
     <!-- CARD 3 -->
     <div class="bg-[#18181B] rounded-lg overflow-hidden transition transform hover:-translate-y-1 hover:shadow-lg">
-      <video autoplay muted loop playsinline class="w-full h-56 object-cover">
-        <source src="LaunchBox_Main.mp4" type="video/mp4">
-      </video>
+     <video muted loop playsinline class="example-video w-full h-56 object-cover">
+  <source src="LaunchBox_Main.mp4" type="video/mp4">
+</video>
       <div class="p-5">
         <h3 class="text-xl mb-2">Project Title</h3>
         <p class="text-gray-300 text-sm mb-2">Tone: Dark / Narrative-driven</p>
@@ -114,9 +114,9 @@
 
     <!-- CARD 4 -->
     <div class="bg-[#18181B] rounded-lg overflow-hidden transition transform hover:-translate-y-1 hover:shadow-lg">
-      <video autoplay muted loop playsinline class="w-full h-56 object-cover">
-        <source src="Bad Bella Animated Logo.mp4" type="video/mp4">
-      </video>
+      <video muted loop playsinline class="example-video w-full h-56 object-cover">
+  <source src="LaunchBox_Main.mp4" type="video/mp4">
+</video>
       <div class="p-5">
         <h3 class="text-xl mb-2">Project Title</h3>
         <p class="text-gray-300 text-sm mb-2">Tone: Clean / Minimal</p>
@@ -150,6 +150,8 @@ class="fixed bottom-6 right-6 bg-[#0066FF] w-10 h-10 rounded-md flex items-cente
 
 <script>
 
+<script>
+
 // TO TOP BUTTON
 const btn = document.getElementById("toTopBtn");
 
@@ -169,6 +171,7 @@ btn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+
 // MENU
 const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
@@ -184,7 +187,31 @@ document.addEventListener("click", (e) => {
   }
 });
 
-</script>
 
+// 🔥 HOVER TO PLAY (PUT IT HERE — INSIDE SCRIPT)
+const videos = document.querySelectorAll('.example-video');
+
+videos.forEach(video => {
+
+  video.parentElement.addEventListener('mouseenter', () => {
+    video.play();
+  });
+
+  video.parentElement.addEventListener('mouseleave', () => {
+    video.pause();
+    video.currentTime = 0;
+  });
+
+});
+
+// MOBILE FALLBACK
+if (window.innerWidth < 768) {
+  videos.forEach(video => {
+    video.setAttribute("autoplay", "");
+    video.play();
+  });
+}
+
+</script>
 </body>
 </html>
