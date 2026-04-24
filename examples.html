@@ -7,166 +7,244 @@
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
-body {
-  margin: 0;
-  background: #0A0A0A;
-  color: white;
-  font-family: sans-serif;
-}
 
-/* SNAP */
-.container {
-  height: 100vh;
-  overflow-y: scroll;
+/* SNAP SYSTEM */
+.snap-container {
   scroll-snap-type: y mandatory;
-}
-
-.section {
+  overflow-y: scroll;
   height: 100vh;
+}
+
+.snap-section {
   scroll-snap-align: start;
-  position: relative;
 }
 
-/* VIDEO */
-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* OVERLAY */
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.55);
-}
-
-/* TEXT */
-.content {
-  position: absolute;
-  bottom: 80px;
-  left: 5%;
-  max-width: 500px;
+/* FADE */
+.fade-up {
   opacity: 0;
   transform: translateY(40px);
-  transition: all 0.8s ease;
+  transition: all 0.9s ease;
 }
 
-.content.active {
+.fade-up.active {
   opacity: 1;
   transform: translateY(0);
 }
 
-.right {
-  left: auto;
-  right: 5%;
-  text-align: right;
-}
-
-/* BUTTON */
-.btn {
-  background: #0066FF;
-  padding: 12px 24px;
-  display: inline-block;
-  margin-top: 16px;
-  border-radius: 6px;
-}
 </style>
 </head>
 
-<body>
+<body class="bg-[#0A0A0A] text-white font-sans">
 
 <!-- NAV -->
-<header style="position:fixed;top:0;width:100%;z-index:100;background:rgba(0,0,0,0.6);backdrop-filter:blur(8px);padding:12px 20px;">
-  <img src="Proof_header_good.png" style="height:40px;">
+<header class="fixed top-0 w-full bg-black/70 backdrop-blur z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center py-3 px-4">
+    
+    <a href="index.html">
+      <img 
+        src="Proof_header_good.png"
+        class="h-[40px] md:h-[60px] scale-[2.5] origin-left"
+      />
+    </a>
+
+    <button id="menuBtn" class="md:hidden text-2xl">☰</button>
+
+    <nav class="hidden md:flex space-x-6 text-sm">
+      <a href="examples.html" class="text-[#0066FF]">Examples</a>
+      <a href="index.html#products">Products</a>
+      <a href="index.html#how-it-works">How It Works</a>
+      <a href="business.html">For Business</a>
+      <a href="index.html#products">Get Started</a>
+    </nav>
+  </div>
+
+  <div id="mobileMenu" class="hidden md:hidden bg-black text-center py-6 space-y-4">
+    <a href="examples.html">Examples</a>
+    <a href="index.html#products">Products</a>
+    <a href="index.html#how-it-works">How It Works</a>
+    <a href="business.html">For Business</a>
+    <a href="index.html#products" class="text-[#0066FF]">Get Started</a>
+  </div>
 </header>
 
-<div class="container" id="scrollContainer">
-
-<!-- SECTION 1 -->
-<section class="section">
-  <video class="scroll-video" src="LaunchBox_Main.mp4" muted></video>
-  <div class="overlay"></div>
-
-  <div class="content">
-    <h2 style="font-size:32px;">PROOF: Scene</h2>
-    <p>Experience tone, pacing, and character instantly.</p>
-    <a href="scene.html" class="btn">View Product</a>
-  </div>
+<!-- HERO -->
+<section class="pt-28 pb-12 text-center">
+  <h1 class="text-[28px] md:text-[48px] mb-4">Examples</h1>
+  <p class="text-gray-400 max-w-xl mx-auto">
+    Watch ideas become something real.
+  </p>
 </section>
 
-<!-- SECTION 2 -->
-<section class="section">
-  <video class="scroll-video" src="Bad Bella Animated Logo.mp4" muted></video>
-  <div class="overlay"></div>
+<!-- SNAP EXPERIENCE -->
+<div class="snap-container">
 
-  <div class="content right">
-    <h2 style="font-size:32px;">PROOF: Sizzle</h2>
-    <p>Fast visual proof that creates immediate momentum.</p>
-    <a href="sizzle.html" class="btn">View Product</a>
+<!-- EXAMPLE 1 -->
+<section class="snap-section relative min-h-screen flex items-end group">
+
+  <video muted loop playsinline 
+    class="video-bg absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105">
+    <source src="LaunchBox_Main.mp4" type="video/mp4">
+  </video>
+
+  <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition"></div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-6 pb-20 fade-up">
+
+    <h2 class="text-[28px] md:text-[48px] mb-4">PROOF: Scene</h2>
+
+    <p class="text-gray-300 max-w-md mb-6">
+      Experience tone, pacing, and character instantly.
+    </p>
+
+    <a href="scene.html" class="bg-[#0066FF] px-6 py-3 rounded-md">
+      View Product
+    </a>
+
   </div>
+
 </section>
 
-<!-- SECTION 3 -->
-<section class="section">
-  <video class="scroll-video" src="Bad Ass Raven.mp4" muted></video>
-  <div class="overlay"></div>
+<!-- EXAMPLE 2 -->
+<section class="snap-section relative min-h-screen flex items-end group">
 
-  <div class="content">
-    <h2 style="font-size:32px;">PROOF: Trailer</h2>
-    <p>Turn interest into belief with a full cinematic asset.</p>
-    <a href="index.html#products" class="btn">Get Started</a>
+  <video muted loop playsinline 
+    class="video-bg absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105">
+    <source src="Bad Bella Animated Logo.mp4" type="video/mp4">
+  </video>
+
+  <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition"></div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-6 pb-20 text-left md:text-right md:ml-auto fade-up">
+
+    <h2 class="text-[28px] md:text-[48px] mb-4">PROOF: Sizzle</h2>
+
+    <p class="text-gray-300 max-w-md md:ml-auto mb-6">
+      Fast visual proof that creates immediate momentum.
+    </p>
+
+    <a href="sizzle.html" class="bg-[#0066FF] px-6 py-3 rounded-md">
+      View Product
+    </a>
+
   </div>
+
+</section>
+
+<!-- EXAMPLE 3 -->
+<section class="snap-section relative min-h-screen flex items-end group">
+
+  <video muted loop playsinline 
+    class="video-bg absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105">
+    <source src="Bad Ass Raven.mp4" type="video/mp4">
+  </video>
+
+  <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition"></div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-6 pb-20 fade-up">
+
+    <h2 class="text-[28px] md:text-[48px] mb-4">PROOF: Trailer</h2>
+
+    <p class="text-gray-300 max-w-md mb-6">
+      Turn interest into belief with a full cinematic asset.
+    </p>
+
+    <a href="index.html#products" class="bg-[#0066FF] px-6 py-3 rounded-md">
+      Get Started
+    </a>
+
+  </div>
+
 </section>
 
 </div>
 
+<!-- CTA -->
+<section class="py-16 text-center">
+  <h2 class="text-3xl mb-4">Ready to build your PROOF?</h2>
+  <a href="index.html#products" class="bg-[#0066FF] px-6 py-3 rounded-md">
+    Get Started
+  </a>
+</section>
+
+<!-- FOOTER -->
+<section class="py-12 text-center">
+  <img src="Proof_lab_footer.png" class="max-w-xl mx-auto opacity-70 mb-6"/>
+  <p class="text-xs text-gray-500">© 2026 PROOF, LLC</p>
+</section>
+
+<!-- TO TOP -->
+<button 
+  id="toTopBtn"
+  class="fixed bottom-6 right-6 bg-[#0066FF] w-10 h-10 rounded-md flex items-center justify-center text-white opacity-0 pointer-events-none transition"
+>
+↑
+</button>
+
 <script>
 
-const container = document.getElementById("scrollContainer");
-const videos = document.querySelectorAll(".scroll-video");
-const contents = document.querySelectorAll(".content");
+// FADE
+const faders = document.querySelectorAll('.fade-up');
 
-function handleScroll() {
-
-  const sections = document.querySelectorAll(".section");
-
-  sections.forEach((section, index) => {
-
-    const rect = section.getBoundingClientRect();
-    const video = videos[index];
-    const content = contents[index];
-
-    const visible = rect.top >= 0 && rect.top < window.innerHeight;
-
-    if (visible) {
-
-      // ACTIVATE TEXT
-      content.classList.add("active");
-
-      // SCROLL CONTROL VIDEO
-      const progress = 1 - rect.top / window.innerHeight;
-      const duration = video.duration || 1;
-
-      video.currentTime = duration * progress;
-
-    } else {
-      content.classList.remove("active");
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
     }
-
   });
+}, { threshold: 0.4 });
 
-}
+faders.forEach(el => fadeObserver.observe(el));
 
-videos.forEach(v => {
-  v.addEventListener("loadedmetadata", () => {
-    v.pause();
+// VIDEO CONTROL
+const videos = document.querySelectorAll('.video-bg');
+
+const videoObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    const video = entry.target;
+
+    if (entry.isIntersecting) {
+      video.play();
+      video.style.opacity = "0.8";
+    } else {
+      video.pause();
+      video.style.opacity = "0.4";
+    }
   });
+}, { threshold: 0.6 });
+
+videos.forEach(video => videoObserver.observe(video));
+
+// TO TOP
+const btn = document.getElementById("toTopBtn");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 400) {
+    btn.classList.remove("opacity-0", "pointer-events-none");
+    btn.classList.add("opacity-100");
+  } else {
+    btn.classList.add("opacity-0", "pointer-events-none");
+    btn.classList.remove("opacity-100");
+  }
 });
 
-container.addEventListener("scroll", handleScroll);
+btn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// MOBILE MENU
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+  mobileMenu.classList.toggle("hidden");
+});
+
+document.addEventListener("click", (e) => {
+  if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+    mobileMenu.classList.add("hidden");
+  }
+});
 
 </script>
 
