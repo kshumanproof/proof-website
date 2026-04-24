@@ -6,37 +6,6 @@
 <title>Examples</title>
 <link rel="icon" href="favicon.ico">
 <script src="https://cdn.tailwindcss.com"></script>
-
-<style>
-
-/* SNAP SYSTEM */
-.snap-container {
-  scroll-snap-type: y mandatory;
-}
-
-.snap-section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  scroll-margin-top: 80px;
-}
-
-.no-snap {
-  scroll-snap-align: none;
-}
-
-/* FADE */
-.fade-up {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
-}
-
-.fade-up.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-</style>
 </head>
 
 <body class="bg-[#0A0A0A] text-white">
@@ -70,7 +39,7 @@
 </header>
 
 <!-- HERO -->
-<section class="pt-28 pb-20 text-center no-snap relative">
+<section class="pt-28 pb-20 text-center relative">
 
   <div class="max-w-6xl mx-auto px-4 mb-4 relative">
     <img 
@@ -100,95 +69,67 @@
     </div>
   </div>
 
-  <!-- SCROLL CUE -->
-  <div class="mt-12 flex justify-center relative z-20">
+</section>
 
-    <button id="scrollTrigger" class="flex flex-col items-center animate-bounce relative z-20">
+<!-- ================= EXAMPLES GRID ================= -->
+<section class="max-w-6xl mx-auto px-4 pb-20">
 
-      <span class="text-gray-400 text-xs mb-2 tracking-widest">
-        SCROLL
-      </span>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-      <span class="text-white text-2xl opacity-80">
-        ↓
-      </span>
+    <!-- CARD 1 -->
+    <div class="bg-[#18181B] rounded-lg overflow-hidden transition transform hover:-translate-y-1 hover:shadow-lg">
+      <video autoplay muted loop playsinline class="w-full h-56 object-cover">
+        <source src="LaunchBox_Main.mp4" type="video/mp4">
+      </video>
+      <div class="p-5">
+        <h3 class="text-xl mb-2">Project Title</h3>
+        <p class="text-gray-300 text-sm mb-2">Tone: Cinematic / Emotional</p>
+        <p class="text-gray-400 text-sm">Used for: Pitch deck / Investor presentation</p>
+      </div>
+    </div>
 
-    </button>
+    <!-- CARD 2 -->
+    <div class="bg-[#18181B] rounded-lg overflow-hidden transition transform hover:-translate-y-1 hover:shadow-lg">
+      <video autoplay muted loop playsinline class="w-full h-56 object-cover">
+        <source src="Bad Bella Animated Logo.mp4" type="video/mp4">
+      </video>
+      <div class="p-5">
+        <h3 class="text-xl mb-2">Project Title</h3>
+        <p class="text-gray-300 text-sm mb-2">Tone: High energy / Stylized</p>
+        <p class="text-gray-400 text-sm">Used for: Concept validation</p>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="bg-[#18181B] rounded-lg overflow-hidden transition transform hover:-translate-y-1 hover:shadow-lg">
+      <video autoplay muted loop playsinline class="w-full h-56 object-cover">
+        <source src="LaunchBox_Main.mp4" type="video/mp4">
+      </video>
+      <div class="p-5">
+        <h3 class="text-xl mb-2">Project Title</h3>
+        <p class="text-gray-300 text-sm mb-2">Tone: Dark / Narrative-driven</p>
+        <p class="text-gray-400 text-sm">Used for: Funding + pitching</p>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="bg-[#18181B] rounded-lg overflow-hidden transition transform hover:-translate-y-1 hover:shadow-lg">
+      <video autoplay muted loop playsinline class="w-full h-56 object-cover">
+        <source src="Bad Bella Animated Logo.mp4" type="video/mp4">
+      </video>
+      <div class="p-5">
+        <h3 class="text-xl mb-2">Project Title</h3>
+        <p class="text-gray-300 text-sm mb-2">Tone: Clean / Minimal</p>
+        <p class="text-gray-400 text-sm">Used for: Early-stage storytelling</p>
+      </div>
+    </div>
 
   </div>
 
 </section>
-
-<!-- ================= EXAMPLES ================= -->
-<div class="snap-container">
-
-<!-- EXAMPLE 1 -->
-<section id="firstExample" class="snap-section relative min-h-screen flex items-end">
-
-  <video muted loop playsinline class="scroll-video absolute inset-0 w-full h-full object-cover">
-    <source src="LaunchBox_Main.mp4" type="video/mp4">
-  </video>
-
-  <div class="absolute inset-0 bg-black/60"></div>
-
-  <div class="relative z-10 max-w-6xl mx-auto px-6 pb-20 fade-up">
-    <h2 class="text-[28px] md:text-[48px] mb-4">PROOF: Scene</h2>
-    <p class="text-gray-300 max-w-md mb-6">
-      Experience tone, pacing, and character instantly.
-    </p>
-    <a href="scene.html" class="bg-[#0066FF] px-6 py-3 rounded-md">
-      View Product
-    </a>
-  </div>
-
-</section>
-
-<!-- EXAMPLE 2 -->
-<section class="snap-section relative min-h-screen flex items-end">
-
-  <video muted loop playsinline class="scroll-video absolute inset-0 w-full h-full object-cover">
-    <source src="Bad Bella Animated Logo.mp4" type="video/mp4">
-  </video>
-
-  <div class="absolute inset-0 bg-black/60"></div>
-
-  <div class="relative z-10 max-w-6xl mx-auto px-6 pb-20 text-left md:text-right md:ml-auto fade-up">
-    <h2 class="text-[28px] md:text-[48px] mb-4">PROOF: Sizzle</h2>
-    <p class="text-gray-300 max-w-md md:ml-auto mb-6">
-      Fast visual proof that creates immediate momentum.
-    </p>
-    <a href="sizzle.html" class="bg-[#0066FF] px-6 py-3 rounded-md">
-      View Product
-    </a>
-  </div>
-
-</section>
-
-<!-- EXAMPLE 3 -->
-<section class="snap-section relative min-h-screen flex items-end">
-
-  <video muted loop playsinline class="scroll-video absolute inset-0 w-full h-full object-cover">
-    <source src="LaunchBox_Main.mp4" type="video/mp4">
-  </video>
-
-  <div class="absolute inset-0 bg-black/60"></div>
-
-  <div class="relative z-10 max-w-6xl mx-auto px-6 pb-20 fade-up">
-    <h2 class="text-[28px] md:text-[48px] mb-4">PROOF: Trailer</h2>
-    <p class="text-gray-300 max-w-md mb-6">
-      Turn interest into belief with a full cinematic asset.
-    </p>
-    <a href="index.html#products" class="bg-[#0066FF] px-6 py-3 rounded-md">
-      Get Started
-    </a>
-  </div>
-
-</section>
-
-</div>
 
 <!-- CTA -->
-<section class="py-16 text-center no-snap">
+<section class="py-16 text-center">
   <h2 class="text-3xl mb-4">Ready to build your PROOF?</h2>
   <a href="index.html#products" class="bg-[#0066FF] px-6 py-3 rounded-md">
     Get Started
@@ -196,7 +137,7 @@
 </section>
 
 <!-- FOOTER -->
-<section class="py-12 text-center no-snap">
+<section class="py-12 text-center">
   <img src="Proof_lab_footer.png" class="max-w-md md:max-w-xl mx-auto opacity-70 mb-6 px-4"/>
   <p class="text-xs text-gray-500">© 2026 PROOF, LLC</p>
 </section>
@@ -209,35 +150,7 @@ class="fixed bottom-6 right-6 bg-[#0066FF] w-10 h-10 rounded-md flex items-cente
 
 <script>
 
-// FADE
-const faders = document.querySelectorAll('.fade-up');
-const fadeObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) entry.target.classList.add('active');
-  });
-}, { threshold: 0.4 });
-faders.forEach(el => fadeObserver.observe(el));
-
-// VIDEO
-const videos = document.querySelectorAll('.scroll-video');
-const videoObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    entry.isIntersecting ? entry.target.play() : entry.target.pause();
-  });
-}, { threshold: 0.6 });
-videos.forEach(v => videoObserver.observe(v));
-
-// SCROLL TRIGGER
-const trigger = document.getElementById("scrollTrigger");
-const firstExample = document.getElementById("firstExample");
-
-if (trigger && firstExample) {
-  trigger.addEventListener("click", () => {
-    firstExample.scrollIntoView({ behavior: "smooth" });
-  });
-}
-
-// TO TOP
+// TO TOP BUTTON
 const btn = document.getElementById("toTopBtn");
 
 window.addEventListener("scroll", () => {
