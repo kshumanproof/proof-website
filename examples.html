@@ -156,6 +156,79 @@ const videoObserver = new IntersectionObserver((entries) => {
 videos.forEach(video => videoObserver.observe(video));
 
 </script>
+   <!-- FOOTER -->
+<section class="py-12 text-center">
 
+  <img
+    src="Proof_lab_footer.png"
+    alt="Built on the Proof Lab system"
+    class="w-full max-w-xl mx-auto opacity-70 mb-6"
+  />
+
+  <p class="text-xs text-gray-500">
+    © 2026 PROOF, LLC. All rights reserved.
+  </p>
+
+</section>
+  
+  <!-- TO TOP BUTTON -->
+<button 
+  id="toTopBtn"
+  class="fixed bottom-6 right-6 bg-[#0066FF] w-10 h-10 rounded-md flex items-center justify-center text-white opacity-0 pointer-events-none transition"
+>
+  ↑
+</button>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  // TO TOP BUTTON
+  const btn = document.getElementById("toTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 400) {
+      btn.classList.remove("opacity-0", "pointer-events-none");
+      btn.classList.add("opacity-100");
+    } else {
+      btn.classList.add("opacity-0", "pointer-events-none");
+      btn.classList.remove("opacity-100");
+    }
+  });
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // HAMBURGER MENU
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  if (menuBtn && mobileMenu) {
+
+    // TOGGLE MENU
+    menuBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // CLOSE WHEN CLICKING LINK
+    const links = mobileMenu.querySelectorAll("a");
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+
+    // CLOSE WHEN CLICKING OUTSIDE
+    document.addEventListener("click", (e) => {
+      if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+        mobileMenu.classList.add("hidden");
+      }
+    });
+
+  }
+
+});
+</script>
 </body>
 </html>
