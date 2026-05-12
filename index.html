@@ -323,23 +323,27 @@ document.addEventListener("DOMContentLoaded", () => {
 <section class="py-24 px-4">
 
   <div class="max-w-5xl mx-auto">
+
     <!-- EXAMPLES INTRO -->
-<div class="max-w-3xl mb-16">
+    <div class="max-w-3xl mb-16">
 
-  
-  <h2 class="text-3xl md:text-5xl mb-6 leading-tight">
-  Turn scripts, concepts, and pitches into something people can 
-  <span class="text-[#0066FF]">actually see.</span>
-</h2>
+      <h2 class="text-3xl md:text-5xl mb-6 leading-tight">
+        Turn scripts, concepts, and pitches into something people can
+        <span class="text-[#0066FF]">actually see.</span>
+      </h2>
 
-  <p class="text-gray-300 text-base md:text-lg leading-relaxed">
-  Powered by the ProofLab system, PROOF creates cinematic pitch videos, proof-of-concept trailers, and visual story assets designed to help filmmakers, creators, and entertainment projects accelerate funding, development, and audience engagement.
-</p>
+      <p class="text-gray-300 text-base md:text-lg leading-relaxed">
+        Powered by the ProofLab system, PROOF creates cinematic pitch videos,
+        proof-of-concept trailers, and visual story assets designed to help
+        filmmakers, creators, and entertainment projects accelerate funding,
+        development, and audience engagement.
+      </p>
 
-</div>
+    </div>
 
     <!-- CREDIBILITY STRIP -->
     <div class="text-center mb-16">
+
       <p class="text-sm text-white mb-6">
         Worked with
       </p>
@@ -347,75 +351,200 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="flex justify-center items-center gap-10 text-gray-200 text-lg">
         <span>LaunchBox</span>
         <span>Bad Bella Films</span>
+        <span>Eighty-West Studios</span>
       </div>
-    </div>
 
+    </div>
 
     <!-- PROOF SECTION -->
-    <div class="grid md:grid-cols-2 gap-12">
+    <div class="grid md:grid-cols-2 gap-12 mb-20">
 
       <!-- EXAMPLE 1 -->
-      <div>
-        <div class="bg-[#18181B] h-48 mb-4 rounded-md flex items-center justify-center text-gray-600 text-sm">
-          Sample Clip / Frame
-        </div>
+<div>
 
-        <p class="text-m text-white mb-2">
-          Goal
-        </p>
-        <p class="text-sm text-gray-200 mb-3">
-          Establish tone and visual direction for a feature pitch.
-        </p>
+  <!-- VIDEO CARD -->
+  <div class="relative h-64 md:h-72 mb-4 rounded-xl overflow-hidden bg-[#18181B] group transition duration-700 hover:shadow-[0_0_40px_rgba(0,102,255,0.18)]">
 
-        <p class="text-m text-white mb-2">
-          Result
-        </p>
-        <p class="text-sm text-gray-200">
-          Created a cinematic proof used in early-stage pitching and development.
-        </p>
-      </div>
+    <!-- VIDEO -->
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-[5000ms] ease-out"
+      style="filter: contrast(1.05) saturate(0.85) brightness(0.85);"
+    >
+      <source src="the-devil-we-buried.mp4" type="video/mp4">
+    </video>
 
+    <!-- OVERLAY -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-black/20"></div>
 
-      <!-- EXAMPLE 2 -->
-      <div>
-        <div class="bg-[#18181B] h-48 mb-4 rounded-md flex items-center justify-center text-gray-600 text-sm">
-          Sample Clip / Frame
-        </div>
+    <!-- FILM GRAIN -->
+    <div
+      class="absolute inset-0 opacity-[0.05] mix-blend-screen pointer-events-none"
+      style="background-image:url('https://grainy-gradients.vercel.app/noise.svg');"
+    ></div>
 
-        <p class="text-m text-white mb-2">
-          Goal
-        </p>
-        <p class="text-sm text-gray-200 mb-3">
-          Translate script pages into a visual proof for investor conversations.
-        </p>
-
-        <p class="text-m text-white mb-2">
-          Result
-        </p>
-        <p class="text-sm text-gray-200">
-          Delivered a focused scene that clarified tone, pacing, and execution.
-        </p>
-      </div>
-
+    <!-- OPTIONAL LABEL -->
+    <div class="absolute bottom-4 left-4 z-10 proof-label hidden">
+      <p class="text-xs uppercase tracking-[0.2em] text-white/70">
+        Proof Example
+      </p>
     </div>
 
+  </div>
 
-    <!-- OPTIONAL TESTIMONIAL -->
-    <div class="text-center mt-20 max-w-2xl mx-auto">
-      <p class="text-gray-200 italic">
+  <p class="text-m text-white mb-2">
+    Project Title
+  </p>
+
+  <p class="text-sm text-gray-200 mb-3">
+    The Devil We Buried
+    <span class="text-xs italic text-gray-400">
+      (Black Hollow Pictures)
+    </span>
+  </p>
+
+  <p class="text-m text-white mb-2">
+    Goal
+  </p>
+
+  <p class="text-sm text-gray-200 mb-3">
+    Establish emotional tension, cinematic tone, and visual identity for a prestige limited series pitch.
+  </p>
+
+  <p class="text-m text-white mb-2">
+    Result
+  </p>
+
+  <p class="text-sm text-gray-200">
+    Created a proof-of-concept sequence used to communicate atmosphere, character dynamics, and marketable tone to potential collaborators.
+  </p>
+
+</div>
+
+<!-- EXAMPLE 2 -->
+<div>
+
+  <!-- VIDEO CARD -->
+  <div class="relative h-64 md:h-72 mb-4 rounded-xl overflow-hidden bg-[#18181B] group transition duration-700 hover:shadow-[0_0_40px_rgba(0,102,255,0.18)]">
+
+    <!-- VIDEO -->
+    <video
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-[5000ms] ease-out"
+      style="filter: contrast(1.05) saturate(0.85) brightness(0.85);"
+    >
+      <source src="last-round-at-mercy-hall.mp4" type="video/mp4">
+    </video>
+
+    <!-- OVERLAY -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-black/20"></div>
+
+    <!-- FILM GRAIN -->
+    <div
+      class="absolute inset-0 opacity-[0.05] mix-blend-screen pointer-events-none"
+      style="background-image:url('https://grainy-gradients.vercel.app/noise.svg');"
+    ></div>
+
+    <!-- OPTIONAL LABEL -->
+    <div class="absolute bottom-4 left-4 z-10 proof-label hidden">
+      <p class="text-xs uppercase tracking-[0.2em] text-white/70">
+        Proof Example
+      </p>
+    </div>
+
+  </div>
+
+  <p class="text-m text-white mb-2">
+    Project Title
+  </p>
+
+  <p class="text-sm text-gray-200 mb-3">
+    Last Round at Mercy Hall
+    <span class="text-xs italic text-gray-400">
+      (Northline Entertainment)
+    </span>
+  </p>
+
+  <p class="text-m text-white mb-2">
+    Goal
+  </p>
+
+  <p class="text-sm text-gray-200 mb-3">
+    Translate a contained character drama into a cinematic visual proof for financing and packaging conversations.
+  </p>
+
+  <p class="text-m text-white mb-2">
+    Result
+  </p>
+
+  <p class="text-sm text-gray-200">
+    Delivered a grounded proof scene that clarified emotional stakes, visual execution, and performance-driven storytelling.
+  </p>
+
+</div>
+
+</div>
+
+    <!-- TESTIMONIALS -->
+<section class="py-20 px-4 border-t border-white/10">
+
+  <div class="max-w-5xl mx-auto text-center relative overflow-hidden">
+
+    <!-- QUOTE -->
+    <div
+      id="testimonialContainer"
+      class="min-h-[90px] transition-opacity duration-1000 opacity-100"
+    >
+
+      <p
+        id="testimonialQuote"
+        class="text-1xl md:text-2xl leading-relaxed text-white italic mb-6"
+      >
         “PROOF helped translate our concept into something tangible we could actually show.”
       </p>
-      <p class="text-gray-400 text-sm mt-3">
-        — Placeholder (replace with real client)
+
+      <p
+        id="testimonialAuthor"
+        class="text-m uppercase tracking-[0.2em] text-gray-500"
+      >
+        — LaunchBox
       </p>
+
     </div>
 
   </div>
 
 </section>
 
+<!-- PROOF LABEL TOGGLE -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const labels = document.querySelectorAll(".proof-label");
+
+  labels.forEach(label => {
+
+    if (SHOW_PROOF_LABEL) {
+      label.classList.remove("hidden");
+    } else {
+      label.classList.add("hidden");
+    }
+
+  });
+
+});
+</script>
+
 <!-- PRODUCTS (WITH MEDIA) -->
-<section id="products" class="pt-20 pb-20 max-w-6xl mx-auto px-4">
+<section id="products" class="pt-20 pb-20 max-w-6xl mx-auto px-4 border-t border-white/10">
   <!-- PRODUCTS INTRO -->
 <div class="max-w-3xl mb-12">
 
@@ -433,13 +562,18 @@ document.addEventListener("DOMContentLoaded", () => {
   <div class="grid md:grid-cols-3 gap-8">
 
     <!-- SIZZLE -->
-    <div class="bg-[#18181B] rounded-lg overflow-hidden">
+    <div class="bg-[#18181B] rounded-lg overflow-hidden group transition duration-700 hover:shadow-[0_0_40px_rgba(0,102,255,0.18)]">
 
-      <!-- IMAGE -->
-      <img 
-        src="u3318617226_make_me_a_movie_poster_same_character_is_on_this__e3627afc-69d3-485c-a52c-548992c8f4ee_0.png" 
+      <!-- VIDEO -->
+      <video 
+        autoplay 
+        muted 
+        loop 
+        playsinline
         class="h-40 w-full object-cover"
       >
+        <source src="the-devil-we-buried.mp4" type="video/mp4">
+      </video>
 
       <!-- CONTENT -->
       <div class="p-6">
@@ -468,13 +602,18 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
 
     <!-- SCENE -->
-    <div class="bg-[#18181B] rounded-lg overflow-hidden">
+    <div class="bg-[#18181B] rounded-lg overflow-hidden group transition duration-700 hover:shadow-[0_0_40px_rgba(0,102,255,0.18)]">
 
-      <!-- IMAGE -->
-      <img 
-        src="u3318617226_high_angle_pov_of_the_top_of_the_store_counter_fr_cc17673a-32fc-4cf1-b349-62fd355b022f_0.png" 
+      <!-- VIDEO -->
+      <video 
+        autoplay 
+        muted 
+        loop 
+        playsinline
         class="h-40 w-full object-cover"
       >
+        <source src="the-devil-we-buried.mp4" type="video/mp4">
+      </video>
 
       <!-- CONTENT -->
       <div class="p-6">
@@ -503,11 +642,11 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
 
     <!-- TRAILER -->
-    <div class="bg-[#18181B] rounded-lg overflow-hidden flex flex-col">
+    <div class="bg-[#18181B] rounded-lg overflow-hidden flex flex-col group transition duration-700 hover:shadow-[0_0_40px_rgba(0,102,255,0.18)]">
 
       <!-- VIDEO -->
       <video autoplay muted loop playsinline class="h-40 w-full object-cover">
-        <source src="Bad Bella Animated Logo.mp4" type="video/mp4">
+        <source src="the-devil-we-buried.mp4" type="video/mp4">
       </video>
 
       <!-- CONTENT -->
@@ -546,39 +685,47 @@ document.addEventListener("DOMContentLoaded", () => {
     <!-- ================= POC CARD ================= -->
 <div class="mt-8">
 
-  <div class="bg-[#18181B] rounded-lg overflow-hidden">
+  <div class="bg-[#18181B] rounded-lg overflow-hidden group transition duration-700 hover:shadow-[0_0_40px_rgba(0,102,255,0.18)]">
 
     <div class="grid grid-cols-1 md:grid-cols-3">
 
       <!-- ================= LEFT: MEDIA ================= -->
       <div class="md:col-span-2 min-h-[260px] md:min-h-full relative">
 
-  <div class="absolute inset-0 md:right-[-01.00rem]">
-    <video 
-      autoplay 
-      muted 
-      loop 
-      playsinline 
-      class="w-full h-full object-cover"
-    >
-      <source src="Bad Bella Animated Logo.mp4" type="video/mp4">
-    </video>
-  </div>
+        <div class="absolute inset-0 md:right-[-01.00rem]">
 
-</div>
+          <video 
+            autoplay 
+            muted 
+            loop 
+            playsinline 
+            class="w-full h-full object-cover"
+          >
+            <source src="the-devil-we-buried.mp4" type="video/mp4">
+          </video>
+
+        </div>
+
+      </div>
 
       <!-- ================= RIGHT: CONTENT ================= -->
       <div class="md:col-span-1 flex flex-col justify-between p-6 md:pl-11">
 
         <div>
+
           <h3 class="text-xl mb-2">PROOF: Concept</h3>
 
           <p class="text-gray-200 mb-4">
             Develop a full short-form proof-of-concept with narrative, tone, and execution.
           </p>
 
-          <p class="text-2xl leading-tight mb-0">Custom Pricing</p>
-          <p class="text-xs text-gray-500 mb-4">*Scope-based project</p>
+          <p class="text-2xl leading-tight mb-0">
+            Custom Pricing
+          </p>
+
+          <p class="text-xs text-gray-500 mb-4">
+            *Scope-based project
+          </p>
 
           <ul class="text-sm text-gray-300 mb-6 space-y-1">
             <li>• Multi-scene narrative</li>
@@ -589,6 +736,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <p class="text-sm text-gray-400 mb-0">
             We'll define this together.
           </p>
+
         </div>
 
         <a 
@@ -607,26 +755,33 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 
 </div>
+
 <!-- HOW IT WORKS -->
 <section id="how-it-works" class="py-20 text-center">
 
   <h2 class="text-3xl md:text-5xl mb-14">How it works</h2>
+
   <p class="sr-only">
-  How PROOF creates cinematic pitch videos and proof-of-concept trailers for filmmakers and creative projects.
-</p>
+    How PROOF creates cinematic pitch videos and proof-of-concept trailers for filmmakers and creative projects.
+  </p>
 
   <div class="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto px-4">
 
     <!-- STEP 1 -->
-    <div class="text-center">
+    <div class="text-center group">
 
       <!-- IMAGE -->
-      <div class="relative w-full aspect-video rounded-lg overflow-hidden mb-6 bg-[#18181B]">
+      <div class="relative w-full aspect-video rounded-lg overflow-hidden mb-6 bg-[#18181B] transition duration-700 group-hover:shadow-[0_0_35px_rgba(0,102,255,0.16)]">
+
         <img
           src="step-one.png"
           alt="Filmmaker submitting script for cinematic proof-of-concept trailer production"
-          class="w-full h-full object-cover"
+          class="w-full h-full object-cover transition-transform duration-[5000ms] ease-out group-hover:scale-110"
         />
+
+        <!-- OVERLAY -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10"></div>
+
       </div>
 
       <p class="text-sm text-gray-200 mb-2">01</p>
@@ -642,15 +797,20 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
 
     <!-- STEP 2 -->
-    <div class="text-center">
+    <div class="text-center group">
 
       <!-- IMAGE -->
-      <div class="relative w-full aspect-video rounded-lg overflow-hidden mb-6 bg-[#18181B]">
+      <div class="relative w-full aspect-video rounded-lg overflow-hidden mb-6 bg-[#18181B] transition duration-700 group-hover:shadow-[0_0_35px_rgba(0,102,255,0.16)]">
+
         <img
           src="step-two.png"
           alt="Cinematic pitch video and proof-of-concept trailer production process"
-          class="w-full h-full object-cover"
+          class="w-full h-full object-cover transition-transform duration-[5000ms] ease-out group-hover:scale-110"
         />
+
+        <!-- OVERLAY -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10"></div>
+
       </div>
 
       <p class="text-sm text-gray-200 mb-2">02</p>
@@ -666,15 +826,20 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
 
     <!-- STEP 3 -->
-    <div class="text-center">
+    <div class="text-center group">
 
       <!-- IMAGE -->
-      <div class="relative w-full aspect-video rounded-lg overflow-hidden mb-6 bg-[#18181B]">
+      <div class="relative w-full aspect-video rounded-lg overflow-hidden mb-6 bg-[#18181B] transition duration-700 group-hover:shadow-[0_0_35px_rgba(0,102,255,0.16)]">
+
         <img
           src="step-three.png"
           alt="Using a cinematic pitch trailer for film funding and development"
-          class="w-full h-full object-cover"
+          class="w-full h-full object-cover transition-transform duration-[5000ms] ease-out group-hover:scale-110"
         />
+
+        <!-- OVERLAY -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10"></div>
+
       </div>
 
       <p class="text-sm text-gray-200 mb-2">03</p>
@@ -699,22 +864,28 @@ document.addEventListener("DOMContentLoaded", () => {
   <h2 class="text-3xl md:text-5xl mb-14">
     Why PROOF?
   </h2>
+
   <p class="sr-only">
-  Why filmmakers, creators, and entertainment projects use PROOF for cinematic pitch trailers and visual storytelling assets.
-</p>
+    Why filmmakers, creators, and entertainment projects use PROOF for cinematic pitch trailers and visual storytelling assets.
+  </p>
 
   <div class="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto px-4">
 
     <!-- ITEM 1 -->
-    <div class="text-center">
+    <div class="text-center group">
 
       <!-- IMAGE -->
-      <div class="relative w-full aspect-video rounded-lg overflow-hidden mb-6 bg-[#18181B]">
+      <div class="relative w-full aspect-video rounded-lg overflow-hidden mb-6 bg-[#18181B] transition duration-700 group-hover:shadow-[0_0_35px_rgba(0,102,255,0.16)]">
+
         <img
           src="why-one.png"
           alt="Cinematic proof-of-concept trailer designed to help filmmakers build momentum"
-          class="w-full h-full object-cover"
+          class="w-full h-full object-cover transition-transform duration-[5000ms] ease-out group-hover:scale-110"
         />
+
+        <!-- OVERLAY -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10"></div>
+
       </div>
 
       <p class="text-sm text-gray-400 mb-2">01</p>
@@ -730,15 +901,20 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
 
     <!-- ITEM 2 -->
-    <div class="text-center">
+    <div class="text-center group">
 
       <!-- IMAGE -->
-      <div class="relative w-full aspect-video rounded-lg overflow-hidden mb-6 bg-[#18181B]">
+      <div class="relative w-full aspect-video rounded-lg overflow-hidden mb-6 bg-[#18181B] transition duration-700 group-hover:shadow-[0_0_35px_rgba(0,102,255,0.16)]">
+
         <img
           src="why-two.png"
           alt="Visual storytelling through cinematic pitch videos and proof-of-concept scenes"
-          class="w-full h-full object-cover"
+          class="w-full h-full object-cover transition-transform duration-[5000ms] ease-out group-hover:scale-110"
         />
+
+        <!-- OVERLAY -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10"></div>
+
       </div>
 
       <p class="text-sm text-gray-400 mb-2">02</p>
@@ -754,15 +930,20 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
 
     <!-- ITEM 3 -->
-    <div class="text-center">
+    <div class="text-center group">
 
       <!-- IMAGE -->
-      <div class="relative w-full aspect-video rounded-lg overflow-hidden mb-6 bg-[#18181B]">
+      <div class="relative w-full aspect-video rounded-lg overflow-hidden mb-6 bg-[#18181B] transition duration-700 group-hover:shadow-[0_0_35px_rgba(0,102,255,0.16)]">
+
         <img
           src="why-three.png"
           alt="Structured cinematic pitch trailer production process for creative projects"
-          class="w-full h-full object-cover"
+          class="w-full h-full object-cover transition-transform duration-[5000ms] ease-out group-hover:scale-110"
         />
+
+        <!-- OVERLAY -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10"></div>
+
       </div>
 
       <p class="text-sm text-gray-400 mb-2">03</p>
@@ -861,41 +1042,58 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </section>
 <!-- FINAL CTA + FOOTER -->
-<section class="pt-24 pb-10 text-center flex flex-col items-center border-t border-white/10">
+<section class="pt-28 pb-12 text-center flex flex-col items-center border-t border-white/10 px-4">
 
   <!-- CTA -->
-  <h2 class="text-4xl md:text-5xl mb-4">Ready to prove it?</h2>
+  <div class="max-w-3xl mx-auto mb-16">
 
-  <a 
-    href="https://calendly.com/hello-prooflab/30min"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="bg-[#0066FF] px-8 py-4 rounded-md text-lg inline-block text-white mb-12"
-  >
-    Start Your Project
-  </a>
+    <h2 class="text-4xl md:text-6xl leading-tight mb-6">
+      Ready to prove it?
+    </h2>
+
+    <p class="text-gray-300 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10">
+      Turn your concept into something tangible — cinematic proof built to help people see the potential.
+    </p>
+
+    <a 
+      href="https://calendly.com/hello-prooflab/30min"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center justify-center bg-[#0066FF] hover:bg-[#0052cc] transition px-8 py-4 rounded-md text-lg text-white shadow-[0_0_35px_rgba(0,102,255,0.18)]"
+    >
+      Start Your Project
+    </a>
+
+  </div>
 
   <!-- SYSTEM LINE -->
-  <img 
-    src="Proof_lab_footer.png"
-    alt="Built on the Proof Lab system"
-    class="w-full max-w-xl opacity-70 mb-10"
-  />
+  <div class="w-full flex justify-center border-t border-white/10">
+
+    <img 
+      src="Proof_lab_footer.png"
+      alt="Built on the Proof Lab system"
+      class="w-full max-w-xl opacity-60"
+    />
+
+  </div>
 
   <!-- CONTACT -->
-  <div class="flex items-center gap-4 text-sm text-gray-400 mb-2">
-    
-    <a href="mailto:hello@prooflab.studio" class="text-white hover:underline">
+  <div class="flex flex-col md:flex-row items-center gap-3 md:gap-4 text-sm text-gray-400 mb-8">
+
+    <a 
+      href="mailto:hello@prooflab.studio"
+      class="text-white hover:text-[#0066FF] transition"
+    >
       hello@prooflab.studio
     </a>
 
-    <span class="opacity-30">•</span>
+    <span class="hidden md:block opacity-30">•</span>
 
     <a 
       href="https://www.instagram.com/needmoreproof/" 
       target="_blank"
       rel="noopener noreferrer"
-      class="hover:text-white"
+      class="hover:text-white transition"
     >
       Instagram
     </a>
@@ -903,8 +1101,13 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 
   <!-- COPYRIGHT -->
-  <p class="text-xs text-gray-500">
+  <p class="text-xs text-gray-600 mb-6">
     © 2026 PROOF, LLC. All Rights Reserved.
+  </p>
+
+  <!-- DISCLAIMER -->
+  <p class="text-[11px] leading-relaxed text-gray-600 max-w-4xl mx-auto">
+    PROOF and ProofLab, LLC provide creative development, visual storytelling, and proof-of-concept production services intended to support presentation, pitching, audience engagement, and project development efforts. While our materials are designed to help communicate creative vision and project potential, ProofLab, LLC makes no guarantees, representations, or warranties regarding financing, distribution, acquisition, commercial success, audience performance, talent attachment, or the purchase, optioning, licensing, or production of any project. All creative and business outcomes remain dependent on numerous external factors beyond our control.
   </p>
 
 </section>
@@ -1042,8 +1245,16 @@ document.addEventListener("DOMContentLoaded", () => {
 </div>
 
 <!-- ================= SCRIPTS ================= -->
+
+<!-- GLOBAL TOGGLES -->
+<script>
+  const SHOW_PROOF_LABEL = false;
+</script>
+
+<!-- EMAIL POPUP -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+
   const popup = document.getElementById("emailPopup");
   const closeBtn = document.getElementById("closePopup");
 
@@ -1077,12 +1288,101 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-}); // 👈 THIS WAS MISSING
+  /*
+  ==========================================
+  PROOF LABEL TOGGLE
+  ==========================================
+  */
+
+  const labels = document.querySelectorAll(".proof-label");
+
+  labels.forEach(label => {
+
+    if (SHOW_PROOF_LABEL) {
+      label.classList.remove("hidden");
+    } else {
+      label.classList.add("hidden");
+    }
+
+  });
+
+  /*
+  ==========================================
+  TESTIMONIAL ROTATION
+  ==========================================
+  */
+
+  const testimonials = [
+
+    {
+      quote: "PROOF helped translate our concept into something tangible we could actually show.",
+      author: "LaunchBox"
+    },
+
+    {
+      quote: "People immediately understood the tone, pacing, and potential.",
+      author: "Bad Bella Films"
+    },
+
+    {
+      quote: "The proof-of-concept changed the conversation completely.",
+      author: "Eighty-West Studios"
+    },
+
+    {
+      quote: "Instead of explaining the vision, we could finally show it.",
+      author: "Development Client"
+    },
+
+    {
+      quote: "The cinematic execution made the project feel real instantly.",
+      author: "Creative Partner"
+    }
+
+  ];
+
+  const container = document.getElementById("testimonialContainer");
+  const quote = document.getElementById("testimonialQuote");
+  const author = document.getElementById("testimonialAuthor");
+
+  // ONLY RUN IF TESTIMONIAL SECTION EXISTS
+  if (container && quote && author) {
+
+    let index = 0;
+
+    function changeTestimonial() {
+
+      container.classList.remove("opacity-100");
+      container.classList.add("opacity-0");
+
+      setTimeout(() => {
+
+        index = (index + 1) % testimonials.length;
+
+        quote.textContent = `“${testimonials[index].quote}”`;
+        author.textContent = `— ${testimonials[index].author}`;
+
+        container.classList.remove("opacity-0");
+        container.classList.add("opacity-100");
+
+      }, 800);
+
+    }
+
+    // CHANGE EVERY 7 SECONDS
+    setInterval(changeTestimonial, 7000);
+
+  }
+
+});
 </script>
 
+<!-- KIT FORM SUBMIT -->
 <script>
 document.addEventListener("submit", function (e) {
+
   if (e.target.matches('form[action*="kit.com"]')) {
+
     e.preventDefault();
 
     const form = e.target;
@@ -1095,14 +1395,18 @@ document.addEventListener("submit", function (e) {
         "Accept": "application/json"
       }
     })
+
     .then(() => {
       form.style.display = "none";
       document.getElementById("emailSuccess").classList.remove("hidden");
     })
+
     .catch(() => {
       alert("Something went wrong. Try again.");
     });
+
   }
+
 });
 </script>
 </body>
