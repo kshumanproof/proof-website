@@ -55,11 +55,44 @@
 
   <!-- MEDIA -->
   <div class="max-w-6xl mx-auto px-4 mb-6">
-    <img 
-      src="u3318617226_a_small_food_truck_parked_under_string_lights_at__07e0c970-72d7-4b0f-b303-721b6fd0dca7_0.png"
-      alt="Scene Preview"
-      class="w-full rounded-lg opacity-95"
-    />
+
+    <!-- VIDEO THUMB -->
+    <div
+      id="openSizzleVideo"
+      class="relative rounded-lg overflow-hidden cursor-pointer group"
+    >
+
+      <!-- POSTER IMAGE -->
+      <img 
+        src="u3318617226_a_small_food_truck_parked_under_string_lights_at__07e0c970-72d7-4b0f-b303-721b6fd0dca7_0.png"
+        alt="Scene Preview"
+        class="w-full rounded-lg opacity-95 transition duration-700 group-hover:opacity-100"
+      />
+
+      <!-- DARK OVERLAY -->
+      <div class="absolute inset-0 bg-black/35 group-hover:bg-black/15 transition duration-700"></div>
+
+      <!-- VIDEO INDICATOR -->
+      <div class="absolute bottom-5 right-5 flex items-center gap-3 z-20">
+
+        <!-- PULSE DOT -->
+        <div class="relative flex items-center justify-center">
+
+          <span class="absolute inline-flex h-3 w-3 rounded-full bg-[#0066FF] opacity-75 animate-ping"></span>
+
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-[#0066FF] shadow-[0_0_12px_rgba(0,102,255,0.9)]"></span>
+
+        </div>
+
+        <!-- LABEL -->
+        <p class="text-xs uppercase tracking-[0.25em] text-white/70 group-hover:text-white transition duration-500">
+          Watch Preview
+        </p>
+
+      </div>
+
+    </div>
+
   </div>
 
   <!-- HERO TEXT -->
@@ -69,7 +102,10 @@
 
       <!-- LEFT -->
       <div class="flex-1 max-w-xl">
-        <h1 class="text-3xl md:text-5xl mb-4">PROOF: Scene</h1>
+
+        <h1 class="text-3xl md:text-5xl mb-4">
+          PROOF: Scene
+        </h1>
 
         <p class="text-base md:text-xl text-gray-200 mb-6">
           Show tone, character, and execution through a fully realized cinematic scene.
@@ -78,12 +114,16 @@
         <p class="text-sm text-gray-600">
           Built to demonstrate how your story actually feels — not just how it reads.
         </p>
+
       </div>
 
       <!-- RIGHT -->
       <div class="flex flex-col w-full md:w-[260px] md:items-end text-left space-y-2">
 
-        <p class="text-3xl">$2,400</p>
+        <p class="text-3xl">
+          $2,400
+        </p>
+
         <p class="text-xs text-gray-400 mb-6">
           Up to 2 script pages • ~90 seconds runtime
         </p>
@@ -91,7 +131,7 @@
         <a 
           href="https://buy.stripe.com/test_14A9AV4MD6SGg6pbdT18c01"
           target="_blank"
-          class="bg-[#0066FF] w-full py-3 rounded-md text-white text-center"
+          class="proof-btn bg-[#0066FF] w-full py-3 rounded-md text-white text-center hover:bg-[#0052cc] transition"
         >
           Buy Now
         </a>
@@ -104,19 +144,62 @@
 
 </section>
 
+<!-- VIDEO MODAL -->
+<div 
+  id="sizzleVideoModal"
+  class="fixed inset-0 bg-black/95 z-[9999] hidden items-center justify-center"
+>
+
+  <!-- CLOSE -->
+  <button
+    id="closeSizzleVideo"
+    class="absolute top-6 right-6 text-white text-5xl z-50 hover:text-gray-300 transition"
+  >
+    &times;
+  </button>
+
+  <!-- VIDEO -->
+  <div class="w-full h-full flex items-center justify-center px-4">
+
+    <video
+      id="sizzleFullVideo"
+      controls
+      playsinline
+      class="w-full max-w-6xl max-h-[90vh] rounded-xl shadow-2xl"
+    >
+      <source src="scene-preview.mp4" type="video/mp4">
+    </video>
+
+  </div>
+
+</div>
+
 <!-- CONTENT -->
 <section class="max-w-6xl mx-auto px-4 pt-6 pb-16">
 
   <div class="grid md:grid-cols-3 gap-6">
 
     <!-- WHAT YOU GET -->
-    <div class="bg-[#18181B] p-6 rounded-lg border border-white/10 text-left transition transform hover:-translate-y-1 hover:border-white/20">
-      
-      <div class="bg-[#111111] h-[140px] rounded-md mb-4 flex items-center justify-center text-xs text-gray-500">
-        Image / visual
+    <div class="bg-[#18181B] p-6 rounded-lg border border-white/10 text-left transition duration-500 transform hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_35px_rgba(0,102,255,0.16)] group">
+
+      <!-- IMAGE -->
+      <div class="relative h-[140px] rounded-md mb-4 overflow-hidden bg-[#111111]">
+
+        <img
+          src="scene-what-you-get.jpg"
+          alt="Narrative-driven cinematic scene preview"
+          class="w-full h-full object-cover transition-transform duration-[5000ms] ease-out group-hover:scale-110"
+        />
+
+        <!-- OVERLAY -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10"></div>
+
       </div>
 
-      <h2 class="text-lg mb-4">What you get</h2>
+      <h2 class="text-lg mb-4">
+        What you get
+      </h2>
+
       <ul class="text-gray-200 space-y-2 text-sm">
         <li>• Narrative-driven scene</li>
         <li>• Character + tone exploration</li>
@@ -124,38 +207,67 @@
         <li>• Pitch-ready asset</li>
         <li>• Delivered in ~21 days</li>
       </ul>
+
     </div>
 
     <!-- BEST FOR -->
-    <div class="bg-[#18181B] p-6 rounded-lg border border-white/10 text-left transition transform hover:-translate-y-1 hover:border-white/20">
-      
-      <div class="bg-[#111111] h-[140px] rounded-md mb-4 flex items-center justify-center text-xs text-gray-500">
-        Image / visual
+    <div class="bg-[#18181B] p-6 rounded-lg border border-white/10 text-left transition duration-500 transform hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_35px_rgba(0,102,255,0.16)] group">
+
+      <!-- IMAGE -->
+      <div class="relative h-[140px] rounded-md mb-4 overflow-hidden bg-[#111111]">
+
+        <img
+          src="scene-best-for.jpg"
+          alt="Character-driven cinematic storytelling"
+          class="w-full h-full object-cover transition-transform duration-[5000ms] ease-out group-hover:scale-110"
+        />
+
+        <!-- OVERLAY -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10"></div>
+
       </div>
 
-      <h2 class="text-lg mb-4">Best for</h2>
+      <h2 class="text-lg mb-4">
+        Best for
+      </h2>
+
       <ul class="text-gray-200 space-y-2 text-sm">
         <li>• Scripted projects</li>
         <li>• Character-driven stories</li>
         <li>• Showing tone + execution</li>
         <li>• Pitch decks & presentations</li>
       </ul>
+
     </div>
 
     <!-- HOW IT WORKS -->
-    <div class="bg-[#18181B] p-6 rounded-lg border border-white/10 text-left transition transform hover:-translate-y-1 hover:border-white/20">
-      
-      <div class="bg-[#111111] h-[140px] rounded-md mb-4 flex items-center justify-center text-xs text-gray-500">
-        Image / visual
+    <div class="bg-[#18181B] p-6 rounded-lg border border-white/10 text-left transition duration-500 transform hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_35px_rgba(0,102,255,0.16)] group">
+
+      <!-- IMAGE -->
+      <div class="relative h-[140px] rounded-md mb-4 overflow-hidden bg-[#111111]">
+
+        <img
+          src="scene-how-it-works.jpg"
+          alt="Cinematic proof scene development workflow"
+          class="w-full h-full object-cover transition-transform duration-[5000ms] ease-out group-hover:scale-110"
+        />
+
+        <!-- OVERLAY -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10"></div>
+
       </div>
 
-      <h2 class="text-lg mb-4">How it works</h2>
+      <h2 class="text-lg mb-4">
+        How it works
+      </h2>
+
       <ul class="text-gray-200 space-y-2 text-sm">
         <li>1. Submit your script pages</li>
         <li>2. We define visual direction</li>
         <li>3. We build your scene</li>
         <li>4. You receive your proof</li>
       </ul>
+
     </div>
 
   </div>
@@ -175,7 +287,7 @@
     href="https://calendly.com/hello-prooflab/30min"
     target="_blank"
     rel="noopener noreferrer"
-    class="bg-[#0066FF] px-6 py-3 rounded-md inline-block"
+    class="bg-[#0066FF] px-6 py-3 rounded-md inline-block hover:bg-[#0052cc] transition"
   >
     Book a Call
   </a>
@@ -195,8 +307,14 @@
     class="w-full max-w-xl mx-auto opacity-70 mb-6"
   />
 
-  <p class="text-xs text-gray-500">
-    © 2026 PROOF, LLC. All rights reserved.
+  <!-- COPYRIGHT -->
+  <p class="text-xs text-gray-600 mb-6">
+    © 2026 PROOF, LLC. All Rights Reserved.
+  </p>
+
+  <!-- DISCLAIMER -->
+  <p class="text-[11px] leading-relaxed text-gray-600 max-w-4xl mx-auto">
+    PROOF and ProofLab, LLC provide creative development, visual storytelling, and proof-of-concept production services intended to support presentation, pitching, audience engagement, and project development efforts. While our materials are designed to help communicate creative vision and project potential, ProofLab, LLC makes no guarantees, representations, or warranties regarding financing, distribution, acquisition, commercial success, audience performance, talent attachment, or the purchase, optioning, licensing, or production of any project. All creative and business outcomes remain dependent on numerous external factors beyond our control.
   </p>
 
 </section>
@@ -260,5 +378,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 </script>
+
 </body>
 </html>

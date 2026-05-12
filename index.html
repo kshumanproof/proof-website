@@ -136,98 +136,102 @@
 <section class="h-screen flex items-center justify-center text-center relative overflow-hidden">
 
   <!-- HERO VIDEO -->
-<div class="absolute inset-0 overflow-hidden">
+  <div class="absolute inset-0 overflow-hidden">
 
-  <!-- BLURRED BACKGROUND LAYER -->
-  <video 
-    autoplay 
-    muted 
-    loop 
-    playsinline
-    class="absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-20"
+    <!-- BLURRED BACKGROUND LAYER -->
+    <video 
+      autoplay 
+      muted 
+      loop 
+      playsinline
+      class="absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-20"
+    >
+      <source src="proof.mp4" type="video/mp4">
+    </video>
+
+    <!-- MAIN VIDEO -->
+    <video 
+      id="heroBgVideo"
+      autoplay 
+      muted 
+      loop 
+      playsinline
+      class="absolute inset-0 w-full h-full object-contain opacity-55"
+    >
+      <source src="proof.mp4" type="video/mp4">
+    </video>
+
+    <!-- DARK OVERLAY -->
+    <div class="absolute inset-0 bg-black/30"></div>
+
+  </div>
+
+  <!-- VIDEO INDICATOR -->
+  <button
+    id="openVideoModal"
+    class="absolute bottom-8 right-8 md:right-12 z-20 flex items-center gap-3 group"
   >
-    <source src="proof.mp4" type="video/mp4">
-  </video>
 
-  <!-- MAIN VIDEO -->
-  <video 
-    id="heroBgVideo"
-    autoplay 
-    muted 
-    loop 
-    playsinline
-    class="absolute inset-0 w-full h-full object-contain opacity-55"
-  >
-    <source src="proof.mp4" type="video/mp4">
-  </video>
+    <!-- PULSE DOT -->
+    <div class="relative flex items-center justify-center">
 
-  <!-- DARK OVERLAY -->
-  <div class="absolute inset-0 bg-black/30"></div>
+      <span class="absolute inline-flex h-3 w-3 rounded-full bg-[#0066FF] opacity-75 animate-ping"></span>
 
-</div>
+      <span class="relative inline-flex rounded-full h-3 w-3 bg-[#0066FF] shadow-[0_0_12px_rgba(0,102,255,0.9)]"></span>
+
+    </div>
+
+    <!-- LABEL -->
+    <p class="text-[11px] uppercase tracking-[0.28em] text-white/60 group-hover:text-white transition duration-500">
+      Watch Preview
+    </p>
+
+  </button>
 
   <!-- CONTENT -->
   <div class="relative z-10 max-w-3xl px-4">
+
     <p class="sr-only">
-  PROOF creates cinematic pitch videos, proof-of-concept trailers, sizzle reels, and visual storytelling assets for filmmakers, television creators, and entertainment projects seeking funding, development, and audience engagement.
-</p>
+      PROOF creates cinematic pitch videos, proof-of-concept trailers, sizzle reels, and visual storytelling assets for filmmakers, television creators, and entertainment projects seeking funding, development, and audience engagement.
+    </p>
 
     <!-- LOGO -->
-<img 
-  src="Proof_Main.png" 
-  alt="PROOF cinematic proof-of-concept studio logo" 
-  class="mx-auto mb-6 md:mb-[-110px] w-[280px] md:w-[550px] lg:w-[750px]"
-/>
+    <img 
+      src="Proof_Main.png" 
+      alt="PROOF cinematic proof-of-concept studio logo" 
+      class="mx-auto mb-6 md:mb-[-110px] w-[280px] md:w-[550px] lg:w-[750px]"
+    />
 
-<!-- SEO H1 -->
-<h1 class="sr-only">
-  Cinematic Pitch Videos and Proof-of-Concept Trailers for Film, Television, and Creative Projects
-</h1>
+    <!-- SEO H1 -->
+    <h1 class="sr-only">
+      Cinematic Pitch Videos and Proof-of-Concept Trailers for Film, Television, and Creative Projects
+    </h1>
 
     <!-- TAGLINE -->
     <p class="text-base md:text-xl text-white mb-8 max-w-lg mx-auto">
       Transform your story into undeniable proof.
     </p>
+
     <p class="sr-only">
-  PROOF creates cinematic pitch videos, proof-of-concept trailers, visual story assets, and sizzle reels for filmmakers, television creators, and entertainment projects.
-</p>
+      PROOF creates cinematic pitch videos, proof-of-concept trailers, visual story assets, and sizzle reels for filmmakers, television creators, and entertainment projects.
+    </p>
 
     <!-- BUTTONS -->
     <div class="flex flex-col sm:flex-row justify-center gap-4 mb-6 w-full max-w-md mx-auto">
 
       <a 
         href="#products" 
-        class="bg-[#0066FF] px-6 py-3 rounded-md font-semibold flex-1 text-center hover:bg-[#0052cc] transition"
+        class="proof-btn bg-[#0066FF] px-6 py-3 rounded-md font-semibold flex-1 text-center hover:bg-[#0052cc] transition"
       >
         Get Your Proof
       </a>
 
       <a 
         href="#how-it-works" 
-        class="border border-white px-6 py-3 rounded-md text-white hover:bg-white hover:text-black transition font-semibold flex-1 text-center"
+        class="proof-btn border border-white px-6 py-3 rounded-md text-white hover:bg-white hover:text-black transition font-semibold flex-1 text-center"
       >
         See How It Works
       </a>
-
-    </div>
-
-    <!-- WATCH BUTTON -->
-    <div class="flex justify-center">
-
-      <button
-        id="openVideoModal"
-        class="group flex items-center gap-3 border border-white/20 bg-white/5 backdrop-blur px-5 py-3 rounded-md text-white hover:bg-white hover:text-black transition duration-300"
-      >
-
-        <div class="w-8 h-8 rounded-full border border-white/30 flex items-center justify-center group-hover:border-black transition">
-          ▶
-        </div>
-
-        <span class="text-sm tracking-wide">
-          Watch the PROOF
-        </span>
-
-      </button>
 
     </div>
 
@@ -572,7 +576,7 @@ document.addEventListener("DOMContentLoaded", () => {
         playsinline
         class="h-40 w-full object-cover"
       >
-        <source src="the-devil-we-buried.mp4" type="video/mp4">
+        <source src="proof-sizzle.mp4" type="video/mp4">
       </video>
 
       <!-- CONTENT -->
@@ -594,7 +598,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </a>
 
         <a href="https://buy.stripe.com/test_5kQ14pcf54KydYh0zf18c00" target="_blank">
-          <button class="bg-[#0066FF] w-full py-3 rounded-md">
+          <button class="bg-[#0066FF] w-full py-3 rounded-md hover:bg-[#0052cc]">
             Buy Now
           </button>
         </a>
@@ -634,7 +638,7 @@ document.addEventListener("DOMContentLoaded", () => {
         </a>
 
         <a href="https://buy.stripe.com/test_14A9AV4MD6SGg6pbdT18c01" target="_blank">
-          <button class="bg-[#0066FF] w-full py-3 rounded-md">
+          <button class="bg-[#0066FF] w-full py-3 rounded-md hover:bg-[#0052cc]">
             Buy Now
           </button>
         </a>
@@ -672,7 +676,7 @@ document.addEventListener("DOMContentLoaded", () => {
             href="https://calendly.com/hello-prooflab/30min" 
             target="_blank" 
             rel="noopener noreferrer"
-            class="block bg-[#0066FF] w-full py-3 rounded-md text-white text-center"
+            class="block bg-[#0066FF] w-full py-3 rounded-md text-white text-center hover:bg-[#0052cc]"
           >
             Book a Call
           </a>
@@ -1067,7 +1071,7 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 
   <!-- SYSTEM LINE -->
-  <div class="w-full flex justify-center border-t border-white/10">
+  <div class="w-full flex justify-center border-t border-white/10 mb-12">
 
     <img 
       src="Proof_lab_footer.png"
