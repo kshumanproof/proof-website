@@ -507,139 +507,145 @@ document.addEventListener("DOMContentLoaded", () => {
 </style>
 
     <!-- PROOF SECTION -->
-    <div class="grid md:grid-cols-2 gap-12 mt-20 mb-20">
+<div class="grid md:grid-cols-2 gap-12 mt-20 mb-20">
 
-      <!-- EXAMPLE 1 -->
-<div>
+  <!-- EXAMPLE 1 -->
+  <div>
 
-  <!-- VIDEO CARD -->
-  <div class="relative h-64 md:h-72 mb-4 rounded-xl overflow-hidden bg-[#18181B] group transition duration-700 hover:shadow-[0_0_40px_rgba(0,102,255,0.18)]">
+    <!-- VIDEO CARD -->
+    <div class="group relative aspect-[16/9] mb-4 rounded-2xl overflow-hidden bg-[#18181B] border border-white/10 transition duration-700 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_45px_rgba(0,102,255,0.16)]">
 
-    <!-- VIDEO -->
-    <video
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="metadata"
-      class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-[5000ms] ease-out"
-      style="filter: contrast(1.05) saturate(0.85) brightness(0.85);"
-    >
-      <source src="the-devil-we-buried.mp4" type="video/mp4">
-    </video>
+      <!-- GLOW -->
+      <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.10),transparent_55%)]"></div>
 
-    <!-- OVERLAY -->
-    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-black/20"></div>
+      <!-- VIDEO -->
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        class="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-[6000ms] ease-out group-hover:scale-105"
+        style="filter: contrast(1.05) saturate(0.85) brightness(0.85);"
+      >
+        <source src="the-devil-we-buried.mp4" type="video/mp4">
+      </video>
 
-    <!-- FILM GRAIN -->
-    <div
-      class="absolute inset-0 opacity-[0.05] mix-blend-screen pointer-events-none"
-      style="background-image:url('https://grainy-gradients.vercel.app/noise.svg');"
-    ></div>
+      <!-- OVERLAY -->
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-black/20"></div>
 
-    <!-- OPTIONAL LABEL -->
-    <div class="absolute bottom-4 left-4 z-10 proof-label hidden">
-      <p class="text-xs uppercase tracking-[0.2em] text-white/70">
-        Proof Example
-      </p>
+      <!-- FILM GRAIN -->
+      <div
+        class="absolute inset-0 opacity-[0.05] mix-blend-screen pointer-events-none"
+        style="background-image:url('https://grainy-gradients.vercel.app/noise.svg');"
+      ></div>
+
+      <!-- OPTIONAL LABEL -->
+      <div class="absolute bottom-4 left-4 z-10 proof-label hidden">
+        <p class="text-xs uppercase tracking-[0.2em] text-white/70">
+          Proof Example
+        </p>
+      </div>
+
     </div>
+
+    <p class="text-m text-white mb-2">
+      Project Title
+    </p>
+
+    <p class="text-sm text-gray-200 mb-3">
+      The Devil We Buried
+      <span class="text-xs italic text-gray-400">
+        (Black Hollow Pictures)
+      </span>
+    </p>
+
+    <p class="text-m text-white mb-2">
+      Goal
+    </p>
+
+    <p class="text-sm text-gray-200 mb-3">
+      Establish emotional tension, cinematic tone, and visual identity for a prestige limited series pitch.
+    </p>
+
+    <p class="text-m text-white mb-2">
+      Result
+    </p>
+
+    <p class="text-sm text-gray-200">
+      Created a proof-of-concept sequence used to communicate atmosphere, character dynamics, and marketable tone to potential collaborators.
+    </p>
 
   </div>
 
-  <p class="text-m text-white mb-2">
-    Project Title
-  </p>
+  <!-- EXAMPLE 2 -->
+  <div>
 
-  <p class="text-sm text-gray-200 mb-3">
-    The Devil We Buried
-    <span class="text-xs italic text-gray-400">
-      (Black Hollow Pictures)
-    </span>
-  </p>
+    <!-- VIDEO CARD -->
+    <div class="group relative aspect-[16/9] mb-4 rounded-2xl overflow-hidden bg-[#18181B] border border-white/10 transition duration-700 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_45px_rgba(0,102,255,0.16)]">
 
-  <p class="text-m text-white mb-2">
-    Goal
-  </p>
+      <!-- GLOW -->
+      <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.10),transparent_55%)]"></div>
 
-  <p class="text-sm text-gray-200 mb-3">
-    Establish emotional tension, cinematic tone, and visual identity for a prestige limited series pitch.
-  </p>
+      <!-- VIDEO -->
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        class="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-[6000ms] ease-out group-hover:scale-105"
+        style="filter: contrast(1.05) saturate(0.85) brightness(0.85);"
+      >
+        <source src="last-round-at-mercy-hall.mp4" type="video/mp4">
+      </video>
 
-  <p class="text-m text-white mb-2">
-    Result
-  </p>
+      <!-- OVERLAY -->
+      <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-black/20"></div>
 
-  <p class="text-sm text-gray-200">
-    Created a proof-of-concept sequence used to communicate atmosphere, character dynamics, and marketable tone to potential collaborators.
-  </p>
+      <!-- FILM GRAIN -->
+      <div
+        class="absolute inset-0 opacity-[0.05] mix-blend-screen pointer-events-none"
+        style="background-image:url('https://grainy-gradients.vercel.app/noise.svg');"
+      ></div>
 
-</div>
+      <!-- OPTIONAL LABEL -->
+      <div class="absolute bottom-4 left-4 z-10 proof-label hidden">
+        <p class="text-xs uppercase tracking-[0.2em] text-white/70">
+          Proof Example
+        </p>
+      </div>
 
-<!-- EXAMPLE 2 -->
-<div>
-
-  <!-- VIDEO CARD -->
-  <div class="relative h-64 md:h-72 mb-4 rounded-xl overflow-hidden bg-[#18181B] group transition duration-700 hover:shadow-[0_0_40px_rgba(0,102,255,0.18)]">
-
-    <!-- VIDEO -->
-    <video
-      autoplay
-      muted
-      loop
-      playsinline
-      preload="metadata"
-      class="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-110 transition-transform duration-[5000ms] ease-out"
-      style="filter: contrast(1.05) saturate(0.85) brightness(0.85);"
-    >
-      <source src="last-round-at-mercy-hall.mp4" type="video/mp4">
-    </video>
-
-    <!-- OVERLAY -->
-    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-black/20"></div>
-
-    <!-- FILM GRAIN -->
-    <div
-      class="absolute inset-0 opacity-[0.05] mix-blend-screen pointer-events-none"
-      style="background-image:url('https://grainy-gradients.vercel.app/noise.svg');"
-    ></div>
-
-    <!-- OPTIONAL LABEL -->
-    <div class="absolute bottom-4 left-4 z-10 proof-label hidden">
-      <p class="text-xs uppercase tracking-[0.2em] text-white/70">
-        Proof Example
-      </p>
     </div>
 
+    <p class="text-m text-white mb-2">
+      Project Title
+    </p>
+
+    <p class="text-sm text-gray-200 mb-3">
+      Last Round at Mercy Hall
+      <span class="text-xs italic text-gray-400">
+        (Northline Entertainment)
+      </span>
+    </p>
+
+    <p class="text-m text-white mb-2">
+      Goal
+    </p>
+
+    <p class="text-sm text-gray-200 mb-3">
+      Translate a contained character drama into a cinematic visual proof for financing and packaging conversations.
+    </p>
+
+    <p class="text-m text-white mb-2">
+      Result
+    </p>
+
+    <p class="text-sm text-gray-200">
+      Delivered a grounded proof scene that clarified emotional stakes, visual execution, and performance-driven storytelling.
+    </p>
+
   </div>
-
-  <p class="text-m text-white mb-2">
-    Project Title
-  </p>
-
-  <p class="text-sm text-gray-200 mb-3">
-    Last Round at Mercy Hall
-    <span class="text-xs italic text-gray-400">
-      (Northline Entertainment)
-    </span>
-  </p>
-
-  <p class="text-m text-white mb-2">
-    Goal
-  </p>
-
-  <p class="text-sm text-gray-200 mb-3">
-    Translate a contained character drama into a cinematic visual proof for financing and packaging conversations.
-  </p>
-
-  <p class="text-m text-white mb-2">
-    Result
-  </p>
-
-  <p class="text-sm text-gray-200">
-    Delivered a grounded proof scene that clarified emotional stakes, visual execution, and performance-driven storytelling.
-  </p>
-
-</div>
 
 </div>
 
@@ -712,158 +718,240 @@ document.addEventListener("DOMContentLoaded", () => {
   <div class="grid md:grid-cols-3 gap-8">
 
     <!-- SIZZLE -->
-    <div class="bg-[#18181B] rounded-lg overflow-hidden group transition duration-700 hover:shadow-[0_0_40px_rgba(0,102,255,0.18)]">
+<div class="group relative overflow-hidden bg-[#18181B] border border-white/10 rounded-2xl transition duration-700 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_45px_rgba(0,102,255,0.16)]">
 
-      <!-- VIDEO -->
-      <video 
-        autoplay 
-        muted 
-        loop 
-        playsinline
-        class="h-40 w-full object-cover"
-      >
-        <source src="proof-sizzle.mp4" type="video/mp4">
-      </video>
+  <!-- GLOW -->
+  <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.10),transparent_55%)]"></div>
 
-      <!-- CONTENT -->
-      <div class="p-6">
-        <h3 class="text-xl mb-2">PROOF: Sizzle</h3>
-        <p class="text-gray-200 mb-4">Fast visual concept to build momentum.</p>
+  <!-- VIDEO -->
+  <video 
+    autoplay 
+    muted 
+    loop 
+    playsinline
+    class="relative z-10 h-40 w-full object-cover transition-transform duration-[5000ms] ease-out group-hover:scale-105"
+    style="filter: contrast(1.05) saturate(0.9) brightness(0.9);"
+  >
+    <source src="proof-sizzle.mp4" type="video/mp4">
+  </video>
 
-        <p class="text-2xl leading-tight">$900</p>
-        <p class="text-xs text-gray-500 mb-4">*Up to 30 seconds</p>
+  <!-- CONTENT -->
+  <div class="relative z-10 p-6">
 
-        <ul class="text-sm text-gray-300 mb-6 space-y-1">
-          <li>• Cinematic visual sequence</li>
-          <li>• Sound + pacing</li>
-          <li>• Delivered in 14 days</li>
-        </ul>
+    <h3 class="text-xl mb-2">
+      PROOF: Sizzle
+    </h3>
 
-        <a href="sizzle.html" class="text-sm text-gray-400 underline block mb-4">
-          View Details
-        </a>
+    <p class="text-gray-200 mb-4">
+      Fast visual concept to build momentum.
+    </p>
 
-        <a href="https://buy.stripe.com/test_5kQ14pcf54KydYh0zf18c00" target="_blank">
-          <button class="bg-[#0066FF] w-full py-3 rounded-md hover:bg-[#0052cc]">
-            Buy Now
-          </button>
-        </a>
-      </div>
-    </div>
+    <p class="text-2xl leading-tight">
+      $900
+    </p>
+
+    <p class="text-xs text-gray-500 mb-4">
+      *Up to 30 seconds
+    </p>
+
+    <ul class="text-sm text-gray-300 mb-6 space-y-1">
+      <li>• Cinematic visual sequence</li>
+      <li>• Sound + pacing</li>
+      <li>• Delivered in 14 days</li>
+    </ul>
+
+    <a 
+      href="sizzle.html" 
+      class="text-sm text-gray-400 underline block mb-4 hover:text-white transition"
+    >
+      View Details
+    </a>
+
+    <a 
+      href="https://buy.stripe.com/test_5kQ14pcf54KydYh0zf18c00" 
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <button class="w-full py-3 rounded-md bg-[#0066FF] text-white transition hover:bg-[#0052cc] hover:shadow-[0_0_35px_rgba(0,102,255,0.28)]">
+        Buy Now
+      </button>
+    </a>
+
+  </div>
+
+</div>
 
     <!-- SCENE -->
-    <div class="bg-[#18181B] rounded-lg overflow-hidden group transition duration-700 hover:shadow-[0_0_40px_rgba(0,102,255,0.18)]">
+<div class="group relative overflow-hidden bg-[#18181B] border border-white/10 rounded-2xl transition duration-700 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_45px_rgba(0,102,255,0.16)]">
 
-      <!-- VIDEO -->
-      <video 
-        autoplay 
-        muted 
-        loop 
-        playsinline
-        class="h-40 w-full object-cover"
-      >
-        <source src="the-devil-we-buried.mp4" type="video/mp4">
-      </video>
+  <!-- GLOW -->
+  <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.10),transparent_55%)]"></div>
 
-      <!-- CONTENT -->
-      <div class="p-6">
-        <h3 class="text-xl mb-2">PROOF: Scene</h3>
-        <p class="text-gray-200 mb-4">Show tone, character, and execution.</p>
+  <!-- VIDEO -->
+  <video 
+    autoplay 
+    muted 
+    loop 
+    playsinline
+    class="relative z-10 h-40 w-full object-cover transition-transform duration-[5000ms] ease-out group-hover:scale-105"
+    style="filter: contrast(1.05) saturate(0.9) brightness(0.9);"
+  >
+    <source src="the-devil-we-buried.mp4" type="video/mp4">
+  </video>
 
-        <p class="text-2xl">$2,400</p>
-        <p class="text-xs text-gray-500 mb-4">*Up to 2 script pages • ~90 seconds runtime</p>
+  <!-- CONTENT -->
+  <div class="relative z-10 p-6">
 
-        <ul class="text-sm text-gray-300 mb-6 space-y-1">
-          <li>• Narrative-driven scene</li>
-          <li>• Optimized for pitch decks & presentations</li>
-          <li>• Delivered in ~21 days</li>
-        </ul>
+    <h3 class="text-xl mb-2">
+      PROOF: Scene
+    </h3>
 
-        <a href="scene.html" class="text-sm text-gray-400 underline block mb-4">
-          View Details
-        </a>
+    <p class="text-gray-200 mb-4">
+      Show tone, character, and execution.
+    </p>
 
-        <a href="https://buy.stripe.com/test_14A9AV4MD6SGg6pbdT18c01" target="_blank">
-          <button class="bg-[#0066FF] w-full py-3 rounded-md hover:bg-[#0052cc]">
-            Buy Now
-          </button>
-        </a>
-      </div>
-    </div>
+    <p class="text-2xl">
+      $2,400
+    </p>
+
+    <p class="text-xs text-gray-500 mb-4">
+      *Up to 2 script pages • ~90 seconds runtime
+    </p>
+
+    <ul class="text-sm text-gray-300 mb-6 space-y-1">
+      <li>• Narrative-driven scene</li>
+      <li>• Optimized for pitch decks & presentations</li>
+      <li>• Delivered in ~21 days</li>
+    </ul>
+
+    <a 
+      href="scene.html" 
+      class="text-sm text-gray-400 underline block mb-4 hover:text-white transition"
+    >
+      View Details
+    </a>
+
+    <a 
+      href="https://buy.stripe.com/test_14A9AV4MD6SGg6pbdT18c01" 
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <button class="w-full py-3 rounded-md bg-[#0066FF] text-white transition hover:bg-[#0052cc] hover:shadow-[0_0_35px_rgba(0,102,255,0.28)]">
+        Buy Now
+      </button>
+    </a>
+
+  </div>
+
+</div>
 
     <!-- TRAILER -->
-    <div class="bg-[#18181B] rounded-lg overflow-hidden flex flex-col group transition duration-700 hover:shadow-[0_0_40px_rgba(0,102,255,0.18)]">
+<div class="group relative overflow-hidden flex flex-col bg-[#18181B] border border-white/10 rounded-2xl transition duration-700 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_45px_rgba(0,102,255,0.16)]">
 
-      <!-- VIDEO -->
-      <video autoplay muted loop playsinline class="h-40 w-full object-cover">
-        <source src="the-devil-we-buried.mp4" type="video/mp4">
-      </video>
+  <!-- GLOW -->
+  <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.10),transparent_55%)]"></div>
 
-      <!-- CONTENT -->
-      <div class="p-6 flex flex-col h-full">
-        <h3 class="text-xl mb-2">PROOF: Trailer</h3>
-        <p class="text-gray-200 mb-4">Full cinematic pitch asset.</p>
+  <!-- VIDEO -->
+  <video 
+    autoplay 
+    muted 
+    loop 
+    playsinline 
+    class="relative z-10 h-40 w-full object-cover transition-transform duration-[5000ms] ease-out group-hover:scale-105"
+    style="filter: contrast(1.05) saturate(0.9) brightness(0.9);"
+  >
+    <source src="the-devil-we-buried.mp4" type="video/mp4">
+  </video>
 
-        <p class="text-2xl">Custom Pricing</p>
-        <p class="text-xs text-gray-500 mb-4">*Scope-based project</p>
+  <!-- CONTENT -->
+  <div class="relative z-10 p-6 flex flex-col h-full">
 
-        <ul class="text-sm text-gray-300 mb-6 space-y-1">
-          <li>• 45–90 second trailer</li>
-          <li>• Pitch-ready output</li>
-          <li>• Custom timeline</li>
-        </ul>
+    <h3 class="text-xl mb-2">
+      PROOF: Trailer
+    </h3>
 
-        <div class="mt-auto">
-          <p class="text-sm text-gray-400 mb-4">
-            We'll define this together.
-          </p>
+    <p class="text-gray-200 mb-4">
+      Full cinematic pitch asset.
+    </p>
 
-          <a 
-            href="https://calendly.com/hello-prooflab/30min" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            class="block bg-[#0066FF] w-full py-3 rounded-md text-white text-center hover:bg-[#0052cc]"
-          >
-            Book a Call
-          </a>
-        </div>
-      </div>
+    <p class="text-2xl">
+      Custom Pricing
+    </p>
+
+    <p class="text-xs text-gray-500 mb-4">
+      *Scope-based project
+    </p>
+
+    <ul class="text-sm text-gray-300 mb-6 space-y-1">
+      <li>• 45–90 second trailer</li>
+      <li>• Pitch-ready output</li>
+      <li>• Custom timeline</li>
+    </ul>
+
+    <div class="mt-auto">
+
+      <p class="text-sm text-gray-400 mb-4">
+        We'll define this together.
+      </p>
+
+      <a 
+        href="https://calendly.com/hello-prooflab/30min" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="block w-full py-3 rounded-md bg-[#0066FF] text-white text-center transition hover:bg-[#0052cc] hover:shadow-[0_0_35px_rgba(0,102,255,0.28)]"
+      >
+        Book a Call
+      </a>
+
     </div>
 
-  </div><!-- END grid -->
+  </div>
+
+</div>
+
+</div><!-- END grid -->
 
     <!-- ================= POC CARD ================= -->
 <div class="mt-8">
 
-  <div class="bg-[#18181B] rounded-lg overflow-hidden group transition duration-700 hover:shadow-[0_0_40px_rgba(0,102,255,0.18)]">
+  <div class="group relative overflow-hidden bg-[#18181B] border border-white/10 rounded-2xl transition duration-700 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_45px_rgba(0,102,255,0.16)]">
 
-    <div class="grid grid-cols-1 md:grid-cols-3">
+    <!-- GLOW -->
+    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.10),transparent_55%)]"></div>
+
+    <div class="relative z-10 grid grid-cols-1 md:grid-cols-3">
 
       <!-- ================= LEFT: MEDIA ================= -->
-      <div class="md:col-span-2 min-h-[260px] md:min-h-full relative">
+      <div class="md:col-span-2 min-h-[260px] md:min-h-full relative overflow-hidden">
 
-        <div class="absolute inset-0 md:right-[-01.00rem]">
+        <div class="absolute inset-0 md:right-[-1rem]">
 
           <video 
             autoplay 
             muted 
             loop 
             playsinline 
-            class="w-full h-full object-cover"
+            class="w-full h-full object-cover transition-transform duration-[6000ms] ease-out group-hover:scale-105"
+            style="filter: contrast(1.05) saturate(0.9) brightness(0.9);"
           >
             <source src="the-devil-we-buried.mp4" type="video/mp4">
           </video>
+
+          <!-- OVERLAY -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent pointer-events-none"></div>
 
         </div>
 
       </div>
 
       <!-- ================= RIGHT: CONTENT ================= -->
-      <div class="md:col-span-1 flex flex-col justify-between p-6 md:pl-11">
+      <div class="md:col-span-1 flex flex-col justify-between p-6 md:pl-11 relative z-10">
 
         <div>
 
-          <h3 class="text-xl mb-2">PROOF: Concept</h3>
+          <h3 class="text-xl mb-2">
+            PROOF: Concept
+          </h3>
 
           <p class="text-gray-200 mb-4">
             Develop a full short-form proof-of-concept with narrative, tone, and execution.
@@ -893,7 +981,7 @@ document.addEventListener("DOMContentLoaded", () => {
           href="https://calendly.com/hello-prooflab/30min" 
           target="_blank" 
           rel="noopener noreferrer"
-          class="mt-6 block bg-[#0066FF] w-full py-3 rounded-md text-white font-medium text-center hover:bg-[#0052cc] transition"
+          class="mt-6 block bg-[#0066FF] w-full py-3 rounded-md text-white font-medium text-center transition hover:bg-[#0052cc] hover:shadow-[0_0_35px_rgba(0,102,255,0.28)]"
         >
           Book a Call
         </a>
