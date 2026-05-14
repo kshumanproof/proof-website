@@ -33,6 +33,7 @@
       <a href="examples.html" class="hover:text-gray-300">Examples</a>
       <a href="index.html#products" class="hover:text-gray-300">Products</a>
       <a href="index.html#how-it-works" class="hover:text-gray-300">How It Works</a>
+      <a href="development.html" class="hover:text-gray-300">PROOF: Dev</a>
       <a href="business.html" class="hover:text-gray-300">For Business</a>
       <a href="index.html#products" class="text-[#0066FF]">Get Started</a>
     </nav>
@@ -40,13 +41,33 @@
   </div>
 
   <!-- MOBILE MENU -->
-  <div id="mobileMenu" class="hidden md:hidden bg-black/95 text-center py-6 space-y-4">
-    <a href="examples.html" class="block">Examples</a>
-    <a href="index.html#products" class="block">Products</a>
-    <a href="index.html#how-it-works" class="block">How It Works</a>
-    <a href="business.html" class="block">For Business</a>
-    <a href="index.html#products" class="block text-[#0066FF]">Get Started</a>
-  </div>
+  <div id="mobileMenu" class="hidden md:hidden bg-black text-center py-6 flex flex-col items-center gap-4">
+
+  <a href="examples.html" class="block">
+    Examples
+  </a>
+
+  <a href="index.html#products" class="block">
+    Products
+  </a>
+
+  <a href="index.html#how-it-works" class="block">
+    How It Works
+  </a>
+
+  <a href="development.html" class="block hover:text-gray-300">
+    PROOF: Dev
+  </a>
+
+  <a href="business.html" class="block">
+    For Business
+  </a>
+
+  <a href="index.html#products" class="block text-[#0066FF]">
+    Get Started
+  </a>
+
+</div>
 
 </header>
 
@@ -174,99 +195,204 @@
 
 </div>
 
-<!-- CONTENT -->
-<section class="max-w-6xl mx-auto px-4 pt-6 pb-16">
+<!-- PROOF: SCENE EXPERIENCE -->
+<section class="max-w-6xl mx-auto px-4 pt-10 pb-10">
 
-  <div class="grid md:grid-cols-3 gap-6">
+  <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-[#111111]">
 
-    <!-- WHAT YOU GET -->
-    <div class="bg-[#18181B] p-6 rounded-lg border border-white/10 text-left transition duration-500 transform hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_35px_rgba(0,102,255,0.16)] group">
+    <!-- BACKGROUND IMAGE -->
+    <div class="absolute inset-0">
 
-      <!-- IMAGE -->
-      <div class="relative h-[140px] rounded-md mb-4 overflow-hidden bg-[#111111]">
+      <img
+        src="proof-scene-experience.png"
+        alt="PROOF Scene cinematic storytelling"
+        class="w-full h-full object-cover opacity-50 scale-[1.02]"
+      />
 
-        <img
-          src="scene-what-you-get.jpg"
-          alt="Narrative-driven cinematic scene preview"
-          class="w-full h-full object-cover transition-transform duration-[5000ms] ease-out group-hover:scale-110"
-        />
+      <!-- OVERLAYS -->
+      <div class="absolute inset-0 bg-black/60"></div>
 
-        <!-- OVERLAY -->
-        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10"></div>
+      <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/50 to-[#111111]"></div>
 
-      </div>
-
-      <h2 class="text-lg mb-4">
-        What you get
-      </h2>
-
-      <ul class="text-gray-200 space-y-2 text-sm">
-        <li>• Narrative-driven scene</li>
-        <li>• Character + tone exploration</li>
-        <li>• Cinematic execution</li>
-        <li>• Pitch-ready asset</li>
-        <li>• Delivered in ~21 days</li>
-      </ul>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.12),transparent_45%)]"></div>
 
     </div>
 
-    <!-- BEST FOR -->
-    <div class="bg-[#18181B] p-6 rounded-lg border border-white/10 text-left transition duration-500 transform hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_35px_rgba(0,102,255,0.16)] group">
+    <!-- CONTENT -->
+    <div class="relative z-10 p-8 md:p-12">
 
-      <!-- IMAGE -->
-      <div class="relative h-[140px] rounded-md mb-4 overflow-hidden bg-[#111111]">
+      <!-- TOP -->
+      <div class="max-w-3xl">
 
-        <img
-          src="scene-best-for.jpg"
-          alt="Character-driven cinematic storytelling"
-          class="w-full h-full object-cover transition-transform duration-[5000ms] ease-out group-hover:scale-110"
-        />
+        <p class="text-xs uppercase tracking-[0.28em] text-[#0066FF] mb-5">
+          Cinematic proof-of-concept
+        </p>
 
-        <!-- OVERLAY -->
-        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10"></div>
+        <h2 class="text-4xl md:text-6xl leading-[1.05] mb-6 max-w-4xl">
+          Show how your story actually feels.
+        </h2>
 
-      </div>
-
-      <h2 class="text-lg mb-4">
-        Best for
-      </h2>
-
-      <ul class="text-gray-200 space-y-2 text-sm">
-        <li>• Scripted projects</li>
-        <li>• Character-driven stories</li>
-        <li>• Showing tone + execution</li>
-        <li>• Pitch decks & presentations</li>
-      </ul>
-
-    </div>
-
-    <!-- HOW IT WORKS -->
-    <div class="bg-[#18181B] p-6 rounded-lg border border-white/10 text-left transition duration-500 transform hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_35px_rgba(0,102,255,0.16)] group">
-
-      <!-- IMAGE -->
-      <div class="relative h-[140px] rounded-md mb-4 overflow-hidden bg-[#111111]">
-
-        <img
-          src="scene-how-it-works.jpg"
-          alt="Cinematic proof scene development workflow"
-          class="w-full h-full object-cover transition-transform duration-[5000ms] ease-out group-hover:scale-110"
-        />
-
-        <!-- OVERLAY -->
-        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10"></div>
+        <p class="text-lg text-gray-300 leading-relaxed max-w-2xl">
+          PROOF: Scene transforms key moments from your screenplay into emotionally grounded cinematic sequences designed to demonstrate tone, character, atmosphere, and execution before production.
+        </p>
 
       </div>
 
-      <h2 class="text-lg mb-4">
-        How it works
-      </h2>
+      <!-- FEATURE GRID -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
 
-      <ul class="text-gray-200 space-y-2 text-sm">
-        <li>1. Submit your script pages</li>
-        <li>2. We define visual direction</li>
-        <li>3. We build your scene</li>
-        <li>4. You receive your proof</li>
-      </ul>
+        <!-- ITEM -->
+        <div class="group relative overflow-hidden bg-black/30 hover:bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl p-5 transition duration-500 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_40px_rgba(0,102,255,0.18)]">
+
+          <!-- GLOW -->
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.18),transparent_70%)]"></div>
+
+          <!-- CONTENT -->
+          <div class="relative z-10">
+
+            <p class="text-2xl md:text-3xl mb-2 transition duration-500 group-hover:text-white">
+              ~90 Sec
+            </p>
+
+            <p class="text-sm text-gray-400 leading-relaxed transition duration-500 group-hover:text-gray-300">
+              Fully realized cinematic scene
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- ITEM -->
+        <div class="group relative overflow-hidden bg-black/30 hover:bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl p-5 transition duration-500 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_40px_rgba(0,102,255,0.18)]">
+
+          <!-- GLOW -->
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.18),transparent_70%)]"></div>
+
+          <!-- CONTENT -->
+          <div class="relative z-10">
+
+            <p class="text-2xl md:text-3xl mb-2 transition duration-500 group-hover:text-white">
+              21 Days
+            </p>
+
+            <p class="text-sm text-gray-400 leading-relaxed transition duration-500 group-hover:text-gray-300">
+              Performance + atmosphere focused
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- ITEM -->
+        <div class="group relative overflow-hidden bg-black/30 hover:bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl p-5 transition duration-500 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_40px_rgba(0,102,255,0.18)]">
+
+          <!-- GLOW -->
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.18),transparent_70%)]"></div>
+
+          <!-- CONTENT -->
+          <div class="relative z-10">
+
+            <p class="text-2xl md:text-3xl mb-2 transition duration-500 group-hover:text-white">
+              3 Rounds
+            </p>
+
+            <p class="text-sm text-gray-400 leading-relaxed transition duration-500 group-hover:text-gray-300">
+              Collaborative refinement included
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- ITEM -->
+        <div class="group relative overflow-hidden bg-black/30 hover:bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl p-5 transition duration-500 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_40px_rgba(0,102,255,0.18)]">
+
+          <!-- GLOW -->
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.18),transparent_70%)]"></div>
+
+          <!-- CONTENT -->
+          <div class="relative z-10">
+
+            <p class="text-2xl md:text-3xl mb-2 transition duration-500 group-hover:text-white">
+              Pitch-Ready
+            </p>
+
+            <p class="text-sm text-gray-400 leading-relaxed transition duration-500 group-hover:text-gray-300">
+              Built for presentations + attachment
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- PROCESS -->
+      <div class="mt-12 pt-8 border-t border-white/10">
+
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+
+          <!-- LEFT -->
+          <div>
+
+            <p class="text-xs uppercase tracking-[0.25em] text-gray-500 mb-4">
+              Collaborative by design
+            </p>
+
+            <h3 class="text-2xl md:text-3xl leading-tight mb-4">
+              Performance.<br class="hidden md:block">
+              Tone. Execution.
+            </h3>
+
+            <p class="text-gray-300 leading-relaxed max-w-2xl">
+              Every PROOF: Scene is shaped around the emotional core of your screenplay through guided creative direction, cinematic storytelling design, pacing refinement, and collaborative feedback throughout the process.
+            </p>
+
+          </div>
+
+          <!-- RIGHT -->
+          <div class="flex flex-col gap-3 text-sm text-gray-200 min-w-[260px]">
+
+            <div class="bg-black/30 border border-white/10 rounded-lg px-4 py-3 backdrop-blur-sm transition duration-500 hover:border-white/20 hover:shadow-[0_0_25px_rgba(0,102,255,0.14)]">
+              Includes 3 collaborative feedback rounds
+            </div>
+
+            <div class="bg-black/30 border border-white/10 rounded-lg px-4 py-3 backdrop-blur-sm transition duration-500 hover:border-white/20 hover:shadow-[0_0_25px_rgba(0,102,255,0.14)]">
+              Character, pacing + tonal refinement included
+            </div>
+
+            <div class="bg-black/30 border border-white/10 rounded-lg px-4 py-3 backdrop-blur-sm transition duration-500 hover:border-white/20 hover:shadow-[0_0_25px_rgba(0,102,255,0.14)]">
+              Expanded scope available for select projects
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- SIMPLE PROCESS ROW -->
+      <div class="mt-12 pt-8 border-t border-white/10">
+
+        <div class="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6 text-sm md:text-base text-gray-300">
+
+          <span>Send your script pages</span>
+
+          <span class="hidden md:block text-[#0066FF]">→</span>
+
+          <span>We shape the cinematic direction</span>
+
+          <span class="hidden md:block text-[#0066FF]">→</span>
+
+          <span>We build your scene</span>
+
+          <span class="hidden md:block text-[#0066FF]">→</span>
+
+          <span>Show how the film feels</span>
+
+        </div>
+
+      </div>
 
     </div>
 
