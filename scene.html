@@ -504,6 +504,123 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 </script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  // TO TOP BUTTON
+  const btn = document.getElementById("toTopBtn");
+
+  if (btn) {
+
+    window.addEventListener("scroll", () => {
+
+      if (window.scrollY > 400) {
+        btn.classList.remove("opacity-0", "pointer-events-none");
+        btn.classList.add("opacity-100");
+      } else {
+        btn.classList.add("opacity-0", "pointer-events-none");
+        btn.classList.remove("opacity-100");
+      }
+
+    });
+
+    btn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+  }
+
+  // MOBILE MENU
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  if (menuBtn && mobileMenu) {
+
+    menuBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    const links = mobileMenu.querySelectorAll("a");
+
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+
+    document.addEventListener("click", (e) => {
+
+      if (
+        !mobileMenu.contains(e.target) &&
+        !menuBtn.contains(e.target)
+      ) {
+        mobileMenu.classList.add("hidden");
+      }
+
+    });
+
+  }
+
+  // ================= VIDEO MODAL =================
+
+  const modal = document.getElementById("sizzleVideoModal");
+  const openBtn = document.getElementById("openSizzleVideo");
+  const closeBtn = document.getElementById("closeSizzleVideo");
+  const video = document.getElementById("sizzleFullVideo");
+
+  if (modal && openBtn && closeBtn && video) {
+
+    // OPEN
+    openBtn.addEventListener("click", () => {
+
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+
+      video.currentTime = 0;
+
+      video.play();
+
+      document.body.style.overflow = "hidden";
+
+    });
+
+    // CLOSE
+    function closeModal() {
+
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+
+      video.pause();
+
+      document.body.style.overflow = "";
+
+    }
+
+    closeBtn.addEventListener("click", closeModal);
+
+    // BACKGROUND CLICK
+    modal.addEventListener("click", (e) => {
+
+      if (e.target === modal) {
+        closeModal();
+      }
+
+    });
+
+    // ESC KEY
+    document.addEventListener("keydown", (e) => {
+
+      if (e.key === "Escape") {
+        closeModal();
+      }
+
+    });
+
+  }
+
+});
+</script>
 
 </body>
 </html>
