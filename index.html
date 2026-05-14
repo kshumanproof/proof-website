@@ -345,11 +345,11 @@ document.addEventListener("DOMContentLoaded", () => {
 </script>
 
 <!-- TRUST -->
-<section class="py-24 px-4">
+<section class="py-24 px-4 overflow-hidden">
 
   <div class="max-w-5xl mx-auto">
 
-    <!-- EXAMPLES INTRO -->
+    <!-- INTRO -->
     <div class="max-w-3xl mb-16">
 
       <h2 class="text-3xl md:text-5xl mb-6 leading-tight">
@@ -366,23 +366,148 @@ document.addEventListener("DOMContentLoaded", () => {
 
     </div>
 
-    <!-- CREDIBILITY STRIP -->
-    <div class="text-center mb-16">
+  </div>
 
-      <p class="text-sm text-white mb-6">
-        Worked with
-      </p>
+  <!-- LOGO MARQUEE -->
+<div class="relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] overflow-hidden py-2">
 
-      <div class="flex justify-center items-center gap-10 text-gray-200 text-lg">
-        <span>LaunchBox</span>
-        <span>Bad Bella Films</span>
-        <span>Eighty-West Studios</span>
+  <!-- LEFT SLIT -->
+  <div class="absolute left-0 top-0 h-full w-24 md:w-40 z-20 bg-[#0A0A0A]"></div>
+
+  <!-- RIGHT SLIT -->
+  <div class="absolute right-0 top-0 h-full w-24 md:w-40 z-20 bg-[#0A0A0A]"></div>
+
+  <!-- INNER FADES -->
+  <div class="absolute left-24 md:left-40 top-0 h-full w-24 z-20 bg-gradient-to-r from-[#0A0A0A] to-transparent pointer-events-none"></div>
+
+  <div class="absolute right-24 md:right-40 top-0 h-full w-24 z-20 bg-gradient-to-l from-[#0A0A0A] to-transparent pointer-events-none"></div>
+
+  <!-- LABEL -->
+  <p class="text-sm text-white text-center mb-10 relative z-30">
+    Worked with
+  </p>
+
+  <!-- WRAPPER -->
+  <div class="overflow-hidden whitespace-nowrap">
+
+    <!-- TRACK -->
+    <div class="marquee-track">
+
+      <!-- GROUP -->
+      <div class="marquee-group">
+
+        <!-- ACTIVE -->
+        <img src="launchbox.png" alt="Story LaunchBox" class="logo-item">
+
+        <img src="logos/bad-bella.png" alt="Bad Bella Films" class="logo-item">
+
+        <img src="logos/eighty-west.jpg" alt="Eighty-West Studios" class="logo-item">
+
+        <img src="logos/georgia-film-society.png" alt="Georgia Film Society" class="logo-item">
+
+        <img src="logos/kris-shuman.png" alt="Kris Shuman" class="logo-item">
+
+        <!-- FUTURE -->
+        <!-- <img src="logos/company5.png" alt="Company 5" class="logo-item"> -->
+
+        <!-- <img src="logos/company6.png" alt="Company 6" class="logo-item"> -->
+
+        <!-- <img src="logos/company7.png" alt="Company 7" class="logo-item"> -->
+
+      </div>
+
+      <!-- DUPLICATE -->
+      <div class="marquee-group">
+
+        <img src="logos/launchbox.png" alt="Story LaunchBox" class="logo-item">
+
+        <img src="logos/bad-bella.png" alt="Bad Bella Films" class="logo-item">
+
+        <img src="logos/eighty-west.jpg" alt="Eighty-West Studios" class="logo-item">
+
+        <img src="logos/georgia-film-society.png" alt="Georgia Film Society" class="logo-item">
+
+        <img src="logos/kris-shuman.png" alt="Kris Shuman" class="logo-item">
+
+        <!-- FUTURE -->
+        <!-- <img src="logos/company5.png" alt="Company 5" class="logo-item"> -->
+
+        <!-- <img src="logos/company6.png" alt="Company 6" class="logo-item"> -->
+
+        <!-- <img src="logos/company7.png" alt="Company 7" class="logo-item"> -->
+
       </div>
 
     </div>
 
+  </div>
+
+</div>
+
+<style>
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 55s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.marquee-group {
+  display: flex;
+  align-items: center;
+  gap: 120px;
+  padding-right: 120px;
+}
+
+.logo-item {
+  height: 90px;
+  width: auto;
+  opacity: 0.72;
+  filter: grayscale(100%);
+  transition: all 0.5s ease;
+  flex-shrink: 0;
+}
+
+.logo-item:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+  transform: scale(1.06);
+}
+
+@keyframes marqueeScroll {
+
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .logo-item {
+    height: 46px;
+  }
+
+  .marquee-group {
+    gap: 72px;
+    padding-right: 72px;
+  }
+
+}
+
+</style>
+
     <!-- PROOF SECTION -->
-    <div class="grid md:grid-cols-2 gap-12 mb-20">
+    <div class="grid md:grid-cols-2 gap-12 mt-20 mb-20">
 
       <!-- EXAMPLE 1 -->
 <div>
