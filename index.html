@@ -1426,39 +1426,41 @@ document.addEventListener("DOMContentLoaded", () => {
   <div class="bg-[#18181B] p-6 md:p-8 rounded-lg border border-white/10 max-w-md w-full text-center relative">
 
     <!-- CLOSE -->
-    <button id="closePopup" class="absolute top-3 right-3 text-gray-400 text-2xl">
+    <button id="closePopup" class="absolute top-3 right-3 text-gray-400 text-2xl hover:text-white transition">
       &times;
     </button>
 
     <!-- CONTENT -->
     <h2 class="text-xl md:text-2xl font-semibold text-center leading-tight">
 
-  <span class="text-[#0066FF] whitespace-nowrap md:whitespace-normal">
-    Not ready to build your 
-  </span>
+      <span class="text-[#0066FF] whitespace-nowrap md:whitespace-normal">
+        Not ready to build your
+      </span>
 
-  <span class="text-white whitespace-nowrap">
-    PROOF
-  </span>
+      <span class="text-white whitespace-nowrap">
+        PROOF
+      </span>
 
-  <span class="text-[#0066FF] whitespace-nowrap md:whitespace-normal">
-    yet?
-  </span>
+      <span class="text-[#0066FF] whitespace-nowrap md:whitespace-normal">
+        yet?
+      </span>
 
-</h2>
+    </h2>
 
-    <p class="text-gray-400 text-sm mb-5">
-      See how ideas turn into something real. 
+    <p class="text-gray-400 text-sm mb-5 mt-4">
+      See how ideas turn into something real.
       Get examples, insights, and early access.
     </p>
 
     <!-- FORM -->
-    <form 
-      action="https://app.kit.com/forms/9363800/subscriptions" 
-      method="post" 
-      data-remote="true"
+    <form
+      id="emailForm"
+      action="https://app.kit.com/forms/9363800/subscriptions"
+      method="post"
+      target="hidden_iframe"
       class="flex flex-col gap-3"
     >
+
       <input
         type="email"
         name="email_address"
@@ -1473,58 +1475,67 @@ document.addEventListener("DOMContentLoaded", () => {
       >
         Get Updates
       </button>
+
     </form>
 
     <!-- SUCCESS -->
     <div id="emailSuccess" class="hidden mt-4">
 
-  <div class="bg-black border border-[#0066FF]/30 rounded-md px-4 py-3">
+      <div class="bg-black border border-[#0066FF]/30 rounded-md px-4 py-5 flex items-center justify-center">
 
-    <p class="text-[#0066FF] text-lg font-medium">
-      BOOM! You're in.
-    </p>
+        <p class="text-[#0066FF] text-lg font-medium text-center">
+          BOOM! You're in.
+        </p>
 
-    
+      </div>
+
+    </div>
+
   </div>
 
 </div>
 
-<!-- ================= SCRIPTS ================= -->
+<!-- HIDDEN IFRAME -->
+<iframe
+  name="hidden_iframe"
+  id="hidden_iframe"
+  style="display:none;"
+></iframe>
 
-<!-- GLOBAL TOGGLES -->
-<script>
-  const SHOW_PROOF_LABEL = false;
-</script>
-
-<!-- EMAIL POPUP -->
+<!-- ================= EMAIL POPUP SCRIPT ================= -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
   const popup = document.getElementById("emailPopup");
   const closeBtn = document.getElementById("closePopup");
-  const form = popup.querySelector("form");
+  const form = document.getElementById("emailForm");
+  const success = document.getElementById("emailSuccess");
 
-  // CHECK STORAGE
+  // CHECK LOCAL STORAGE
   const popupClosed = localStorage.getItem("proofPopupClosed");
   const popupSubscribed = localStorage.getItem("proofSubscribed");
 
-  // IF ALREADY CLOSED OR SUBSCRIBED, STOP EVERYTHING
+  // IF USER ALREADY CLOSED OR SUBSCRIBED
   if (popupClosed || popupSubscribed) {
     return;
   }
 
   let shown = false;
 
-  // FUNCTION TO SHOW POPUP
+  // SHOW POPUP FUNCTION
   function showPopup() {
+
     if (!shown) {
+
       popup.classList.remove("hidden");
+
       shown = true;
     }
   }
 
   // DESKTOP EXIT INTENT
   document.addEventListener("mouseleave", (e) => {
+
     if (e.clientY < 10) {
       showPopup();
     }
@@ -1532,7 +1543,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // MOBILE TIMER
   setTimeout(() => {
+
     showPopup();
+
   }, 25000);
 
   // CLOSE BUTTON
@@ -1543,7 +1556,7 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("proofPopupClosed", "true");
   });
 
-  // CLICK OUTSIDE
+  // CLICK OUTSIDE TO CLOSE
   popup.addEventListener("click", (e) => {
 
     if (e.target.id === "emailPopup") {
@@ -1557,13 +1570,22 @@ document.addEventListener("DOMContentLoaded", () => {
   // FORM SUBMIT
   form.addEventListener("submit", () => {
 
+    // STORE SUBSCRIBED STATE
     localStorage.setItem("proofSubscribed", "true");
+
+    // SHOW SUCCESS
+    setTimeout(() => {
+
+      form.classList.add("hidden");
+
+      success.classList.remove("hidden");
+
+    }, 500);
+
   });
 
 });
-
-
-  /*
+</script>
   ==========================================
   PROOF LABEL TOGGLE
   ==========================================
