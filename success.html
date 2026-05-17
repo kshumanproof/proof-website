@@ -10,6 +10,29 @@
 
 <body class="bg-[#0A0A0A] text-white font-sans">
 
+<script>
+const params = new URLSearchParams(window.location.search);
+const access = params.get("access");
+
+if (access !== "proof_access_7XqP91LmK2vRa8NzQ4TyF0bWsJcE63HdMpL9UaYtC5KrVx81Qn") {
+  document.body.innerHTML = `
+    <div style="
+      background:#0A0A0A;
+      color:white;
+      height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-family:Arial,sans-serif;
+      text-align:center;
+      padding:40px;
+    ">
+      Invalid access.
+    </div>
+  `;
+}
+</script>
+
 <!-- ================= NAV ================= -->
 <header class="fixed top-0 w-full bg-black/70 backdrop-blur z-50">
   <div class="max-w-6xl mx-auto flex justify-between items-center py-3 px-4">
