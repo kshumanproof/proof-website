@@ -1480,14 +1480,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   <div class="bg-black border border-[#0066FF]/30 rounded-md px-4 py-3">
 
-    <p class="text-[#0066FF] text-sm font-medium">
-      You're in.
+    <p class="text-[#0066FF] text-lg font-medium">
+      BOOM! You're in.
     </p>
 
-    <p class="text-gray-400 text-xs mt-1">
-      Check your inbox to confirm and start building your PROOF.
-    </p>
-
+    
   </div>
 
 </div>
@@ -1507,6 +1504,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeBtn = document.getElementById("closePopup");
 
   let shown = false;
+
+  const popupClosed = localStorage.getItem("proofPopupClosed");
+const popupSubscribed = localStorage.getItem("proofSubscribed");
+
+if (popupClosed || popupSubscribed) {
+  shown = true;
+}
 
   // DESKTOP EXIT INTENT
   document.addEventListener("mouseleave", (e) => {
