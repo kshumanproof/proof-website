@@ -1530,15 +1530,20 @@ if (popupClosed || popupSubscribed) {
 
   // CLOSE BUTTON
   closeBtn.addEventListener("click", () => {
-    popup.classList.add("hidden");
-  });
+  popup.classList.add("hidden");
+
+  localStorage.setItem("proofPopupClosed", "true");
+});
 
   // CLICK OUTSIDE TO CLOSE
   popup.addEventListener("click", (e) => {
-    if (e.target.id === "emailPopup") {
-      popup.classList.add("hidden");
-    }
-  });
+  if (e.target.id === "emailPopup") {
+
+    popup.classList.add("hidden");
+
+    localStorage.setItem("proofPopupClosed", "true");
+  }
+});
 
   /*
   ==========================================
