@@ -1457,7 +1457,6 @@ document.addEventListener("DOMContentLoaded", () => {
       id="emailForm"
       action="https://app.kit.com/forms/9363800/subscriptions"
       method="post"
-      target="hidden_iframe"
       class="flex flex-col gap-3"
     >
 
@@ -1495,12 +1494,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </div>
 
-<!-- HIDDEN IFRAME -->
-<iframe
-  name="hidden_iframe"
-  id="hidden_iframe"
-  style="display:none;"
-></iframe>
+<!-- ================= SCRIPTS ================= -->
+
+<!-- GLOBAL TOGGLES -->
+<script>
+const SHOW_PROOF_LABEL = false;
+</script>
 
 <!-- ================= EMAIL POPUP SCRIPT ================= -->
 <script>
@@ -1515,14 +1514,14 @@ document.addEventListener("DOMContentLoaded", () => {
   const popupClosed = localStorage.getItem("proofPopupClosed");
   const popupSubscribed = localStorage.getItem("proofSubscribed");
 
-  // IF USER ALREADY CLOSED OR SUBSCRIBED
+  // STOP IF ALREADY CLOSED OR SUBSCRIBED
   if (popupClosed || popupSubscribed) {
     return;
   }
 
   let shown = false;
 
-  // SHOW POPUP FUNCTION
+  // SHOW POPUP
   function showPopup() {
 
     if (!shown) {
@@ -1556,7 +1555,7 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("proofPopupClosed", "true");
   });
 
-  // CLICK OUTSIDE TO CLOSE
+  // CLICK OUTSIDE
   popup.addEventListener("click", (e) => {
 
     if (e.target.id === "emailPopup") {
@@ -1567,29 +1566,55 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // FORM SUBMIT
-  form.addEventListener("submit", () => {
+});
+</script>
 
-    // STORE SUBSCRIBED STATE
-    localStorage.setItem("proofSubscribed", "true");
+<!-- ================= KIT FORM SUBMIT ================= -->
+<script>
+document.addEventListener("submit", function (e) {
 
-    // SHOW SUCCESS
-    setTimeout(() => {
+  if (e.target.matches('#emailForm')) {
 
+    e.preventDefault();
+
+    const form = e.target;
+    const data = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: {
+        "Accept": "application/json"
+      }
+    })
+
+    .then(() => {
+
+      // STORE SUBSCRIBED STATE
+      localStorage.setItem("proofSubscribed", "true");
+
+      // HIDE FORM
       form.classList.add("hidden");
 
-      success.classList.remove("hidden");
+      // SHOW SUCCESS
+      document.getElementById("emailSuccess").classList.remove("hidden");
 
-    }, 500);
+    })
 
-  });
+    .catch(() => {
 
+      alert("Something went wrong. Try again.");
 
+    });
 
-  <!-- =========================================================
-  <!-- ================= PROOF LABEL TOGGLE
-  <!-- ================= ==========================================
-  */
+  }
+
+});
+</script>
+
+<!-- ================= PROOF LABEL TOGGLE ================= -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
 
   const labels = document.querySelectorAll(".proof-label");
 
@@ -1603,11 +1628,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   });
 
-  /*
-  ==========================================
-  TESTIMONIAL ROTATION
-  ==========================================
-  */
+});
+</script>
+
+<!-- ================= TESTIMONIAL ROTATION ================= -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
 
   const testimonials = [
 
@@ -1642,7 +1668,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const quote = document.getElementById("testimonialQuote");
   const author = document.getElementById("testimonialAuthor");
 
-  // ONLY RUN IF TESTIMONIAL SECTION EXISTS
   if (container && quote && author) {
 
     let index = 0;
@@ -1666,41 +1691,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
 
-    // CHANGE EVERY 7 SECONDS
     setInterval(changeTestimonial, 7000);
-
-  }
-
-});
-</script>
-
-<!-- KIT FORM SUBMIT -->
-<script>
-document.addEventListener("submit", function (e) {
-
-  if (e.target.matches('form[action*="kit.com"]')) {
-
-    e.preventDefault();
-
-    const form = e.target;
-    const data = new FormData(form);
-
-    fetch(form.action, {
-      method: "POST",
-      body: data,
-      headers: {
-        "Accept": "application/json"
-      }
-    })
-
-    .then(() => {
-      form.style.display = "none";
-      document.getElementById("emailSuccess").classList.remove("hidden");
-    })
-
-    .catch(() => {
-      alert("Something went wrong. Try again.");
-    });
 
   }
 
