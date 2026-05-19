@@ -18,7 +18,7 @@
     <!-- LOGO -->
     <a href="index.html">
       <img 
-        src="Proof_header_good.png" 
+        src="proof-logo/Proof_header_good.png" 
         alt="PROOF Logo" 
         class="h-[40px] md:h-[60px] w-auto object-contain scale-[2.5] origin-left"
       />
@@ -84,7 +84,7 @@
 
       <!-- POSTER IMAGE -->
       <img 
-        src="proof-sizzle.png"
+        src="images/proof-sizzle.png"
         alt="Proof Sizzle Preview"
         class="w-full rounded-lg opacity-95 transition duration-700 group-hover:opacity-100"
       />
@@ -195,13 +195,11 @@
   <div class="w-full h-full flex items-center justify-center px-4">
 
     <video
-      id="sizzleFullVideo"
-      controls
-      playsinline
-      class="w-full max-w-6xl max-h-[90vh] rounded-xl shadow-2xl"
-    >
-      <source src="proof-sizzle.mp4" type="video/mp4">
-    </video>
+  id="sizzleFullVideo"
+  controls
+  playsinline
+  class="w-full max-w-6xl max-h-[90vh] rounded-xl shadow-2xl"
+></video>
 
   </div>
 
@@ -450,7 +448,7 @@
 <section class="py-12 text-center">
 
   <img
-    src="Proof_lab_footer.png"
+    src="proof-logo/Proof_lab_footer.png"
     alt="Built on the Proof Lab system"
     class="w-full max-w-xl mx-auto opacity-70 mb-6"
   />
@@ -594,6 +592,39 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
     });
+
+  }
+
+});
+</script>
+<!-- HLS -->
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+<!-- STREAM INIT -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const video = document.getElementById("sizzleFullVideo");
+
+  const streamUrl =
+    "https://videodelivery.net/fb3e37e4bd61bc95a165a0410818ebe4/manifest/video.m3u8";
+
+  if (!video) return;
+
+  if (Hls.isSupported()) {
+
+    const hls = new Hls({
+      enableWorker: true,
+      lowLatencyMode: true
+    });
+
+    hls.loadSource(streamUrl);
+
+    hls.attachMedia(video);
+
+  } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+
+    video.src = streamUrl;
 
   }
 
