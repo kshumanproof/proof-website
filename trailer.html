@@ -85,49 +85,48 @@
 
       <!-- POSTER IMAGE -->
       <img 
-        src="proof-scene.png"
-        alt="Proof Sizzle Preview"
+        src="images/proof-trailer.png"
+        alt="Proof Trailer Preview"
         class="w-full rounded-lg opacity-95 transition duration-700 group-hover:opacity-100"
       />
 
       <!-- DARK OVERLAY -->
       <div class="absolute inset-0 bg-black/35 group-hover:bg-black/15 transition duration-700"></div>
-<!-- VIDEO INDICATOR -->
-<div class="absolute bottom-5 right-5 flex items-center gap-3 z-20">
 
-  <!-- PULSE DOT -->
-  <div class="relative flex items-center justify-center">
+      <!-- VIDEO INDICATOR -->
+      <div class="absolute bottom-5 right-5 flex items-center gap-3 z-20">
 
-    <span class="absolute inline-flex h-3 w-3 rounded-full bg-[#0066FF] opacity-75 animate-ping"></span>
+        <!-- PULSE DOT -->
+        <div class="relative flex items-center justify-center">
 
-    <span class="relative inline-flex rounded-full h-3 w-3 bg-[#0066FF]"></span>
+          <span class="absolute inline-flex h-3 w-3 rounded-full bg-[#0066FF] opacity-75 animate-ping"></span>
 
-  </div>
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-[#0066FF]"></span>
 
-  <!-- LABEL -->
-  <p class="text-xs uppercase tracking-[0.25em] text-white/70 group-hover:text-white transition duration-500">
-    Watch Preview
-  </p>
-  
+        </div>
 
-</div>
+        <!-- LABEL -->
+        <p class="text-xs uppercase tracking-[0.25em] text-white/70 group-hover:text-white transition duration-500">
+          Watch Preview
+        </p>
 
-      
+      </div>
 
     </div>
+
     <div class="flex flex-wrap gap-3 mt-2 text-[11px] uppercase tracking-[0.18em] text-gray-500">
 
-  <span>PROOF: Trailer</span>
+      <span>PROOF: Trailer</span>
 
-<span>The Devil We Buried</span>
+      <span>Croatoan, District 22</span>
 
-<span>Feature Film Trailer</span>
+      <span>Animated Short Film Trailer</span>
 
-<span>Pitch + Audience Asset</span>
+      <span>Pitch + Audience Asset</span>
 
-<span>2026</span>
+      <span>2026</span>
 
-</div>
+    </div>
 
   </div>
 
@@ -140,40 +139,37 @@
       <div class="flex-1 max-w-xl">
 
         <h1 class="text-3xl md:text-5xl mb-4">
-  PROOF: Trailer
-</h1>
+          PROOF: Trailer
+        </h1>
 
-<p class="text-base md:text-xl text-gray-200 mb-6">
-  Build a cinematic trailer designed to create momentum, emotional reaction, and market-facing presentation.
-</p>
+        <p class="text-base md:text-xl text-gray-200 mb-6">
+          Build a cinematic trailer designed to create momentum, emotional reaction, and market-facing presentation.
+        </p>
 
-<p class="text-sm text-gray-600">
-  Built to help audiences, collaborators, and investors feel the potential instantly.
-</p>
+        <p class="text-sm text-gray-600">
+          Built to help audiences, collaborators, and investors feel the potential instantly.
+        </p>
 
       </div>
 
       <!-- RIGHT -->
-<div class="flex flex-col w-full md:w-[260px] md:items-end text-left space-y-2">
+      <div class="flex flex-col w-full md:w-[260px] md:items-end text-left space-y-2">
 
-  <p class="text-3xl">
-    Custom Pricing
-  </p>
+        <p class="text-3xl">
+          $1,800
+        </p>
 
-  <p class="text-xs text-gray-400 mb-6">
-    Scope-based trailer development
-  </p>
+        <p class="text-xs text-gray-400 mb-6">
+          ~45–90 seconds • Includes creative script consult
+        </p>
 
-  <a 
-    href="https://calendly.com/hello-prooflab/30min"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="proof-btn bg-[#0066FF] w-full py-3 rounded-md text-white text-center hover:bg-[#0052cc] transition"
-  >
-    Book a Call
-  </a>
-
-</div>
+        <a 
+          href="https://buy.stripe.com/test_dRm28tdj9dh4f2l0zf18c04"
+          target="_blank"
+          class="proof-btn bg-[#0066FF] w-full py-3 rounded-md text-white text-center hover:bg-[#0052cc] transition"
+        >
+          Buy Now
+        </a>
 
       </div>
 
@@ -205,13 +201,46 @@
       controls
       playsinline
       class="w-full max-w-6xl max-h-[90vh] rounded-xl shadow-2xl"
-    >
-      <source src="proof-scene.mp4" type="video/mp4">
-    </video>
+    ></video>
 
   </div>
 
 </div>
+
+<!-- HLS -->
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const streamUrl =
+    "https://videodelivery.net/0304618be91b7130f2cd851db3a46a47/manifest/video.m3u8";
+
+  const video = document.getElementById("trailerFullVideo");
+
+  if (video) {
+
+    if (Hls.isSupported()) {
+
+      const hls = new Hls({
+        enableWorker: true,
+        lowLatencyMode: true
+      });
+
+      hls.loadSource(streamUrl);
+
+      hls.attachMedia(video);
+
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+
+      video.src = streamUrl;
+
+    }
+
+  }
+
+});
+</script>
 <!-- PROOF: SIZZLE EXPERIENCE -->
 <section class="max-w-6xl mx-auto px-4 pt-12 pb-10">
 
@@ -219,11 +248,7 @@
 
     <!-- BACKGROUND IMAGE -->
     <div class="absolute inset-0">
-      <img
-        src="proof-scene-experience.png"
-        alt="PROOF Sizzle cinematic worlds"
-        class="w-full h-full object-cover opacity-45 scale-[1.02]"
-      />
+      
 
       
 
