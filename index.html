@@ -201,50 +201,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <!-- BLURRED BACKGROUND LAYER -->
     <video 
-  id="heroBlurVideo"
-  autoplay 
-  muted 
-  loop 
-  playsinline
-  class="absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-20"
-></video>
+      id="heroBlurVideo"
+      autoplay 
+      muted 
+      loop 
+      playsinline
+      class="absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-20"
+    ></video>
 
     <!-- MAIN VIDEO -->
     <video 
-  id="heroBgVideo"
-  autoplay 
-  muted 
-  loop 
-  playsinline
-  class="absolute inset-0 w-full h-full object-contain opacity-55"
-></video>
+      id="heroBgVideo"
+      autoplay 
+      muted 
+      loop 
+      playsinline
+      class="absolute inset-0 w-full h-full object-contain opacity-55"
+    ></video>
 
     <!-- DARK OVERLAY -->
     <div class="absolute inset-0 bg-black/30"></div>
 
   </div>
-
-  <!-- VIDEO INDICATOR -->
-  <button
-    id="openVideoModal"
-    class="absolute bottom-8 right-8 md:right-12 z-20 flex items-center gap-3 group"
-  >
-
-    <!-- PULSE DOT -->
-    <div class="relative flex items-center justify-center">
-
-      <span class="absolute inline-flex h-3 w-3 rounded-full bg-[#0066FF] opacity-75 animate-ping"></span>
-
-      <span class="relative inline-flex rounded-full h-3 w-3 bg-[#0066FF] shadow-[0_0_12px_rgba(0,102,255,0.9)]"></span>
-
-    </div>
-
-    <!-- LABEL -->
-    <p class="text-[11px] uppercase tracking-[0.28em] text-white/60 group-hover:text-white transition duration-500">
-      Watch Preview
-    </p>
-
-  </button>
 
   <!-- CONTENT -->
   <div class="relative z-10 max-w-3xl px-4">
@@ -293,6 +271,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
     </div>
 
+    <!-- VIDEO INDICATOR -->
+<div class="flex justify-center mt-4">
+
+  <button
+    id="openVideoModal"
+    class="z-20 flex items-center gap-3 group px-4 py-2 rounded-full border border-white/10 bg-black/25 backdrop-blur-sm hover:border-[#0066FF]/30 hover:bg-black/40 transition duration-500"
+  >
+
+    <!-- PULSE DOT -->
+    <div class="relative flex items-center justify-center">
+
+      <span class="absolute inline-flex h-3 w-3 rounded-full bg-[#0066FF] opacity-60 animate-ping"></span>
+
+      <span class="relative inline-flex rounded-full h-3 w-3 bg-[#0066FF] shadow-[0_0_10px_rgba(0,102,255,0.75)]"></span>
+
+    </div>
+
+    <!-- LABEL -->
+    <p class="text-[10px] uppercase tracking-[0.28em] text-white/70 group-hover:text-white transition duration-500">
+      Watch Preview
+    </p>
+
+  </button>
+
+</div>
+
   </div>
 
 </section>
@@ -315,11 +319,11 @@ document.addEventListener("DOMContentLoaded", () => {
   <div class="w-full h-full flex items-center justify-center px-4">
 
     <video
-  id="fullVideo"
-  controls
-  playsinline
-  class="w-full max-w-6xl max-h-[90vh] rounded-lg shadow-2xl"
-></video>
+      id="fullVideo"
+      controls
+      playsinline
+      class="w-full max-w-6xl max-h-[90vh] rounded-lg shadow-2xl"
+    ></video>
 
   </div>
 
