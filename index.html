@@ -94,26 +94,36 @@
 </head>
 
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
   const streamUrl =
     "https://videodelivery.net/4e195dcb6f423b5d4c01e31fbb52bd4f/manifest/video.m3u8";
 
-  const videos = [
+  const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
 
-    // DESKTOP
-    document.getElementById("heroBgVideo"),
-    document.getElementById("heroBlurVideo"),
+  let videos = [];
 
-    // MOBILE
-    document.getElementById("heroBgVideoMobile"),
-    document.getElementById("heroBlurVideoMobile"),
+  // DESKTOP ONLY
+  if (isDesktop) {
 
-    // MODAL
-    document.getElementById("fullVideo")
+    videos = [
+      document.getElementById("heroBgVideo"),
+      document.getElementById("heroBlurVideo")
+    ];
 
-  ];
+  }
+
+  // MOBILE ONLY
+  else {
+
+    videos = [
+      document.getElementById("heroBgVideoMobile"),
+      document.getElementById("heroBlurVideoMobile")
+    ];
+
+  }
 
   videos.forEach(video => {
 
@@ -465,6 +475,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeBtn = document.getElementById("closeVideoModal");
   const fullVideo = document.getElementById("fullVideo");
 
+  // STREAM URL
+  const streamUrl =
+    "https://videodelivery.net/4e195dcb6f423b5d4c01e31fbb52bd4f/manifest/video.m3u8";
+
   // OPEN MODAL
   openBtns.forEach(openBtn => {
 
@@ -475,13 +489,47 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.classList.remove("hidden");
       modal.classList.add("flex");
 
-      fullVideo.currentTime = 0;
-
-      fullVideo.muted = false;
-
-      fullVideo.play();
-
       document.body.style.overflow = "hidden";
+
+      // INIT HLS ONLY WHEN MODAL OPENS
+      if (Hls.isSupported()) {
+
+        // DESTROY OLD INSTANCE IF EXISTS
+        if (fullVideo.hlsInstance) {
+          fullVideo.hlsInstance.destroy();
+        }
+
+        const hls = new Hls({
+          enableWorker: true,
+          lowLatencyMode: true
+        });
+
+        hls.loadSource(streamUrl);
+
+        hls.attachMedia(fullVideo);
+
+        fullVideo.hlsInstance = hls;
+
+        hls.on(Hls.Events.MANIFEST_PARSED, () => {
+
+  fullVideo.currentTime = 0;
+  fullVideo.muted = false;
+
+  fullVideo.play().catch(err => {
+    console.log("Playback prevented:", err);
+  });
+
+});
+
+      } else if (fullVideo.canPlayType('application/vnd.apple.mpegurl')) {
+
+        fullVideo.src = streamUrl;
+
+        fullVideo.currentTime = 0;
+        fullVideo.muted = false;
+        fullVideo.play();
+
+      }
 
     });
 
@@ -495,7 +543,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     fullVideo.pause();
 
+    // DESTROY HLS INSTANCE
+    if (fullVideo.hlsInstance) {
+
+      fullVideo.hlsInstance.destroy();
+      fullVideo.hlsInstance = null;
+
+    }
+
     document.body.style.overflow = "";
+
   }
 
   // CLOSE BUTTON
@@ -1045,15 +1102,16 @@ document.addEventListener("DOMContentLoaded", () => {
         </ul>
 
         <!-- BUTTON -->
-        <div class="relative z-20">
+<div class="relative z-20">
 
-          
-            <button class="w-full py-3 rounded-md bg-[#0066FF] text-white transition hover:bg-[#0052cc] hover:shadow-[0_0_35px_rgba(0,102,255,0.28)]">
-              View Experience
-            </button>
-          </a>
+  <a 
+    href="sizzle.html"
+    class="block w-full py-3 rounded-md bg-[#0066FF] text-white text-center transition hover:bg-[#0052cc] hover:shadow-[0_0_35px_rgba(0,102,255,0.28)]"
+  >
+    View Experience
+  </a>
 
-        </div>
+</div>
 
       </div>
 
@@ -1151,16 +1209,16 @@ document.addEventListener("DOMContentLoaded", () => {
           
 
           <!-- BUTTON -->
-          <div class="relative z-20">
+<div class="relative z-20">
 
-            <a 
-              
-              class="block w-full py-3 rounded-md bg-[#0066FF] text-white text-center transition hover:bg-[#0052cc] hover:shadow-[0_0_35px_rgba(0,102,255,0.28)]"
-            >
-              View Experience
-            </a>
+  <a 
+    href="sizzle.html"
+    class="block w-full py-3 rounded-md bg-[#0066FF] text-white text-center transition hover:bg-[#0052cc] hover:shadow-[0_0_35px_rgba(0,102,255,0.28)]"
+  >
+    View Experience
+  </a>
 
-          </div>
+</div>
 
         </div>
 
@@ -1257,15 +1315,16 @@ document.addEventListener("DOMContentLoaded", () => {
         </ul>
 
         <!-- BUTTON -->
-        <div class="relative z-20">
+<div class="relative z-20">
 
-          
-            <button class="w-full py-3 rounded-md bg-[#0066FF] text-white transition hover:bg-[#0052cc] hover:shadow-[0_0_35px_rgba(0,102,255,0.28)]">
-              View Experience
-            </button>
-          </a>
+  <a 
+    href="sizzle.html"
+    class="block w-full py-3 rounded-md bg-[#0066FF] text-white text-center transition hover:bg-[#0052cc] hover:shadow-[0_0_35px_rgba(0,102,255,0.28)]"
+  >
+    View Experience
+  </a>
 
-        </div>
+</div>
 
       </div>
 
