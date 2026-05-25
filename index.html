@@ -683,7 +683,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
 
   </div>
-  <!-- ===================================================== -->
+<!-- ===================================================== -->
 <!-- DIVIDER -->
 <!-- ===================================================== -->
 <div class="w-full border-t border-white/10 my-24"></div>
@@ -716,149 +716,105 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 
     <!-- ===================================================== -->
-    <!-- DESKTOP EXPERIENCE -->
-    <!-- ===================================================== -->
-    <div class="hidden lg:block">
+<!-- DESKTOP EXPERIENCE -->
+<!-- ===================================================== -->
+<div class="hidden lg:block">
 
-      <div class="grid grid-cols-12 gap-10 items-center">
+  <div class="grid grid-cols-12 gap-10 items-center">
 
-        <!-- VISUAL -->
-        <div class="col-span-7">
+    <!-- VISUAL -->
+    <div class="col-span-7">
 
-          <div class="relative rounded-3xl overflow-hidden border border-white/10 bg-[#111111] shadow-[0_0_60px_rgba(0,0,0,0.4)]">
+      <div class="group relative rounded-3xl overflow-hidden border border-white/10 bg-[#111111] transition-all duration-700 hover:border-white/15 hover:-translate-y-[2px] hover:shadow-[0_20px_80px_rgba(0,0,0,0.55)]">
 
-            <!-- PANEL 1 -->
-            <div class="proof-panel active-panel" data-panel="1">
+        <!-- ATMOSPHERIC TOP LIGHT -->
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 pointer-events-none bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.05),transparent_58%)]"></div>
 
-              <div class="aspect-[16/9] relative overflow-hidden">
+        <!-- PANEL 1 -->
+        <div class="proof-panel active-panel" data-panel="1">
 
-                <img
-                  src="images/social-preview.jpg"
-                  alt="Raw Script"
-                  class="absolute inset-0 w-full h-full object-cover opacity-80"
-                >
+          <div class="aspect-[16/9] relative overflow-hidden">
 
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
+            <img
+              src="images/social-preview.jpg"
+              alt="Raw Script"
+              class="absolute inset-0 w-full h-full object-cover opacity-80 transition-transform duration-[7000ms] ease-out group-hover:scale-[1.03]"
+            >
 
-              </div>
+            <!-- WARM FILMIC OVERLAY -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
 
-            </div>
-
-            <!-- PANEL 2 -->
-            <div class="proof-panel hidden" data-panel="2">
-
-              <div class="aspect-[16/9] relative overflow-hidden">
-
-                <img
-                  src="images/social-preview.jpg"
-                  alt="Raw Machine Generation"
-                  class="absolute inset-0 w-full h-full object-cover opacity-55 blur-[1px]"
-                >
-
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
-
-              </div>
-
-            </div>
-
-            <!-- PANEL 3 -->
-            <div class="proof-panel hidden" data-panel="3">
-
-              <div class="aspect-[16/9] relative overflow-hidden">
-
-                <video
-                  autoplay
-                  muted
-                  loop
-                  playsinline
-                  preload="metadata"
-                  class="absolute inset-0 w-full h-full object-cover opacity-90"
-                >
-                  <source src="https://videodelivery.net/f2d390847b244b605519cc3b7269ebc3/manifest/video.m3u8">
-                </video>
-
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
-
-              </div>
-
-            </div>
-
-            <!-- PANEL 4 -->
-            <div class="proof-panel hidden" data-panel="4">
-
-              <div class="aspect-[16/9] relative overflow-hidden">
-
-                <video
-                  autoplay
-                  muted
-                  loop
-                  playsinline
-                  preload="metadata"
-                  class="absolute inset-0 w-full h-full object-cover opacity-95"
-                >
-                  <source src="https://videodelivery.net/1a90159d735dc26353423b43d11dade8/manifest/video.m3u8">
-                </video>
-
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
-
-              </div>
-
-            </div>
+            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 bg-[radial-gradient(circle_at_center,rgba(255,245,220,0.04),transparent_65%)]"></div>
 
           </div>
 
         </div>
 
-        <!-- TEXT -->
-        <div class="col-span-5">
+        <!-- PANEL 2 -->
+        <div class="proof-panel hidden" data-panel="2">
 
-          <div class="min-h-[420px] flex flex-col justify-between">
+          <div class="aspect-[16/9] relative overflow-hidden">
 
-            <!-- STEP -->
-            <div>
+            <img
+              src="images/social-preview.jpg"
+              alt="Raw Machine Generation"
+              class="absolute inset-0 w-full h-full object-cover opacity-55 blur-[1px] transition-transform duration-[7000ms] ease-out group-hover:scale-[1.02]"
+            >
 
-              <p
-                id="desktopStepLabel"
-                class="text-xs uppercase tracking-[0.35em] text-[#0066FF] mb-6"
-              >
-                Step 01
-              </p>
+            <!-- UNCANNY RED TENSION -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
 
-              <h4
-                id="desktopStepTitle"
-                class="text-4xl leading-tight mb-6"
-              >
-                The Raw Script
-              </h4>
+            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-[radial-gradient(circle_at_center,rgba(255,0,0,0.06),transparent_70%)]"></div>
 
-              <p
-                id="desktopStepDescription"
-                class="text-gray-300 leading-relaxed text-lg"
-              >
-                Most scripts communicate plot. Very few communicate cinematic atmosphere, emotional weight, visual rhythm, or tone clearly enough to accelerate belief.
-              </p>
+          </div>
 
-            </div>
+        </div>
 
-            <!-- BUTTON -->
-            <div class="mt-12">
+        <!-- PANEL 3 -->
+        <div class="proof-panel hidden" data-panel="3">
 
-              <button
-                id="nextProofStep"
-                class="group inline-flex items-center gap-4 px-7 py-4 rounded-full bg-[#0066FF] text-white transition duration-500 hover:bg-[#0052cc] hover:shadow-[0_0_40px_rgba(0,102,255,0.35)]"
-              >
+          <div class="aspect-[16/9] relative overflow-hidden">
 
-                <span class="text-sm uppercase tracking-[0.2em]">
-                  Next Step
-                </span>
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              class="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-[7000ms] ease-out group-hover:scale-[1.02]"
+            >
+              <source src="https://videodelivery.net/f2d390847b244b605519cc3b7269ebc3/manifest/video.m3u8">
+            </video>
 
-                <span class="text-xl transition-transform duration-500 group-hover:translate-x-1">
-                  →
-                </span>
+            <!-- PROOFLAB BLUE -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
 
-              </button>
+            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 bg-[radial-gradient(circle_at_center,rgba(0,102,255,0.08),transparent_65%)]"></div>
 
-            </div>
+          </div>
+
+        </div>
+
+        <!-- PANEL 4 -->
+        <div class="proof-panel hidden" data-panel="4">
+
+          <div class="aspect-[16/9] relative overflow-hidden">
+
+            <video
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+              class="absolute inset-0 w-full h-full object-cover opacity-95 transition-transform duration-[7000ms] ease-out group-hover:scale-[1.015]"
+            >
+              <source src="https://videodelivery.net/1a90159d735dc26353423b43d11dade8/manifest/video.m3u8">
+            </video>
+
+            <!-- FINAL CINEMATIC BLOOM -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
+
+            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.035),transparent_68%)]"></div>
 
           </div>
 
@@ -868,189 +824,256 @@ document.addEventListener("DOMContentLoaded", () => {
 
     </div>
 
-    <!-- ===================================================== -->
-    <!-- MOBILE EXPERIENCE -->
-    <!-- ===================================================== -->
-    <div class="lg:hidden">
+    <!-- TEXT -->
+    <div class="col-span-5">
 
-      <!-- CAROUSEL -->
-      <div
-        id="mobileProofCarousel"
-        class="flex overflow-x-auto snap-x snap-mandatory gap-5 pb-6 hide-scrollbar"
-      >
+      <div class="min-h-[420px] flex flex-col justify-between">
 
-        <!-- PANEL 1 -->
-        <div class="min-w-[92vw] snap-center">
+        <!-- STEP -->
+        <div>
 
-          <div class="rounded-3xl overflow-hidden border border-white/10 bg-[#111111]">
+          <p
+            id="desktopStepLabel"
+            class="text-xs uppercase tracking-[0.35em] text-[#0066FF] mb-6"
+          >
+            Step 01
+          </p>
 
-            <div class="aspect-[16/9] relative overflow-hidden">
+          <h4
+            id="desktopStepTitle"
+            class="text-4xl leading-tight mb-6"
+          >
+            The Raw Script
+          </h4>
 
-              <img
-                src="images/social-preview.jpg"
-                alt="Raw Script"
-                class="absolute inset-0 w-full h-full object-cover opacity-80"
-              >
-
-              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
-
-            </div>
-
-            <div class="p-8">
-
-              <p class="text-xs uppercase tracking-[0.35em] text-[#0066FF] mb-5">
-                Step 01
-              </p>
-
-              <h4 class="text-3xl mb-5">
-                The Raw Script
-              </h4>
-
-              <p class="text-gray-300 leading-relaxed">
-                Most scripts communicate plot. Very few communicate cinematic atmosphere, emotional weight, visual rhythm, or tone clearly enough to accelerate belief.
-              </p>
-
-            </div>
-
-          </div>
+          <p
+            id="desktopStepDescription"
+            class="text-gray-300 leading-relaxed text-lg"
+          >
+            Most scripts communicate plot. Very few communicate cinematic atmosphere, emotional weight, visual rhythm, or tone clearly enough to accelerate belief.
+          </p>
 
         </div>
 
-        <!-- PANEL 2 -->
-        <div class="min-w-[92vw] snap-center">
+        <!-- BUTTON -->
+        <div class="mt-12">
 
-          <div class="rounded-3xl overflow-hidden border border-red-500/20 bg-[#111111]">
+          <button
+            id="nextProofStep"
+            class="group inline-flex items-center gap-4 px-7 py-4 rounded-full bg-[#0066FF] text-white transition duration-500 hover:bg-[#0052cc] hover:shadow-[0_0_40px_rgba(0,102,255,0.22)]"
+          >
 
-            <div class="aspect-[16/9] relative overflow-hidden">
+            <span class="text-sm uppercase tracking-[0.2em]">
+              Next Step
+            </span>
 
-              <img
-                src="images/social-preview.jpg"
-                alt="Raw Machine Generation"
-                class="absolute inset-0 w-full h-full object-cover opacity-55 blur-[1px]"
-              >
+            <span class="text-xl transition-transform duration-500 group-hover:translate-x-1">
+              →
+            </span>
 
-              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
-
-            </div>
-
-            <div class="p-8">
-
-              <p class="text-xs uppercase tracking-[0.35em] text-red-400 mb-5">
-                Step 02
-              </p>
-
-              <h4 class="text-3xl mb-5">
-                Raw Machine Generation
-              </h4>
-
-              <p class="text-gray-300 leading-relaxed">
-                Unmanaged generative output often lacks cinematic intention — producing synthetic movement, inconsistent faces, flat lighting, and emotionally weightless visuals.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- PANEL 3 -->
-        <div class="min-w-[92vw] snap-center">
-
-          <div class="rounded-3xl overflow-hidden border border-white/10 bg-[#111111]">
-
-            <div class="aspect-[16/9] relative overflow-hidden">
-
-              <video
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="metadata"
-                class="absolute inset-0 w-full h-full object-cover opacity-90"
-              >
-                <source src="https://videodelivery.net/f2d390847b244b605519cc3b7269ebc3/manifest/video.m3u8">
-              </video>
-
-              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
-
-            </div>
-
-            <div class="p-8">
-
-              <p class="text-xs uppercase tracking-[0.35em] text-[#0066FF] mb-5">
-                Step 03
-              </p>
-
-              <h4 class="text-3xl mb-5">
-                The ProofLab System
-              </h4>
-
-              <p class="text-gray-300 leading-relaxed">
-                PROOF manually refines cinematic pacing, shot language, continuity, sound design, atmosphere, and emotional clarity to create presentation-grade visual proof.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <!-- PANEL 4 -->
-        <div class="min-w-[92vw] snap-center">
-
-          <div class="rounded-3xl overflow-hidden border border-[#0066FF]/20 bg-[#111111]">
-
-            <div class="aspect-[16/9] relative overflow-hidden">
-
-              <video
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="metadata"
-                class="absolute inset-0 w-full h-full object-cover opacity-95"
-              >
-                <source src="https://videodelivery.net/1a90159d735dc26353423b43d11dade8/manifest/video.m3u8">
-              </video>
-
-              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
-
-            </div>
-
-            <div class="p-8">
-
-              <p class="text-xs uppercase tracking-[0.35em] text-emerald-400 mb-5">
-                Final Output
-              </p>
-
-              <h4 class="text-3xl mb-5">
-                Cinematic Proof
-              </h4>
-
-              <p class="text-gray-300 leading-relaxed">
-                The result is a cinematic asset capable of communicating tone, execution, emotional stakes, and marketable identity to collaborators, producers, and investors.
-              </p>
-
-            </div>
-
-          </div>
+          </button>
 
         </div>
 
       </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- MOBILE EXPERIENCE -->
+<!-- ===================================================== -->
+<div class="lg:hidden">
+
+  <!-- CAROUSEL -->
+  <div
+    id="mobileProofCarousel"
+    class="flex overflow-x-auto snap-x snap-mandatory gap-5 pb-6 hide-scrollbar"
+  >
+
+    <!-- PANEL 1 -->
+    <div class="min-w-[92vw] snap-center">
+
+      <div class="group rounded-3xl overflow-hidden border border-white/10 bg-[#111111] transition-all duration-700 hover:border-white/15 hover:shadow-[0_16px_60px_rgba(0,0,0,0.45)]">
+
+        <div class="aspect-[16/9] relative overflow-hidden">
+
+          <img
+            src="images/social-preview.jpg"
+            alt="Raw Script"
+            class="absolute inset-0 w-full h-full object-cover opacity-80 transition-transform duration-[7000ms] ease-out group-hover:scale-[1.03]"
+          >
+
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
+
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 bg-[radial-gradient(circle_at_center,rgba(255,245,220,0.04),transparent_65%)]"></div>
+
+        </div>
+
+        <div class="p-8">
+
+          <p class="text-xs uppercase tracking-[0.35em] text-[#0066FF] mb-5">
+            Step 01
+          </p>
+
+          <h4 class="text-3xl mb-5">
+            The Raw Script
+          </h4>
+
+          <p class="text-gray-300 leading-relaxed">
+            Most scripts communicate plot. Very few communicate cinematic atmosphere, emotional weight, visual rhythm, or tone clearly enough to accelerate belief.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- PANEL 2 -->
+    <div class="min-w-[92vw] snap-center">
+
+      <div class="group rounded-3xl overflow-hidden border border-red-500/20 bg-[#111111] transition-all duration-700 hover:border-red-400/30 hover:shadow-[0_18px_70px_rgba(0,0,0,0.5)]">
+
+        <div class="aspect-[16/9] relative overflow-hidden">
+
+          <img
+            src="images/social-preview.jpg"
+            alt="Raw Machine Generation"
+            class="absolute inset-0 w-full h-full object-cover opacity-55 blur-[1px] transition-transform duration-[7000ms] ease-out group-hover:scale-[1.02]"
+          >
+
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
+
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-[radial-gradient(circle_at_center,rgba(255,0,0,0.06),transparent_70%)]"></div>
+
+        </div>
+
+        <div class="p-8">
+
+          <p class="text-xs uppercase tracking-[0.35em] text-red-400 mb-5">
+            Step 02
+          </p>
+
+          <h4 class="text-3xl mb-5">
+            Raw Machine Generation
+          </h4>
+
+          <p class="text-gray-300 leading-relaxed">
+            Unmanaged generative output often lacks cinematic intention — producing synthetic movement, inconsistent faces, flat lighting, and emotionally weightless visuals.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- PANEL 3 -->
+    <div class="min-w-[92vw] snap-center">
+
+      <div class="group rounded-3xl overflow-hidden border border-white/10 bg-[#111111] transition-all duration-700 hover:border-[#0066FF]/20 hover:shadow-[0_20px_80px_rgba(0,102,255,0.08)]">
+
+        <div class="aspect-[16/9] relative overflow-hidden">
+
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            class="absolute inset-0 w-full h-full object-cover opacity-90 transition-transform duration-[7000ms] ease-out group-hover:scale-[1.02]"
+          >
+            <source src="https://videodelivery.net/f2d390847b244b605519cc3b7269ebc3/manifest/video.m3u8">
+          </video>
+
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
+
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 bg-[radial-gradient(circle_at_center,rgba(0,102,255,0.08),transparent_65%)]"></div>
+
+        </div>
+
+        <div class="p-8">
+
+          <p class="text-xs uppercase tracking-[0.35em] text-[#0066FF] mb-5">
+            Step 03
+          </p>
+
+          <h4 class="text-3xl mb-5">
+            The ProofLab System
+          </h4>
+
+          <p class="text-gray-300 leading-relaxed">
+            PROOF manually refines cinematic pacing, shot language, continuity, sound design, atmosphere, and emotional clarity to create presentation-grade visual proof.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- PANEL 4 -->
+    <div class="min-w-[92vw] snap-center">
+
+      <div class="group rounded-3xl overflow-hidden border border-[#0066FF]/20 bg-[#111111] transition-all duration-700 hover:border-white/20 hover:shadow-[0_20px_80px_rgba(255,255,255,0.04)]">
+
+        <div class="aspect-[16/9] relative overflow-hidden">
+
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            class="absolute inset-0 w-full h-full object-cover opacity-95 transition-transform duration-[7000ms] ease-out group-hover:scale-[1.015]"
+          >
+            <source src="https://videodelivery.net/1a90159d735dc26353423b43d11dade8/manifest/video.m3u8">
+          </video>
+
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
+
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.035),transparent_68%)]"></div>
+
+        </div>
+
+        <div class="p-8">
+
+          <p class="text-xs uppercase tracking-[0.35em] text-emerald-400 mb-5">
+            Final Output
+          </p>
+
+          <h4 class="text-3xl mb-5">
+            Cinematic Proof
+          </h4>
+
+          <p class="text-gray-300 leading-relaxed">
+            The result is a cinematic asset capable of communicating tone, execution, emotional stakes, and marketable identity to collaborators, producers, and investors.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 
       <!-- DOTS -->
-      <div class="flex items-center justify-center gap-3 mt-6">
+<div class="flex items-center justify-center gap-3 mt-6">
 
-        <div class="w-2 h-2 rounded-full bg-[#0066FF]"></div>
+  <button class="proof-dot w-2 h-2 rounded-full bg-[#0066FF] transition-all duration-300"></button>
 
-        <div class="w-2 h-2 rounded-full bg-white/20"></div>
+  <button class="proof-dot w-2 h-2 rounded-full bg-white/20 transition-all duration-300"></button>
 
-        <div class="w-2 h-2 rounded-full bg-white/20"></div>
+  <button class="proof-dot w-2 h-2 rounded-full bg-white/20 transition-all duration-300"></button>
 
-        <div class="w-2 h-2 rounded-full bg-white/20"></div>
+  <button class="proof-dot w-2 h-2 rounded-full bg-white/20 transition-all duration-300"></button>
 
-      </div>
+</div>
 
       <!-- SWIPE HINT -->
       <div class="flex items-center justify-center gap-3 mt-6 text-xs uppercase tracking-[0.3em] text-gray-500">
@@ -1132,6 +1155,47 @@ document.addEventListener("DOMContentLoaded", () => {
     stepDescription.textContent = panelContent[currentPanel].description;
 
   });
+
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const carousel = document.getElementById("mobileProofCarousel");
+
+  const dots = document.querySelectorAll(".proof-dot");
+
+  if (!carousel || !dots.length) return;
+
+  function updateDots() {
+
+    const scrollLeft = carousel.scrollLeft;
+
+    const cardWidth = carousel.querySelector("div").offsetWidth + 20;
+
+    const activeIndex = Math.round(scrollLeft / cardWidth);
+
+    dots.forEach((dot, index) => {
+
+      if (index === activeIndex) {
+
+        dot.classList.remove("bg-white/20");
+
+        dot.classList.add("bg-[#0066FF]");
+
+      } else {
+
+        dot.classList.remove("bg-[#0066FF]");
+
+        dot.classList.add("bg-white/20");
+
+      }
+
+    });
+
+  }
+
+  carousel.addEventListener("scroll", updateDots);
 
 });
 </script>
