@@ -755,43 +755,6 @@ document.addEventListener("DOMContentLoaded", () => {
     <!-- LEFT COLUMN -->
     <div class="col-span-7">
 
-      <!-- DELTA STEP INDICATORS -->
-<div class="flex justify-center mb-5">
-
-  <div class="flex items-center gap-10 select-none">
-
-    <div
-      class="delta-step-indicator active-step"
-      data-step="1"
-    >
-      1
-    </div>
-
-    <div
-      class="delta-step-indicator"
-      data-step="2"
-    >
-      2
-    </div>
-
-    <div
-      class="delta-step-indicator"
-      data-step="3"
-    >
-      3
-    </div>
-
-    <div
-      class="delta-step-indicator"
-      data-step="4"
-    >
-      4
-    </div>
-
-  </div>
-
-</div>
-
       <!-- VISUAL -->
       <div class="group relative rounded-3xl overflow-hidden border border-white/10 bg-[#111111] transition-all duration-700 hover:border-white/15 hover:-translate-y-[2px] hover:shadow-[0_20px_80px_rgba(0,0,0,0.55)]">
 
@@ -809,7 +772,6 @@ document.addEventListener("DOMContentLoaded", () => {
               class="absolute inset-0 w-full h-full object-cover opacity-80 transition-transform duration-[7000ms] ease-out group-hover:scale-[1.03]"
             >
 
-            <!-- WARM FILMIC OVERLAY -->
             <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
 
             <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 bg-[radial-gradient(circle_at_center,rgba(255,245,220,0.04),transparent_65%)]"></div>
@@ -829,7 +791,6 @@ document.addEventListener("DOMContentLoaded", () => {
               class="absolute inset-0 w-full h-full object-cover opacity-82 contrast-[1.03] saturate-[0.92] transition-transform duration-[7000ms] ease-out group-hover:scale-[1.02]"
             >
 
-            <!-- UNCANNY RED TENSION -->
             <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
 
             <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-[radial-gradient(circle_at_center,rgba(255,0,0,0.035),transparent_70%)]"></div>
@@ -853,7 +814,6 @@ document.addEventListener("DOMContentLoaded", () => {
               class="absolute inset-0 w-full h-full object-cover opacity-100 contrast-[1.04] saturate-[0.96]"
             ></video>
 
-            <!-- PROOFLAB BLUE -->
             <div class="absolute inset-0 bg-gradient-to-t from-black via-black/3 to-transparent"></div>
 
             <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 bg-[radial-gradient(circle_at_center,rgba(0,102,255,0.03),transparent_65%)]"></div>
@@ -863,95 +823,121 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
 
         <!-- PANEL 4 -->
-<div class="proof-panel hidden" data-panel="4">
+        <div class="proof-panel hidden" data-panel="4">
 
-  <div
-    id="proofComparisonDesktop"
-    class="aspect-[16/9] relative overflow-hidden bg-black select-none"
-  >
+          <div
+            id="proofComparisonDesktop"
+            class="aspect-[16/9] relative overflow-hidden bg-black select-none"
+          >
 
-    <!-- LABELS -->
-<div
-  
-  class="absolute top-5 left-5 z-40 text-[10px] uppercase tracking-[0.3em] text-[#0066FF] opacity-0 transition-opacity duration-700 pointer-events-none"
->
-  ProofLab
-</div>
+            <!-- RAW BASE VIDEO -->
+            <video
+              id="proofRawVideoDesktop"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="auto"
+              class="absolute inset-0 w-full h-full object-cover contrast-[0.9] saturate-[0.72] brightness-[0.92] blur-[0.4px]"
+            ></video>
 
+            <!-- GENERIC LABEL -->
+            <div
+              id="genericLabelDesktop"
+              class="absolute top-5 right-5 z-10 text-[10px] uppercase tracking-[0.3em] text-white/45 transition-opacity duration-500 pointer-events-none"
+            >
+              Generic Generation
+            </div>
 
+            <!-- CINEMATIC REVEAL -->
+            <div
+              id="proofRevealDesktop"
+              class="absolute inset-y-0 left-0 overflow-hidden z-30"
+              style="width:50%;"
+            >
 
-    <!-- RAW BASE VIDEO -->
-<video
-  id="proofRawVideoDesktop"
-  autoplay
-  muted
-  loop
-  playsinline
-  preload="auto"
-  class="absolute inset-0 w-full h-full object-cover contrast-[0.9] saturate-[0.72] brightness-[0.92] blur-[0.4px]"
-></video>
-<!-- GENERIC LABEL -->
-<div
-  id="genericLabelDesktop"
-  class="absolute top-5 right-5 z-10 text-[10px] uppercase tracking-[0.3em] text-white/45 transition-opacity duration-500 pointer-events-none"
->
-  Generic Generation
-</div>
+              <video
+                id="proofCinematicVideoDesktop"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="auto"
+                class="absolute inset-0 w-full h-full object-cover contrast-[1.06] saturate-[1.08] brightness-[0.98]"
+              ></video>
 
+              <!-- PROOFLAB LABEL -->
+              <div
+                class="absolute top-5 left-5 z-40 text-[10px] uppercase tracking-[0.3em] text-[#0066FF] pointer-events-none"
+              >
+                ProofLab
+              </div>
 
+            </div>
 
-<!-- CINEMATIC REVEAL -->
-<div
-  id="proofRevealDesktop"
-  class="absolute inset-y-0 left-0 overflow-hidden z-30"
-  style="width:50%;"
->
+            <!-- DIVIDER -->
+            <div
+              id="proofSliderDesktop"
+              class="absolute top-0 bottom-0 z-30 w-[2px] bg-[#0066FF] shadow-[0_0_18px_rgba(0,102,255,0.45)] hover:shadow-[0_0_24px_rgba(0,102,255,0.38)] cursor-ew-resize transition-shadow duration-300"
+              style="left:50%; transform:translateX(-1px);"
+            >
 
-  <video
-    id="proofCinematicVideoDesktop"
-    autoplay
-    muted
-    loop
-    playsinline
-    preload="auto"
-    class="absolute inset-0 w-full h-full object-cover contrast-[1.06] saturate-[1.08] brightness-[0.98]"
-  ></video>
+              <!-- HANDLE -->
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-white/25 bg-black/60 backdrop-blur flex items-center justify-center animate-[pulse_4s_cubic-bezier(0.4,0,0.6,1)_infinite]">
 
-  <!-- PROOFLAB LABEL -->
-  <div
-    class="absolute top-5 left-5 z-40 text-[10px] uppercase tracking-[0.3em] text-[#0066FF] pointer-events-none"
-  >
-    ProofLab
-  </div>
+                <span class="text-[10px] tracking-tight text-white/70">
+                  ← →
+                </span>
 
-</div>
+              </div>
 
-    <!-- DIVIDER -->
-    <div
-      id="proofSliderDesktop"
-      class="absolute top-0 bottom-0 z-30 w-[2px] bg-[#0066FF] shadow-[0_0_18px_rgba(255,255,255,0.45)] hover:shadow-[0_0_24px_rgba(255,255,255,0.28)] cursor-ew-resize transition-shadow duration-300"
-      style="left:50%; transform:translateX(-1px);"
-    >
+            </div>
 
-      <!-- HANDLE -->
-      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-white/25 bg-black/60 backdrop-blur flex items-center justify-center animate-[pulse_4s_cubic-bezier(0.4,0,0.6,1)_infinite]">
+            <!-- OVERLAYS -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/5 to-transparent pointer-events-none"></div>
 
-        <span class="text-[10px] tracking-tight text-white/70">
-          ← →
-        </span>
+            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.018),transparent_68%)]"></div>
+
+          </div>
+
+        </div>
 
       </div>
 
-    </div>
+      <!-- DELTA STEP INDICATORS -->
+      <div class="flex justify-center mt-5">
 
-    <!-- OVERLAYS -->
-    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/5 to-transparent pointer-events-none"></div>
+        <div class="flex items-center gap-10 select-none">
 
-    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.018),transparent_68%)]"></div>
+          <div
+            class="delta-step-indicator active-step"
+            data-step="1"
+          >
+            1
+          </div>
 
-  </div>
+          <div
+            class="delta-step-indicator"
+            data-step="2"
+          >
+            2
+          </div>
 
-</div>
+          <div
+            class="delta-step-indicator"
+            data-step="3"
+          >
+            3
+          </div>
+
+          <div
+            class="delta-step-indicator"
+            data-step="4"
+          >
+            4
+          </div>
+
+        </div>
 
       </div>
 
@@ -1863,9 +1849,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 .delta-step-indicator {
 
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
 
   color: rgb(255, 255, 255);
 
@@ -1873,7 +1859,11 @@ document.addEventListener("DOMContentLoaded", () => {
     color 0.45s ease,
     opacity 0.45s ease;
 
-  cursor: default;
+}
+
+.delta-step-indicator.active-step {
+
+  color: #0066FF;
 
 }
 
