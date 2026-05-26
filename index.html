@@ -614,63 +614,64 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="marquee-track">
 
           <!-- GROUP -->
-          <div class="marquee-group">
+<div class="marquee-group">
 
-            <img src="logos/launchbox.png" alt="Story LaunchBox" class="logo-item">
+  <img src="logos/georgia-film-society.png" alt="Georgia Film Society" class="logo-item">
 
-            <img src="logos/nora.png" alt="Story LaunchBox" class="logo-item">
-            
-            <img src="logos/eighty-west.jpg" alt="Eighty-West Studios" class="logo-item">
+  <img src="logos/freckles.png" alt="Freckles" class="logo-item">
 
-            <img src="logos/georgia-film-society.png" alt="Georgia Film Society" class="logo-item">
+  <img src="logos/alex.png" alt="Alex Montgomery" class="logo-item">
 
-            <img src="logos/kris-shuman.png" alt="Kris Shuman" class="logo-item">
+  <img src="logos/eighty-west.jpg" alt="Eighty-West Studios" class="logo-item">
 
-          </div>
+  <img src="logos/lumen.png" alt="Lumen" class="logo-item">
 
-          <!-- DUPLICATE -->
-          <div class="marquee-group">
+</div>
 
-            <img src="logos/freckles.png" alt="Story LaunchBox" class="logo-item">
+<!-- DUPLICATE -->
+<div class="marquee-group">
 
-            <img src="logos/birch.png" alt="Bad Bella Films" class="logo-item">
+  <img src="logos/bad-bella.png" alt="Bad Bella Films" class="logo-item">
 
-            <img src="logos/brookhaven.png" alt="Eighty-West Studios" class="logo-item">
+  <img src="logos/nora.png" alt="Nora Bradford" class="logo-item">
 
-            <img src="logos/porchlight.png" alt="Georgia Film Society" class="logo-item">
+  <img src="logos/launchbox.png" alt="Story LaunchBox" class="logo-item">
 
-            <img src="logos/lumen.png" alt="Kris Shuman" class="logo-item">
+  <img src="logos/porchlight.png" alt="Porchlight" class="logo-item">
 
-          </div>
+  <img src="logos/riley.png" alt="Riley Morgan" class="logo-item">
 
-          <!-- TRIPLICATE -->
-          <div class="marquee-group">
+</div>
 
-            <img src="logos/launchbox.png" alt="Story LaunchBox" class="logo-item">
+<!-- TRIPLICATE -->
+<div class="marquee-group">
 
-            <img src="logos/bad-bella.png" alt="Bad Bella Films" class="logo-item">
+  <img src="logos/brookhaven.png" alt="Brookhaven" class="logo-item">
 
-            <img src="logos/eighty-west.jpg" alt="Eighty-West Studios" class="logo-item">
+  <img src="logos/kris-shuman.png" alt="Kris Shuman" class="logo-item">
 
-            <img src="logos/georgia-film-society.png" alt="Georgia Film Society" class="logo-item">
+  <img src="logos/taylor.png" alt="Taylor Reese" class="logo-item">
 
-            <img src="logos/kris-shuman.png" alt="Kris Shuman" class="logo-item">
+  <img src="logos/georgia-film-society.png" alt="Georgia Film Society" class="logo-item">
 
-          </div>
-          <!-- ANOTHER ONE -->
-          <div class="marquee-group">
+  <img src="logos/birch.png" alt="Simon Birch" class="logo-item">
 
-            <img src="logos/bad-bella.png" alt="Bad Bella Films" class="logo-item">
+</div>
 
-            <img src="logos/taylor.png" alt="Bad Bella Films" class="logo-item">
+<!-- ANOTHER ONE -->
+<div class="marquee-group">
 
-            <img src="logos/riley.png" alt="Eighty-West Studios" class="logo-item">
+  <img src="logos/eighty-west.jpg" alt="Eighty-West Studios" class="logo-item">
 
-            <img src="logos/eliot.png" alt="Georgia Film Society" class="logo-item">
+  <img src="logos/eliot.png" alt="Elliot Gray" class="logo-item">
 
-            <img src="logos/alex.png" alt="Kris Shuman" class="logo-item">
+  <img src="logos/bad-bella.png" alt="Bad Bella Films" class="logo-item">
 
-          </div>
+  <img src="logos/launchbox.png" alt="Story LaunchBox" class="logo-item">
+
+  <img src="logos/kris-shuman.png" alt="Kris Shuman" class="logo-item">
+
+</div>
 
         </div>
 
@@ -749,11 +750,49 @@ document.addEventListener("DOMContentLoaded", () => {
 <!-- ===================================================== -->
 <div class="hidden lg:block">
 
-  <div class="grid grid-cols-12 gap-10 items-center">
+  <div class="grid grid-cols-12 gap-10 items-start">
 
-    <!-- VISUAL -->
+    <!-- LEFT COLUMN -->
     <div class="col-span-7">
 
+      <!-- DELTA STEP INDICATORS -->
+<div class="flex justify-center mb-5">
+
+  <div class="flex items-center gap-10 select-none">
+
+    <div
+      class="delta-step-indicator active-step"
+      data-step="1"
+    >
+      1
+    </div>
+
+    <div
+      class="delta-step-indicator"
+      data-step="2"
+    >
+      2
+    </div>
+
+    <div
+      class="delta-step-indicator"
+      data-step="3"
+    >
+      3
+    </div>
+
+    <div
+      class="delta-step-indicator"
+      data-step="4"
+    >
+      4
+    </div>
+
+  </div>
+
+</div>
+
+      <!-- VISUAL -->
       <div class="group relative rounded-3xl overflow-hidden border border-white/10 bg-[#111111] transition-all duration-700 hover:border-white/15 hover:-translate-y-[2px] hover:shadow-[0_20px_80px_rgba(0,0,0,0.55)]">
 
         <!-- ATMOSPHERIC TOP LIGHT -->
@@ -1311,30 +1350,59 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (nextBtn) {
 
-    nextBtn.addEventListener("click", () => {
+  nextBtn.addEventListener("click", () => {
 
-      panels[currentPanel].classList.add("hidden");
+    /* REMOVE CURRENT PANEL */
+    panels[currentPanel].classList.add(
+      "hidden"
+    );
 
-      currentPanel++;
+    /* NEXT PANEL */
+    currentPanel++;
 
-      if (currentPanel >= panels.length) {
-        currentPanel = 0;
-      }
+    if (currentPanel >= panels.length) {
+      currentPanel = 0;
+    }
 
-      panels[currentPanel].classList.remove("hidden");
+    /* SHOW NEW PANEL */
+    panels[currentPanel].classList.remove(
+      "hidden"
+    );
 
-      stepLabel.textContent =
-        panelContent[currentPanel].label;
+    /* UPDATE TEXT */
+    stepLabel.textContent =
+      panelContent[currentPanel].label;
 
-      stepTitle.textContent =
-        panelContent[currentPanel].title;
+    stepTitle.textContent =
+      panelContent[currentPanel].title;
 
-      stepDescription.textContent =
-        panelContent[currentPanel].description;
+    stepDescription.textContent =
+      panelContent[currentPanel].description;
+
+    /* ===================================== */
+    /* UPDATE STEP INDICATORS */
+    /* ===================================== */
+
+    const indicators =
+      document.querySelectorAll(
+        ".delta-step-indicator"
+      );
+
+    indicators.forEach(indicator => {
+
+      indicator.classList.remove(
+        "active-step"
+      );
 
     });
 
-  }
+    indicators[currentPanel].classList.add(
+      "active-step"
+    );
+
+  });
+
+}
 
 });
 </script>
@@ -1787,6 +1855,32 @@ document.addEventListener("DOMContentLoaded", () => {
   opacity: 1;
   filter: grayscale(0%);
   transform: scale(1.06);
+}
+
+/* ===================================================== */
+/* DELTA STEP INDICATORS */
+/* ===================================================== */
+
+.delta-step-indicator {
+
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+
+  color: rgb(255, 255, 255);
+
+  transition:
+    color 0.45s ease,
+    opacity 0.45s ease;
+
+  cursor: default;
+
+}
+
+.delta-step-indicator.active-step {
+
+  color: #0066FF;
+
 }
 
 @keyframes marqueeScroll {
