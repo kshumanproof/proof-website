@@ -631,19 +631,19 @@ document.addEventListener("DOMContentLoaded", () => {
           <!-- DUPLICATE -->
           <div class="marquee-group">
 
-            <img src="logos/launchbox.png" alt="Story LaunchBox" class="logo-item">
+            <img src="logos/freckles.png" alt="Story LaunchBox" class="logo-item">
 
-            <img src="logos/bad-bella.png" alt="Bad Bella Films" class="logo-item">
+            <img src="logos/birch.png" alt="Bad Bella Films" class="logo-item">
 
-            <img src="logos/eighty-west.jpg" alt="Eighty-West Studios" class="logo-item">
+            <img src="logos/brookhaven.png" alt="Eighty-West Studios" class="logo-item">
 
-            <img src="logos/georgia-film-society.png" alt="Georgia Film Society" class="logo-item">
+            <img src="logos/porchlight.png" alt="Georgia Film Society" class="logo-item">
 
-            <img src="logos/kris-shuman.png" alt="Kris Shuman" class="logo-item">
+            <img src="logos/lumen.png" alt="Kris Shuman" class="logo-item">
 
           </div>
 
-          <!-- DUPLICATE -->
+          <!-- TRIPLICATE -->
           <div class="marquee-group">
 
             <img src="logos/launchbox.png" alt="Story LaunchBox" class="logo-item">
@@ -655,6 +655,20 @@ document.addEventListener("DOMContentLoaded", () => {
             <img src="logos/georgia-film-society.png" alt="Georgia Film Society" class="logo-item">
 
             <img src="logos/kris-shuman.png" alt="Kris Shuman" class="logo-item">
+
+          </div>
+          <!-- ANOTHER ONE -->
+          <div class="marquee-group">
+
+            <img src="logos/freckles.png" alt="Story LaunchBox" class="logo-item">
+
+            <img src="logos/birch.png" alt="Bad Bella Films" class="logo-item">
+
+            <img src="logos/brookhaven.png" alt="Eighty-West Studios" class="logo-item">
+
+            <img src="logos/porchlight.png" alt="Georgia Film Society" class="logo-item">
+
+            <img src="logos/lumen.png" alt="Kris Shuman" class="logo-item">
 
           </div>
 
@@ -743,7 +757,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="group relative rounded-3xl overflow-hidden border border-white/10 bg-[#111111] transition-all duration-700 hover:border-white/15 hover:-translate-y-[2px] hover:shadow-[0_20px_80px_rgba(0,0,0,0.55)]">
 
         <!-- ATMOSPHERIC TOP LIGHT -->
-<div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 pointer-events-none mix-blend-screen bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.025),transparent_58%)]"></div>
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 pointer-events-none mix-blend-screen bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.025),transparent_58%)]"></div>
 
         <!-- PANEL 1 -->
         <div class="proof-panel active-panel" data-panel="1">
@@ -791,14 +805,14 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="aspect-[16/9] relative overflow-hidden">
 
             <video
-  id="proofDeltaVideo1"
-  autoplay
-  muted
-  loop
-  playsinline
-  preload="auto"
-  class="absolute inset-0 w-full h-full object-cover opacity-100 contrast-[1.04] saturate-[0.96]"
-></video>
+              id="proofDeltaVideo1"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="auto"
+              class="absolute inset-0 w-full h-full object-cover opacity-100 contrast-[1.04] saturate-[0.96]"
+            ></video>
 
             <!-- PROOFLAB BLUE -->
             <div class="absolute inset-0 bg-gradient-to-t from-black via-black/3 to-transparent"></div>
@@ -810,28 +824,95 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
 
         <!-- PANEL 4 -->
-        <div class="proof-panel hidden" data-panel="4">
+<div class="proof-panel hidden" data-panel="4">
 
-          <div class="aspect-[16/9] relative overflow-hidden">
+  <div
+    id="proofComparisonDesktop"
+    class="aspect-[16/9] relative overflow-hidden bg-black select-none"
+  >
 
-            <video
-  id="proofDeltaVideo2"
+    <!-- LABELS -->
+<div
+  
+  class="absolute top-5 left-5 z-40 text-[10px] uppercase tracking-[0.3em] text-[#0066FF] opacity-0 transition-opacity duration-700 pointer-events-none"
+>
+  ProofLab
+</div>
+
+
+
+    <!-- RAW BASE VIDEO -->
+<video
+  id="proofRawVideoDesktop"
   autoplay
   muted
   loop
   playsinline
   preload="auto"
-  class="absolute inset-0 w-full h-full object-cover opacity-100 contrast-[1.03] saturate-[1.01]"
+  class="absolute inset-0 w-full h-full object-cover contrast-[0.9] saturate-[0.72] brightness-[0.92] blur-[0.4px]"
 ></video>
+<!-- GENERIC LABEL -->
+<div
+  id="genericLabelDesktop"
+  class="absolute top-5 right-5 z-10 text-[10px] uppercase tracking-[0.3em] text-white/45 transition-opacity duration-500 pointer-events-none"
+>
+  Generic Generation
+</div>
 
-            <!-- FINAL CINEMATIC BLOOM -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/3 to-transparent"></div>
 
-            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.018),transparent_68%)]"></div>
 
-          </div>
+<!-- CINEMATIC REVEAL -->
+<div
+  id="proofRevealDesktop"
+  class="absolute inset-y-0 left-0 overflow-hidden z-30"
+  style="width:50%;"
+>
 
-        </div>
+  <video
+    id="proofCinematicVideoDesktop"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+    class="absolute inset-0 w-full h-full object-cover contrast-[1.06] saturate-[1.08] brightness-[0.98]"
+  ></video>
+
+  <!-- PROOFLAB LABEL -->
+  <div
+    class="absolute top-5 left-5 z-40 text-[10px] uppercase tracking-[0.3em] text-[#0066FF] pointer-events-none"
+  >
+    ProofLab
+  </div>
+
+</div>
+
+    <!-- DIVIDER -->
+    <div
+      id="proofSliderDesktop"
+      class="absolute top-0 bottom-0 z-30 w-[2px] bg-[#0066FF] shadow-[0_0_18px_rgba(255,255,255,0.45)] hover:shadow-[0_0_24px_rgba(255,255,255,0.28)] cursor-ew-resize transition-shadow duration-300"
+      style="left:50%; transform:translateX(-1px);"
+    >
+
+      <!-- HANDLE -->
+      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-white/25 bg-black/60 backdrop-blur flex items-center justify-center animate-[pulse_4s_cubic-bezier(0.4,0,0.6,1)_infinite]">
+
+        <span class="text-[10px] tracking-tight text-white/70">
+          ← →
+        </span>
+
+      </div>
+
+    </div>
+
+    <!-- OVERLAYS -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/5 to-transparent pointer-events-none"></div>
+
+    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.018),transparent_68%)]"></div>
+
+  </div>
+
+</div>
 
       </div>
 
@@ -993,14 +1074,14 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="aspect-[16/9] relative overflow-hidden">
 
           <video
-  id="proofDeltaVideo1Mobile"
-  autoplay
-  muted
-  loop
-  playsinline
-  preload="auto"
-  class="absolute inset-0 w-full h-full object-cover opacity-100 contrast-[1.04] saturate-[0.96]"
-></video>
+            id="proofDeltaVideo1Mobile"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            class="absolute inset-0 w-full h-full object-cover opacity-100 contrast-[1.04] saturate-[0.96]"
+          ></video>
 
           <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
 
@@ -1029,47 +1110,118 @@ document.addEventListener("DOMContentLoaded", () => {
     </div>
 
     <!-- PANEL 4 -->
-    <div class="min-w-[92vw] snap-center">
+<div class="min-w-[92vw] snap-center">
 
-      <div class="group rounded-3xl overflow-hidden border border-[#0066FF]/20 bg-[#111111] transition-all duration-700 hover:border-white/20 hover:shadow-[0_20px_80px_rgba(255,255,255,0.04)]">
+  <div class="group rounded-3xl overflow-hidden border border-[#0066FF]/20 bg-[#111111] transition-all duration-700 hover:border-white/20 hover:shadow-[0_20px_80px_rgba(255,255,255,0.04)]">
 
-        <div class="aspect-[16/9] relative overflow-hidden">
+    <div
+      id="proofComparisonMobile"
+      class="aspect-[16/9] relative overflow-hidden bg-black select-none"
+    >
 
-          <video
-  id="proofDeltaVideo2Mobile"
+      <!-- LABELS -->
+<div
+  id="prooflabLabelMobile"
+  class="absolute top-5 left-5 z-40 text-[10px] uppercase tracking-[0.3em] text-[#0066FF] opacity-0 transition-opacity duration-700 pointer-events-none"
+>
+  ProofLab
+</div>
+
+
+
+      <!-- RAW BASE VIDEO -->
+<video
+  id="proofRawVideoDesktop"
   autoplay
   muted
   loop
   playsinline
   preload="auto"
-  class="absolute inset-0 w-full h-full object-cover opacity-100 contrast-[1.03] saturate-[1.01]"
+  class="absolute inset-0 w-full h-full object-cover contrast-[0.9] saturate-[0.72] brightness-[0.92] blur-[0.4px]"
 ></video>
+<!-- GENERIC LABEL -->
+<div
+  id="genericLabelDesktop"
+  class="absolute top-5 right-5 z-10 text-[10px] uppercase tracking-[0.3em] text-white/45 transition-opacity duration-500 pointer-events-none"
+>
+  Generic Generation
+</div>
 
-          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
 
-          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.035),transparent_68%)]"></div>
 
-        </div>
+<!-- CINEMATIC REVEAL -->
+<div
+  id="proofRevealMobile"
+  class="absolute inset-y-0 left-0 overflow-hidden z-30"
+  style="width:50%;"
+>
 
-        <div class="p-8">
+  <video
+    id="proofCinematicVideoMobile"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+    class="absolute inset-0 w-full h-full object-cover contrast-[1.06] saturate-[1.08] brightness-[0.98]"
+  ></video>
+<!-- PROOFLAB LABEL -->
+  <div
+    class="absolute top-5 left-5 z-40 text-[10px] uppercase tracking-[0.3em] text-[#0066FF] pointer-events-none"
+  >
+    ProofLab
+  </div>
+  
 
-          <p class="text-xs uppercase tracking-[0.35em] text-emerald-400 mb-5">
-            Final Output
-          </p>
+</div>
 
-          <h4 class="text-3xl mb-5">
-            Cinematic Proof
-          </h4>
+      <!-- DIVIDER -->
+      <div
+        id="proofSliderMobile"
+        class="absolute top-0 bottom-0 z-30 w-[2px] bg-white/80 shadow-[0_0_18px_rgba(255,255,255,0.45)]"
+        style="
+          left:50%;
+          transform:translateX(-1px);
+          "
+      >
 
-          <p class="text-gray-300 leading-relaxed">
-            The result is a cinematic asset capable of communicating tone, execution, emotional stakes, and marketable identity to collaborators, producers, and investors.
-          </p>
+        <!-- HANDLE -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-white/25 bg-black/60 backdrop-blur flex items-center justify-center animate-[pulse_4s_cubic-bezier(0.4,0,0.6,1)_infinite]">
+
+          <span class="text-[10px] tracking-tight text-white/70">
+            ← →
+          </span>
 
         </div>
 
       </div>
 
+      <!-- OVERLAYS -->
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/5 to-transparent pointer-events-none"></div>
+
+      <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.035),transparent_68%)]"></div>
+
     </div>
+
+    <div class="p-8">
+
+      <p class="text-xs uppercase tracking-[0.35em] text-emerald-400 mb-5">
+        Final Output
+      </p>
+
+      <h4 class="text-3xl mb-5">
+        Cinematic Proof
+      </h4>
+
+      <p class="text-gray-300 leading-relaxed">
+        The result is a cinematic asset capable of communicating tone, execution, emotional stakes, and marketable identity to collaborators, producers, and investors.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
 
   </div>
 
@@ -1113,11 +1265,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const nextBtn = document.getElementById("nextProofStep");
 
-  const stepLabel = document.getElementById("desktopStepLabel");
+  const stepLabel =
+    document.getElementById("desktopStepLabel");
 
-  const stepTitle = document.getElementById("desktopStepTitle");
+  const stepTitle =
+    document.getElementById("desktopStepTitle");
 
-  const stepDescription = document.getElementById("desktopStepDescription");
+  const stepDescription =
+    document.getElementById("desktopStepDescription");
 
   let currentPanel = 0;
 
@@ -1126,25 +1281,29 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       label: "Step 01",
       title: "The Raw Script",
-      description: "Most scripts communicate plot. Very few communicate cinematic atmosphere, emotional weight, visual rhythm, or tone clearly enough to accelerate belief."
+      description:
+        "Most scripts communicate plot. Very few communicate cinematic atmosphere, emotional weight, visual rhythm, or tone clearly enough to accelerate belief."
     },
 
     {
       label: "Step 02",
       title: "Raw Machine Generation",
-      description: "Unmanaged generative output often lacks cinematic intention — producing synthetic movement, inconsistent faces, flat lighting, and emotionally weightless visuals."
+      description:
+        "Unmanaged generative output often lacks cinematic intention — producing synthetic movement, inconsistent faces, flat lighting, and emotionally weightless visuals."
     },
 
     {
       label: "Step 03",
       title: "The ProofLab System",
-      description: "PROOF manually refines cinematic pacing, shot language, continuity, sound design, atmosphere, and emotional clarity to create presentation-grade visual proof."
+      description:
+        "PROOF manually refines cinematic pacing, shot language, continuity, sound design, atmosphere, and emotional clarity to create presentation-grade visual proof."
     },
 
     {
       label: "Final Output",
       title: "Cinematic Proof",
-      description: "The result is a cinematic asset capable of communicating tone, execution, emotional stakes, and marketable identity to collaborators, producers, and investors."
+      description:
+        "The result is a cinematic asset capable of communicating tone, execution, emotional stakes, and marketable identity to collaborators, producers, and investors."
     }
 
   ];
@@ -1243,7 +1402,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const videos = [
 
-    /* DESKTOP PANEL 3 */
     {
       element:
         document.getElementById("proofDeltaVideo1"),
@@ -1251,7 +1409,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "https://videodelivery.net/c0f6d21e6379b577d5933cfdda621c9c/manifest/video.m3u8"
     },
 
-    /* MOBILE PANEL 3 */
     {
       element:
         document.getElementById("proofDeltaVideo1Mobile"),
@@ -1259,18 +1416,30 @@ document.addEventListener("DOMContentLoaded", () => {
         "https://videodelivery.net/c0f6d21e6379b577d5933cfdda621c9c/manifest/video.m3u8"
     },
 
-    /* DESKTOP PANEL 4 */
     {
       element:
-        document.getElementById("proofDeltaVideo2"),
+        document.getElementById("proofRawVideoDesktop"),
+      url:
+        "https://videodelivery.net/b0cb9d42d534c412cb74dc954380b426/manifest/video.m3u8"
+    },
+
+    {
+      element:
+        document.getElementById("proofCinematicVideoDesktop"),
       url:
         "https://videodelivery.net/1a90159d735dc26353423b43d11dade8/manifest/video.m3u8"
     },
 
-    /* MOBILE PANEL 4 */
     {
       element:
-        document.getElementById("proofDeltaVideo2Mobile"),
+        document.getElementById("proofRawVideoMobile"),
+      url:
+        "https://videodelivery.net/b0cb9d42d534c412cb74dc954380b426/manifest/video.m3u8"
+    },
+
+    {
+      element:
+        document.getElementById("proofCinematicVideoMobile"),
       url:
         "https://videodelivery.net/1a90159d735dc26353423b43d11dade8/manifest/video.m3u8"
     }
@@ -1280,6 +1449,35 @@ document.addEventListener("DOMContentLoaded", () => {
   videos.forEach(videoData => {
 
     if (!videoData.element) return;
+
+    function setupVisibilityPlayback(video) {
+
+      video.pause();
+
+      const observer =
+        new IntersectionObserver(entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              video.play();
+
+            } else {
+
+              video.pause();
+
+            }
+
+          });
+
+        }, {
+          threshold: 0.35
+        });
+
+      observer.observe(video);
+
+    }
 
     if (Hls.isSupported()) {
 
@@ -1292,20 +1490,267 @@ document.addEventListener("DOMContentLoaded", () => {
 
       hls.attachMedia(videoData.element);
 
+      videoData.element.addEventListener(
+        "canplay",
+        () => {
+
+          setupVisibilityPlayback(
+            videoData.element
+          );
+
+        },
+        { once: true }
+      );
+
     } else if (
       videoData.element.canPlayType(
         "application/vnd.apple.mpegurl"
       )
     ) {
 
-      videoData.element.src = videoData.url;
+      videoData.element.src =
+        videoData.url;
+
+      videoData.element.addEventListener(
+        "canplay",
+        () => {
+
+          setupVisibilityPlayback(
+            videoData.element
+          );
+
+        },
+        { once: true }
+      );
 
     }
 
   });
 
+  /* ===================================================== */
+  /* PROOFLAB REVEAL SYSTEM */
+  /* ===================================================== */
+
+  function initProofReveal({
+    comparison,
+    reveal,
+    slider
+  }) {
+
+    if (
+      !comparison ||
+      !reveal ||
+      !slider
+    ) return;
+
+    let position = 0;
+
+    let direction = 1;
+
+    let raf;
+
+    let isDragging = false;
+
+    let isVisible = false;
+
+    const isDesktop =
+      window.innerWidth >= 1024;
+
+    /* ===================================== */
+    /* SET POSITION */
+    /* ===================================== */
+
+    function setSliderPosition(pos) {
+
+      position = Math.max(
+        0,
+        Math.min(100, pos)
+      );
+
+      reveal.style.width =
+        `${position}%`;
+
+      slider.style.left =
+        `${position}%`;
+
+      slider.style.boxShadow =
+        `
+        0 0 18px rgba(0,102,255,1),
+        0 0 42px rgba(0,102,255,0.9),
+        -90px 0 140px rgba(0,102,255,0.34),
+        -180px 0 220px rgba(0,102,255,0.16)
+        `;
+    }
+
+    /* ===================================== */
+    /* AUTO ANIMATION */
+    /* ===================================== */
+
+    function animateSlider() {
+
+      if (
+        !isVisible ||
+        isDragging
+      ) {
+
+        raf =
+          requestAnimationFrame(
+            animateSlider
+          );
+
+        return;
+
+      }
+
+      position += direction * 0.25;
+
+      if (position >= 100) {
+        direction = -1;
+      }
+
+      if (position <= 0) {
+        direction = 1;
+      }
+
+      setSliderPosition(position);
+
+      raf =
+        requestAnimationFrame(
+          animateSlider
+        );
+
+    }
+
+    /* ===================================== */
+    /* VISIBILITY */
+    /* ===================================== */
+
+    const observer =
+      new IntersectionObserver(entries => {
+
+        entries.forEach(entry => {
+
+          isVisible =
+            entry.isIntersecting;
+
+        });
+
+      }, {
+        threshold: 0.55
+      });
+
+    observer.observe(comparison);
+
+    /* ===================================== */
+    /* DESKTOP DRAGGING */
+    /* ===================================== */
+
+    if (isDesktop) {
+
+      function updateFromMouse(clientX) {
+
+        const rect =
+          comparison.getBoundingClientRect();
+
+        let newPosition =
+          ((clientX - rect.left) / rect.width) * 100;
+
+        setSliderPosition(newPosition);
+
+      }
+
+      slider.addEventListener(
+        "mousedown",
+        () => {
+
+          isDragging = true;
+
+        }
+      );
+
+      window.addEventListener(
+        "mouseup",
+        () => {
+
+          isDragging = false;
+
+        }
+      );
+
+      window.addEventListener(
+        "mousemove",
+        e => {
+
+          if (!isDragging) return;
+
+          updateFromMouse(
+            e.clientX
+          );
+
+        }
+      );
+
+    }
+
+    /* ===================================== */
+    /* START */
+    /* ===================================== */
+
+    setSliderPosition(0);
+
+    animateSlider();
+
+  }
+
+  /* ===================================================== */
+  /* DESKTOP */
+  /* ===================================================== */
+
+  initProofReveal({
+
+    comparison:
+      document.getElementById(
+        "proofComparisonDesktop"
+      ),
+
+    reveal:
+      document.getElementById(
+        "proofRevealDesktop"
+      ),
+
+    slider:
+      document.getElementById(
+        "proofSliderDesktop"
+      )
+
+  });
+
+  /* ===================================================== */
+  /* MOBILE */
+  /* ===================================================== */
+
+  initProofReveal({
+
+    comparison:
+      document.getElementById(
+        "proofComparisonMobile"
+      ),
+
+    reveal:
+      document.getElementById(
+        "proofRevealMobile"
+      ),
+
+    slider:
+      document.getElementById(
+        "proofSliderMobile"
+      )
+
+  });
+
 });
 </script>
+
 <!-- ===================================================== -->
 <!-- STYLES -->
 <!-- ===================================================== -->
