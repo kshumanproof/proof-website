@@ -1888,7 +1888,7 @@ videos.forEach(videoData => {
 }
 
 .logo-item {
-  height: 90px;
+  height: 105px;
   width: auto;
   opacity: 0.72;
   filter: grayscale(100%);
@@ -1900,6 +1900,19 @@ videos.forEach(videoData => {
   opacity: 1;
   filter: grayscale(0%);
   transform: scale(1.06);
+}
+
+@media (max-width: 768px) {
+
+  .logo-item {
+    opacity: 1 !important;
+    filter: grayscale(0%) !important;
+  }
+
+  .marquee-track:hover {
+    animation-play-state: running !important;
+  }
+
 }
 
 /* ===================================================== */
@@ -1957,7 +1970,7 @@ videos.forEach(videoData => {
 @media (max-width: 768px) {
 
   .logo-item {
-    height: 72px;
+    height: 82px;
   }
 
   .marquee-group {
