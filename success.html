@@ -22,40 +22,8 @@ const access = params.get("access");
 const validAccess =
   "proof_access_7XqP91LmK2vRa8NzQ4TyF0bWsJcE63HdMpL9UaYtC5KrVx81Qn";
 
-if (access !== validAccess) {
-
-  document.documentElement.innerHTML = `
-    <head>
-      <title>Invalid Access</title>
-      <script src="https://cdn.tailwindcss.com"><\/script>
-    </head>
-
-    <body class="bg-[#0A0A0A] text-white min-h-screen flex items-center justify-center px-6">
-
-      <div class="text-center">
-
-        <img
-  src="proof-logo/Proof_Main.png"
-  alt="PROOF Logo"
-  class="h-[90px] md:h-[130px] w-auto object-contain mx-auto mb-10 scale-[2.1]"
- />
-
-        <h1 class="text-4xl md:text-5xl mb-4">
-          Invalid Access
-        </h1>
-
-        <p class="text-gray-400 max-w-md mx-auto leading-relaxed">
-          This submission portal requires a valid purchase.
-        </p>
-
-      </div>
-
-    </body>
-  `;
-
-  throw new Error("Access denied");
-
-}
+const hasValidAccess =
+  access === validAccess;
 </script>
 
 <!-- NAV -->
@@ -157,6 +125,9 @@ if (access !== validAccess) {
   </div>
 
 </header>
+
+<!-- PROTECTED CONTENT -->
+<div id="protectedContent">
 
 <!-- HERO -->
 <section class="pt-24 sm:pt-28 pb-10">
@@ -296,6 +267,8 @@ if (access !== validAccess) {
 
 </section>
 
+</div>
+
 <!-- TO TOP -->
 <button
   id="toTopBtn"
@@ -306,6 +279,52 @@ if (access !== validAccess) {
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+
+  /* ===================================== */
+  /* ACCESS CONTROL */
+  /* ===================================== */
+
+  if (!hasValidAccess) {
+
+    const protectedContent =
+      document.getElementById("protectedContent");
+
+    if (protectedContent) {
+
+      protectedContent.innerHTML = `
+        <section class="min-h-[70vh] flex items-center justify-center px-6 py-24">
+
+          <div class="text-center">
+
+            <img
+              src="proof-logo/Proof_Main.png"
+              alt="PROOF Logo"
+              class="h-[110px] md:h-[160px] w-auto object-contain mx-auto mb-10 scale-[2.1]"
+            />
+
+            <h1 class="text-4xl md:text-5xl mb-4">
+              Invalid Access
+            </h1>
+
+            <p class="text-gray-400 max-w-md mx-auto leading-relaxed mb-8">
+              This submission portal requires a valid purchase.
+            </p>
+
+            <a
+              href="index.html"
+              class="inline-flex items-center justify-center bg-[#0066FF] px-6 py-3 rounded-md text-white transition hover:bg-[#0052cc]"
+            >
+              Return Home
+            </a>
+
+          </div>
+
+        </section>
+      `;
+
+    }
+
+  }
 
   /* ===================================== */
   /* TO TOP BUTTON */
