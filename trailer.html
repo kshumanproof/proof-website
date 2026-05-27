@@ -29,66 +29,56 @@
     </button>
 
     <!-- DESKTOP NAV -->
-<nav class="hidden md:flex space-x-6 text-sm text-white">
+    <nav class="hidden md:flex space-x-6 text-sm text-white">
 
-  <!--
-  <a href="examples.html" class="hover:text-gray-300">Examples</a>
-  -->
+      <a href="index.html#products" class="hover:text-gray-300">
+        Products
+      </a>
 
-  <a href="index.html#products" class="hover:text-gray-300">Products</a>
+      <a href="index.html#how-it-works" class="hover:text-gray-300">
+        How It Works
+      </a>
 
-  <a href="index.html#how-it-works" class="hover:text-gray-300">
-    How It Works
-  </a>
+      <a href="index.html#what-is-proof" class="hover:text-gray-300">
+        What is PROOF?
+      </a>
 
-  <a href="index.html#what-is-proof" class="hover:text-gray-300">
-    What is PROOF?
-  </a>
-
-  <a href="development.html" class="hover:text-gray-300">
-    PROOF: Dev
-  </a>
+      <a href="development.html" class="hover:text-gray-300">
+        PROOF: Dev
+      </a>
       
-  <a href="index.html#products" class="text-[#0066FF]">
-    Get Started
-  </a>
+      <a href="index.html#products" class="text-[#0066FF]">
+        Get Started
+      </a>
 
-</nav>
+    </nav>
 
-</div>
+  </div>
 
-<!-- MOBILE MENU -->
-<div id="mobileMenu" class="hidden md:hidden bg-black text-center py-6 flex flex-col items-center gap-4">
+  <!-- MOBILE MENU -->
+  <div id="mobileMenu" class="hidden md:hidden bg-black text-center py-6 flex flex-col items-center gap-4">
 
-  <!--
-  <a href="examples.html" class="block">
-    Examples
-  </a>
-  -->
+    <a href="index.html#products" class="block">
+      Products
+    </a>
 
-  <a href="index.html#products" class="block">
-    Products
-  </a>
+    <a href="index.html#how-it-works" class="block">
+      How It Works
+    </a>
 
-  <a href="index.html#how-it-works" class="block">
-    How It Works
-  </a>
+    <a href="index.html#what-is-proof" class="block">
+      What is PROOF?
+    </a>
 
-  <a href="index.html#what-is-proof" class="block">
-    What is PROOF?
-  </a>
+    <a href="development.html" class="block hover:text-gray-300">
+      PROOF: Dev
+    </a>
 
-  <a href="development.html" class="block hover:text-gray-300">
-    PROOF: Dev
-  </a>
+    <a href="index.html#products" class="block text-[#0066FF]">
+      Get Started
+    </a>
 
-  
-
-  <a href="index.html#products" class="block text-[#0066FF]">
-    Get Started
-  </a>
-
-</div>
+  </div>
 
 </header>
 
@@ -152,18 +142,18 @@
   </div>
 
   <!-- HERO TEXT -->
-  <div class="max-w-6xl mx-auto px-4">
+  <div class="max-w-6xl mx-auto px-4 mt-6">
 
-    <div class="flex flex-col md:flex-row justify-between items-start gap-8 text-left">
+    <div class="flex flex-col md:flex-row justify-between items-start gap-10 text-left">
 
-      <!-- LEFT -->
+      <!-- LEFT SIDE -->
       <div class="flex-1 max-w-xl">
 
-        <h1 class="text-3xl md:text-5xl mb-4">
+        <h1 class="text-5xl mb-4">
           PROOF: Trailer
         </h1>
 
-        <p class="text-base md:text-xl text-gray-200 mb-6">
+        <p class="text-xl text-gray-200 mb-6">
           Build a cinematic trailer designed to create momentum, emotional reaction, and market-facing presentation.
         </p>
 
@@ -173,10 +163,10 @@
 
       </div>
 
-      <!-- RIGHT -->
+      <!-- RIGHT SIDE -->
       <div class="flex flex-col w-full md:w-[260px] md:items-end text-left space-y-2">
 
-        <p class="text-3xl">
+        <p class="text-3xl mb-1">
           $1,800
         </p>
 
@@ -187,7 +177,7 @@
         <a 
           href="https://buy.stripe.com/test_dRm28tdj9dh4f2l0zf18c04"
           target="_blank"
-          class="proof-btn bg-[#0066FF] w-full py-3 rounded-md text-white text-center hover:bg-[#0052cc] transition"
+          class="bg-[#0066FF] w-full py-3 rounded-md text-white text-center hover:bg-[#0052cc]"
         >
           Buy Now
         </a>
@@ -228,50 +218,13 @@
 
 </div>
 
-<!-- HLS -->
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-  const streamUrl =
-    "https://videodelivery.net/0304618be91b7130f2cd851db3a46a47/manifest/video.m3u8";
-
-  const video = document.getElementById("trailerFullVideo");
-
-  if (video) {
-
-    if (Hls.isSupported()) {
-
-      const hls = new Hls({
-        enableWorker: true,
-        lowLatencyMode: true
-      });
-
-      hls.loadSource(streamUrl);
-
-      hls.attachMedia(video);
-
-    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-
-      video.src = streamUrl;
-
-    }
-
-  }
-
-});
-</script>
-<!-- PROOF: SIZZLE EXPERIENCE -->
+<!-- PROOF: TRAILER EXPERIENCE -->
 <section class="max-w-6xl mx-auto px-4 pt-12 pb-10">
 
   <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-[#111111]">
 
     <!-- BACKGROUND IMAGE -->
     <div class="absolute inset-0">
-      
-
-      
 
       <!-- OVERLAYS -->
       <div class="absolute inset-0 bg-black/55"></div>
@@ -289,8 +242,8 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="max-w-3xl">
 
         <p class="text-xs uppercase tracking-[0.28em] text-[#0066FF] mb-5">
-  Cinematic Trailer
-</p>
+          Cinematic Trailer
+        </p>
 
         <h2 class="text-4xl md:text-6xl leading-[1.05] mb-6 max-w-4xl">
           Launch the emotional experience of the film.
@@ -308,10 +261,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <!-- ITEM -->
         <div class="group relative overflow-hidden bg-black/30 hover:bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl p-5 transition duration-500 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_40px_rgba(0,102,255,0.18)]">
 
-          <!-- GLOW -->
           <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.18),transparent_70%)]"></div>
 
-          <!-- CONTENT -->
           <div class="relative z-10">
 
             <p class="text-2xl md:text-3xl mb-2 transition duration-500 group-hover:text-white">
@@ -329,10 +280,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <!-- ITEM -->
         <div class="group relative overflow-hidden bg-black/30 hover:bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl p-5 transition duration-500 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_40px_rgba(0,102,255,0.18)]">
 
-          <!-- GLOW -->
           <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.18),transparent_70%)]"></div>
 
-          <!-- CONTENT -->
           <div class="relative z-10">
 
             <p class="text-2xl md:text-3xl mb-2 transition duration-500 group-hover:text-white">
@@ -350,10 +299,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <!-- ITEM -->
         <div class="group relative overflow-hidden bg-black/30 hover:bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl p-5 transition duration-500 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_40px_rgba(0,102,255,0.18)]">
 
-          <!-- GLOW -->
           <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.18),transparent_70%)]"></div>
 
-          <!-- CONTENT -->
           <div class="relative z-10">
 
             <p class="text-2xl md:text-3xl mb-2 transition duration-500 group-hover:text-white">
@@ -371,10 +318,8 @@ document.addEventListener("DOMContentLoaded", () => {
         <!-- ITEM -->
         <div class="group relative overflow-hidden bg-black/30 hover:bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl p-5 transition duration-500 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_40px_rgba(0,102,255,0.18)]">
 
-          <!-- GLOW -->
           <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.18),transparent_70%)]"></div>
 
-          <!-- CONTENT -->
           <div class="relative z-10">
 
             <p class="text-2xl md:text-3xl mb-2 transition duration-500 group-hover:text-white">
@@ -392,32 +337,32 @@ document.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <!-- PROCESS -->
-<div class="mt-12 pt-8 border-t border-white/10">
+      <div class="mt-12 pt-8 border-t border-white/10">
 
-  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
 
-    <!-- LEFT -->
-    <div>
+          <!-- LEFT -->
+          <div>
 
-      <p class="text-xs uppercase tracking-[0.25em] text-gray-500 mb-4">
-        Built for market momentum
-      </p>
+            <p class="text-xs uppercase tracking-[0.25em] text-gray-500 mb-4">
+              Built for market momentum
+            </p>
 
-      <h3 class="text-2xl md:text-3xl leading-tight mb-4">
+            <h3 class="text-2xl md:text-3xl leading-tight mb-4">
               Pacing.<br class="hidden md:block">
-Emotion. Impact.
+              Emotion. Impact.
             </h3>
 
-      <p class="text-gray-300 leading-relaxed max-w-2xl">
-        Every PROOF: Trailer is collaboratively shaped around emotional pacing, cinematic escalation, audience engagement, visual identity, and presentation strategy to help your project feel market-ready before production.
-      </p>
+            <p class="text-gray-300 leading-relaxed max-w-2xl">
+              Every PROOF: Trailer is collaboratively shaped around emotional pacing, cinematic escalation, audience engagement, visual identity, and presentation strategy to help your project feel market-ready before production.
+            </p>
 
-    </div>
+          </div>
 
-    <!-- RIGHT -->
-    <div class="flex flex-col gap-3 text-sm text-gray-200 min-w-[260px]">
+          <!-- RIGHT -->
+          <div class="flex flex-col gap-3 text-sm text-gray-200 min-w-[260px]">
 
-      <div class="bg-black/30 border border-white/10 rounded-lg px-4 py-3 backdrop-blur-sm transition duration-500 hover:border-white/20 hover:shadow-[0_0_25px_rgba(0,102,255,0.14)]">
+            <div class="bg-black/30 border border-white/10 rounded-lg px-4 py-3 backdrop-blur-sm transition duration-500 hover:border-white/20 hover:shadow-[0_0_25px_rgba(0,102,255,0.14)]">
               Trailer pacing + escalation shaping included
             </div>
 
@@ -429,15 +374,15 @@ Emotion. Impact.
               Presentation strategy + positioning support
             </div>
 
-      <div class="bg-black/30 border border-white/10 rounded-lg px-4 py-3 backdrop-blur-sm transition duration-500 hover:border-white/20 hover:shadow-[0_0_25px_rgba(0,102,255,0.14)]">
-        Expanded trailer campaigns available for select projects
+            <div class="bg-black/30 border border-white/10 rounded-lg px-4 py-3 backdrop-blur-sm transition duration-500 hover:border-white/20 hover:shadow-[0_0_25px_rgba(0,102,255,0.14)]">
+              Expanded trailer campaigns available for select projects
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
-
-    </div>
-
-  </div>
-
-</div>
 
       <!-- SIMPLE PROCESS ROW -->
       <div class="mt-12 pt-8 border-t border-white/10">
@@ -446,17 +391,17 @@ Emotion. Impact.
 
           <span>Share your project vision</span>
 
-<span class="hidden md:block text-[#0066FF]">→</span>
+          <span class="hidden md:block text-[#0066FF]">→</span>
 
-<span>We shape the trailer structure</span>
+          <span>We shape the trailer structure</span>
 
-<span class="hidden md:block text-[#0066FF]">→</span>
+          <span class="hidden md:block text-[#0066FF]">→</span>
 
-<span>We build the cinematic experience</span>
+          <span>We build the cinematic experience</span>
 
-<span class="hidden md:block text-[#0066FF]">→</span>
+          <span class="hidden md:block text-[#0066FF]">→</span>
 
-<span>Create momentum before production</span>
+          <span>Create momentum before production</span>
 
         </div>
 
@@ -468,12 +413,12 @@ Emotion. Impact.
 
 </section>
 
-
-
 <!-- FINAL CTA -->
 <section class="pt-16 pb-12 text-center">
 
-  <h2 class="text-3xl mb-4">Let's shape the right trailer approach.</h2>
+  <h2 class="text-3xl mb-4">
+    Let's shape the right trailer approach.
+  </h2>
 
   <p class="text-gray-200 mb-6">
     We'll define the right scope, pacing, and strategy for your project together.
@@ -483,13 +428,19 @@ Emotion. Impact.
     href="https://calendly.com/hello-prooflab/30min"
     target="_blank"
     rel="noopener noreferrer"
-    class="bg-[#0066FF] px-6 py-3 rounded-md inline-block hover:bg-[#0052cc] transition"
+    class="bg-[#0066FF] px-6 py-3 rounded-md inline-block hover:bg-[#0052cc]"
   >
     Book a Call
   </a>
 
   <p class="text-sm text-gray-300 mt-4">
-    Or email: hello@prooflab.studio
+    Or email:
+    <a 
+      href="mailto:hello@prooflab.studio"
+      class="text-white hover:text-[#0066FF] transition"
+    >
+      hello@prooflab.studio
+    </a>
   </p>
 
 </section>
@@ -503,26 +454,25 @@ Emotion. Impact.
     class="w-full max-w-xl mx-auto opacity-70 mb-6"
   />
 
-  <!-- COPYRIGHT -->
   <p class="text-xs text-gray-600 mb-6">
     © 2026 PROOF, LLC. All Rights Reserved.
   </p>
 
-  <!-- DISCLAIMER -->
   <p class="text-[11px] leading-relaxed text-gray-600 max-w-4xl mx-auto">
     PROOF and ProofLab, LLC provide creative development, visual storytelling, and proof-of-concept production services intended to support presentation, pitching, audience engagement, and project development efforts. While our materials are designed to help communicate creative vision and project potential, ProofLab, LLC makes no guarantees, representations, or warranties regarding financing, distribution, acquisition, commercial success, audience performance, talent attachment, or the purchase, optioning, licensing, or production of any project. All creative and business outcomes remain dependent on numerous external factors beyond our control.
   </p>
+
   <div class="flex justify-center gap-6 text-xs text-gray-500 mt-12">
 
-  <a href="terms.html" class="hover:text-white transition">
-    Terms & Conditions
-  </a>
+    <a href="terms.html" class="hover:text-white transition">
+      Terms & Conditions
+    </a>
 
-  <a href="privacy.html" class="hover:text-white transition">
-    Privacy Policy
-  </a>
+    <a href="privacy.html" class="hover:text-white transition">
+      Privacy Policy
+    </a>
 
-</div>
+  </div>
 
 </section>
 
@@ -568,6 +518,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // CLOSE WHEN CLICKING LINK
     const links = mobileMenu.querySelectorAll("a");
+
     links.forEach(link => {
       link.addEventListener("click", () => {
         mobileMenu.classList.add("hidden");
@@ -575,61 +526,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // CLOSE WHEN CLICKING OUTSIDE
-    document.addEventListener("click", (e) => {
-      if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
-        mobileMenu.classList.add("hidden");
-      }
-    });
-
-  }
-
-});
-</script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-  // TO TOP BUTTON
-  const btn = document.getElementById("toTopBtn");
-
-  if (btn) {
-
-    window.addEventListener("scroll", () => {
-
-      if (window.scrollY > 400) {
-        btn.classList.remove("opacity-0", "pointer-events-none");
-        btn.classList.add("opacity-100");
-      } else {
-        btn.classList.add("opacity-0", "pointer-events-none");
-        btn.classList.remove("opacity-100");
-      }
-
-    });
-
-    btn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-
-  }
-
-  // MOBILE MENU
-  const menuBtn = document.getElementById("menuBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
-
-  if (menuBtn && mobileMenu) {
-
-    menuBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      mobileMenu.classList.toggle("hidden");
-    });
-
-    const links = mobileMenu.querySelectorAll("a");
-
-    links.forEach(link => {
-      link.addEventListener("click", () => {
-        mobileMenu.classList.add("hidden");
-      });
-    });
-
     document.addEventListener("click", (e) => {
 
       if (
@@ -663,7 +559,6 @@ document.addEventListener("DOMContentLoaded", () => {
       video.play();
 
       document.body.style.overflow = "hidden";
-
     });
 
     // CLOSE
@@ -675,12 +570,11 @@ document.addEventListener("DOMContentLoaded", () => {
       video.pause();
 
       document.body.style.overflow = "";
-
     }
 
     closeBtn.addEventListener("click", closeModal);
 
-    // BACKGROUND CLICK
+    // CLOSE ON BACKGROUND CLICK
     modal.addEventListener("click", (e) => {
 
       if (e.target === modal) {
@@ -689,7 +583,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-    // ESC KEY
+    // ESC KEY CLOSE
     document.addEventListener("keydown", (e) => {
 
       if (e.key === "Escape") {
@@ -697,6 +591,40 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
     });
+
+  }
+
+});
+</script>
+
+<!-- HLS -->
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+<!-- STREAM INIT -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const video = document.getElementById("trailerFullVideo");
+
+  const streamUrl =
+    "https://videodelivery.net/0304618be91b7130f2cd851db3a46a47/manifest/video.m3u8";
+
+  if (!video) return;
+
+  if (Hls.isSupported()) {
+
+    const hls = new Hls({
+      enableWorker: true,
+      lowLatencyMode: true
+    });
+
+    hls.loadSource(streamUrl);
+
+    hls.attachMedia(video);
+
+  } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+
+    video.src = streamUrl;
 
   }
 
