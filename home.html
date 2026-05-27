@@ -1,0 +1,3166 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>PROOF | Cinematic Pitch Videos & Proof-of-Concept Trailers</title>
+
+  <meta 
+    name="description" 
+    content="PROOF creates cinematic pitch videos, proof-of-concept trailers, and visual story assets for filmmakers, creators, and entertainment projects."
+  />
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="PROOF | Cinematic Pitch Videos & Proof-of-Concept Trailers">
+
+  <meta 
+    property="og:description" 
+    content="Transform scripts and concepts into cinematic proof for pitches, funding, and development."
+  >
+
+  <meta property="og:type" content="website">
+
+  <meta property="og:url" content="https://prooflab.studio">
+
+  <meta property="og:image" content="https://prooflab.studio/images/social-preview.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+<meta 
+  name="twitter:title" 
+  content="PROOF | Cinematic Pitch Videos & Proof-of-Concept Trailers"
+>
+
+<meta 
+  name="twitter:description" 
+  content="Transform scripts and concepts into cinematic proof for pitches, funding, and development."
+>
+
+<meta 
+  name="twitter:image" 
+  content="https://prooflab.studio/images/social-preview.jpg"
+>
+
+  <link rel="canonical" href="https://prooflab.studio/">
+  <link rel="icon" href="favicon.ico">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PROOF",
+  "url": "https://prooflab.studio",
+  "logo": "https://prooflab.studio/proof-logo/Proof_Main.png",
+  "description": "PROOF is a cinematic proof-of-concept platform powered by the ProofLab system, helping filmmakers, creators, and entertainment projects transform concepts into visual proof for funding, development, and audience validation.",
+  "sameAs": [
+    "https://www.instagram.com/needmoreproof/"
+  ],
+  "foundingDate": "2026",
+  "brand": {
+    "@type": "Brand",
+    "name": "ProofLab System"
+  },
+  "knowsAbout": [
+    "Proof-of-concept trailers",
+    "Cinematic pitch videos",
+    "Visual storytelling",
+    "Entertainment development",
+    "Audience validation",
+    "Concept acceleration",
+    "Film pitch assets"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "PROOF",
+  "url": "https://prooflab.studio",
+  "description": "Cinematic proof-of-concept platform powered by the ProofLab system.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "PROOF"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://prooflab.studio/?s={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+</head>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const streamUrl =
+    "https://videodelivery.net/4e195dcb6f423b5d4c01e31fbb52bd4f/manifest/video.m3u8";
+
+  const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
+
+  let videos = [];
+
+  // DESKTOP ONLY
+  if (isDesktop) {
+
+    videos = [
+      document.getElementById("heroBgVideo"),
+      document.getElementById("heroBlurVideo")
+    ];
+
+  }
+
+  // MOBILE ONLY
+  else {
+
+    videos = [
+      document.getElementById("heroBgVideoMobile"),
+      document.getElementById("heroBlurVideoMobile")
+    ];
+
+  }
+
+  videos.forEach(video => {
+
+    if (!video) return;
+
+    if (Hls.isSupported()) {
+
+      const hls = new Hls({
+        enableWorker: true,
+        lowLatencyMode: true
+      });
+
+      hls.loadSource(streamUrl);
+
+      hls.attachMedia(video);
+
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+
+      video.src = streamUrl;
+
+    }
+
+  });
+
+});
+</script>
+
+<body class="bg-[#0A0A0A] text-white font-sans">
+
+<!-- NAV -->
+<header class="fixed top-0 w-full bg-black/70 backdrop-blur z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center py-3 px-4">
+
+    <!-- LOGO -->
+    <img 
+      src="proof-logo/Proof_header_good.png"
+      alt="PROOF and ProofLab system cinematic proof-of-concept platform"
+      class="h-[40px] md:h-[60px] w-auto object-contain scale-[2.5] origin-left"
+    />
+
+    <!-- HAMBURGER -->
+    <button id="menuBtn" class="md:hidden text-white text-2xl">
+      ☰
+    </button>
+
+    <!-- DESKTOP NAV -->
+<nav class="hidden md:flex space-x-6 text-sm text-white">
+
+  <!--
+  <a href="examples.html" class="hover:text-gray-300">Examples</a>
+  -->
+
+  <a href="home.html#products" class="hover:text-gray-300">Products</a>
+
+  <a href="home.html#how-it-works" class="hover:text-gray-300">
+    How It Works
+  </a>
+
+  <a href="home.html#what-is-proof" class="hover:text-gray-300">
+    What is PROOF?
+  </a>
+
+  <a href="development.html" class="hover:text-gray-300">
+    PROOF: Dev
+  </a>
+      
+  <a href="home.html#products" class="text-[#0066FF]">
+    Get Started
+  </a>
+
+</nav>
+
+</div>
+
+<!-- MOBILE MENU -->
+<div id="mobileMenu" class="hidden md:hidden bg-black text-center py-6 flex flex-col items-center gap-4">
+
+  <!--
+  <a href="examples.html" class="block">
+    Examples
+  </a>
+  -->
+
+  <a href="home.html#products" class="block">
+    Products
+  </a>
+
+  <a href="home.html#how-it-works" class="block">
+    How It Works
+  </a>
+
+  <a href="home.html#what-is-proof" class="block">
+    What is PROOF?
+  </a>
+
+  <a href="development.html" class="block hover:text-gray-300">
+    PROOF: Dev
+  </a>
+
+  
+
+  <a href="home.html#products" class="block text-[#0066FF]">
+    Get Started
+  </a>
+
+</div>
+
+</header>
+
+
+
+  <!-- HERO WRAPPER -->
+<section class="relative overflow-hidden bg-black">
+
+  <!-- ===================================================== -->
+  <!-- DESKTOP HERO -->
+  <!-- ===================================================== -->
+  <div class="hidden lg:flex relative min-h-screen items-center justify-center text-center overflow-hidden">
+
+    <!-- VIDEO LAYER -->
+    <div class="absolute inset-0 overflow-hidden">
+
+      <!-- BLURRED BG -->
+      <video 
+        id="heroBlurVideo"
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-20"
+      ></video>
+
+      <!-- MAIN VIDEO -->
+      <video 
+        id="heroBgVideo"
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-contain opacity-55"
+      ></video>
+
+      <!-- OVERLAY -->
+      <div class="absolute inset-0 bg-black/40"></div>
+
+    </div>
+
+    <!-- CONTENT -->
+    <div class="relative z-10 w-full px-6 flex flex-col items-center justify-center">
+
+      <!-- SEO -->
+      <p class="sr-only">
+        PROOF creates cinematic pitch videos, proof-of-concept trailers, sizzle reels, and visual storytelling assets for filmmakers, television creators, and entertainment projects seeking funding, development, and audience engagement.
+      </p>
+
+      <h1 class="sr-only">
+        Cinematic Pitch Videos and Proof-of-Concept Trailers for Film, Television, and Creative Projects
+      </h1>
+
+      <!-- LOGO -->
+      <img 
+        src="proof-logo/Proof_Main.png" 
+        alt="PROOF cinematic proof-of-concept studio logo" 
+        class="mx-auto w-[550px] lg:w-[750px] mb-[-110px]"
+      />
+
+      <!-- TAGLINE -->
+      <p class="text-xl text-white max-w-lg mx-auto">
+        Transform your story into undeniable proof.
+      </p>
+
+      <!-- BUTTONS -->
+      <div class="flex flex-row justify-center gap-4 mt-10 w-full max-w-md mx-auto">
+
+        <!-- BUTTON 1 -->
+        <a 
+          href="#products" 
+          class="proof-btn bg-[#0066FF] px-6 py-4 rounded-md font-semibold text-center hover:bg-[#0052cc] transition w-full"
+        >
+          Get Your Proof
+        </a>
+
+        <!-- BUTTON 2 -->
+        <a 
+          href="#how-it-works" 
+          class="proof-btn border border-white px-6 py-4 rounded-md text-white hover:bg-white hover:text-black transition font-semibold text-center w-full"
+        >
+          See How It Works
+        </a>
+
+      </div>
+
+      <!-- DESKTOP WATCH PREVIEW -->
+      <button
+        id="openVideoModal"
+        class="mt-8 flex items-center gap-3 group opacity-80 hover:opacity-100 transition duration-500"
+      >
+
+        <!-- PULSE -->
+        <div class="relative flex items-center justify-center">
+
+          <span class="absolute inline-flex h-3 w-3 rounded-full bg-[#0066FF] opacity-75 animate-ping"></span>
+
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-[#0066FF] shadow-[0_0_12px_rgba(0,102,255,0.9)]"></span>
+
+        </div>
+
+        <!-- LABEL -->
+        <p class="text-[11px] uppercase tracking-[0.32em] text-white/70 group-hover:text-white transition duration-500">
+          Watch Preview
+        </p>
+
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- ===================================================== -->
+  <!-- MOBILE HERO -->
+  <!-- ===================================================== -->
+  <div class="flex lg:hidden relative min-h-screen items-center justify-center text-center overflow-hidden">
+
+    <!-- VIDEO LAYER -->
+    <div class="absolute inset-0 overflow-hidden">
+
+      <!-- MOBILE BLUR VIDEO -->
+      <video 
+        id="heroBlurVideoMobile"
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-20"
+      ></video>
+
+      <!-- MOBILE MAIN VIDEO -->
+      <video 
+        id="heroBgVideoMobile"
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-contain opacity-55"
+      ></video>
+
+      <!-- OVERLAY -->
+      <div class="absolute inset-0 bg-black/40"></div>
+
+    </div>
+
+    <!-- MOBILE CONTENT -->
+    <div class="relative z-10 w-full h-screen px-5 flex flex-col items-center justify-center">
+
+      <!-- LOGO -->
+      <img 
+        src="proof-logo/Proof_Main.png" 
+        alt="PROOF cinematic proof-of-concept studio logo" 
+        class="w-[88vw] max-w-[420px] mb-4"
+      />
+
+      <!-- MOBILE BUTTONS -->
+      <div class="absolute bottom-24 left-0 right-0 w-[88%] max-w-sm mx-auto flex flex-col gap-4">
+
+        <!-- BUTTON 1 -->
+        <a 
+          href="#products" 
+          class="proof-btn bg-[#0066FF] px-6 py-4 rounded-md font-semibold text-center hover:bg-[#0052cc] transition w-full"
+        >
+          Get Your Proof
+        </a>
+
+        <!-- BUTTON 2 -->
+        <a 
+          href="#how-it-works" 
+          class="proof-btn border border-white px-6 py-4 rounded-md text-white hover:bg-white hover:text-black transition font-semibold text-center w-full"
+        >
+          See How It Works
+        </a>
+
+        <!-- MOBILE WATCH PREVIEW -->
+        <button
+          id="openVideoModalMobile"
+          class="mt-4 flex items-center justify-center gap-3 group opacity-90 hover:opacity-100 transition duration-500"
+        >
+
+          <!-- PULSE -->
+          <div class="relative flex items-center justify-center">
+
+            <span class="absolute inline-flex h-3 w-3 rounded-full bg-[#0066FF] opacity-75 animate-ping"></span>
+
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-[#0066FF] shadow-[0_0_12px_rgba(0,102,255,0.9)]"></span>
+
+          </div>
+
+          <!-- LABEL -->
+          <p class="text-[11px] uppercase tracking-[0.32em] text-white/70 group-hover:text-white transition duration-500">
+            Watch Preview
+          </p>
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- CINEMATIC VIDEO MODAL -->
+<!-- ===================================================== -->
+<div 
+  id="videoModal"
+  class="fixed inset-0 bg-black/95 z-[9999] hidden items-center justify-center"
+>
+
+  <!-- CLOSE -->
+  <button
+    id="closeVideoModal"
+    class="absolute top-6 right-6 text-white text-4xl z-50 hover:text-gray-300 transition"
+  >
+    &times;
+  </button>
+
+  <!-- VIDEO WRAPPER -->
+  <div class="w-full h-full flex items-center justify-center px-4">
+
+    <video
+      id="fullVideo"
+      controls
+      playsinline
+      class="w-full max-w-6xl max-h-[90vh] rounded-lg shadow-2xl"
+    ></video>
+
+  </div>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- HERO VIDEO SCRIPT -->
+<!-- ===================================================== -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const modal = document.getElementById("videoModal");
+
+  // BOTH DESKTOP + MOBILE BUTTONS
+  const openBtns = [
+    document.getElementById("openVideoModal"),
+    document.getElementById("openVideoModalMobile")
+  ];
+
+  const closeBtn = document.getElementById("closeVideoModal");
+  const fullVideo = document.getElementById("fullVideo");
+
+  // STREAM URL
+  const streamUrl =
+    "https://videodelivery.net/4e195dcb6f423b5d4c01e31fbb52bd4f/manifest/video.m3u8";
+
+  // OPEN MODAL
+  openBtns.forEach(openBtn => {
+
+    if (!openBtn) return;
+
+    openBtn.addEventListener("click", () => {
+
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+
+      document.body.style.overflow = "hidden";
+
+      // INIT HLS ONLY WHEN MODAL OPENS
+      if (Hls.isSupported()) {
+
+        // DESTROY OLD INSTANCE IF EXISTS
+        if (fullVideo.hlsInstance) {
+          fullVideo.hlsInstance.destroy();
+        }
+
+        const hls = new Hls({
+          enableWorker: true,
+          lowLatencyMode: true
+        });
+
+        hls.loadSource(streamUrl);
+
+        hls.attachMedia(fullVideo);
+
+        fullVideo.hlsInstance = hls;
+
+        hls.on(Hls.Events.MANIFEST_PARSED, () => {
+
+  fullVideo.currentTime = 0;
+  fullVideo.muted = false;
+
+  fullVideo.play().catch(err => {
+    console.log("Playback prevented:", err);
+  });
+
+});
+
+      } else if (fullVideo.canPlayType('application/vnd.apple.mpegurl')) {
+
+        fullVideo.src = streamUrl;
+
+        fullVideo.currentTime = 0;
+        fullVideo.muted = false;
+        fullVideo.play();
+
+      }
+
+    });
+
+  });
+
+  // CLOSE MODAL
+  function closeModal() {
+
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+
+    fullVideo.pause();
+
+    // DESTROY HLS INSTANCE
+    if (fullVideo.hlsInstance) {
+
+      fullVideo.hlsInstance.destroy();
+      fullVideo.hlsInstance = null;
+
+    }
+
+    document.body.style.overflow = "";
+
+  }
+
+  // CLOSE BUTTON
+  closeBtn.addEventListener("click", closeModal);
+
+  // CLOSE ON BACKGROUND CLICK
+  modal.addEventListener("click", (e) => {
+
+    if (e.target === modal) {
+      closeModal();
+    }
+
+  });
+
+  // ESC KEY CLOSE
+  document.addEventListener("keydown", (e) => {
+
+    if (e.key === "Escape") {
+      closeModal();
+    }
+
+  });
+
+});
+</script>
+
+<!-- ===================================================== -->
+<!-- TRUST / PROOFLAB DELTA -->
+<!-- ===================================================== -->
+<section class="py-28 border-t border-white/10 bg-[#0A0A0A] overflow-x-hidden">
+
+  <!-- ===================================================== -->
+  <!-- TRUST ECOSYSTEM -->
+  <!-- ===================================================== -->
+  <div class="relative mb-28">
+
+    <!-- ===================================================== -->
+    <!-- MARQUEE ZONE -->
+    <!-- ===================================================== -->
+    <div class="relative overflow-hidden py-2">
+
+      <!-- EDGE MASKS -->
+      <div class="absolute left-0 top-0 h-full w-24 md:w-40 z-20 bg-[#0A0A0A]"></div>
+
+      <div class="absolute right-0 top-0 h-full w-24 md:w-40 z-20 bg-[#0A0A0A]"></div>
+
+      <div class="absolute left-24 md:left-40 top-0 h-full w-20 z-20 bg-gradient-to-r from-[#0A0A0A] to-transparent pointer-events-none"></div>
+
+      <div class="absolute right-24 md:right-40 top-0 h-full w-20 z-20 bg-gradient-to-l from-[#0A0A0A] to-transparent pointer-events-none"></div>
+
+      <!-- LABEL -->
+      <p class="text-xs uppercase tracking-[0.35em] text-gray-500 text-center mb-10 relative z-30">
+        Trusted By
+      </p>
+
+      <!-- TRACK -->
+      <div class="overflow-hidden whitespace-nowrap">
+
+        <div class="marquee-track">
+
+          <!-- GROUP -->
+<div class="marquee-group">
+
+  <img src="logos/georgia-film-society.png" alt="Georgia Film Society" class="logo-item">
+
+  <img src="logos/freckles.png" alt="Freckles" class="logo-item">
+
+  <img src="logos/alex.png" alt="Alex Montgomery" class="logo-item">
+
+  <img src="logos/eighty-west.jpg" alt="Eighty-West Studios" class="logo-item">
+
+  <img src="logos/lumen.png" alt="Lumen" class="logo-item">
+
+</div>
+
+<!-- DUPLICATE -->
+<div class="marquee-group">
+
+  <img src="logos/bad-bella.png" alt="Bad Bella Films" class="logo-item">
+
+  <img src="logos/nora.png" alt="Nora Bradford" class="logo-item">
+
+  <img src="logos/launchbox.png" alt="Story LaunchBox" class="logo-item">
+
+  <img src="logos/porchlight.png" alt="Porchlight" class="logo-item">
+
+  <img src="logos/riley.png" alt="Riley Morgan" class="logo-item">
+
+</div>
+
+<!-- TRIPLICATE -->
+<div class="marquee-group">
+
+  <img src="logos/brookhaven.png" alt="Brookhaven" class="logo-item">
+
+  <img src="logos/kris-shuman.png" alt="Kris Shuman" class="logo-item">
+
+  <img src="logos/taylor.png" alt="Taylor Reese" class="logo-item">
+
+  <img src="logos/georgia-film-society.png" alt="Georgia Film Society" class="logo-item">
+
+  <img src="logos/birch.png" alt="Simon Birch" class="logo-item">
+
+</div>
+
+<!-- ANOTHER ONE -->
+<div class="marquee-group">
+
+  <img src="logos/eighty-west.jpg" alt="Eighty-West Studios" class="logo-item">
+
+  <img src="logos/eliot.png" alt="Elliot Gray" class="logo-item">
+
+  <img src="logos/bad-bella.png" alt="Bad Bella Films" class="logo-item">
+
+  <img src="logos/launchbox.png" alt="Story LaunchBox" class="logo-item">
+
+  <img src="logos/kris-shuman.png" alt="Kris Shuman" class="logo-item">
+
+</div>
+
+        </div>
+
+      </div>
+
+    </div>
+    
+
+    <!-- ===================================================== -->
+    <!-- TESTIMONIAL CHAMBER -->
+    <!-- ===================================================== -->
+    <div class="relative z-30 mt-16 px-6">
+
+      <div class="max-w-3xl mx-auto text-center">
+
+        <div
+          id="testimonialContainer"
+          class="transition-opacity duration-1000 opacity-100"
+        >
+
+          <p
+            id="testimonialQuote"
+            class="text-xl md:text-2xl leading-relaxed text-white italic mb-6"
+          >
+            “PROOF immediately understood the tone, pacing, and cinematic potential of the project.”
+          </p>
+
+          <p
+            id="testimonialAuthor"
+            class="text-xs uppercase tracking-[0.3em] text-gray-500"
+          >
+            — Bad Bella Films
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+<!-- ===================================================== -->
+<!-- DIVIDER -->
+<!-- ===================================================== -->
+<div class="w-full border-t border-white/10 my-24"></div>
+
+<!-- ===================================================== -->
+<!-- PROOFLAB DELTA -->
+<!-- ===================================================== -->
+<div id="prooflab-delta" class="max-w-7xl mx-auto px-4">
+
+  <!-- HEADER -->
+  <div class="mb-16">
+
+    <p class="text-xs uppercase tracking-[0.35em] text-[#0066FF] mb-5">
+      The ProofLab Delta
+    </p>
+
+    <div class="max-w-5xl">
+
+      <h3 class="text-3xl md:text-5xl leading-tight mb-6">
+        Turn your scripts, concepts, and pitches into something people can
+        <span class="text-[#0066FF]">actually believe in.</span>
+      </h3>
+
+      <p class="text-gray-300 text-base md:text-lg leading-relaxed max-w-3xl">
+        The proprietary ProofLab system transforms raw concepts into cinematic proof that helps producers, collaborators, and audiences emotionally understand what you've been seeing all along.
+      </p>
+
+    </div>
+
+  </div>
+
+<!-- ===================================================== -->
+<!-- DESKTOP EXPERIENCE -->
+<!-- ===================================================== -->
+<div class="hidden lg:block">
+
+  <div class="grid grid-cols-12 gap-10 items-start">
+
+    <!-- LEFT COLUMN -->
+    <div class="col-span-7">
+
+      <!-- VISUAL -->
+      <div class="group relative rounded-3xl overflow-hidden border border-white/10 bg-[#111111] transition-all duration-700 hover:border-white/15 hover:-translate-y-[2px] hover:shadow-[0_20px_80px_rgba(0,0,0,0.55)]">
+
+        <!-- ATMOSPHERIC TOP LIGHT -->
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 pointer-events-none mix-blend-screen bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.025),transparent_58%)]"></div>
+
+        <!-- PANEL 1 -->
+        <div class="proof-panel active-panel" data-panel="1">
+
+          <div class="aspect-[16/9] relative overflow-hidden">
+
+            <img
+              src="images/panel-1.png"
+              alt="Raw Script"
+              class="absolute inset-0 w-full h-full object-cover opacity-80 transition-transform duration-[7000ms] ease-out group-hover:scale-[1.03]"
+            >
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
+
+            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 bg-[radial-gradient(circle_at_center,rgba(255,245,220,0.04),transparent_65%)]"></div>
+
+          </div>
+
+        </div>
+
+        <!-- PANEL 2 -->
+        <div class="proof-panel hidden" data-panel="2">
+
+          <div class="aspect-[16/9] relative overflow-hidden">
+
+            <img
+              src="images/panel-2.png"
+              alt="Raw Machine Generation"
+              class="absolute inset-0 w-full h-full object-cover opacity-82 contrast-[1.03] saturate-[0.92] transition-transform duration-[7000ms] ease-out group-hover:scale-[1.02]"
+            >
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
+
+            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-[radial-gradient(circle_at_center,rgba(255,0,0,0.035),transparent_70%)]"></div>
+
+          </div>
+
+        </div>
+
+        <!-- PANEL 3 -->
+        <div class="proof-panel hidden" data-panel="3">
+
+          <div class="aspect-[16/9] relative overflow-hidden">
+
+            <video
+              id="proofDeltaVideo1"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="auto"
+              class="absolute inset-0 w-full h-full object-cover opacity-100 contrast-[1.04] saturate-[0.96]"
+            ></video>
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/3 to-transparent"></div>
+
+            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 bg-[radial-gradient(circle_at_center,rgba(0,102,255,0.03),transparent_65%)]"></div>
+
+          </div>
+
+        </div>
+
+        <!-- PANEL 4 -->
+        <div class="proof-panel hidden" data-panel="4">
+
+          <div
+            id="proofComparisonDesktop"
+            class="aspect-[16/9] relative overflow-hidden bg-black select-none"
+          >
+
+            <!-- RAW BASE VIDEO -->
+            <video
+              id="proofRawVideoDesktop"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="auto"
+              class="absolute inset-0 w-full h-full object-cover contrast-[0.9] saturate-[0.72] brightness-[0.92] blur-[0.4px]"
+            ></video>
+
+            <!-- GENERIC LABEL -->
+            <div
+              id="genericLabelDesktop"
+              class="absolute top-5 right-5 z-10 text-[10px] uppercase tracking-[0.3em] text-white/45 transition-opacity duration-500 pointer-events-none"
+            >
+              Generic Generation
+            </div>
+
+            <!-- CINEMATIC REVEAL -->
+            <div
+              id="proofRevealDesktop"
+              class="absolute inset-y-0 left-0 overflow-hidden z-30"
+              style="width:50%;"
+            >
+
+              <video
+                id="proofCinematicVideoDesktop"
+                autoplay
+                muted
+                loop
+                playsinline
+                preload="auto"
+                class="absolute inset-0 w-full h-full object-cover contrast-[1.06] saturate-[1.08] brightness-[0.98]"
+              ></video>
+
+              <!-- PROOFLAB LABEL -->
+              <div
+                class="absolute top-5 left-5 z-40 text-[10px] uppercase tracking-[0.3em] text-[#0066FF] pointer-events-none"
+              >
+                ProofLab
+              </div>
+
+            </div>
+
+            <!-- DIVIDER -->
+            <div
+              id="proofSliderDesktop"
+              class="absolute top-0 bottom-0 z-30 w-[2px] bg-[#0066FF] shadow-[0_0_18px_rgba(0,102,255,0.45)] hover:shadow-[0_0_24px_rgba(0,102,255,0.38)] cursor-ew-resize transition-shadow duration-300"
+              style="left:50%; transform:translateX(-1px);"
+            >
+
+              <!-- HANDLE -->
+              <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-white/25 bg-black/60 backdrop-blur flex items-center justify-center animate-[pulse_4s_cubic-bezier(0.4,0,0.6,1)_infinite]">
+
+                <span class="text-[10px] tracking-tight text-white/70">
+                  ← →
+                </span>
+
+              </div>
+
+            </div>
+
+            <!-- OVERLAYS -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/5 to-transparent pointer-events-none"></div>
+
+            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.018),transparent_68%)]"></div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- DELTA STEP INDICATORS -->
+      <div class="flex justify-center mt-5">
+
+        <div class="flex items-center gap-10 select-none">
+
+          <div
+            class="delta-step-indicator active-step"
+            data-step="1"
+          >
+            1
+          </div>
+
+          <div
+            class="delta-step-indicator"
+            data-step="2"
+          >
+            2
+          </div>
+
+          <div
+            class="delta-step-indicator"
+            data-step="3"
+          >
+            3
+          </div>
+
+          <div
+            class="delta-step-indicator"
+            data-step="4"
+          >
+            4
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- TEXT -->
+    <div class="col-span-5">
+
+      <div class="min-h-[420px] flex flex-col justify-between">
+
+        <!-- STEP -->
+        <div>
+
+          <p
+            id="desktopStepLabel"
+            class="text-xs uppercase tracking-[0.35em] text-[#0066FF] mb-6"
+          >
+            Step 01
+          </p>
+
+          <h4
+            id="desktopStepTitle"
+            class="text-4xl leading-tight mb-6"
+          >
+            The Raw Script
+          </h4>
+
+          <p
+            id="desktopStepDescription"
+            class="text-gray-300 leading-relaxed text-lg"
+          >
+            Most scripts communicate plot. Very few communicate cinematic atmosphere, emotional weight, visual rhythm, or tone clearly enough to accelerate belief.
+          </p>
+
+        </div>
+
+        <!-- BUTTON -->
+        <div class="mt-12">
+
+          <button
+            id="nextProofStep"
+            class="group inline-flex items-center gap-4 px-7 py-4 rounded-full bg-[#0066FF] text-white transition duration-500 hover:bg-[#0052cc] hover:shadow-[0_0_40px_rgba(0,102,255,0.22)]"
+          >
+
+            <span class="text-sm uppercase tracking-[0.2em]">
+              Next Step
+            </span>
+
+            <span class="text-xl transition-transform duration-500 group-hover:translate-x-1">
+              →
+            </span>
+
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ===================================================== -->
+<!-- MOBILE EXPERIENCE -->
+<!-- ===================================================== -->
+<div class="lg:hidden">
+
+  <!-- CAROUSEL -->
+  <div
+    id="mobileProofCarousel"
+    class="flex overflow-x-auto snap-x snap-mandatory gap-5 pb-6 hide-scrollbar"
+  >
+
+    <!-- PANEL 1 -->
+    <div class="min-w-[92vw] snap-center">
+
+      <div class="group rounded-3xl overflow-hidden border border-white/10 bg-[#111111] transition-all duration-700 hover:border-white/15 hover:shadow-[0_16px_60px_rgba(0,0,0,0.45)]">
+
+        <div class="aspect-[16/9] relative overflow-hidden">
+
+          <img
+            src="images/panel-1.png"
+            alt="Raw Script"
+            class="absolute inset-0 w-full h-full object-cover opacity-80 transition-transform duration-[7000ms] ease-out group-hover:scale-[1.03]"
+          >
+
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
+
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 bg-[radial-gradient(circle_at_center,rgba(255,245,220,0.04),transparent_65%)]"></div>
+
+        </div>
+
+        <div class="p-8">
+
+          <p class="text-xs uppercase tracking-[0.35em] text-[#0066FF] mb-5">
+            Step 01
+          </p>
+
+          <h4 class="text-3xl mb-5">
+            The Raw Script
+          </h4>
+
+          <p class="text-gray-300 leading-relaxed">
+            Most scripts communicate plot. Very few communicate cinematic atmosphere, emotional weight, visual rhythm, or tone clearly enough to accelerate belief.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- PANEL 2 -->
+    <div class="min-w-[92vw] snap-center">
+
+      <div class="group rounded-3xl overflow-hidden border border-red-500/20 bg-[#111111] transition-all duration-700 hover:border-red-400/30 hover:shadow-[0_18px_70px_rgba(0,0,0,0.5)]">
+
+        <div class="aspect-[16/9] relative overflow-hidden">
+
+          <img
+            src="images/panel-2.png"
+            alt="Raw Machine Generation"
+            class="absolute inset-0 w-full h-full object-cover opacity-82 contrast-[1.03] saturate-[0.92] transition-transform duration-[7000ms] ease-out group-hover:scale-[1.02]"
+          >
+
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
+
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-[radial-gradient(circle_at_center,rgba(255,0,0,0.06),transparent_70%)]"></div>
+
+        </div>
+
+        <div class="p-8">
+
+          <p class="text-xs uppercase tracking-[0.35em] text-red-400 mb-5">
+            Step 02
+          </p>
+
+          <h4 class="text-3xl mb-5">
+            Raw Generation
+          </h4>
+
+          <p class="text-gray-300 leading-relaxed">
+            Unmanaged generative output often lacks cinematic intention — producing synthetic movement, inconsistent faces, flat lighting, and emotionally weightless visuals.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- PANEL 3 -->
+    <div class="min-w-[92vw] snap-center">
+
+      <div class="group rounded-3xl overflow-hidden border border-white/10 bg-[#111111] transition-all duration-700 hover:border-[#0066FF]/20 hover:shadow-[0_20px_80px_rgba(0,102,255,0.08)]">
+
+        <div class="aspect-[16/9] relative overflow-hidden">
+
+          <video
+            id="proofDeltaVideo1Mobile"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="auto"
+            class="absolute inset-0 w-full h-full object-cover opacity-100 contrast-[1.04] saturate-[0.96]"
+          ></video>
+
+          <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
+
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 bg-[radial-gradient(circle_at_center,rgba(0,102,255,0.08),transparent_65%)]"></div>
+
+        </div>
+
+        <div class="p-8">
+
+          <p class="text-xs uppercase tracking-[0.35em] text-[#0066FF] mb-5">
+            Step 03
+          </p>
+
+          <h4 class="text-3xl mb-5">
+            The ProofLab System
+          </h4>
+
+          <p class="text-gray-300 leading-relaxed">
+            PROOF manually refines cinematic pacing, shot language, continuity, sound design, atmosphere, and emotional clarity to create presentation-grade visual proof.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- PANEL 4 -->
+<div class="min-w-[92vw] snap-center">
+
+  <div class="group rounded-3xl overflow-hidden border border-[#0066FF]/20 bg-[#111111] transition-all duration-700 hover:border-white/20 hover:shadow-[0_20px_80px_rgba(255,255,255,0.04)]">
+
+    <div
+      id="proofComparisonMobile"
+      class="aspect-[16/9] relative overflow-hidden bg-black select-none"
+    >
+
+      <!-- LABELS -->
+<div
+  id="prooflabLabelMobile"
+  class="absolute top-5 left-5 z-40 text-[10px] uppercase tracking-[0.3em] text-[#0066FF] opacity-0 transition-opacity duration-700 pointer-events-none"
+>
+  ProofLab
+</div>
+
+
+
+<!-- RAW BASE VIDEO -->
+<video
+  id="proofRawVideoMobile"
+  autoplay
+  muted
+  loop
+  playsinline
+  preload="auto"
+  class="absolute inset-0 w-full h-full object-cover contrast-[0.9] saturate-[0.72] brightness-[0.92] blur-[0.4px]"
+></video>
+
+<!-- GENERIC LABEL -->
+<div
+  id="genericLabelMobile"
+  class="absolute top-5 right-5 z-10 text-[10px] uppercase tracking-[0.3em] text-white/45 transition-opacity duration-500 pointer-events-none"
+>
+  Generic Generation
+</div>
+
+
+
+<!-- CINEMATIC REVEAL -->
+<div
+  id="proofRevealMobile"
+  class="absolute inset-y-0 left-0 overflow-hidden z-30"
+  style="width:50%;"
+>
+
+  <video
+    id="proofCinematicVideoMobile"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+    class="absolute inset-0 w-full h-full object-cover contrast-[1.06] saturate-[1.08] brightness-[0.98]"
+  ></video>
+<!-- PROOFLAB LABEL -->
+  <div
+    class="absolute top-5 left-5 z-40 text-[10px] uppercase tracking-[0.3em] text-[#0066FF] pointer-events-none"
+  >
+    ProofLab
+  </div>
+  
+
+</div>
+
+      <!-- DIVIDER -->
+      <div
+        id="proofSliderMobile"
+        class="absolute top-0 bottom-0 z-30 w-[2px] bg-white/80 shadow-[0_0_18px_rgba(255,255,255,0.45)]"
+        style="
+          left:50%;
+          transform:translateX(-1px);
+          "
+      >
+
+        <!-- HANDLE -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-white/25 bg-black/60 backdrop-blur flex items-center justify-center animate-[pulse_4s_cubic-bezier(0.4,0,0.6,1)_infinite]">
+
+          <span class="text-[10px] tracking-tight text-white/70">
+            ← →
+          </span>
+
+        </div>
+
+      </div>
+
+      <!-- OVERLAYS -->
+      <div class="absolute inset-0 bg-gradient-to-t from-black via-black/5 to-transparent pointer-events-none"></div>
+
+      <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.035),transparent_68%)]"></div>
+
+    </div>
+
+    <div class="p-8">
+
+      <p class="text-xs uppercase tracking-[0.35em] text-emerald-400 mb-5">
+        Final Output
+      </p>
+
+      <h4 class="text-3xl mb-5">
+        Cinematic Proof
+      </h4>
+
+      <p class="text-gray-300 leading-relaxed">
+        The result is a cinematic asset capable of communicating tone, execution, emotional stakes, and marketable identity to collaborators, producers, and investors.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+  </div>
+
+      <!-- DOTS -->
+<div class="flex items-center justify-center gap-3 mt-6">
+
+  <button class="proof-dot w-2 h-2 rounded-full bg-[#0066FF] transition-all duration-300"></button>
+
+  <button class="proof-dot w-2 h-2 rounded-full bg-white/20 transition-all duration-300"></button>
+
+  <button class="proof-dot w-2 h-2 rounded-full bg-white/20 transition-all duration-300"></button>
+
+  <button class="proof-dot w-2 h-2 rounded-full bg-white/20 transition-all duration-300"></button>
+
+</div>
+
+      <!-- SWIPE HINT -->
+      <div class="flex items-center justify-center gap-3 mt-6 text-xs uppercase tracking-[0.3em] text-gray-500">
+
+        <span>Swipe</span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- DELTA INTERACTION -->
+<!-- ===================================================== -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* ===================================================== */
+  /* DESKTOP PANEL SWITCHING */
+  /* ===================================================== */
+
+  const panels = document.querySelectorAll(".proof-panel");
+
+  const nextBtn = document.getElementById("nextProofStep");
+
+  const stepLabel =
+    document.getElementById("desktopStepLabel");
+
+  const stepTitle =
+    document.getElementById("desktopStepTitle");
+
+  const stepDescription =
+    document.getElementById("desktopStepDescription");
+
+  let currentPanel = 0;
+
+  const panelContent = [
+
+    {
+      label: "Step 01",
+      title: "The Raw Script",
+      description:
+        "Most scripts communicate plot. Very few communicate cinematic atmosphere, emotional weight, visual rhythm, or tone clearly enough to accelerate belief."
+    },
+
+    {
+      label: "Step 02",
+      title: "Raw Machine Generation",
+      description:
+        "Unmanaged generative output often lacks cinematic intention — producing synthetic movement, inconsistent faces, flat lighting, and emotionally weightless visuals."
+    },
+
+    {
+      label: "Step 03",
+      title: "The ProofLab System",
+      description:
+        "PROOF manually refines cinematic pacing, shot language, continuity, sound design, atmosphere, and emotional clarity to create presentation-grade visual proof."
+    },
+
+    {
+      label: "Final Output",
+      title: "Cinematic Proof",
+      description:
+        "The result is a cinematic asset capable of communicating tone, execution, emotional stakes, and marketable identity to collaborators, producers, and investors."
+    }
+
+  ];
+
+  if (nextBtn) {
+
+  nextBtn.addEventListener("click", () => {
+
+    /* REMOVE CURRENT PANEL */
+    panels[currentPanel].classList.add(
+      "hidden"
+    );
+
+    /* NEXT PANEL */
+    currentPanel++;
+
+    if (currentPanel >= panels.length) {
+      currentPanel = 0;
+    }
+
+    /* SHOW NEW PANEL */
+    panels[currentPanel].classList.remove(
+      "hidden"
+    );
+
+    /* UPDATE TEXT */
+    stepLabel.textContent =
+      panelContent[currentPanel].label;
+
+    stepTitle.textContent =
+      panelContent[currentPanel].title;
+
+    stepDescription.textContent =
+      panelContent[currentPanel].description;
+
+    /* ===================================== */
+    /* UPDATE STEP INDICATORS */
+    /* ===================================== */
+
+    const indicators =
+      document.querySelectorAll(
+        ".delta-step-indicator"
+      );
+
+    indicators.forEach(indicator => {
+
+      indicator.classList.remove(
+        "active-step"
+      );
+
+    });
+
+    indicators[currentPanel].classList.add(
+      "active-step"
+    );
+
+  });
+
+}
+
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* ===================================================== */
+  /* MOBILE DOTS */
+  /* ===================================================== */
+
+  const carousel =
+    document.getElementById("mobileProofCarousel");
+
+  const dots =
+    document.querySelectorAll(".proof-dot");
+
+  if (!carousel || !dots.length) return;
+
+  function updateDots() {
+
+    const scrollLeft = carousel.scrollLeft;
+
+    const firstCard =
+      carousel.querySelector(".snap-center");
+
+    if (!firstCard) return;
+
+    const cardWidth =
+      firstCard.offsetWidth + 20;
+
+    const activeIndex =
+      Math.round(scrollLeft / cardWidth);
+
+    dots.forEach((dot, index) => {
+
+      if (index === activeIndex) {
+
+        dot.classList.remove("bg-white/20");
+
+        dot.classList.add("bg-[#0066FF]");
+
+      } else {
+
+        dot.classList.remove("bg-[#0066FF]");
+
+        dot.classList.add("bg-white/20");
+
+      }
+
+    });
+
+  }
+
+  carousel.addEventListener("scroll", updateDots);
+
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  /* ===================================================== */
+/* VIDEO SETUP */
+/* ===================================================== */
+
+/* ===================================================== */
+/* CONCEPT MEDIA MODE */
+/* ===================================================== */
+
+const conceptMedia =
+  document.getElementById("proofConceptMedia");
+
+/* ====================================== */
+/* CREATE VIDEO ONLY IN VIDEO MODE */
+/* ====================================== */
+
+if (
+  conceptMedia &&
+  conceptMedia.dataset.mediaType === "video"
+) {
+
+  conceptMedia.innerHTML = `
+    <video
+      id="proofConceptVideo"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      class="w-full h-full object-cover transition-transform duration-[6000ms] ease-out group-hover:scale-105"
+      style="filter: contrast(1.05) saturate(0.9) brightness(0.9);"
+    ></video>
+  `;
+
+}
+
+/* ===================================================== */
+/* VIDEO SOURCES */
+/* ===================================================== */
+
+const videos = [
+
+  {
+    element:
+      document.getElementById("proofDeltaVideo1"),
+    url:
+      "https://videodelivery.net/c0f6d21e6379b577d5933cfdda621c9c/manifest/video.m3u8"
+  },
+
+  {
+    element:
+      document.getElementById("proofDeltaVideo1Mobile"),
+    url:
+      "https://videodelivery.net/c0f6d21e6379b577d5933cfdda621c9c/manifest/video.m3u8"
+  },
+
+  {
+    element:
+      document.getElementById("proofRawVideoDesktop"),
+    url:
+      "https://videodelivery.net/b0cb9d42d534c412cb74dc954380b426/manifest/video.m3u8"
+  },
+
+  {
+    element:
+      document.getElementById("proofCinematicVideoDesktop"),
+    url:
+      "https://videodelivery.net/1a90159d735dc26353423b43d11dade8/manifest/video.m3u8"
+  },
+
+  {
+    element:
+      document.getElementById("proofRawVideoMobile"),
+    url:
+      "https://videodelivery.net/b0cb9d42d534c412cb74dc954380b426/manifest/video.m3u8"
+  },
+
+  {
+    element:
+      document.getElementById("proofCinematicVideoMobile"),
+    url:
+      "https://videodelivery.net/1a90159d735dc26353423b43d11dade8/manifest/video.m3u8"
+  },
+
+  /* ====================================== */
+  /* CONCEPT VIDEO */
+  /* ====================================== */
+
+  {
+    element:
+      document.getElementById("proofConceptVideo"),
+
+    url:
+      document
+        .getElementById("proofConceptMedia")
+        ?.dataset.videoUrl
+  }
+
+];
+
+/* ===================================================== */
+/* VIDEO INITIALIZATION */
+/* ===================================================== */
+
+videos.forEach(videoData => {
+
+  if (!videoData.element) return;
+
+  function setupVisibilityPlayback(video) {
+
+    video.pause();
+
+    const observer =
+      new IntersectionObserver(entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            video.play();
+
+          } else {
+
+            video.pause();
+
+          }
+
+        });
+
+      }, {
+        threshold: 0.35
+      });
+
+    observer.observe(video);
+
+  }
+
+  if (Hls.isSupported()) {
+
+    const hls = new Hls({
+      enableWorker: true,
+      lowLatencyMode: true
+    });
+
+    hls.loadSource(videoData.url);
+
+    hls.attachMedia(videoData.element);
+
+    videoData.element.addEventListener(
+      "canplay",
+      () => {
+
+        setupVisibilityPlayback(
+          videoData.element
+        );
+
+      },
+      { once: true }
+    );
+
+  } else if (
+    videoData.element.canPlayType(
+      "application/vnd.apple.mpegurl"
+    )
+  ) {
+
+    videoData.element.src =
+      videoData.url;
+
+    videoData.element.addEventListener(
+      "canplay",
+      () => {
+
+        setupVisibilityPlayback(
+          videoData.element
+        );
+
+      },
+      { once: true }
+    );
+
+  }
+
+});
+
+  /* ===================================================== */
+  /* PROOFLAB REVEAL SYSTEM */
+  /* ===================================================== */
+
+  function initProofReveal({
+    comparison,
+    reveal,
+    slider
+  }) {
+
+    if (
+      !comparison ||
+      !reveal ||
+      !slider
+    ) return;
+
+    let position = 0;
+
+    let direction = 1;
+
+    let raf;
+
+    let isDragging = false;
+
+    let isVisible = false;
+
+    const isDesktop =
+      window.innerWidth >= 1024;
+
+    /* ===================================== */
+    /* SET POSITION */
+    /* ===================================== */
+
+    function setSliderPosition(pos) {
+
+      position = Math.max(
+        0,
+        Math.min(100, pos)
+      );
+
+      reveal.style.width =
+        `${position}%`;
+
+      slider.style.left =
+        `${position}%`;
+
+      slider.style.boxShadow =
+        `
+        0 0 18px rgba(0,102,255,1),
+        0 0 42px rgba(0,102,255,0.9),
+        -90px 0 140px rgba(0,102,255,0.34),
+        -180px 0 220px rgba(0,102,255,0.16)
+        `;
+    }
+
+    /* ===================================== */
+    /* AUTO ANIMATION */
+    /* ===================================== */
+
+    function animateSlider() {
+
+      if (
+        !isVisible ||
+        isDragging
+      ) {
+
+        raf =
+          requestAnimationFrame(
+            animateSlider
+          );
+
+        return;
+
+      }
+
+      position += direction * 0.25;
+
+      if (position >= 100) {
+        direction = -1;
+      }
+
+      if (position <= 0) {
+        direction = 1;
+      }
+
+      setSliderPosition(position);
+
+      raf =
+        requestAnimationFrame(
+          animateSlider
+        );
+
+    }
+
+    /* ===================================== */
+    /* VISIBILITY */
+    /* ===================================== */
+
+    const observer =
+      new IntersectionObserver(entries => {
+
+        entries.forEach(entry => {
+
+          isVisible =
+            entry.isIntersecting;
+
+        });
+
+      }, {
+        threshold: 0.55
+      });
+
+    observer.observe(comparison);
+
+    /* ===================================== */
+    /* DESKTOP DRAGGING */
+    /* ===================================== */
+
+    if (isDesktop) {
+
+      function updateFromMouse(clientX) {
+
+        const rect =
+          comparison.getBoundingClientRect();
+
+        let newPosition =
+          ((clientX - rect.left) / rect.width) * 100;
+
+        setSliderPosition(newPosition);
+
+      }
+
+      slider.addEventListener(
+        "mousedown",
+        () => {
+
+          isDragging = true;
+
+        }
+      );
+
+      window.addEventListener(
+        "mouseup",
+        () => {
+
+          isDragging = false;
+
+        }
+      );
+
+      window.addEventListener(
+        "mousemove",
+        e => {
+
+          if (!isDragging) return;
+
+          updateFromMouse(
+            e.clientX
+          );
+
+        }
+      );
+
+    }
+
+    /* ===================================== */
+    /* START */
+    /* ===================================== */
+
+    setSliderPosition(0);
+
+    animateSlider();
+
+  }
+
+  /* ===================================================== */
+  /* DESKTOP */
+  /* ===================================================== */
+
+  initProofReveal({
+
+    comparison:
+      document.getElementById(
+        "proofComparisonDesktop"
+      ),
+
+    reveal:
+      document.getElementById(
+        "proofRevealDesktop"
+      ),
+
+    slider:
+      document.getElementById(
+        "proofSliderDesktop"
+      )
+
+  });
+
+  /* ===================================================== */
+  /* MOBILE */
+  /* ===================================================== */
+
+  initProofReveal({
+
+    comparison:
+      document.getElementById(
+        "proofComparisonMobile"
+      ),
+
+    reveal:
+      document.getElementById(
+        "proofRevealMobile"
+      ),
+
+    slider:
+      document.getElementById(
+        "proofSliderMobile"
+      )
+
+  });
+
+});
+</script>
+
+<!-- ===================================================== -->
+<!-- STYLES -->
+<!-- ===================================================== -->
+<style>
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 55s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.marquee-group {
+  display: flex;
+  align-items: center;
+  gap: 120px;
+  padding-right: 120px;
+}
+
+.logo-item {
+  height: 105px;
+  width: auto;
+  opacity: 0.72;
+  filter: grayscale(100%);
+  transition: all 0.5s ease;
+  flex-shrink: 0;
+}
+
+.logo-item:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+  transform: scale(1.06);
+}
+
+@media (max-width: 768px) {
+
+  .logo-item {
+    opacity: 1 !important;
+    filter: grayscale(0%) !important;
+  }
+
+  .marquee-track:hover {
+    animation-play-state: running !important;
+  }
+
+}
+
+/* ===================================================== */
+/* DELTA STEP INDICATORS */
+/* ===================================================== */
+
+.delta-step-indicator {
+
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+
+  color: rgb(255, 255, 255);
+
+  transition:
+    color 0.45s ease,
+    opacity 0.45s ease;
+
+}
+
+.delta-step-indicator.active-step {
+
+  color: #0066FF;
+
+}
+
+.delta-step-indicator.active-step {
+
+  color: #0066FF;
+
+}
+
+@keyframes marqueeScroll {
+
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .logo-item {
+    height: 82px;
+  }
+
+  .marquee-group {
+    gap: 48px;
+    padding-right: 48px;
+  }
+
+}
+
+</style>
+
+
+
+<!-- PRODUCTS (WITH MEDIA) -->
+<section id="products" class="pt-20 pb-20">
+
+  <!-- FULL WIDTH BORDER -->
+  <div class="border-t border-white/10 w-full mb-20"></div>
+
+  <div class="max-w-6xl mx-auto px-4">
+
+  <!-- PRODUCTS INTRO -->
+  <div class="max-w-3xl mx-auto text-center mb-12">
+
+    <h2 class="text-3xl md:text-5xl mb-6 leading-tight">
+      Proof-of-concept trailers built to 
+      <span class="text-[#0066FF]">move projects forward.</span>
+    </h2>
+
+    <p class="text-gray-300 text-base md:text-lg leading-relaxed">
+      PROOF creates cinematic pitch videos, visual story assets, and proof-of-concept trailers designed for filmmakers, creators, and entertainment projects seeking funding, development, or audience momentum.
+    </p>
+
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <!-- ================= SIZZLE ================= -->
+    <div class="group relative overflow-hidden bg-[#18181B] border border-white/10 rounded-2xl transition duration-700 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_45px_rgba(0,102,255,0.16)]">
+
+      <!-- CLICKABLE OVERLAY -->
+      <a 
+        href="sizzle.html"
+        aria-label="View PROOF Sizzle details"
+        class="absolute inset-0 z-10"
+      ></a>
+
+      <!-- GLOW -->
+      <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.10),transparent_55%)]"></div>
+
+      <!-- VIDEO -->
+<video 
+  id="proofSizzleVideo"
+  autoplay 
+  muted 
+  loop 
+  playsinline
+  preload="metadata"
+  class="relative z-[1] h-40 w-full object-cover transition-transform duration-[5000ms] ease-out group-hover:scale-105"
+  style="filter: contrast(1.05) saturate(0.9) brightness(0.9);"
+></video>
+
+<!-- STREAM INIT -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const video = document.getElementById("proofSizzleVideo");
+
+  const streamUrl =
+    "https://videodelivery.net/238de8025285e57b0ad563bdaeca85da/manifest/video.m3u8";
+
+  if (!video) return;
+
+  if (Hls.isSupported()) {
+
+    const hls = new Hls({
+      enableWorker: true,
+      lowLatencyMode: true
+    });
+
+    hls.loadSource(streamUrl);
+
+    hls.attachMedia(video);
+
+  } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+
+    video.src = streamUrl;
+
+  }
+
+});
+</script>
+
+      <!-- CONTENT -->
+      <div class="relative z-[1] p-6">
+
+        <!-- TITLE ROW -->
+        <div class="flex items-start justify-between gap-4 mb-2">
+
+          <h3 class="text-xl">
+            PROOF: Sizzle
+          </h3>
+
+          
+
+        </div>
+
+        <p class="text-gray-200 mb-4">
+          Fast visual concept to build momentum.
+        </p>
+
+        <p class="text-2xl leading-tight">
+          $900
+        </p>
+
+        <p class="text-xs text-gray-500 mb-4">
+          *Up to 30 seconds
+        </p>
+
+        <ul class="text-sm text-gray-300 mb-6 space-y-1">
+          <li>• Cinematic visual sequence</li>
+          <li>• Sound + pacing</li>
+          <li>• Delivered in 10 days</li>
+        </ul>
+
+        <!-- BUTTON -->
+<div class="relative z-20">
+
+  <a 
+    href="sizzle.html"
+    class="block w-full py-3 rounded-md bg-[#0066FF] text-white text-center transition hover:bg-[#0052cc] hover:shadow-[0_0_35px_rgba(0,102,255,0.28)]"
+  >
+    View Experience
+  </a>
+
+</div>
+
+      </div>
+
+    </div>
+    <!-- ================= TRAILER ================= -->
+    <div class="group relative overflow-hidden flex flex-col bg-[#18181B] border border-white/10 rounded-2xl transition duration-700 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_45px_rgba(0,102,255,0.16)]">
+
+      <!-- CLICKABLE OVERLAY -->
+      <a 
+        href="trailer.html"
+        aria-label="View PROOF Trailer details"
+        class="absolute inset-0 z-10"
+      ></a>
+
+      <!-- GLOW -->
+      <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.10),transparent_55%)]"></div>
+
+      <!-- VIDEO -->
+<video 
+  id="proofTrailerVideo"
+  autoplay 
+  muted 
+  loop 
+  playsinline 
+  preload="metadata"
+  class="relative z-[1] h-40 w-full object-cover transition-transform duration-[5000ms] ease-out group-hover:scale-105"
+  style="filter: contrast(1.05) saturate(0.9) brightness(0.9);"
+></video>
+
+<!-- STREAM INIT -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const video = document.getElementById("proofTrailerVideo");
+
+  const streamUrl =
+    "https://videodelivery.net/0ab0b9b0bc81d018f5a645d2d9069632/manifest/video.m3u8";
+
+  if (!video) return;
+
+  if (Hls.isSupported()) {
+
+    const hls = new Hls({
+      enableWorker: true,
+      lowLatencyMode: true
+    });
+
+    hls.loadSource(streamUrl);
+
+    hls.attachMedia(video);
+
+  } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+
+    video.src = streamUrl;
+
+  }
+
+});
+</script>
+
+      <!-- CONTENT -->
+      <div class="relative z-[1] p-6 flex flex-col h-full">
+
+        <!-- TITLE ROW -->
+        <div class="flex items-start justify-between gap-4 mb-2">
+
+          <h3 class="text-xl">
+            PROOF: Trailer
+          </h3>
+
+          
+
+        </div>
+
+        <p class="text-gray-200 mb-4">
+          Full cinematic pitch asset.
+        </p>
+
+        <p class="text-2xl">
+          $1,800
+        </p>
+
+        <p class="text-xs text-gray-500 mb-4">
+          *~45–90 seconds • Includes creative consult
+        </p>
+
+        <ul class="text-sm text-gray-300 mb-6 space-y-1">
+          <li>• 45–90 second trailer</li>
+          <li>• Pitch-ready output</li>
+          <li>• Delivered in ~14 days</li>
+        </ul>
+
+        <div class="mt-auto">
+
+          
+
+          <!-- BUTTON -->
+<div class="relative z-20">
+
+  <a 
+    href="sizzle.html"
+    class="block w-full py-3 rounded-md bg-[#0066FF] text-white text-center transition hover:bg-[#0052cc] hover:shadow-[0_0_35px_rgba(0,102,255,0.28)]"
+  >
+    View Experience
+  </a>
+
+</div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- ================= SCENE ================= -->
+    <div class="group relative overflow-hidden bg-[#18181B] border border-white/10 rounded-2xl transition duration-700 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_45px_rgba(0,102,255,0.16)]">
+
+      <!-- CLICKABLE OVERLAY -->
+      <a 
+        href="scene.html"
+        aria-label="View PROOF Scene details"
+        class="absolute inset-0 z-10"
+      ></a>
+
+      <!-- GLOW -->
+      <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.10),transparent_55%)]"></div>
+
+      <!-- VIDEO -->
+<video 
+  id="proofSceneVideo"
+  autoplay 
+  muted 
+  loop 
+  playsinline
+  preload="metadata"
+  class="relative z-[1] h-40 w-full object-cover transition-transform duration-[5000ms] ease-out group-hover:scale-105"
+  style="filter: contrast(1.05) saturate(0.9) brightness(0.9);"
+></video>
+
+<!-- STREAM INIT -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const video = document.getElementById("proofSceneVideo");
+
+  const streamUrl =
+    "https://videodelivery.net/ffd865d79dcdf2b9a958e43a3bf208df/manifest/video.m3u8";
+
+  if (!video) return;
+
+  if (Hls.isSupported()) {
+
+    const hls = new Hls({
+      enableWorker: true,
+      lowLatencyMode: true
+    });
+
+    hls.loadSource(streamUrl);
+
+    hls.attachMedia(video);
+
+  } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+
+    video.src = streamUrl;
+
+  }
+
+});
+</script>
+
+      <!-- CONTENT -->
+      <div class="relative z-[1] p-6">
+
+        <!-- TITLE ROW -->
+        <div class="flex items-start justify-between gap-4 mb-2">
+
+          <h3 class="text-xl">
+            PROOF: Scene
+          </h3>
+
+          
+
+        </div>
+
+        <p class="text-gray-200 mb-4">
+          Show tone, character, and execution.
+        </p>
+
+        <p class="text-2xl">
+          $2,400
+        </p>
+
+        <p class="text-xs text-gray-500 mb-4">
+          *Up to 2 script pages • ~90-120 seconds runtime
+        </p>
+
+        <ul class="text-sm text-gray-300 mb-6 space-y-1">
+          <li>• Narrative-driven scene</li>
+          <li>• Optimized for pitch decks & presentations</li>
+          <li>• Delivered in ~21 days</li>
+        </ul>
+
+        <!-- BUTTON -->
+<div class="relative z-20">
+
+  <a 
+    href="sizzle.html"
+    class="block w-full py-3 rounded-md bg-[#0066FF] text-white text-center transition hover:bg-[#0052cc] hover:shadow-[0_0_35px_rgba(0,102,255,0.28)]"
+  >
+    View Experience
+  </a>
+
+</div>
+
+      </div>
+
+    </div>
+
+    
+
+  </div><!-- END grid -->
+
+  <!-- ================= POC CARD ================= -->
+<div class="mt-8">
+
+  <div class="group relative overflow-hidden bg-[#18181B] border border-white/10 rounded-2xl transition duration-700 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_45px_rgba(0,102,255,0.16)]">
+
+    <!-- CLICKABLE OVERLAY -->
+    <a 
+      href="concept.html"
+      aria-label="View PROOF Concept details"
+      class="absolute inset-0 z-10"
+    ></a>
+
+    <!-- GLOW -->
+    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.10),transparent_55%)]"></div>
+
+    <div class="relative z-[1] grid grid-cols-1 md:grid-cols-3">
+
+      <!-- ================= LEFT: MEDIA ================= -->
+      <div class="md:col-span-2 min-h-[260px] md:min-h-full relative overflow-hidden">
+
+        <div class="absolute inset-0 md:right-[-1rem]">
+
+          <!-- ====================================== -->
+          <!-- CONCEPT MEDIA --><!-- CHANGE TO "video" WHEN CONCEPT ASSET IS READY -->
+          <!-- ====================================== -->
+
+          <div
+            id="proofConceptMedia"
+            data-media-type="image"
+            data-video-url="https://videodelivery.net/f2d390847b244b605519cc3b7269ebc3/manifest/video.m3u8"
+            class="w-full h-full"
+          >
+
+            <!-- IMAGE VERSION -->
+            <img
+              id="proofConceptImage"
+              src="images/proof-concept.png"
+              alt="PROOF Concept cinematic proof-of-concept development"
+              class="w-full h-full object-cover transition-transform duration-[6000ms] ease-out group-hover:scale-105"
+              style="filter: contrast(1.05) saturate(0.9) brightness(0.9);"
+            />
+
+          </div>
+
+          <!-- OVERLAY -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent pointer-events-none"></div>
+
+        </div>
+
+      </div>
+
+      <!-- ================= RIGHT: CONTENT ================= -->
+      <div class="md:col-span-1 flex flex-col justify-between p-6 md:pl-11 relative z-[1]">
+
+        <div>
+
+          <!-- TITLE ROW -->
+          <div class="flex items-start justify-between gap-4 mb-2">
+
+            <h3 class="text-xl">
+              PROOF: Concept
+            </h3>
+
+          </div>
+
+          <p class="text-gray-200 mb-4">
+            Develop a full short-form proof-of-concept with narrative, tone, and execution.
+          </p>
+
+          <p class="text-2xl leading-tight mb-0">
+            Custom Pricing
+          </p>
+
+          <p class="text-xs text-gray-500 mb-4">
+            *Scope-based project
+          </p>
+
+          <ul class="text-sm text-gray-300 mb-6 space-y-1">
+            <li>• Multi-scene narrative</li>
+            <li>• Cinematic execution</li>
+            <li>• Designed for pitching & funding</li>
+          </ul>
+
+        </div>
+
+        <!-- BUTTON -->
+        <div class="relative z-20">
+
+          <a 
+            class="mt-6 block bg-[#0066FF] w-full py-3 rounded-md text-white font-medium text-center transition hover:bg-[#0052cc] hover:shadow-[0_0_35px_rgba(0,102,255,0.28)]"
+          >
+            View Experience
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works" class="py-20 border-t border-white/10 text-center">
+
+  <h2 class="text-3xl md:text-5xl mb-14">How it works</h2>
+
+  <p class="sr-only">
+    How PROOF creates cinematic pitch videos and proof-of-concept trailers for filmmakers and creative projects.
+  </p>
+
+  <div class="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto px-4">
+
+    <!-- STEP 1 -->
+    <div class="text-center group">
+
+      <!-- IMAGE -->
+      <div class="relative w-full aspect-video rounded-lg overflow-hidden mb-6 bg-[#18181B] transition duration-700 group-hover:shadow-[0_0_35px_rgba(0,102,255,0.16)]">
+
+        <img
+          src="images/step-one.png"
+          alt="Filmmaker submitting script for cinematic proof-of-concept trailer production"
+          class="w-full h-full object-cover transition-transform duration-[5000ms] ease-out group-hover:scale-110"
+        />
+
+        <!-- OVERLAY -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10"></div>
+
+      </div>
+
+      <p class="text-sm text-gray-200 mb-2">01</p>
+
+      <h3 class="text-lg text-white mb-2">
+        Send your script
+      </h3>
+
+      <p class="text-gray-300 text-sm max-w-sm mx-auto">
+        Share your material and vision so we understand what you're building.
+      </p>
+
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="text-center group">
+
+      <!-- IMAGE -->
+      <div class="relative w-full aspect-video rounded-lg overflow-hidden mb-6 bg-[#18181B] transition duration-700 group-hover:shadow-[0_0_35px_rgba(0,102,255,0.16)]">
+
+        <img
+          src="images/step-two.png"
+          alt="Cinematic pitch video and proof-of-concept trailer production process"
+          class="w-full h-full object-cover transition-transform duration-[5000ms] ease-out group-hover:scale-110"
+        />
+
+        <!-- OVERLAY -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10"></div>
+
+      </div>
+
+      <p class="text-sm text-gray-200 mb-2">02</p>
+
+      <h3 class="text-lg text-white mb-2">
+        We build your proof
+      </h3>
+
+      <p class="text-gray-300 text-sm max-w-sm mx-auto">
+        We translate your concept into a cinematic, pitch-ready asset.
+      </p>
+
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="text-center group">
+
+      <!-- IMAGE -->
+      <div class="relative w-full aspect-video rounded-lg overflow-hidden mb-6 bg-[#18181B] transition duration-700 group-hover:shadow-[0_0_35px_rgba(0,102,255,0.16)]">
+
+        <img
+          src="images/step-three.png"
+          alt="Using a cinematic pitch trailer for film funding and development"
+          class="w-full h-full object-cover transition-transform duration-[5000ms] ease-out group-hover:scale-110"
+        />
+
+        <!-- OVERLAY -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10"></div>
+
+      </div>
+
+      <p class="text-sm text-gray-200 mb-2">03</p>
+
+      <h3 class="text-lg text-white mb-2">
+        Use it to move forward
+      </h3>
+
+      <p class="text-gray-300 text-sm max-w-sm mx-auto">
+        Present, pitch, and fund your project with something people can actually see.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- WHY PROOF -->
+<section class="py-20 text-center border-t border-white/10">
+
+  <h2 class="text-3xl md:text-5xl mb-14">
+    Why PROOF?
+  </h2>
+
+  <p class="sr-only">
+    Why filmmakers, creators, and entertainment projects use PROOF for cinematic pitch trailers and visual storytelling assets.
+  </p>
+
+  <div class="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto px-4">
+
+    <!-- ITEM 1 -->
+    <div class="text-center group">
+
+      <!-- IMAGE -->
+      <div class="relative w-full aspect-video rounded-lg overflow-hidden mb-6 bg-[#18181B] transition duration-700 group-hover:shadow-[0_0_35px_rgba(0,102,255,0.16)]">
+
+        <img
+          src="images/why-one.png"
+          alt="Cinematic proof-of-concept trailer designed to help filmmakers build momentum"
+          class="w-full h-full object-cover transition-transform duration-[5000ms] ease-out group-hover:scale-110"
+        />
+
+        <!-- OVERLAY -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10"></div>
+
+      </div>
+
+      <p class="text-sm text-gray-400 mb-2">01</p>
+
+      <h3 class="text-lg text-white mb-2">
+        Built for momentum
+      </h3>
+
+      <p class="text-gray-400 text-sm max-w-sm mx-auto">
+        Move faster — whether you're pitching, packaging, or trying to get buy-in.
+      </p>
+
+    </div>
+
+    <!-- ITEM 2 -->
+    <div class="text-center group">
+
+      <!-- IMAGE -->
+      <div class="relative w-full aspect-video rounded-lg overflow-hidden mb-6 bg-[#18181B] transition duration-700 group-hover:shadow-[0_0_35px_rgba(0,102,255,0.16)]">
+
+        <img
+          src="images/why-two.png"
+          alt="Visual storytelling through cinematic pitch videos and proof-of-concept scenes"
+          class="w-full h-full object-cover transition-transform duration-[5000ms] ease-out group-hover:scale-110"
+        />
+
+        <!-- OVERLAY -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10"></div>
+
+      </div>
+
+      <p class="text-sm text-gray-400 mb-2">02</p>
+
+      <h3 class="text-lg text-white mb-2">
+        Show...don’t tell
+      </h3>
+
+      <p class="text-gray-400 text-sm max-w-sm mx-auto">
+        Scripts and decks can’t carry tone. PROOF gives people something real to react to.
+      </p>
+
+    </div>
+
+    <!-- ITEM 3 -->
+    <div class="text-center group">
+
+      <!-- IMAGE -->
+      <div class="relative w-full aspect-video rounded-lg overflow-hidden mb-6 bg-[#18181B] transition duration-700 group-hover:shadow-[0_0_35px_rgba(0,102,255,0.16)]">
+
+        <img
+          src="images/why-three.png"
+          alt="Structured cinematic pitch trailer production process for creative projects"
+          class="w-full h-full object-cover transition-transform duration-[5000ms] ease-out group-hover:scale-110"
+        />
+
+        <!-- OVERLAY -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10"></div>
+
+      </div>
+
+      <p class="text-sm text-gray-400 mb-2">03</p>
+
+      <h3 class="text-lg text-white mb-2">
+        System, not guesswork
+      </h3>
+
+      <p class="text-gray-400 text-sm max-w-sm mx-auto">
+        Built on the ProofLab system — structured, repeatable, and designed for real use.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- PROOFLAB SYSTEM -->
+<section class="py-24 px-4 border-t border-white/10">
+
+  <div class="max-w-4xl mx-auto text-center">
+
+    <p class="text-sm uppercase tracking-[0.2em] text-[#0066FF] mb-4">
+      The ProofLab System
+    </p>
+
+    <h2 class="text-3xl md:text-5xl leading-tight mb-8">
+      A cinematic proof-of-concept system built to accelerate belief.
+    </h2>
+
+    <p class="text-gray-300 text-base md:text-lg leading-relaxed max-w-3xl mx-auto mb-6">
+      PROOF uses the ProofLab system to transform scripts, concepts, and creative ideas into cinematic proof-of-concept assets designed for pitching, development, funding, and audience validation.
+    </p>
+
+    <p class="text-gray-500 text-sm max-w-2xl mx-auto leading-relaxed">
+      Combining visual storytelling, concept development, and structured creative workflows, the ProofLab system helps creators communicate tone, execution, and potential before full-scale production begins.
+    </p>
+
+  </div>
+
+</section>
+<!-- FAQ -->
+<section id="what-is-proof" class="py-24 px-4 border-t border-white/10">
+
+  <div class="max-w-4xl mx-auto">
+
+    <h2 class="text-3xl md:text-5xl mb-14 text-center">
+      What is PROOF?
+    </h2>
+
+    <div class="space-y-10">
+
+      <!-- FEATURE QUESTION -->
+      <div>
+        <h3 class="text-xl mb-3">
+          Is PROOF an AI filmmaking company trying to replace traditional filmmaking?
+        </h3>
+
+        <p class="text-gray-300 leading-relaxed mb-5">
+          No. PROOF exists to support filmmaking — not replace it. We believe deeply in filmmakers and the collaborative craft of storytelling. 
+          Traditional filmmaking costs tens of thousands of dollars. PROOF is an accessible bridge between screenplay and screen, helping creators communicate cinematic vision earlier in development.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl mb-3">
+          Who is PROOF built for?
+        </h3>
+
+        <p class="text-gray-300 leading-relaxed">
+          PROOF is designed for screenwriters, filmmakers, creators, startups, and teams that need to communicate ideas visually for funding, development, pitching, or audience validation.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl mb-3">
+          What makes the ProofLab system different?
+        </h3>
+
+        <p class="text-gray-300 leading-relaxed">
+          The ProofLab system combines cinematic storytelling, concept development, emotional structure, visual direction, and structured creative workflows to help projects move from idea to visual proof faster and more effectively.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl mb-3">
+          Can PROOF help with investor or pitch presentations?
+        </h3>
+
+        <p class="text-gray-300 leading-relaxed">
+          Yes! PROOF assets are specifically designed to help creators communicate tone, vision, and execution during development, funding conversations, packaging efforts, and pitch presentations.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- FAQ CTA -->
+    <div class="mt-16 flex justify-end">
+
+      <a
+        href="faq.html"
+        class="group inline-flex items-center gap-3 text-[#0066FF] hover:text-white transition duration-300"
+      >
+
+        <span class="text-sm uppercase tracking-[0.24em]">
+          Read Full FAQ
+        </span>
+
+        <span class="text-2xl transition-transform duration-300 group-hover:translate-x-1">
+          →
+        </span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- FINAL CTA + FOOTER -->
+<section class="pt-28 pb-12 text-center flex flex-col items-center border-t border-white/10 px-4">
+
+  <!-- CTA -->
+  <div class="max-w-3xl mx-auto mb-16">
+
+    <h2 class="text-4xl md:text-6xl leading-tight mb-6">
+      Ready to prove it?
+    </h2>
+
+    <p class="text-gray-300 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-10">
+      Turn your concept into something tangible — cinematic proof built to help people see the potential.
+    </p>
+
+    <a 
+      href="https://calendly.com/hello-prooflab/30min"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center justify-center bg-[#0066FF] hover:bg-[#0052cc] transition px-8 py-4 rounded-md text-lg text-white shadow-[0_0_35px_rgba(0,102,255,0.18)]"
+    >
+      Start Your Project
+    </a>
+
+  </div>
+
+  <!-- SYSTEM LINE -->
+  <div class="w-full flex justify-center border-t border-white/10 mb-12">
+
+    <img 
+      src="proof-logo/Proof_lab_footer.png"
+      alt="Built on the Proof Lab system"
+      class="w-full max-w-xl opacity-60"
+    />
+
+  </div>
+
+  <!-- CONTACT -->
+  <div class="flex flex-col md:flex-row items-center gap-3 md:gap-4 text-sm text-gray-400 mb-8">
+
+    <a 
+      href="mailto:hello@prooflab.studio"
+      class="text-white hover:text-[#0066FF] transition"
+    >
+      hello@prooflab.studio
+    </a>
+
+    <span class="hidden md:block opacity-30">•</span>
+
+    <a 
+      href="https://www.instagram.com/needmoreproof/" 
+      target="_blank"
+      rel="noopener noreferrer"
+      class="hover:text-white transition"
+    >
+      Instagram
+    </a>
+
+  </div>
+
+  <!-- COPYRIGHT -->
+  <p class="text-xs text-gray-600 mb-6">
+    © 2026 PROOF, LLC. All Rights Reserved.
+  </p>
+  
+
+  <!-- DISCLAIMER -->
+  <p class="text-[11px] leading-relaxed text-gray-600 max-w-4xl mx-auto">
+    PROOF and ProofLab, LLC provide creative development, visual storytelling, and proof-of-concept production services intended to support presentation, pitching, audience engagement, and project development efforts. While our materials are designed to help communicate creative vision and project potential, ProofLab, LLC makes no guarantees, representations, or warranties regarding financing, distribution, acquisition, commercial success, audience performance, talent attachment, or the purchase, optioning, licensing, or production of any project. All creative and business outcomes remain dependent on numerous external factors beyond our control.
+  </p>
+  <div class="flex justify-center gap-6 text-xs text-gray-500 mt-12">
+
+  <a href="terms.html" class="hover:text-white transition">
+    Terms & Conditions
+  </a>
+
+  <a href="privacy.html" class="hover:text-white transition">
+    Privacy Policy
+  </a>
+
+</div>
+
+</section>
+
+<!-- TO TOP BUTTON -->
+<button 
+  id="toTopBtn"
+  class="fixed bottom-6 right-6 bg-[#0066FF] w-10 h-10 rounded-md flex items-center justify-center text-white opacity-0 pointer-events-none transition"
+>
+  ↑
+</button>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  // TO TOP BUTTON
+  const btn = document.getElementById("toTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 400) {
+      btn.classList.remove("opacity-0", "pointer-events-none");
+      btn.classList.add("opacity-100");
+    } else {
+      btn.classList.add("opacity-0", "pointer-events-none");
+      btn.classList.remove("opacity-100");
+    }
+  });
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // HAMBURGER MENU
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  if (menuBtn && mobileMenu) {
+
+    // TOGGLE MENU
+    menuBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    // CLOSE WHEN CLICKING LINK
+    const links = mobileMenu.querySelectorAll("a");
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("hidden");
+      });
+    });
+
+    // CLOSE WHEN CLICKING OUTSIDE
+    document.addEventListener("click", (e) => {
+      if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+        mobileMenu.classList.add("hidden");
+      }
+    });
+
+  }
+
+});
+</script>
+
+  <!-- ================= EMAIL POPUP ================= -->
+<div id="emailPopup" class="fixed inset-0 bg-black/80 flex items-center justify-center z-[999] hidden">
+
+  <div class="bg-[#18181B] p-6 md:p-8 rounded-lg border border-white/10 max-w-md w-full text-center relative">
+
+    <!-- CLOSE -->
+    <button id="closePopup" class="absolute top-3 right-3 text-gray-400 text-2xl hover:text-white transition">
+      &times;
+    </button>
+
+    <!-- CONTENT -->
+    <h2 class="text-xl md:text-2xl font-semibold text-center leading-tight">
+
+      <span class="text-[#0066FF] whitespace-nowrap md:whitespace-normal">
+        Not ready to build your
+      </span>
+
+      <span class="text-white whitespace-nowrap">
+        PROOF
+      </span>
+
+      <span class="text-[#0066FF] whitespace-nowrap md:whitespace-normal">
+        yet?
+      </span>
+
+    </h2>
+
+    <p class="text-gray-400 text-sm mb-5 mt-4">
+      See how ideas turn into something real.
+      Get examples, insights, and early access.
+    </p>
+
+    <!-- FORM -->
+    <form
+      id="emailForm"
+      action="https://app.kit.com/forms/9363800/subscriptions"
+      method="post"
+      class="flex flex-col gap-3"
+    >
+
+      <input
+        type="email"
+        name="email_address"
+        placeholder="Your email"
+        required
+        class="px-4 py-3 rounded-md bg-black border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-[#0066FF]"
+      />
+
+      <button
+        type="submit"
+        class="bg-[#0066FF] py-3 rounded-md text-white font-medium hover:bg-blue-600 transition w-full"
+      >
+        Get Updates
+      </button>
+
+    </form>
+
+    <!-- SUCCESS -->
+    <div id="emailSuccess" class="hidden mt-4">
+
+      <div class="bg-black border border-[#0066FF]/30 rounded-md px-4 py-5 flex items-center justify-center">
+
+        <p class="text-[#0066FF] text-lg font-medium text-center">
+          BOOM! You're in.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<!-- ================= SCRIPTS ================= -->
+
+<!-- GLOBAL TOGGLES -->
+<script>
+const SHOW_PROOF_LABEL = false;
+</script>
+
+<!-- ================= EMAIL POPUP SCRIPT ================= -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const popup = document.getElementById("emailPopup");
+  const closeBtn = document.getElementById("closePopup");
+  const form = document.getElementById("emailForm");
+  const success = document.getElementById("emailSuccess");
+
+  // CHECK LOCAL STORAGE
+  const popupClosed = localStorage.getItem("proofPopupClosed");
+  const popupSubscribed = localStorage.getItem("proofSubscribed");
+
+  // STOP IF ALREADY CLOSED OR SUBSCRIBED
+  if (popupClosed || popupSubscribed) {
+    return;
+  }
+
+  let shown = false;
+
+  // SHOW POPUP
+  function showPopup() {
+
+    if (!shown) {
+
+      popup.classList.remove("hidden");
+
+      shown = true;
+    }
+  }
+
+  // DESKTOP EXIT INTENT
+  document.addEventListener("mouseleave", (e) => {
+
+    if (e.clientY < 10) {
+      showPopup();
+    }
+  });
+
+  // MOBILE TIMER
+  setTimeout(() => {
+
+    showPopup();
+
+  }, 25000);
+
+  // CLOSE BUTTON
+  closeBtn.addEventListener("click", () => {
+
+    popup.classList.add("hidden");
+
+    localStorage.setItem("proofPopupClosed", "true");
+  });
+
+  // CLICK OUTSIDE
+  popup.addEventListener("click", (e) => {
+
+    if (e.target.id === "emailPopup") {
+
+      popup.classList.add("hidden");
+
+      localStorage.setItem("proofPopupClosed", "true");
+    }
+  });
+
+});
+</script>
+
+<!-- ================= KIT FORM SUBMIT ================= -->
+<script>
+document.addEventListener("submit", function (e) {
+
+  if (e.target.matches('#emailForm')) {
+
+    e.preventDefault();
+
+    const form = e.target;
+    const data = new FormData(form);
+
+    fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: {
+        "Accept": "application/json"
+      }
+    })
+
+    .then(() => {
+
+      // STORE SUBSCRIBED STATE
+      localStorage.setItem("proofSubscribed", "true");
+
+      // HIDE FORM
+      form.classList.add("hidden");
+
+      // SHOW SUCCESS
+      document.getElementById("emailSuccess").classList.remove("hidden");
+
+    })
+
+    .catch(() => {
+
+      alert("Something went wrong. Try again.");
+
+    });
+
+  }
+
+});
+</script>
+
+<!-- ================= PROOF LABEL TOGGLE ================= -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const labels = document.querySelectorAll(".proof-label");
+
+  labels.forEach(label => {
+
+    if (SHOW_PROOF_LABEL) {
+      label.classList.remove("hidden");
+    } else {
+      label.classList.add("hidden");
+    }
+
+  });
+
+});
+</script>
+
+<!-- ================= TESTIMONIAL ROTATION ================= -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const testimonials = [
+
+    {
+      quote: "PROOF helped translate our concept into something tangible we could actually show.",
+      author: "LaunchBox"
+    },
+
+    {
+      quote: "People immediately understood the tone, pacing, and potential.",
+      author: "Bad Bella Films"
+    },
+
+    {
+      quote: "The proof-of-concept changed the conversation completely.",
+      author: "Eighty-West Studios"
+    },
+
+    {
+      quote: "Instead of explaining the vision, we could finally show it.",
+      author: "Development Client"
+    },
+
+    {
+      quote: "The cinematic execution made the project feel real instantly.",
+      author: "Creative Partner"
+    }
+
+  ];
+
+  const container = document.getElementById("testimonialContainer");
+  const quote = document.getElementById("testimonialQuote");
+  const author = document.getElementById("testimonialAuthor");
+
+  if (container && quote && author) {
+
+    let index = 0;
+
+    function changeTestimonial() {
+
+      container.classList.remove("opacity-100");
+      container.classList.add("opacity-0");
+
+      setTimeout(() => {
+
+        index = (index + 1) % testimonials.length;
+
+        quote.textContent = `“${testimonials[index].quote}”`;
+        author.textContent = `— ${testimonials[index].author}`;
+
+        container.classList.remove("opacity-0");
+        container.classList.add("opacity-100");
+
+      }, 800);
+
+    }
+
+    setInterval(changeTestimonial, 7000);
+
+  }
+
+});
+</script>
+</body>
+</html>
