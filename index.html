@@ -279,7 +279,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </header>
 
+<!-- ================= FLOATING PITCH READINESS BAR ================= -->
+<div
+  id="floatingPitchBar"
+  class="fixed left-4 right-4 top-[76px] md:top-[96px] z-[60] transition-all duration-500"
+>
 
+  <div class="max-w-5xl mx-auto bg-black/70 backdrop-blur-md border border-white/10 rounded-full shadow-[0_0_35px_rgba(0,0,0,0.45)] px-4 md:px-6 py-3">
+
+    <p class="text-[11px] md:text-sm text-gray-400 leading-relaxed text-center">
+
+      <span class="text-white/70">
+        Before you ask them to believe:
+      </span>
+
+      <button
+        id="openChecklistPopupFloating"
+        type="button"
+        class="text-[#0066FF] hover:text-white transition underline underline-offset-4 decoration-[#0066FF]/40 hover:decoration-white/60"
+      >
+        get the free 17-point Pitch Asset Checklist
+      </button>
+
+      <span class="text-white/40">
+        or
+      </span>
+
+      <a
+        href="project-review.html"
+        class="text-[#0066FF] hover:text-white transition underline underline-offset-4 decoration-[#0066FF]/40 hover:decoration-white/60"
+      >
+        request a Free Project Fit Review
+      </a>
+
+      <span class="text-white/70">
+        before you pitch.
+      </span>
+
+    </p>
+
+  </div>
+
+</div>
 
   <!-- HERO WRAPPER -->
 <section class="relative overflow-hidden bg-black">
@@ -3099,12 +3140,13 @@ document.addEventListener("DOMContentLoaded", () => {
         </p>
 
         <a
-          href="/pitch-asset-checklist.png"
-          download="pitch-asset-checklist.png"
-          class="block bg-[#0066FF] py-3 rounded-md text-white font-medium hover:bg-blue-600 transition w-full text-center"
-        >
-          Download the Checklist
-        </a>
+  id="downloadChecklistBtn"
+  href="/pitch-asset-checklist.png"
+  download="pitch-asset-checklist.png"
+  class="block bg-[#0066FF] py-3 rounded-md text-white font-medium hover:bg-blue-600 transition w-full text-center"
+>
+  Download the Checklist
+</a>
 
       </div>
 
@@ -3127,64 +3169,59 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const popup = document.getElementById("emailPopup");
   const closeBtn = document.getElementById("closePopup");
-  const form = document.getElementById("emailForm");
-  const success = document.getElementById("emailSuccess");
+
+  if (!popup || !closeBtn) return;
 
   // CHECK LOCAL STORAGE
   const popupClosed = localStorage.getItem("proofPopupClosed");
   const popupSubscribed = localStorage.getItem("proofSubscribed");
 
-  // STOP IF ALREADY CLOSED OR SUBSCRIBED
-  if (popupClosed || popupSubscribed) {
-    return;
-  }
-
   let shown = false;
 
   // SHOW POPUP
   function showPopup() {
-
     if (!shown) {
-
       popup.classList.remove("hidden");
-
       shown = true;
     }
   }
 
-  // DESKTOP EXIT INTENT
-  document.addEventListener("mouseleave", (e) => {
-
-    if (e.clientY < 10) {
-      showPopup();
-    }
-  });
-
-  // MOBILE TIMER
-  setTimeout(() => {
-
-    showPopup();
-
-  }, 25000);
+  // CLOSE POPUP FUNCTION
+  function closePopup() {
+    popup.classList.add("hidden");
+  }
 
   // CLOSE BUTTON
   closeBtn.addEventListener("click", () => {
-
-    popup.classList.add("hidden");
-
+    closePopup();
     localStorage.setItem("proofPopupClosed", "true");
   });
 
   // CLICK OUTSIDE
   popup.addEventListener("click", (e) => {
-
     if (e.target.id === "emailPopup") {
-
-      popup.classList.add("hidden");
-
+      closePopup();
       localStorage.setItem("proofPopupClosed", "true");
     }
   });
+
+  // STOP AUTO-POPUP IF ALREADY CLOSED OR SUBSCRIBED
+  // But keep close button working for manual opens.
+  if (popupClosed || popupSubscribed) {
+    return;
+  }
+
+  // DESKTOP EXIT INTENT
+  document.addEventListener("mouseleave", (e) => {
+    if (e.clientY < 10) {
+      showPopup();
+    }
+  });
+
+  // MOBILE / GENERAL DELAY
+  setTimeout(() => {
+    showPopup();
+  }, 25000);
 
 });
 </script>
@@ -3231,6 +3268,28 @@ document.addEventListener("submit", function (e) {
 
 });
 </script>
+
+<!-- ================= CHECKLIST DOWNLOAD CLOSE ================= -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const downloadBtn = document.getElementById("downloadChecklistBtn");
+  const popup = document.getElementById("emailPopup");
+
+  if (!downloadBtn || !popup) return;
+
+  downloadBtn.addEventListener("click", () => {
+
+    setTimeout(() => {
+      popup.classList.add("hidden");
+    }, 300);
+
+  });
+
+});
+</script>
+
+
 
 <!-- ================= PROOF LABEL TOGGLE ================= -->
 <script>
@@ -3312,6 +3371,67 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     setInterval(changeTestimonial, 7000);
+
+  }
+
+});
+</script>
+<!-- ================= FLOATING BAR SCRIPT ================= -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const floatingBar = document.getElementById("floatingPitchBar");
+  const openChecklistBtn = document.getElementById("openChecklistPopupFloating");
+
+  const popup = document.getElementById("emailPopup");
+  const form = document.getElementById("emailForm");
+  const success = document.getElementById("emailSuccess");
+
+  if (!floatingBar) return;
+
+  // Hide after user scrolls past early page area.
+  window.addEventListener("scroll", () => {
+
+    const hideAfter = window.innerHeight * 1.25;
+
+    if (window.scrollY > hideAfter) {
+
+      floatingBar.classList.add(
+        "opacity-0",
+        "-translate-y-4",
+        "pointer-events-none"
+      );
+
+    } else {
+
+      floatingBar.classList.remove(
+        "opacity-0",
+        "-translate-y-4",
+        "pointer-events-none"
+      );
+
+    }
+
+  });
+
+  // Open checklist popup manually.
+  // Manual clicks always start fresh at the email form.
+  if (openChecklistBtn && popup) {
+
+    openChecklistBtn.addEventListener("click", () => {
+
+      popup.classList.remove("hidden");
+
+      if (form) {
+        form.classList.remove("hidden");
+        form.reset();
+      }
+
+      if (success) {
+        success.classList.add("hidden");
+      }
+
+    });
 
   }
 
