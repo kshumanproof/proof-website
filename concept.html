@@ -158,32 +158,57 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
   </div>
 
   <!-- MOBILE MENU -->
-  <div id="mobileMenu" class="hidden md:hidden bg-black text-center py-6 flex flex-col items-center gap-4">
+<div id="mobileMenu" class="hidden md:hidden bg-black text-center py-6 flex flex-col items-center gap-4">
 
-    <a href="index.html#products" class="block">
-      Products
+  <a href="index.html#products" class="block">
+    Products
+  </a>
+
+  <a href="index.html#how-it-works" class="block">
+    How It Works
+  </a>
+
+  <a href="index.html#what-is-proof" class="block">
+    What is PROOF?
+  </a>
+
+  <a href="development.html" class="block hover:text-gray-300">
+    PROOF: Dev
+  </a>
+
+  <a href="index.html#products" class="block text-[#0066FF]">
+    Get Started
+  </a>
+
+  <!-- MOBILE CHECKLIST / PROJECT REVIEW CTA -->
+  <div class="w-[88%] max-w-sm border border-white/10 rounded-2xl px-4 py-4 mt-2 bg-white/[0.02]">
+
+    <p class="text-xs text-gray-400 leading-relaxed mb-4">
+      Before you ask them to believe, get the free checklist or request a project review.
+    </p>
+
+    <a
+      href="index.html#checklist"
+      class="block w-full bg-[#0066FF] text-white text-sm font-semibold py-3 rounded-md hover:bg-[#0052cc] transition mb-3"
+    >
+      Get the 17-point Checklist
     </a>
 
-    <a href="index.html#how-it-works" class="block">
-      How It Works
-    </a>
-
-    <a href="index.html#what-is-proof" class="block">
-      What is PROOF?
-    </a>
-
-    <a href="development.html" class="block hover:text-gray-300">
-      PROOF: Dev
-    </a>
-
-    <a href="index.html#products" class="block text-[#0066FF]">
-      Get Started
+    <a
+      href="project-review.html"
+      class="block w-full border border-white/20 text-white text-sm font-semibold py-3 rounded-md hover:bg-white hover:text-black transition"
+    >
+      Free Project Fit Review
     </a>
 
   </div>
 
+</div>
+
 </header>
 
+<!-- HERO -->
+<section class="pt-28 pb-20 text-center">
 <!-- HERO -->
 <section class="pt-28 pb-20 text-center">
 
@@ -198,7 +223,7 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
       id="conceptHeroMedia"
       data-media-type="image"
       data-video-url="https://videodelivery.net/0ab0b9b0bc81d018f5a645d2d9069632/manifest/video.m3u8"
-      class="relative rounded-lg overflow-hidden group"
+      class="relative rounded-lg overflow-hidden group bg-black"
     >
 
       <!-- 
@@ -215,12 +240,169 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
       />
 
       <!-- DARK OVERLAY -->
-      <div class="absolute inset-0 bg-black/35 group-hover:bg-black/15 transition duration-700"></div>
+      <div class="absolute inset-0 z-10 bg-black/35 group-hover:bg-black/50 transition duration-700"></div>
+
+      <!-- CASE FILE HOVER OVERLAY - DESKTOP ONLY -->
+      <div class="hidden md:block absolute inset-0 z-20 opacity-0 group-hover:opacity-100 transition duration-700 pointer-events-none overflow-hidden">
+
+        <!-- CASE FILE SHADE -->
+        <div class="absolute inset-0 bg-black/68 backdrop-blur-[2px]"></div>
+
+        <!-- WARM FILE TINT -->
+        <div class="absolute inset-0 bg-[#d6be8b]/10 mix-blend-screen"></div>
+
+        <!-- SYSTEM BORDER WITH WATCH PREVIEW CUTOUT -->
+
+        <!-- TOP BORDER -->
+        <div class="absolute top-6 left-6 right-6 h-[1px] bg-[#0066FF]/25"></div>
+
+        <!-- LEFT BORDER -->
+        <div class="absolute top-6 bottom-6 left-6 w-[1px] bg-[#0066FF]/25"></div>
+
+        <!-- RIGHT BORDER - STOPS ABOVE WATCH PREVIEW -->
+        <div class="absolute top-6 bottom-24 right-6 w-[1px] bg-[#0066FF]/25"></div>
+
+        <!-- BOTTOM BORDER - STOPS BEFORE WATCH PREVIEW -->
+        <div class="absolute bottom-6 left-6 right-56 h-[1px] bg-[#0066FF]/25"></div>
+
+        <!-- TOP LEFT CORNER ACCENT -->
+        <div class="absolute top-6 left-6 w-20 h-[1px] bg-[#0066FF]/70"></div>
+        <div class="absolute top-6 left-6 w-[1px] h-20 bg-[#0066FF]/70"></div>
+
+        <!-- BOTTOM LEFT CORNER ACCENT -->
+        <div class="absolute bottom-6 left-6 w-20 h-[1px] bg-[#0066FF]/45"></div>
+        <div class="absolute bottom-6 left-6 w-[1px] h-20 bg-[#0066FF]/45"></div>
+
+        <!-- CUTOUT RETURN DETAIL NEAR WATCH PREVIEW -->
+        <div class="absolute bottom-6 right-56 w-10 h-[1px] bg-[#0066FF]/55"></div>
+        <div class="absolute bottom-24 right-6 w-[1px] h-10 bg-[#0066FF]/55"></div>
+
+        <!-- CASE FILE CONTENT -->
+        <div class="relative z-30 h-full px-12 py-10 font-mono flex flex-col text-left">
+
+          <!-- HEADER -->
+          <div class="mb-8">
+
+            <p class="text-[13px] uppercase tracking-[0.55em] text-[#0066FF] mb-4">
+              PROOF CASE FILE
+            </p>
+
+            <h2 class="text-3xl lg:text-4xl text-white tracking-[0.08em] leading-tight mb-3">
+              PRF-CON-2026-001
+            </h2>
+
+            <p class="text-[11px] uppercase tracking-[0.32em] text-white/45">
+              Visual proof asset record / concept classification
+            </p>
+
+          </div>
+
+          <!-- DIVIDER -->
+          <div class="w-full h-[1px] bg-white/10 mb-8"></div>
+
+          <!-- PRIMARY DATA -->
+          <div class="grid grid-cols-3 gap-x-12 gap-y-8">
+
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.32em] text-white/35 mb-3">
+                Asset Type
+              </p>
+              <p class="text-2xl text-white leading-tight">
+                PROOF: Concept
+              </p>
+            </div>
+
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.32em] text-white/35 mb-3">
+                Project
+              </p>
+              <p class="text-2xl text-white leading-tight">
+                Starlight Diner
+              </p>
+            </div>
+
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.32em] text-white/35 mb-3">
+                Scope
+              </p>
+              <p class="text-2xl text-white leading-tight">
+                Custom Package
+              </p>
+            </div>
+
+          </div>
+
+          <!-- SECONDARY DATA -->
+          <div class="grid grid-cols-3 gap-x-12 gap-y-8 mt-10">
+
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.32em] text-white/35 mb-3">
+                Format
+              </p>
+              <p class="text-lg text-white/85 leading-tight">
+                Short-Form Proof of Concept
+              </p>
+            </div>
+
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.32em] text-white/35 mb-3">
+                Use Case
+              </p>
+              <p class="text-lg text-white/85 leading-tight">
+                Development + Funding Asset
+              </p>
+            </div>
+
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.32em] text-white/35 mb-3">
+                Year
+              </p>
+              <p class="text-lg text-white/85 leading-tight">
+                2026
+              </p>
+            </div>
+
+          </div>
+
+          <!-- FOOTER -->
+          <div class="mt-auto pt-8">
+
+            <div class="w-full h-[1px] bg-white/10 mb-5"></div>
+
+            <div class="flex items-end justify-between gap-8">
+
+              <div>
+                <p class="text-[10px] uppercase tracking-[0.32em] text-white/35 mb-2">
+                  Developed Through
+                </p>
+
+                <p class="text-sm uppercase tracking-[0.28em] text-[#0066FF]">
+                  ProofLab System
+                </p>
+              </div>
+
+              <div class="text-right pr-52">
+                <p class="text-[10px] uppercase tracking-[0.32em] text-white/35 mb-2">
+                  Status
+                </p>
+
+                <p class="text-sm uppercase tracking-[0.28em] text-white/65">
+                  Scope Review Required
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
 
       <!-- WATCH PREVIEW -->
       <button
         id="openConceptVideo"
-        class="absolute bottom-5 right-5 items-center gap-3 z-20 hidden"
+        class="absolute bottom-5 right-5 items-center gap-3 z-[80] hidden"
       >
 
         <!-- PULSE DOT -->
@@ -228,12 +410,12 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
 
           <span class="absolute inline-flex h-3 w-3 rounded-full bg-[#0066FF] opacity-75 animate-ping"></span>
 
-          <span class="relative inline-flex rounded-full h-3 w-3 bg-[#0066FF]"></span>
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-[#0066FF] shadow-[0_0_12px_rgba(0,102,255,0.9)]"></span>
 
         </div>
 
         <!-- LABEL -->
-        <p class="text-xs uppercase tracking-[0.25em] text-white/70 group-hover:text-white transition duration-500">
+        <p class="text-xs uppercase tracking-[0.25em] text-white/80 group-hover:text-white transition duration-500">
           Watch Preview
         </p>
 
@@ -241,17 +423,50 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
 
     </div>
 
-    <div class="flex flex-wrap gap-3 mt-2 text-[11px] uppercase tracking-[0.18em] text-gray-500">
+    <!-- MOBILE CASE FILE -->
+    <div class="md:hidden mt-3 relative overflow-hidden bg-black border border-[#0066FF]/20 rounded-lg px-4 py-2 font-mono text-left">
 
-      <span>PROOF: Concept</span>
+      <!-- SUBTLE FILE TINT -->
+      <div class="absolute inset-0 bg-[#d6be8b]/15 mix-blend-screen pointer-events-none"></div>
 
-      <span>Starlight Diner</span>
+      <!-- CONTENT -->
+      <div class="relative z-10">
 
-      <span>Short-Form Proof of Concept</span>
+        <div class="flex items-start justify-between gap-4 border-b border-white/10 pb-3 mb-3">
 
-      <span>Development + Funding Asset</span>
+          <div>
+            <p class="text-[9px] uppercase tracking-[0.32em] text-[#0066FF] mb-2">
+              PROOF Case File
+            </p>
 
-      <span>2026</span>
+            <p class="text-sm text-white tracking-[0.08em] leading-tight">
+              PRF-CON-2026-001
+            </p>
+          </div>
+
+          <p class="text-[9px] uppercase tracking-[0.24em] text-white/35 text-right leading-relaxed">
+            2026
+          </p>
+
+        </div>
+
+        <div class="space-y-2">
+
+          <p class="text-sm text-white leading-snug">
+            PROOF: Concept <span class="text-white/35">/</span> Starlight Diner
+          </p>
+
+          <p class="text-xs text-white/55 leading-snug">
+            Short-Form Proof of Concept · Development + Funding Asset
+          </p>
+
+          <p class="text-[9px] uppercase tracking-[0.22em] text-white/35 leading-relaxed pt-2">
+            Developed through the <span class="text-[#0066FF]">ProofLab System</span>
+          </p>
+
+        </div>
+
+      </div>
 
     </div>
 
@@ -274,8 +489,9 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
         </p>
 
         <p class="text-sm text-gray-500">
-  Built for larger creative packages that need multiple assets, deeper development, or a full proof-of-concept campaign.
-</p>
+          Built for larger creative packages that need multiple assets, deeper development, or a full proof-of-concept campaign.
+        </p>
+
       </div>
 
       <!-- RIGHT SIDE -->
@@ -290,15 +506,15 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
         </p>
 
         <a 
-  href="project-review.html"
-  class="bg-[#0066FF] w-full py-3 rounded-md text-white text-center hover:bg-[#0052cc] transition inline-block"
->
-  Request Custom Quote
-</a>
+          href="project-review.html"
+          class="bg-[#0066FF] w-full py-3 rounded-md text-white text-center hover:bg-[#0052cc] transition inline-block"
+        >
+          Request Custom Quote
+        </a>
 
-<p class="text-xs text-gray-500 text-center mt-3">
-  Custom scope reviewed before checkout.
-</p>
+        <p class="text-xs text-gray-500 text-center mt-3">
+          Custom scope reviewed before checkout.
+        </p>
 
       </div>
 
@@ -353,10 +569,10 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
     </div>
 
     <!-- CONTENT -->
-    <div class="relative z-10 p-8 md:p-12">
+<div class="relative z-10 p-8 md:p-12 text-left">
 
-      <!-- TOP -->
-      <div class="max-w-3xl">
+  <!-- TOP -->
+  <div class="max-w-3xl text-left">
 
         <p class="text-xs uppercase tracking-[0.28em] text-[#0066FF] mb-5">
           Cinematic Proof of Concept
@@ -607,7 +823,7 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
 <!-- TO TOP BUTTON -->
 <button
   id="toTopBtn"
-  class="fixed bottom-32 right-6 bg-[#0066FF] w-12 h-12 rounded-lg flex items-center justify-center text-white shadow-lg opacity-0 pointer-events-none transition duration-300 hover:bg-blue-500"
+  class="fixed bottom-32 right-6 z-[9998] bg-[#0066FF] w-12 h-12 rounded-lg flex items-center justify-center text-white shadow-lg opacity-0 pointer-events-none transition duration-300 hover:bg-blue-500"
 >
   ↑
 </button>

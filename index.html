@@ -269,11 +269,33 @@ document.addEventListener("DOMContentLoaded", () => {
     PROOF: Dev
   </a>
 
-  
-
   <a href="index.html#products" class="block text-[#0066FF]">
     Get Started
   </a>
+
+  <!-- MOBILE CHECKLIST / PROJECT REVIEW CTA -->
+  <div class="w-[88%] max-w-sm border border-white/10 rounded-2xl px-4 py-4 mt-2 bg-white/[0.02]">
+
+    <p class="text-xs text-gray-400 leading-relaxed mb-4">
+      Before you ask them to believe, get the free checklist or request a project review.
+    </p>
+
+    <button
+      id="openChecklistPopupMobileMenu"
+      type="button"
+      class="block w-full bg-[#0066FF] text-white text-sm font-semibold py-3 rounded-md hover:bg-[#0052cc] transition mb-3"
+    >
+      Get the 17-point Checklist
+    </button>
+
+    <a
+      href="project-review.html"
+      class="block w-full border border-white/20 text-white text-sm font-semibold py-3 rounded-md hover:bg-white hover:text-black transition"
+    >
+      Free Project Fit Review
+    </a>
+
+  </div>
 
 </div>
 
@@ -282,7 +304,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <!-- ================= FLOATING PITCH READINESS BAR ================= -->
 <div
   id="floatingPitchBar"
-  class="fixed left-4 right-4 top-[76px] md:top-[96px] z-[60] transition-all duration-500"
+  class="hidden md:block fixed left-4 right-4 top-[96px] z-[60] transition-all duration-500"
 >
 
   <div class="max-w-5xl mx-auto bg-black/70 backdrop-blur-md border border-white/10 rounded-full shadow-[0_0_35px_rgba(0,0,0,0.45)] px-4 md:px-6 py-3">
@@ -399,7 +421,7 @@ document.addEventListener("DOMContentLoaded", () => {
           href="#project-fit-review" 
           class="proof-btn border border-white px-6 py-4 rounded-md text-white hover:bg-white hover:text-black transition font-semibold text-center w-full"
         >
-          Project Fit Review
+          Free Project Fit Review
         </a>
 
       </div>
@@ -489,7 +511,7 @@ document.addEventListener("DOMContentLoaded", () => {
           href="#project-fit-review" 
           class="proof-btn border border-white px-6 py-4 rounded-md text-white hover:bg-white hover:text-black transition font-semibold text-center w-full"
         >
-          Project Fit Review
+          Free Project Fit Review
         </a>
 
         <!-- MOBILE WATCH PREVIEW -->
@@ -3021,7 +3043,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <!-- TO TOP BUTTON -->
 <button
   id="toTopBtn"
-  class="fixed bottom-32 right-6 bg-[#0066FF] w-12 h-12 rounded-lg flex items-center justify-center text-white shadow-lg opacity-0 pointer-events-none transition duration-300 hover:bg-blue-500"
+  class="fixed bottom-32 right-6 z-[9998] bg-[#0066FF] w-12 h-12 rounded-lg flex items-center justify-center text-white shadow-lg opacity-0 pointer-events-none transition duration-300 hover:bg-blue-500"
 >
   ↑
 </button>
@@ -3376,64 +3398,101 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 </script>
-<!-- ================= FLOATING BAR SCRIPT ================= -->
+<!-- ================= FLOATING BAR / MOBILE MENU CHECKLIST SCRIPT ================= -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
 
   const floatingBar = document.getElementById("floatingPitchBar");
   const openChecklistBtn = document.getElementById("openChecklistPopupFloating");
+  const openChecklistMobileMenu = document.getElementById("openChecklistPopupMobileMenu");
+
+  const popup = document.getElementById("emailPopup");
+  const form = document.getElementById("emailForm");
+  const success = document.getElementById("emailSuccess");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  if (floatingBar) {
+    window.addEventListener("scroll", () => {
+
+      const hideAfter = window.innerHeight * 1.25;
+
+      if (window.scrollY > hideAfter) {
+        floatingBar.classList.add(
+          "opacity-0",
+          "-translate-y-4",
+          "pointer-events-none"
+        );
+      } else {
+        floatingBar.classList.remove(
+          "opacity-0",
+          "-translate-y-4",
+          "pointer-events-none"
+        );
+      }
+
+    });
+  }
+
+  function openChecklistPopup() {
+    if (!popup) return;
+
+    popup.classList.remove("hidden");
+
+    if (form) {
+      form.classList.remove("hidden");
+      form.reset();
+    }
+
+    if (success) {
+      success.classList.add("hidden");
+    }
+
+    if (mobileMenu) {
+      mobileMenu.classList.add("hidden");
+    }
+  }
+
+  if (openChecklistBtn) {
+    openChecklistBtn.addEventListener("click", openChecklistPopup);
+  }
+
+  if (openChecklistMobileMenu) {
+    openChecklistMobileMenu.addEventListener("click", openChecklistPopup);
+  }
+
+});
+</script>
+<!-- ================= OPEN CHECKLIST POPUP FROM URL HASH ================= -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  if (window.location.hash !== "#checklist") return;
 
   const popup = document.getElementById("emailPopup");
   const form = document.getElementById("emailForm");
   const success = document.getElementById("emailSuccess");
 
-  if (!floatingBar) return;
+  if (!popup) return;
 
-  // Hide after user scrolls past early page area.
-  window.addEventListener("scroll", () => {
+  // Small delay so the page finishes rendering first
+  setTimeout(() => {
 
-    const hideAfter = window.innerHeight * 1.25;
+    popup.classList.remove("hidden");
 
-    if (window.scrollY > hideAfter) {
-
-      floatingBar.classList.add(
-        "opacity-0",
-        "-translate-y-4",
-        "pointer-events-none"
-      );
-
-    } else {
-
-      floatingBar.classList.remove(
-        "opacity-0",
-        "-translate-y-4",
-        "pointer-events-none"
-      );
-
+    // Always start fresh at the email form
+    if (form) {
+      form.classList.remove("hidden");
+      form.reset();
     }
 
-  });
+    if (success) {
+      success.classList.add("hidden");
+    }
 
-  // Open checklist popup manually.
-  // Manual clicks always start fresh at the email form.
-  if (openChecklistBtn && popup) {
+    // Clean the URL after opening so refresh doesn't keep forcing it
+    history.replaceState(null, "", window.location.pathname);
 
-    openChecklistBtn.addEventListener("click", () => {
-
-      popup.classList.remove("hidden");
-
-      if (form) {
-        form.classList.remove("hidden");
-        form.reset();
-      }
-
-      if (success) {
-        success.classList.add("hidden");
-      }
-
-    });
-
-  }
+  }, 500);
 
 });
 </script>

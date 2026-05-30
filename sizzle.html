@@ -158,12 +158,6 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
 <!-- MOBILE MENU -->
 <div id="mobileMenu" class="hidden md:hidden bg-black text-center py-6 flex flex-col items-center gap-4">
 
-  <!--
-  <a href="examples.html" class="block">
-    Examples
-  </a>
-  -->
-
   <a href="index.html#products" class="block">
     Products
   </a>
@@ -180,11 +174,32 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
     PROOF: Dev
   </a>
 
-  
-
   <a href="index.html#products" class="block text-[#0066FF]">
     Get Started
   </a>
+
+  <!-- MOBILE CHECKLIST / PROJECT REVIEW CTA -->
+  <div class="w-[88%] max-w-sm border border-white/10 rounded-2xl px-4 py-4 mt-2 bg-white/[0.02]">
+
+    <p class="text-xs text-gray-400 leading-relaxed mb-4">
+      Before you ask them to believe, get the free checklist or request a project review.
+    </p>
+
+    <a
+      href="index.html#checklist"
+      class="block w-full bg-[#0066FF] text-white text-sm font-semibold py-3 rounded-md hover:bg-[#0052cc] transition mb-3"
+    >
+      Get the 17-point Checklist
+    </a>
+
+    <a
+      href="project-review.html"
+      class="block w-full border border-white/20 text-white text-sm font-semibold py-3 rounded-md hover:bg-white hover:text-black transition"
+    >
+      Free Project Fit Review
+    </a>
+
+  </div>
 
 </div>
 
@@ -198,54 +213,243 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
     <!-- VIDEO THUMB -->
     <div
       id="openSizzleVideo"
-      class="relative rounded-lg overflow-hidden cursor-pointer group"
+      class="relative aspect-video rounded-lg overflow-hidden cursor-pointer group bg-black"
     >
 
       <!-- POSTER IMAGE -->
       <img 
         src="images/proof-sizzle.png"
         alt="Proof Sizzle Preview"
-        class="w-full rounded-lg opacity-95 transition duration-700 group-hover:opacity-100"
+        class="absolute inset-0 w-full h-full object-cover opacity-95 transition duration-700 group-hover:opacity-100"
       />
 
-      <!-- DARK OVERLAY -->
-      <div class="absolute inset-0 bg-black/35 group-hover:bg-black/15 transition duration-700"></div>
-<!-- VIDEO INDICATOR -->
-<div class="absolute bottom-5 right-5 flex items-center gap-3 z-20">
+      <!-- NORMAL DARK OVERLAY -->
+      <div class="absolute inset-0 z-10 bg-black/35 group-hover:bg-black/50 transition duration-700"></div>
 
-  <!-- PULSE DOT -->
-  <div class="relative flex items-center justify-center">
+      <!-- CASE FILE HOVER OVERLAY - DESKTOP ONLY -->
+      <div class="hidden md:block absolute inset-0 z-20 opacity-0 group-hover:opacity-100 transition duration-700 pointer-events-none overflow-hidden">
 
-    <span class="absolute inline-flex h-3 w-3 rounded-full bg-[#0066FF] opacity-75 animate-ping"></span>
+        <!-- CASE FILE SHADE -->
+        <div class="absolute inset-0 bg-black/68 backdrop-blur-[2px]"></div>
 
-    <span class="relative inline-flex rounded-full h-3 w-3 bg-[#0066FF]"></span>
+        <!-- WARM FILE TINT -->
+        <div class="absolute inset-0 bg-[#d6be8b]/10 mix-blend-screen"></div>
 
-  </div>
+        <!-- SYSTEM BORDER WITH WATCH PREVIEW CUTOUT -->
 
-  <!-- LABEL -->
-  <p class="text-xs uppercase tracking-[0.25em] text-white/70 group-hover:text-white transition duration-500">
-    Watch Preview
-  </p>
-  
+<!-- TOP BORDER -->
+<div class="absolute top-6 left-6 right-6 h-[1px] bg-[#0066FF]/25"></div>
 
-</div>
+<!-- LEFT BORDER -->
+<div class="absolute top-6 bottom-6 left-6 w-[1px] bg-[#0066FF]/25"></div>
 
-      
+<!-- RIGHT BORDER - STOPS ABOVE WATCH PREVIEW -->
+<div class="absolute top-6 bottom-24 right-6 w-[1px] bg-[#0066FF]/25"></div>
+
+<!-- BOTTOM BORDER - STOPS BEFORE WATCH PREVIEW -->
+<div class="absolute bottom-6 left-6 right-56 h-[1px] bg-[#0066FF]/25"></div>
+
+<!-- TOP LEFT CORNER ACCENT -->
+<div class="absolute top-6 left-6 w-20 h-[1px] bg-[#0066FF]/70"></div>
+<div class="absolute top-6 left-6 w-[1px] h-20 bg-[#0066FF]/70"></div>
+
+<!-- BOTTOM LEFT CORNER ACCENT -->
+<div class="absolute bottom-6 left-6 w-20 h-[1px] bg-[#0066FF]/45"></div>
+<div class="absolute bottom-6 left-6 w-[1px] h-20 bg-[#0066FF]/45"></div>
+
+<!-- CUTOUT RETURN DETAIL NEAR WATCH PREVIEW -->
+<div class="absolute bottom-6 right-56 w-10 h-[1px] bg-[#0066FF]/55"></div>
+<div class="absolute bottom-24 right-6 w-[1px] h-10 bg-[#0066FF]/55"></div>
+
+        <!-- CASE FILE CONTENT -->
+        <div class="relative z-30 h-full px-12 py-10 font-mono flex flex-col text-left">
+
+          <!-- HEADER -->
+          <div class="mb-8">
+
+            <p class="text-[13px] uppercase tracking-[0.55em] text-[#0066FF] mb-4">
+              PROOF CASE FILE
+            </p>
+
+            <h2 class="text-3xl lg:text-4xl text-white tracking-[0.08em] leading-tight mb-3">
+              PRF-SIZ-2026-014
+            </h2>
+
+            <p class="text-[11px] uppercase tracking-[0.32em] text-white/45">
+              Visual proof asset record / sizzle classification
+            </p>
+
+          </div>
+
+          <!-- DIVIDER -->
+          <div class="w-full h-[1px] bg-white/10 mb-8"></div>
+
+          <!-- PRIMARY DATA -->
+          <div class="grid grid-cols-3 gap-x-12 gap-y-8">
+
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.32em] text-white/35 mb-3">
+                Asset Type
+              </p>
+              <p class="text-2xl text-white leading-tight">
+                PROOF: Sizzle
+              </p>
+            </div>
+
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.32em] text-white/35 mb-3">
+                Project
+              </p>
+              <p class="text-2xl text-white leading-tight">
+                Runaway Saints
+              </p>
+            </div>
+
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.32em] text-white/35 mb-3">
+                Company
+              </p>
+              <p class="text-2xl text-white leading-tight">
+                Pollo Frito Films
+              </p>
+            </div>
+
+          </div>
+
+          <!-- SECONDARY DATA -->
+          <div class="grid grid-cols-3 gap-x-12 gap-y-8 mt-10">
+
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.32em] text-white/35 mb-3">
+                Format
+              </p>
+              <p class="text-lg text-white/85 leading-tight">
+                Drama / Pilot
+              </p>
+            </div>
+
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.32em] text-white/35 mb-3">
+                Use Case
+              </p>
+              <p class="text-lg text-white/85 leading-tight">
+                Investor Pitch Asset
+              </p>
+            </div>
+
+            <div>
+              <p class="text-[10px] uppercase tracking-[0.32em] text-white/35 mb-3">
+                Year
+              </p>
+              <p class="text-lg text-white/85 leading-tight">
+                2026
+              </p>
+            </div>
+
+          </div>
+
+          <!-- FOOTER -->
+          <div class="mt-auto pt-8">
+
+            <div class="w-full h-[1px] bg-white/10 mb-5"></div>
+
+            <div class="flex items-end justify-between gap-8">
+
+              <div>
+                <p class="text-[10px] uppercase tracking-[0.32em] text-white/35 mb-2">
+                  Developed Through
+                </p>
+
+                <p class="text-sm uppercase tracking-[0.28em] text-[#0066FF]">
+                  ProofLab System
+                </p>
+              </div>
+
+              <div class="text-right pr-52">
+                <p class="text-[10px] uppercase tracking-[0.32em] text-white/35 mb-2">
+                  Status
+                </p>
+
+                <p class="text-sm uppercase tracking-[0.28em] text-white/65">
+                  Pitch-Ready Asset
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- VIDEO INDICATOR - ALWAYS ABOVE CASE FILE -->
+      <div class="absolute bottom-5 right-5 flex items-center gap-3 z-[80] pointer-events-none">
+
+        <!-- PULSE DOT -->
+        <div class="relative flex items-center justify-center">
+
+          <span class="absolute inline-flex h-3 w-3 rounded-full bg-[#0066FF] opacity-75 animate-ping"></span>
+
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-[#0066FF] shadow-[0_0_12px_rgba(0,102,255,0.9)]"></span>
+
+        </div>
+
+        <!-- LABEL -->
+        <p class="text-xs uppercase tracking-[0.25em] text-white/80 group-hover:text-white transition duration-500">
+          Watch Preview
+        </p>
+
+      </div>
 
     </div>
-    <div class="flex flex-wrap gap-3 mt-2 text-[11px] uppercase tracking-[0.18em] text-gray-500">
 
-  <span>PROOF: Sizzle</span>
+    <!-- MOBILE CASE FILE -->
+    <div class="md:hidden mt-3 relative overflow-hidden bg-black border border-[#0066FF]/20 rounded-lg px-4 py-2 font-mono text-left">
 
-  <span>Runaway Saints, Pollo Frito Films</span>
+      <!-- SUBTLE FILE TINT -->
+      <div class="absolute inset-0 bg-[#d6be8b]/15 mix-blend-screen pointer-events-none"></div>
 
-  <span>Drama / Pilot</span>
+      <!-- CONTENT -->
+      <div class="relative z-10">
 
-  <span>Investor Pitch Asset</span>
+        <div class="flex items-start justify-between gap-4 border-b border-white/10 pb-3 mb-3">
 
-  <span>2026</span>
+          <div>
+            <p class="text-[9px] uppercase tracking-[0.32em] text-[#0066FF] mb-2">
+              PROOF Case File
+            </p>
 
-</div>
+            <p class="text-sm text-white tracking-[0.08em] leading-tight">
+              PRF-SIZ-2026-014
+            </p>
+          </div>
+
+          <p class="text-[9px] uppercase tracking-[0.24em] text-white/35 text-right leading-relaxed">
+            2026
+          </p>
+
+        </div>
+
+        <div class="space-y-2">
+
+          <p class="text-sm text-white leading-snug">
+            PROOF: Sizzle <span class="text-white/35">/</span> Runaway Saints
+          </p>
+
+          <p class="text-xs text-white/55 leading-snug">
+            Pollo Frito Films · Drama / Pilot · Investor Pitch Asset
+          </p>
+
+          <p class="text-[9px] uppercase tracking-[0.22em] text-white/35 leading-relaxed pt-2">
+            Developed through the <span class="text-[#0066FF]">ProofLab System</span>
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
 
   </div>
 
@@ -274,24 +478,26 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
       <!-- RIGHT SIDE -->
       <div class="flex flex-col w-full md:w-[260px] md:items-end text-left space-y-2">
 
-        <p class="text-3xl mb-1">$900</p>
+        <p class="text-3xl mb-1">
+          $900
+        </p>
 
         <p class="text-xs text-gray-400 mb-6">
           Up to 30 seconds
         </p>
 
         <a 
-  href="https://buy.stripe.com/test_5kQ14pcf54KydYh0zf18c00"
-  target="_blank"
-  rel="noopener noreferrer"
-  class="bg-[#0066FF] w-full py-3 rounded-md text-white text-center hover:bg-[#0052cc] transition inline-block"
->
-  Start Your Sizzle
-</a>
+          href="https://buy.stripe.com/test_5kQ14pcf54KydYh0zf18c00"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-[#0066FF] w-full py-3 rounded-md text-white text-center hover:bg-[#0052cc] transition inline-block"
+        >
+          Start Your Sizzle
+        </a>
 
-<p class="text-xs text-gray-500 text-center mt-3">
-  Secure checkout via Stripe.
-</p>
+        <p class="text-xs text-gray-500 text-center mt-3">
+          Secure checkout via Stripe.
+        </p>
 
       </div>
 
@@ -319,11 +525,11 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
   <div class="w-full h-full flex items-center justify-center px-4">
 
     <video
-  id="sizzleFullVideo"
-  controls
-  playsinline
-  class="w-full max-w-6xl max-h-[90vh] rounded-xl shadow-2xl"
-></video>
+      id="sizzleFullVideo"
+      controls
+      playsinline
+      class="w-full max-w-6xl max-h-[90vh] rounded-xl shadow-2xl"
+    ></video>
 
   </div>
 
@@ -616,7 +822,7 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
   <!-- TO TOP BUTTON -->
 <button
   id="toTopBtn"
-  class="fixed bottom-32 right-6 bg-[#0066FF] w-12 h-12 rounded-lg flex items-center justify-center text-white shadow-lg opacity-0 pointer-events-none transition duration-300 hover:bg-blue-500"
+  class="fixed bottom-32 right-6 z-[9998] bg-[#0066FF] w-12 h-12 rounded-lg flex items-center justify-center text-white shadow-lg opacity-0 pointer-events-none transition duration-300 hover:bg-blue-500"
 >
   ↑
 </button>
