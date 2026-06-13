@@ -113,9 +113,9 @@
     <div class="grid md:grid-cols-3 gap-8 items-start">
       <div>
         <img
-          src="proof-logo/Proof_header_good.png"
+          src="proof-logo/Proof_Main.png"
           alt="PROOF"
-          class="w-[145px] md:w-[185px] h-auto object-contain opacity-80"
+          class="w-[220px] md:w-[280px] h-auto object-contain opacity-90"
         />
 
         <p class="text-sm text-gray-500 leading-relaxed max-w-sm">
