@@ -115,7 +115,7 @@
         <img
           src="proof-logo/Proof_header_good.png"
           alt="PROOF"
-          class="h-9 md:h-10 w-auto"
+          class="w-[145px] md:w-[185px] h-auto object-contain opacity-80"
         />
 
         <p class="text-sm text-gray-500 leading-relaxed max-w-sm">
@@ -509,4 +509,5 @@ document.addEventListener("DOMContentLoaded", function () {
   wireMobileWatchPreview();
   window.setTimeout(wireMobileWatchPreview, 300);
 });
+
 
