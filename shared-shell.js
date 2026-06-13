@@ -2,69 +2,75 @@
   document.documentElement.classList.add("scroll-smooth");
 
   const headerHtml = `
-<header id="proofSharedHeader" class="fixed top-0 w-full bg-black/70 backdrop-blur z-50">
+<!-- NAV -->
+<!-- NAV -->
+<header class="fixed top-0 w-full bg-black/70 backdrop-blur z-50">
   <div class="max-w-6xl mx-auto flex justify-between items-center py-3 px-4">
-    <a href="index.html" aria-label="PROOF home" class="block">
-      <img
-        src="proof-logo/Proof_header_good.png"
-        alt="PROOF and ProofLab system cinematic proof-of-concept platform"
-        class="h-[40px] md:h-[60px] w-auto object-contain scale-[2.5] origin-left"
-      />
-    </a>
 
-    <button
-      id="menuBtn"
-      class="md:hidden text-white text-3xl leading-none w-10 h-10 flex items-center justify-center"
-      aria-label="Open menu"
-      aria-expanded="false"
-      type="button"
-    >
-      <span id="menuIcon" aria-hidden="true">&#9776;</span>
+    <!-- LOGO -->
+    <img
+      src="proof-logo/Proof_header_good.png"
+      alt="PROOF and ProofLab system cinematic proof-of-concept platform"
+      class="h-[40px] md:h-[60px] w-auto object-contain scale-[2.5] origin-left"
+    />
+
+    <!-- HAMBURGER -->
+    <button id="menuBtn" class="md:hidden text-white text-2xl">
+      &#9776;
     </button>
 
+    <!-- DESKTOP NAV -->
     <nav class="hidden md:flex space-x-5 text-sm text-white">
-      <a href="index.html#project-fit-review" class="hover:text-gray-300">Free Review</a>
-      <a href="index.html#examples" class="hover:text-gray-300">Examples</a>
-      <a href="index.html#how-it-works" class="hover:text-gray-300">How It Works</a>
       <a href="index.html#what-is-proof" class="hover:text-gray-300">What is PROOF?</a>
-      <a href="faq.html" class="hover:text-gray-300">FAQ</a>
+      <a href="index.html#examples" class="hover:text-gray-300">Examples</a>
       <a href="products.html" class="hover:text-gray-300">Products</a>
       <a href="development.html" class="hover:text-gray-300">PROOF: Dev</a>
-      <a href="project-review.html" class="text-[#0066FF]">Get Reviewed</a>
+      <a href="faq.html" class="hover:text-gray-300">FAQ</a>
+      <a href="project-review.html" class="text-[#0066FF] font-semibold">Get Free Review</a>
     </nav>
+
   </div>
 
+  <!-- MOBILE MENU -->
   <div id="mobileMenu" class="hidden md:hidden bg-black text-center py-6 flex flex-col items-center gap-4">
-    <a href="index.html#project-fit-review" class="block">Free Review</a>
-    <a href="index.html#examples" class="block">Examples</a>
-    <a href="index.html#how-it-works" class="block">How It Works</a>
+    <a href="project-review.html" class="block text-[#0066FF] font-semibold">Get Free Review</a>
+
+    <button
+      type="button"
+      data-mobile-watch-preview
+      class="hidden text-white/80 hover:text-white transition"
+    >
+      Watch Preview
+    </button>
+
     <a href="index.html#what-is-proof" class="block">What is PROOF?</a>
-    <a href="faq.html" class="block">FAQ</a>
+    <a href="index.html#examples" class="block">Examples</a>
     <a href="products.html" class="block">Products</a>
     <a href="development.html" class="block hover:text-gray-300">PROOF: Dev</a>
-    <a href="project-review.html" class="block text-[#0066FF]">Get Reviewed</a>
+    <a href="faq.html" class="block">FAQ</a>
 
     <div class="w-[88%] max-w-sm border border-white/10 rounded-2xl px-4 py-4 mt-2 bg-white/[0.02]">
       <p class="text-xs text-gray-400 leading-relaxed mb-4">
-        Project stuck? Get the checklist first or send it in for a free review.
+        Project stuck? Send it in for a free review before you waste another pitch.
       </p>
+
+      <a
+        href="project-review.html"
+        class="block w-full bg-[#0066FF] text-white text-sm font-semibold py-3 rounded-md hover:bg-[#0052cc] transition mb-3"
+      >
+        Start Free Review
+      </a>
 
       <button
         id="openChecklistPopupMobileMenu"
         type="button"
-        class="block w-full bg-[#0066FF] text-white text-sm font-semibold py-3 rounded-md hover:bg-[#0052cc] transition mb-3"
+        class="block w-full border border-white/20 text-white text-sm font-semibold py-3 rounded-md hover:bg-white hover:text-black transition"
       >
         Get the 17-point Checklist
       </button>
-
-      <a
-        href="project-review.html"
-        class="block w-full border border-white/20 text-white text-sm font-semibold py-3 rounded-md hover:bg-white hover:text-black transition"
-      >
-        Free Project Review
-      </a>
     </div>
   </div>
+
 </header>
 `;
 
@@ -109,7 +115,7 @@
         <img
           src="proof-logo/Proof_header_good.png"
           alt="PROOF"
-          class="h-[96px] w-auto object-contain mb-4"
+          class="h-9 md:h-10 w-auto"
         />
 
         <p class="text-sm text-gray-500 leading-relaxed max-w-sm">
@@ -436,4 +442,70 @@
       history.replaceState(null, "", window.location.pathname);
     }, 500);
   }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// MOBILE MENU WATCH PREVIEW BRIDGE
+document.addEventListener("DOMContentLoaded", function () {
+  function wireMobileWatchPreview() {
+    const menuPreviewButtons = document.querySelectorAll("[data-mobile-watch-preview]");
+
+    if (!menuPreviewButtons.length) return;
+
+    const previewOpeners = [
+      document.getElementById("openVideoModalMobile"),
+      document.getElementById("openVideoModal"),
+      document.getElementById("openSizzleVideo"),
+      document.getElementById("openTrailerVideo"),
+      document.getElementById("openSceneVideo"),
+      document.getElementById("openConceptVideo"),
+      document.getElementById("openExamplesVideo")
+    ].filter(Boolean);
+
+    menuPreviewButtons.forEach(function (button) {
+      if (!previewOpeners.length) {
+        button.classList.add("hidden");
+        return;
+      }
+
+      button.classList.remove("hidden");
+
+      if (button.dataset.previewWired === "true") return;
+
+      button.dataset.previewWired = "true";
+
+      button.addEventListener("click", function () {
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuIcon = document.getElementById("menuIcon");
+
+        if (mobileMenu) {
+          mobileMenu.classList.add("hidden");
+        }
+
+        if (menuIcon) {
+          menuIcon.innerHTML = "&#9776;";
+        }
+
+        document.body.classList.remove("menu-open");
+
+        previewOpeners[0].click();
+      });
+    });
+  }
+
+  wireMobileWatchPreview();
+  window.setTimeout(wireMobileWatchPreview, 300);
 });
