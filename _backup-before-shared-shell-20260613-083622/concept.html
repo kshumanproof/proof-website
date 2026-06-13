@@ -1,82 +1,85 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
   <!-- PRIMARY SEO -->
-  <title>PROOF: Trailer | Cinematic Product & Launch Trailers</title>
+  <title>PROOF: Concept | Cinematic Proof-of-Concept Films</title>
 
   <meta
     name="description"
-    content="PROOF: Trailer creates cinematic product trailers, launch visuals, and promotional storytelling assets designed to build hype, emotional engagement, and audience attention."
+    content="PROOF: Concept develops cinematic proof-of-concept films designed to demonstrate story, tone, visual execution, and market potential before production."
   />
 
   <meta
     name="keywords"
-    content="cinematic trailer, product trailer, launch trailer, promotional storytelling, cinematic marketing, prooflab, brand trailer, visual campaign"
+    content="proof of concept film, cinematic proof of concept, film pitch trailer, development film, cinematic sizzle reel, investor trailer, visual storytelling, proof of concept production"
   />
 
   <meta name="author" content="PROOF" />
 
-  <!-- INDEXING -->
+  <!-- REMOVE WHEN PUBLICLY LAUNCHING -->
   <meta name="robots" content="index, follow" />
 
   <!-- THEME -->
   <meta name="theme-color" content="#0A0A0A" />
 
   <!-- OPEN GRAPH -->
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="website">
 
   <meta
     property="og:title"
-    content="PROOF: Trailer | Cinematic Product & Launch Trailers"
-  />
+    content="PROOF: Concept | Cinematic Proof-of-Concept Films"
+  >
 
   <meta
     property="og:description"
-    content="Cinematic promotional trailers and launch assets designed to create emotion, momentum, and audience attention."
-  />
+    content="Develop cinematic proof-of-concept films for pitching, financing, and project development."
+  >
 
   <meta
     property="og:url"
-    content="https://prooflab.studio/trailer.html"
-  />
+    content="https://prooflab.studio/concept.html"
+  >
 
   <meta
     property="og:image"
-    content="https://prooflab.studio/images/proof-trailer.png"
-  />
+    content="https://prooflab.studio/images/social-preview.jpg"
+  >
 
   <!-- TWITTER -->
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:card" content="summary_large_image">
 
   <meta
     name="twitter:title"
-    content="PROOF: Trailer | Cinematic Product & Launch Trailers"
-  />
+    content="PROOF: Concept | Cinematic Proof-of-Concept Films"
+  >
 
   <meta
     name="twitter:description"
-    content="Cinematic promotional trailers and launch assets designed to create emotion, momentum, and audience attention."
-  />
+    content="Develop cinematic proof-of-concept films for pitching, financing, and project development."
+  >
 
   <meta
     name="twitter:image"
-    content="https://prooflab.studio/images/proof-trailer.png"
-  />
+    content="https://prooflab.studio/images/social-preview.jpg"
+  >
 
   <!-- CANONICAL -->
   <link
     rel="canonical"
-    href="https://prooflab.studio/trailer.html"
-  />
+    href="https://prooflab.studio/concept.html"
+  >
 
   <!-- FAVICON -->
   <link rel="icon" href="favicon.ico">
 
   <!-- TAILWIND -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- HLS -->
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -104,8 +107,8 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
 
   gtag('config', 'G-23WNYGS1Y8');
 </script>
-  <link rel="stylesheet" href="shared-shell.css" />
 </head>
+
 
 <body class="bg-[#0A0A0A] text-white font-sans">
 
@@ -124,7 +127,7 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
 
     <!-- HAMBURGER -->
     <button id="menuBtn" class="md:hidden text-white text-2xl">
-      â˜°
+      ☰
     </button>
 
     <!-- DESKTOP NAV -->
@@ -206,24 +209,37 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
 
 <!-- HERO -->
 <section class="pt-28 pb-20 text-center">
+<!-- HERO -->
+<section class="pt-28 pb-20 text-center">
 
   <!-- MEDIA -->
   <div class="max-w-6xl mx-auto px-4 mb-4">
 
-    <!-- VIDEO THUMB -->
+    <!-- ====================================== -->
+    <!-- CONCEPT HERO MEDIA -->
+    <!-- ====================================== -->
+
     <div
-      id="openTrailerVideo"
-      class="relative aspect-video rounded-lg overflow-hidden cursor-pointer group bg-black"
+      id="conceptHeroMedia"
+      data-media-type="image"
+      data-video-url="https://videodelivery.net/0ab0b9b0bc81d018f5a645d2d9069632/manifest/video.m3u8"
+      class="relative rounded-lg overflow-hidden group bg-black"
     >
 
-      <!-- POSTER IMAGE -->
+      <!-- 
+        CHANGE TO:
+        data-media-type="video"
+        WHEN HERO VIDEO IS READY
+      -->
+
+      <!-- IMAGE -->
       <img 
-        src="images/proof-trailer.png"
-        alt="Proof Trailer Preview"
-        class="absolute inset-0 w-full h-full object-cover opacity-95 transition duration-700 group-hover:opacity-100"
+        src="images/proof-concept.png"
+        alt="PROOF Concept Preview"
+        class="w-full rounded-lg opacity-95 transition duration-700 group-hover:opacity-100"
       />
 
-      <!-- NORMAL DARK OVERLAY -->
+      <!-- DARK OVERLAY -->
       <div class="absolute inset-0 z-10 bg-black/35 group-hover:bg-black/50 transition duration-700"></div>
 
       <!-- CASE FILE HOVER OVERLAY - DESKTOP ONLY -->
@@ -237,29 +253,29 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
 
         <!-- SYSTEM BORDER WITH WATCH PREVIEW CUTOUT -->
 
-<!-- TOP BORDER -->
-<div class="absolute top-6 left-6 right-6 h-[1px] bg-[#0066FF]/25"></div>
+        <!-- TOP BORDER -->
+        <div class="absolute top-6 left-6 right-6 h-[1px] bg-[#0066FF]/25"></div>
 
-<!-- LEFT BORDER -->
-<div class="absolute top-6 bottom-6 left-6 w-[1px] bg-[#0066FF]/25"></div>
+        <!-- LEFT BORDER -->
+        <div class="absolute top-6 bottom-6 left-6 w-[1px] bg-[#0066FF]/25"></div>
 
-<!-- RIGHT BORDER - STOPS ABOVE WATCH PREVIEW -->
-<div class="absolute top-6 bottom-24 right-6 w-[1px] bg-[#0066FF]/25"></div>
+        <!-- RIGHT BORDER - STOPS ABOVE WATCH PREVIEW -->
+        <div class="absolute top-6 bottom-24 right-6 w-[1px] bg-[#0066FF]/25"></div>
 
-<!-- BOTTOM BORDER - STOPS BEFORE WATCH PREVIEW -->
-<div class="absolute bottom-6 left-6 right-56 h-[1px] bg-[#0066FF]/25"></div>
+        <!-- BOTTOM BORDER - STOPS BEFORE WATCH PREVIEW -->
+        <div class="absolute bottom-6 left-6 right-56 h-[1px] bg-[#0066FF]/25"></div>
 
-<!-- TOP LEFT CORNER ACCENT -->
-<div class="absolute top-6 left-6 w-20 h-[1px] bg-[#0066FF]/70"></div>
-<div class="absolute top-6 left-6 w-[1px] h-20 bg-[#0066FF]/70"></div>
+        <!-- TOP LEFT CORNER ACCENT -->
+        <div class="absolute top-6 left-6 w-20 h-[1px] bg-[#0066FF]/70"></div>
+        <div class="absolute top-6 left-6 w-[1px] h-20 bg-[#0066FF]/70"></div>
 
-<!-- BOTTOM LEFT CORNER ACCENT -->
-<div class="absolute bottom-6 left-6 w-20 h-[1px] bg-[#0066FF]/45"></div>
-<div class="absolute bottom-6 left-6 w-[1px] h-20 bg-[#0066FF]/45"></div>
+        <!-- BOTTOM LEFT CORNER ACCENT -->
+        <div class="absolute bottom-6 left-6 w-20 h-[1px] bg-[#0066FF]/45"></div>
+        <div class="absolute bottom-6 left-6 w-[1px] h-20 bg-[#0066FF]/45"></div>
 
-<!-- CUTOUT RETURN DETAIL NEAR WATCH PREVIEW -->
-<div class="absolute bottom-6 right-56 w-10 h-[1px] bg-[#0066FF]/55"></div>
-<div class="absolute bottom-24 right-6 w-[1px] h-10 bg-[#0066FF]/55"></div>
+        <!-- CUTOUT RETURN DETAIL NEAR WATCH PREVIEW -->
+        <div class="absolute bottom-6 right-56 w-10 h-[1px] bg-[#0066FF]/55"></div>
+        <div class="absolute bottom-24 right-6 w-[1px] h-10 bg-[#0066FF]/55"></div>
 
         <!-- CASE FILE CONTENT -->
         <div class="relative z-30 h-full px-12 py-10 font-mono flex flex-col text-left">
@@ -272,11 +288,11 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
             </p>
 
             <h2 class="text-3xl lg:text-4xl text-white tracking-[0.08em] leading-tight mb-3">
-              PRF-TRL-2026-022
+              PRF-CON-2026-001
             </h2>
 
             <p class="text-[11px] uppercase tracking-[0.32em] text-white/45">
-              Visual proof asset record / trailer classification
+              Visual proof asset record / concept classification
             </p>
 
           </div>
@@ -292,7 +308,7 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
                 Asset Type
               </p>
               <p class="text-2xl text-white leading-tight">
-                PROOF: Trailer
+                PROOF: Concept
               </p>
             </div>
 
@@ -301,16 +317,16 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
                 Project
               </p>
               <p class="text-2xl text-white leading-tight">
-                Croatoan
+                Starlight Diner
               </p>
             </div>
 
             <div>
               <p class="text-[10px] uppercase tracking-[0.32em] text-white/35 mb-3">
-                Company
+                Scope
               </p>
               <p class="text-2xl text-white leading-tight">
-                District 22
+                Custom Package
               </p>
             </div>
 
@@ -324,7 +340,7 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
                 Format
               </p>
               <p class="text-lg text-white/85 leading-tight">
-                Animated Short Film Trailer
+                Short-Form Proof of Concept
               </p>
             </div>
 
@@ -333,7 +349,7 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
                 Use Case
               </p>
               <p class="text-lg text-white/85 leading-tight">
-                Pitch + Audience Asset
+                Development + Funding Asset
               </p>
             </div>
 
@@ -371,7 +387,7 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
                 </p>
 
                 <p class="text-sm uppercase tracking-[0.28em] text-white/65">
-                  Pitch-Ready Asset
+                  Scope Review Required
                 </p>
               </div>
 
@@ -383,8 +399,11 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
 
       </div>
 
-      <!-- VIDEO INDICATOR - ALWAYS ABOVE CASE FILE -->
-      <div class="absolute bottom-5 right-5 flex items-center gap-3 z-[80] pointer-events-none">
+      <!-- WATCH PREVIEW -->
+      <button
+        id="openConceptVideo"
+        class="absolute bottom-5 right-5 items-center gap-3 z-[80] hidden"
+      >
 
         <!-- PULSE DOT -->
         <div class="relative flex items-center justify-center">
@@ -400,7 +419,7 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
           Watch Preview
         </p>
 
-      </div>
+      </button>
 
     </div>
 
@@ -421,7 +440,7 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
             </p>
 
             <p class="text-sm text-white tracking-[0.08em] leading-tight">
-              PRF-TRL-2026-022
+              PRF-CON-2026-001
             </p>
           </div>
 
@@ -434,11 +453,11 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
         <div class="space-y-2">
 
           <p class="text-sm text-white leading-snug">
-            PROOF: Trailer <span class="text-white/35">/</span> Croatoan
+            PROOF: Concept <span class="text-white/35">/</span> Starlight Diner
           </p>
 
           <p class="text-xs text-white/55 leading-snug">
-            District 22 Â· Animated Trailer Â· Pitch + Audience Asset
+            Short-Form Proof of Concept · Development + Funding Asset
           </p>
 
           <p class="text-[9px] uppercase tracking-[0.22em] text-white/35 leading-relaxed pt-2">
@@ -462,15 +481,15 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
       <div class="flex-1 max-w-xl">
 
         <h1 class="text-5xl mb-4">
-          PROOF: Trailer
+          PROOF: Concept
         </h1>
 
         <p class="text-xl text-gray-200 mb-6">
-          Build a cinematic trailer designed to create momentum, emotional reaction, and market-facing presentation.
+          Develop a cinematic proof-of-concept designed to demonstrate story, tone, execution, and market potential before production.
         </p>
 
         <p class="text-sm text-gray-500">
-          Built for serious pitches where tone, world, and stakes need to land.
+          Built for larger creative packages that need multiple assets, deeper development, or a full proof-of-concept campaign.
         </p>
 
       </div>
@@ -479,24 +498,22 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
       <div class="flex flex-col w-full md:w-[260px] md:items-end text-left space-y-2">
 
         <p class="text-3xl mb-1">
-          $1,800
+          Custom Pricing
         </p>
 
         <p class="text-xs text-gray-400 mb-6">
-          ~45â€“90 seconds â€¢ Includes creative script consult
+          Scope-based proof-of-concept development
         </p>
 
         <a 
-          href="https://buy.stripe.com/test_dRm28tdj9dh4f2l0zf18c04"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="project-review.html"
           class="bg-[#0066FF] w-full py-3 rounded-md text-white text-center hover:bg-[#0052cc] transition inline-block"
         >
-          Start Your Trailer
+          Request Custom Quote
         </a>
 
         <p class="text-xs text-gray-500 text-center mt-3">
-          Secure checkout via Stripe.
+          Custom scope reviewed before checkout.
         </p>
 
       </div>
@@ -509,13 +526,13 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
 
 <!-- VIDEO MODAL -->
 <div 
-  id="trailerVideoModal"
+  id="conceptVideoModal"
   class="fixed inset-0 bg-black/95 z-[9999] hidden items-center justify-center"
 >
 
   <!-- CLOSE -->
   <button
-    id="closeTrailerVideo"
+    id="closeConceptVideo"
     class="absolute top-6 right-6 text-white text-5xl z-50 hover:text-gray-300 transition"
   >
     &times;
@@ -525,7 +542,7 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
   <div class="w-full h-full flex items-center justify-center px-4">
 
     <video
-      id="trailerFullVideo"
+      id="conceptFullVideo"
       controls
       playsinline
       class="w-full max-w-6xl max-h-[90vh] rounded-xl shadow-2xl"
@@ -535,7 +552,7 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
 
 </div>
 
-<!-- PROOF: TRAILER EXPERIENCE -->
+<!-- PROOF: CONCEPT EXPERIENCE -->
 <section class="max-w-6xl mx-auto px-4 pt-12 pb-10">
 
   <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-[#111111]">
@@ -543,7 +560,6 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
     <!-- BACKGROUND IMAGE -->
     <div class="absolute inset-0">
 
-      <!-- OVERLAYS -->
       <div class="absolute inset-0 bg-black/55"></div>
 
       <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-[#111111]"></div>
@@ -553,21 +569,21 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
     </div>
 
     <!-- CONTENT -->
-    <div class="relative z-10 p-8 md:p-12">
+<div class="relative z-10 p-8 md:p-12 text-left">
 
-      <!-- TOP -->
-      <div class="max-w-3xl">
+  <!-- TOP -->
+  <div class="max-w-3xl text-left">
 
         <p class="text-xs uppercase tracking-[0.28em] text-[#0066FF] mb-5">
-          Cinematic Trailer
+          Cinematic Proof of Concept
         </p>
 
         <h2 class="text-4xl md:text-6xl leading-[1.05] mb-6 max-w-4xl">
-          Launch the emotional experience of the film.
+          Show the film before the film exists.
         </h2>
 
         <p class="text-lg text-gray-300 leading-relaxed max-w-2xl">
-          PROOF: Trailer creates cinematic pitch trailers designed to communicate atmosphere, momentum, emotional stakes, audience potential, and visual identity before production begins.
+          PROOF: Concept develops cinematic short-form proof-of-concept films designed to demonstrate narrative execution, atmosphere, emotional impact, visual identity, and project viability before production begins.
         </p>
 
       </div>
@@ -583,11 +599,11 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
           <div class="relative z-10">
 
             <p class="text-2xl md:text-3xl mb-2 transition duration-500 group-hover:text-white">
-              45â€“90 Sec
+              Multi-Scene
             </p>
 
             <p class="text-sm text-gray-400 leading-relaxed transition duration-500 group-hover:text-gray-300">
-              Cinematic proof-of-concept trailer
+              Narrative-driven proof-of-concept film
             </p>
 
           </div>
@@ -602,11 +618,11 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
           <div class="relative z-10">
 
             <p class="text-2xl md:text-3xl mb-2 transition duration-500 group-hover:text-white">
-              Custom Scope
+              Expanded Scope
             </p>
 
             <p class="text-sm text-gray-400 leading-relaxed transition duration-500 group-hover:text-gray-300">
-              Built around tone, pacing + market positioning
+              Designed around narrative, tone + cinematic execution
             </p>
 
           </div>
@@ -621,11 +637,11 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
           <div class="relative z-10">
 
             <p class="text-2xl md:text-3xl mb-2 transition duration-500 group-hover:text-white">
-              3 Rounds
+              5 Rounds
             </p>
 
             <p class="text-sm text-gray-400 leading-relaxed transition duration-500 group-hover:text-gray-300">
-              Narrative shaping + emotional sequencing
+              Collaborative narrative + visual refinement
             </p>
 
           </div>
@@ -640,11 +656,11 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
           <div class="relative z-10">
 
             <p class="text-2xl md:text-3xl mb-2 transition duration-500 group-hover:text-white">
-              Audience-Facing
+              Funding-Ready
             </p>
 
             <p class="text-sm text-gray-400 leading-relaxed transition duration-500 group-hover:text-gray-300">
-              Designed for presentations, momentum + visibility
+              Built for pitching, financing + strategic attachment
             </p>
 
           </div>
@@ -662,16 +678,16 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
           <div>
 
             <p class="text-xs uppercase tracking-[0.25em] text-gray-500 mb-4">
-              Built for market momentum
+              Built for development
             </p>
 
             <h3 class="text-2xl md:text-3xl leading-tight mb-4">
-              Pacing.<br class="hidden md:block">
-              Emotion. Impact.
+              Narrative.<br class="hidden md:block">
+              Atmosphere. Execution.
             </h3>
 
             <p class="text-gray-300 leading-relaxed max-w-2xl">
-              Every PROOF: Trailer is collaboratively shaped around emotional pacing, cinematic escalation, audience engagement, visual identity, and presentation strategy to help your project feel market-ready before production.
+              Every PROOF: Concept is collaboratively developed around story architecture, emotional progression, cinematic execution, visual identity, and long-term project positioning to help your film move from idea to believable reality.
             </p>
 
           </div>
@@ -680,19 +696,19 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
           <div class="flex flex-col gap-3 text-sm text-gray-200 min-w-[260px]">
 
             <div class="bg-black/30 border border-white/10 rounded-lg px-4 py-3 backdrop-blur-sm transition duration-500 hover:border-white/20 hover:shadow-[0_0_25px_rgba(0,102,255,0.14)]">
-              Trailer pacing + escalation shaping included
+              Narrative development + cinematic structuring included
             </div>
 
             <div class="bg-black/30 border border-white/10 rounded-lg px-4 py-3 backdrop-blur-sm transition duration-500 hover:border-white/20 hover:shadow-[0_0_25px_rgba(0,102,255,0.14)]">
-              Audience-facing emotional structure development
+              Expanded emotional and tonal refinement process
             </div>
 
             <div class="bg-black/30 border border-white/10 rounded-lg px-4 py-3 backdrop-blur-sm transition duration-500 hover:border-white/20 hover:shadow-[0_0_25px_rgba(0,102,255,0.14)]">
-              Presentation strategy + positioning support
+              Pitch, financing + presentation strategy support
             </div>
 
             <div class="bg-black/30 border border-white/10 rounded-lg px-4 py-3 backdrop-blur-sm transition duration-500 hover:border-white/20 hover:shadow-[0_0_25px_rgba(0,102,255,0.14)]">
-              Expanded trailer campaigns available for select projects
+              Designed for serious development-stage projects
             </div>
 
           </div>
@@ -706,19 +722,19 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
 
         <div class="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6 text-sm md:text-base text-gray-300">
 
-          <span>Share your project vision</span>
+          <span>Share the vision</span>
 
-          <span class="hidden md:block text-[#0066FF]">â†’</span>
+          <span class="hidden md:block text-[#0066FF]">→</span>
 
-          <span>We shape the trailer structure</span>
+          <span>We shape the cinematic concept</span>
 
-          <span class="hidden md:block text-[#0066FF]">â†’</span>
+          <span class="hidden md:block text-[#0066FF]">→</span>
 
-          <span>We build the cinematic experience</span>
+          <span>We build the proof-of-concept film</span>
 
-          <span class="hidden md:block text-[#0066FF]">â†’</span>
+          <span class="hidden md:block text-[#0066FF]">→</span>
 
-          <span>Create momentum before production</span>
+          <span>Create belief before production</span>
 
         </div>
 
@@ -734,36 +750,32 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
 <section class="pt-16 pb-12 text-center">
 
   <h2 class="text-3xl mb-4">
-    Not sure if Trailer is the right PROOF?
+    Ready to scope a custom PROOF?
   </h2>
 
   <p class="text-gray-200 mb-8 max-w-xl mx-auto px-4">
-    Start the Trailer package if youâ€™re ready, or request a Project Review if you want us to recommend the right asset first.
+    Request a Project Review if you want us to recommend the right scope, or book a call if you’re ready to discuss a custom proof-of-concept strategy.
   </p>
 
   <div class="flex flex-col sm:flex-row justify-center gap-4 w-full max-w-md mx-auto px-4">
 
     <a 
-      href="https://buy.stripe.com/test_dRm28tdj9dh4f2l0zf18c04"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="bg-[#0066FF] px-6 py-3 rounded-md inline-flex items-center justify-center hover:bg-[#0052cc] transition font-medium w-full"
-    >
-      Start Your Trailer
-    </a>
-
-    <a 
       href="project-review.html"
-      class="border border-white/20 px-6 py-3 rounded-md inline-flex items-center justify-center hover:bg-white hover:text-black transition font-medium w-full"
+      class="bg-[#0066FF] px-6 py-3 rounded-md inline-flex items-center justify-center hover:bg-[#0052cc] transition font-medium w-full"
     >
       Project Review
     </a>
 
-  </div>
+    <a 
+      href="https://calendly.com/hello-prooflab/30min"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="border border-white/20 px-6 py-3 rounded-md inline-flex items-center justify-center hover:bg-white hover:text-black transition font-medium w-full"
+    >
+      Book a Call
+    </a>
 
-  <p class="text-xs text-gray-500 mt-4">
-    Secure checkout via Stripe.
-  </p>
+  </div>
 
   <p class="text-sm text-gray-300 mt-5">
     Or email:
@@ -787,7 +799,7 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
   />
 
   <p class="text-xs text-gray-600 mb-6">
-    Â© 2026 PROOF, LLC. All Rights Reserved.
+    © 2026 PROOF, LLC. All Rights Reserved.
   </p>
 
   <p class="text-[11px] leading-relaxed text-gray-600 max-w-4xl mx-auto">
@@ -813,7 +825,7 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
   id="toTopBtn"
   class="fixed bottom-32 right-6 z-[9998] bg-[#0066FF] w-12 h-12 rounded-lg flex items-center justify-center text-white shadow-lg opacity-0 pointer-events-none transition duration-300 hover:bg-blue-500"
 >
-  â†‘
+  ↑
 </button>
 
 <script>
@@ -836,19 +848,17 @@ document.addEventListener("DOMContentLoaded", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  // HAMBURGER MENU
+  // MOBILE MENU
   const menuBtn = document.getElementById("menuBtn");
   const mobileMenu = document.getElementById("mobileMenu");
 
   if (menuBtn && mobileMenu) {
 
-    // TOGGLE MENU
     menuBtn.addEventListener("click", (e) => {
       e.stopPropagation();
       mobileMenu.classList.toggle("hidden");
     });
 
-    // CLOSE WHEN CLICKING LINK
     const links = mobileMenu.querySelectorAll("a");
 
     links.forEach(link => {
@@ -857,7 +867,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    // CLOSE WHEN CLICKING OUTSIDE
     document.addEventListener("click", (e) => {
 
       if (
@@ -871,29 +880,94 @@ document.addEventListener("DOMContentLoaded", () => {
 
   }
 
-  // ================= VIDEO MODAL =================
+  /* ===================================================== */
+  /* CONCEPT HERO VIDEO SYSTEM */
+  /* ===================================================== */
 
-  const modal = document.getElementById("trailerVideoModal");
-  const openBtn = document.getElementById("openTrailerVideo");
-  const closeBtn = document.getElementById("closeTrailerVideo");
-  const video = document.getElementById("trailerFullVideo");
+  const heroMedia =
+    document.getElementById("conceptHeroMedia");
 
-  if (modal && openBtn && closeBtn && video) {
+  const modal =
+    document.getElementById("conceptVideoModal");
 
-    // OPEN
+  const openBtn =
+    document.getElementById("openConceptVideo");
+
+  const closeBtn =
+    document.getElementById("closeConceptVideo");
+
+  const video =
+    document.getElementById("conceptFullVideo");
+
+  /* ====================================== */
+  /* VIDEO MODE */
+  /* ====================================== */
+
+  if (
+    heroMedia &&
+    heroMedia.dataset.mediaType === "video"
+  ) {
+
+    /* SHOW WATCH BUTTON */
+    openBtn.classList.remove("hidden");
+    openBtn.classList.add("flex");
+
+    const streamUrl =
+      heroMedia.dataset.videoUrl;
+
+    let hls;
+
+    /* OPEN MODAL */
     openBtn.addEventListener("click", () => {
 
       modal.classList.remove("hidden");
       modal.classList.add("flex");
 
-      video.currentTime = 0;
-
-      video.play();
-
       document.body.style.overflow = "hidden";
+
+      /* INIT HLS ONLY WHEN OPENING */
+      if (Hls.isSupported()) {
+
+        if (hls) {
+          hls.destroy();
+        }
+
+        hls = new Hls({
+          enableWorker: true,
+          lowLatencyMode: true
+        });
+
+        hls.loadSource(streamUrl);
+
+        hls.attachMedia(video);
+
+        hls.on(Hls.Events.MANIFEST_PARSED, () => {
+
+          video.currentTime = 0;
+
+          video.play().catch(err => {
+            console.log(err);
+          });
+
+        });
+
+      } else if (
+        video.canPlayType(
+          "application/vnd.apple.mpegurl"
+        )
+      ) {
+
+        video.src = streamUrl;
+
+        video.currentTime = 0;
+
+        video.play();
+
+      }
+
     });
 
-    // CLOSE
+    /* CLOSE MODAL */
     function closeModal() {
 
       modal.classList.add("hidden");
@@ -901,13 +975,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
       video.pause();
 
+      if (hls) {
+
+        hls.destroy();
+
+        hls = null;
+
+      }
+
       document.body.style.overflow = "";
+
     }
 
-    closeBtn.addEventListener("click", closeModal);
+    closeBtn.addEventListener(
+      "click",
+      closeModal
+    );
 
-    // CLOSE ON BACKGROUND CLICK
-    modal.addEventListener("click", (e) => {
+    modal.addEventListener("click", e => {
 
       if (e.target === modal) {
         closeModal();
@@ -915,8 +1000,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-    // ESC KEY CLOSE
-    document.addEventListener("keydown", (e) => {
+    document.addEventListener("keydown", e => {
 
       if (e.key === "Escape") {
         closeModal();
@@ -929,40 +1013,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
-<!-- HLS -->
-<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-
-<!-- STREAM INIT -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-  const video = document.getElementById("trailerFullVideo");
-
-  const streamUrl =
-    "https://videodelivery.net/0304618be91b7130f2cd851db3a46a47/manifest/video.m3u8";
-
-  if (!video) return;
-
-  if (Hls.isSupported()) {
-
-    const hls = new Hls({
-      enableWorker: true,
-      lowLatencyMode: true
-    });
-
-    hls.loadSource(streamUrl);
-
-    hls.attachMedia(video);
-
-  } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-
-    video.src = streamUrl;
-
-  }
-
-});
-</script>
-
-<script defer src="shared-shell.js"></script>
 </body>
 </html>

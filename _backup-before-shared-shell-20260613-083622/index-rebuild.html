@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
@@ -1072,7 +1072,6 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="shared-shell.css" />
 </head>
 
 <body class="bg-[#0A0A0A] text-white font-sans">
@@ -1183,10 +1182,6 @@
 <!-- HERO -->
 <!-- ===================================================== -->
 <section class="relative overflow-hidden bg-black">
-
-  <!-- ===================================================== -->
-  <!-- DESKTOP HERO -->
-  <!-- ===================================================== -->
   <div class="hidden lg:flex relative min-h-screen items-center justify-center text-center overflow-hidden">
     <div class="absolute inset-0 overflow-hidden">
       <video
@@ -1209,7 +1204,7 @@
         class="js-hls-video absolute inset-0 w-full h-full object-contain opacity-55"
       ></video>
 
-      <div class="absolute inset-0 bg-black/45"></div>
+      <div class="absolute inset-0 bg-black/40"></div>
     </div>
 
     <div class="relative z-10 w-full px-6 flex flex-col items-center justify-center">
@@ -1224,34 +1219,101 @@
       <img
         src="proof-logo/Proof_Main.png"
         alt="PROOF cinematic proof-of-concept studio logo"
-        class="mx-auto w-[550px] lg:w-[750px] mb-[-105px]"
+        class="mx-auto w-[550px] lg:w-[750px] mb-[-110px]"
       />
 
-      <div class="mt-10 w-full max-w-3xl mx-auto rounded-2xl border border-white/10 bg-black/55 backdrop-blur-md px-6 py-6 shadow-[0_20px_80px_rgba(0,0,0,0.55)]">
-        <p class="text-xl md:text-3xl text-white font-semibold leading-tight tracking-[-0.04em] drop-shadow-[0_2px_18px_rgba(0,0,0,0.95)]">
-          No one says yes to a project they can&rsquo;t picture.
-        </p>
+      <p class="mt-4 text-xs md:text-sm text-white/65 max-w-xl mx-auto leading-relaxed">
+        You have a project. People are not seeing it. Send it in and we will tell you what kind of proof can make it land.
+      </p>
 
-        <div class="flex flex-row justify-center gap-4 mt-6 w-full max-w-md mx-auto">
-          <a
-            href="project-review.html"
-            class="proof-btn bg-[#0066FF] px-6 py-4 rounded-md font-semibold text-center hover:bg-[#0052cc] transition w-full"
-          >
-            Get Free Review
-          </a>
+      <div class="flex flex-row justify-center gap-4 mt-10 w-full max-w-md mx-auto">
+        <a
+          href="project-review.html"
+          class="proof-btn bg-[#0066FF] px-6 py-4 rounded-md font-semibold text-center hover:bg-[#0052cc] transition w-full"
+        >
+          Get Free Review
+        </a>
 
-          <a
-            href="#examples"
-            class="proof-btn border border-white px-6 py-4 rounded-md text-white hover:bg-white hover:text-black transition font-semibold text-center w-full"
-          >
-            See Examples
-          </a>
+        <a
+          href="#examples"
+          class="proof-btn border border-white px-6 py-4 rounded-md text-white hover:bg-white hover:text-black transition font-semibold text-center w-full"
+        >
+          See Examples
+        </a>
+      </div>
+
+      <button
+        id="openVideoModal"
+        type="button"
+        class="mt-8 flex items-center gap-3 group opacity-80 hover:opacity-100 transition duration-500"
+      >
+        <div class="relative flex items-center justify-center">
+          <span class="absolute inline-flex h-3 w-3 rounded-full bg-[#0066FF] opacity-75 animate-ping"></span>
+          <span class="relative inline-flex rounded-full h-3 w-3 bg-[#0066FF] shadow-[0_0_12px_rgba(0,102,255,0.9)]"></span>
         </div>
 
+        <p class="text-[11px] uppercase tracking-[0.32em] text-white/70 group-hover:text-white transition duration-500">
+          Watch Preview
+        </p>
+      </button>
+    </div>
+  </div>
+
+  <div class="flex lg:hidden relative min-h-screen items-center justify-center text-center overflow-hidden">
+    <div class="absolute inset-0 overflow-hidden">
+      <video
+        id="heroBlurVideoMobile"
+        data-hls="https://videodelivery.net/4e195dcb6f423b5d4c01e31fbb52bd4f/manifest/video.m3u8"
+        autoplay
+        muted
+        loop
+        playsinline
+        class="js-hls-video absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-20"
+      ></video>
+
+      <video
+        id="heroBgVideoMobile"
+        data-hls="https://videodelivery.net/4e195dcb6f423b5d4c01e31fbb52bd4f/manifest/video.m3u8"
+        autoplay
+        muted
+        loop
+        playsinline
+        class="js-hls-video absolute inset-0 w-full h-full object-contain opacity-55"
+      ></video>
+
+      <div class="absolute inset-0 bg-black/40"></div>
+    </div>
+
+    <div class="relative z-10 w-full h-screen px-5 flex flex-col items-center justify-center">
+      <img
+        src="proof-logo/Proof_Main.png"
+        alt="PROOF cinematic proof-of-concept studio logo"
+        class="w-[88vw] max-w-[420px] mb-4"
+      />
+
+      <div class="absolute bottom-24 left-0 right-0 w-[88%] max-w-sm mx-auto flex flex-col gap-4">
+        <p class="text-sm text-white/75 leading-relaxed">
+          You have a project. People are not seeing it. Send it in and get a clear recommendation.
+        </p>
+
+        <a
+          href="project-review.html"
+          class="proof-btn bg-[#0066FF] px-6 py-4 rounded-md font-semibold text-center hover:bg-[#0052cc] transition w-full"
+        >
+          Get Free Review
+        </a>
+
+        <a
+          href="#examples"
+          class="proof-btn border border-white px-6 py-4 rounded-md text-white hover:bg-white hover:text-black transition font-semibold text-center w-full"
+        >
+          See Examples
+        </a>
+
         <button
-          id="openVideoModal"
+          id="openVideoModalMobile"
           type="button"
-          class="mt-6 mx-auto flex items-center gap-3 group opacity-80 hover:opacity-100 transition duration-500"
+          class="mt-4 flex items-center justify-center gap-3 group opacity-90 hover:opacity-100 transition duration-500"
         >
           <div class="relative flex items-center justify-center">
             <span class="absolute inline-flex h-3 w-3 rounded-full bg-[#0066FF] opacity-75 animate-ping"></span>
@@ -1265,82 +1327,7 @@
       </div>
     </div>
   </div>
-
-  <!-- ===================================================== -->
-<!-- MOBILE HERO -->
-<!-- ===================================================== -->
-<div class="flex lg:hidden relative min-h-screen items-center justify-center text-center overflow-hidden">
-  <div class="absolute inset-0 overflow-hidden">
-    <video
-      id="heroBlurVideoMobile"
-      data-hls="https://videodelivery.net/4e195dcb6f423b5d4c01e31fbb52bd4f/manifest/video.m3u8"
-      autoplay
-      muted
-      loop
-      playsinline
-      class="js-hls-video absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-20"
-    ></video>
-
-    <video
-      id="heroBgVideoMobile"
-      data-hls="https://videodelivery.net/4e195dcb6f423b5d4c01e31fbb52bd4f/manifest/video.m3u8"
-      autoplay
-      muted
-      loop
-      playsinline
-      class="js-hls-video absolute inset-0 w-full h-full object-contain opacity-55"
-    ></video>
-
-    <div class="absolute inset-0 bg-black/45"></div>
-  </div>
-
-  <div class="relative z-10 w-full h-screen px-5 flex flex-col items-center justify-center">
-    <img
-      src="proof-logo/Proof_Main.png"
-      alt="PROOF cinematic proof-of-concept studio logo"
-      class="w-[88vw] max-w-[420px] mb-4"
-    />
-
-    <div class="absolute bottom-16 sm:bottom-20 left-0 right-0 w-[88%] max-w-sm mx-auto">
-      <div class="rounded-2xl border border-white/10 bg-black/55 backdrop-blur-md px-5 py-5 shadow-[0_20px_80px_rgba(0,0,0,0.65)]">
-        <p class="text-[1.65rem] sm:text-3xl text-white font-semibold leading-[1.05] tracking-[-0.045em] drop-shadow-[0_2px_18px_rgba(0,0,0,0.95)]">
-          No one says yes to a project they can&rsquo;t picture.
-        </p>
-
-        <div class="mt-5 flex flex-col gap-3">
-          <a
-            href="project-review.html"
-            class="proof-btn bg-[#0066FF] px-6 py-4 rounded-md font-semibold text-center hover:bg-[#0052cc] transition w-full"
-          >
-            Get Free Review
-          </a>
-
-          <a
-            href="#examples"
-            class="proof-btn border border-white px-6 py-4 rounded-md text-white hover:bg-white hover:text-black transition font-semibold text-center w-full"
-          >
-            See Examples
-          </a>
-
-          <button
-            id="openVideoModalMobile"
-            type="button"
-            class="mt-4 flex items-center justify-center gap-3 group opacity-90 hover:opacity-100 transition duration-500"
-          >
-            <div class="relative flex items-center justify-center">
-              <span class="absolute inline-flex h-3 w-3 rounded-full bg-[#0066FF] opacity-75 animate-ping"></span>
-              <span class="relative inline-flex rounded-full h-3 w-3 bg-[#0066FF] shadow-[0_0_12px_rgba(0,102,255,0.9)]"></span>
-            </div>
-
-            <p class="text-[11px] uppercase tracking-[0.32em] text-white/70 group-hover:text-white transition duration-500">
-              Watch Preview
-            </p>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+</section>
 
 <!-- ===================================================== -->
 <!-- VIDEO MODAL -->
@@ -1371,1421 +1358,607 @@
 <!-- ===================================================== -->
 <!-- WHAT IS PROOF -->
 <!-- ===================================================== -->
-<section id="what-is-proof" class="proof-section-border proof-meaning-section py-16 md:py-28">
+<section id="what-is-proof" class="proof-section-border proof-meaning-section py-24">
   <div class="max-w-6xl mx-auto px-4">
+    <div class="grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-5 proof-meaning-copy">
+        <p class="proof-eyebrow mb-5">
+          What Is PROOF?
+        </p>
 
-    <div class="max-w-4xl mx-auto md:mx-0 text-center md:text-left">
-      <p class="proof-eyebrow mb-5">
-        What Is PROOF?
-      </p>
+        <h2 class="text-3xl md:text-5xl leading-tight mb-6">
+          PROOF turns the thing you keep explaining into the thing they can finally see.
+        </h2>
 
-      <h2 class="text-3xl md:text-5xl leading-tight mb-6 max-w-3xl mx-auto md:mx-0">
-        PROOF helps people understand your project fast.
-      </h2>
+        <p class="text-gray-300 text-lg leading-relaxed">
+          A script can be strong. A deck can be beautiful. But if the person across from you cannot feel the project quickly, the pitch stalls. PROOF creates the visual bridge between your materials and the next yes.
+        </p>
+      </div>
 
-      <p class="text-gray-300 text-base md:text-xl leading-relaxed max-w-3xl mx-auto md:mx-0">
-        We take your script, deck, idea, or scene and turn it into something people can see, feel, and react to.
-      </p>
-    </div>
+      <div class="lg:col-span-7">
+        <div class="proof-meaning-panel">
+          <div class="proof-meaning-header">
+            <p>
+              Translation System
+            </p>
 
-    <div class="mt-10 md:mt-14">
-      <div class="rounded-[2rem] border border-white/10 bg-white/[0.035] overflow-hidden shadow-[0_30px_110px_rgba(0,0,0,0.45)]">
-
-        <div class="px-5 py-6 md:px-8 md:py-7 border-b border-white/10">
-          <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 text-center md:text-left">
-            <div class="max-w-3xl mx-auto md:mx-0">
-              <p class="text-[11px] md:text-xs uppercase tracking-[0.34em] text-white/40 font-semibold mb-3">
-                The Simple Version
-              </p>
-
-              <h3 class="text-2xl md:text-3xl text-white font-semibold leading-tight tracking-[-0.04em]">
-                You have the material. We make it easier to see.
-              </h3>
-            </div>
-
-            <div class="hidden md:flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-white/50">
-              <span class="h-2 w-2 rounded-full bg-[#0066FF] shadow-[0_0_14px_rgba(0,102,255,0.9)]"></span>
+            <div class="proof-meaning-status">
+              <span></span>
               Active
             </div>
           </div>
-        </div>
 
-        <div class="grid md:grid-cols-3 gap-px bg-white/10">
-          <div class="bg-[#080A0F] px-5 py-6 md:px-7 md:py-8 text-center md:text-left">
-            <p class="text-[11px] uppercase tracking-[0.32em] text-[#0066FF] font-semibold mb-4">
-              Input
-            </p>
-
-            <h3 class="text-xl md:text-2xl text-white font-semibold leading-tight tracking-[-0.04em]">
-              Script. Deck. Idea. Scene.
-            </h3>
-
-            <p class="mt-4 text-sm md:text-base text-gray-300 leading-relaxed">
-              You already have something. But the other person may still have to imagine too much.
-            </p>
-          </div>
-
-          <div class="bg-[#0B1220] px-5 py-6 md:px-7 md:py-8 border-y md:border-y-0 md:border-x border-[#0066FF]/50 text-center md:text-left">
-            <p class="text-[11px] uppercase tracking-[0.32em] text-[#0066FF] font-semibold mb-4">
-              PROOF
-            </p>
-
-            <h3 class="text-xl md:text-2xl text-white font-semibold leading-tight tracking-[-0.04em]">
-              We build the visual version.
-            </h3>
-
-            <p class="mt-4 text-sm md:text-base text-gray-300 leading-relaxed">
-              A sizzle, trailer, scene, or proof-of-concept asset that shows the tone, world, stakes, and emotion.
-            </p>
-          </div>
-
-          <div class="bg-[#080A0F] px-5 py-6 md:px-7 md:py-8 text-center md:text-left">
-            <p class="text-[11px] uppercase tracking-[0.32em] text-[#0066FF] font-semibold mb-4">
-              Output
-            </p>
-
-            <h3 class="text-xl md:text-2xl text-white font-semibold leading-tight tracking-[-0.04em]">
-              They get it faster.
-            </h3>
-
-            <p class="mt-4 text-sm md:text-base text-gray-300 leading-relaxed">
-              Producers, investors, talent, collaborators, and audiences get something to react to.
-            </p>
-          </div>
-        </div>
-
-        <div class="px-5 py-6 md:px-8 md:py-8 border-t border-white/10 bg-black/20">
-          <div class="space-y-3">
-
-            <details class="group rounded-2xl border border-white/10 bg-white/[0.035] overflow-hidden">
-              <summary class="cursor-pointer list-none px-5 py-5 flex items-center justify-between gap-4">
-                <div>
-                  <p class="text-[11px] uppercase tracking-[0.28em] text-[#0066FF] font-semibold mb-2">
-                    Why It Matters
-                  </p>
-
-                  <h3 class="text-lg md:text-xl text-white font-semibold leading-tight">
-                    A strong project can still be hard to pitch.
-                  </h3>
-                </div>
-
-                <span class="shrink-0 text-white/50 text-2xl leading-none group-open:rotate-45 transition">
-                  +
-                </span>
-              </summary>
-
-              <div class="px-5 pb-5">
-                <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                  A script can be strong. A deck can look good. But if the person across from you cannot picture the project quickly, the pitch stalls. PROOF gives them something clear to watch, feel, and remember.
+          <div class="proof-meaning-stack">
+            <div class="proof-meaning-row">
+              <div>
+                <p class="proof-meaning-label">
+                  Input
                 </p>
+
+                <h3 class="proof-meaning-title">
+                  Script. Deck. Idea. Scene.
+                </h3>
               </div>
-            </details>
 
-            <details class="group rounded-2xl border border-white/10 bg-white/[0.035] overflow-hidden">
-              <summary class="cursor-pointer list-none px-5 py-5 flex items-center justify-between gap-4">
-                <div>
-                  <p class="text-[11px] uppercase tracking-[0.28em] text-[#0066FF] font-semibold mb-2">
-                    What It Is Not
-                  </p>
+              <p class="proof-meaning-text">
+                The raw material already exists. The problem is that it still requires the other person to imagine too much, too quickly.
+              </p>
+            </div>
 
-                  <h3 class="text-lg md:text-xl text-white font-semibold leading-tight">
-                    Not raw AI clips. Not a full production.
-                  </h3>
-                </div>
-
-                <span class="shrink-0 text-white/50 text-2xl leading-none group-open:rotate-45 transition">
-                  +
-                </span>
-              </summary>
-
-              <div class="px-5 pb-5">
-                <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                  Raw generation is not enough. A real pitch asset needs pacing, continuity, emotion, structure, and direction. But you may not need a crew or a finished film yet. You may only need proof that the project can work.
+            <div class="proof-meaning-row proof-meaning-row-main">
+              <div>
+                <p class="proof-meaning-label">
+                  PROOF
                 </p>
+
+                <h3 class="proof-meaning-title">
+                  Tone, world, pace, stakes, emotion.
+                </h3>
               </div>
-            </details>
 
-            <details class="group rounded-2xl border border-white/10 bg-white/[0.035] overflow-hidden">
-              <summary class="cursor-pointer list-none px-5 py-5 flex items-center justify-between gap-4">
-                <div>
-                  <p class="text-[11px] uppercase tracking-[0.28em] text-[#0066FF] font-semibold mb-2">
-                    What You Get
-                  </p>
+              <p class="proof-meaning-text">
+                We extract what matters and shape it into cinematic visual proof: not just motion, but a clearer feeling of what the project is and why it should exist.
+              </p>
+            </div>
 
-                  <h3 class="text-lg md:text-xl text-white font-semibold leading-tight">
-                    A better next conversation.
-                  </h3>
-                </div>
-
-                <span class="shrink-0 text-white/50 text-2xl leading-none group-open:rotate-45 transition">
-                  +
-                </span>
-              </summary>
-
-              <div class="px-5 pb-5">
-                <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                  The asset gives people something to respond to instead of something they have to decode. That can make the next yes easier, whether you are talking to producers, investors, talent, collaborators, or an audience.
+            <div class="proof-meaning-row">
+              <div>
+                <p class="proof-meaning-label">
+                  Output
                 </p>
+
+                <h3 class="proof-meaning-title">
+                  A stronger next conversation.
+                </h3>
               </div>
-            </details>
 
-          </div>
-        </div>
-
-        <div class="px-5 py-6 md:px-8 md:py-7 flex flex-col md:flex-row md:items-center md:justify-between gap-5 border-t border-white/10 text-center md:text-left">
-          <div>
-            <h3 class="text-xl text-white font-semibold tracking-[-0.03em]">
-              Not sure what your project needs?
-            </h3>
-
-            <p class="mt-2 text-sm md:text-base text-gray-400 leading-relaxed">
-              Start with the review. We will tell you what kind of visual proof makes the most sense.
-            </p>
+              <p class="proof-meaning-text">
+                The asset gives producers, investors, collaborators, talent, or audiences something to react to instead of something they have to decode.
+              </p>
+            </div>
           </div>
 
-          <a
-            href="project-review.html"
-            class="proof-btn bg-[#0066FF] px-6 py-4 rounded-md font-semibold text-center hover:bg-[#0052cc] transition w-full md:w-auto"
-          >
-            Start With the Free Review
-          </a>
-        </div>
+          <div class="proof-meaning-pills">
+            <div class="proof-meaning-pill">
+              <h3>
+                Not raw AI output.
+              </h3>
 
+              <p>
+                Raw generation is not enough. Pacing, continuity, emotion, and clarity still need direction.
+              </p>
+            </div>
+
+            <div class="proof-meaning-pill">
+              <h3>
+                Not a full production.
+              </h3>
+
+              <p>
+                You may not need a crew or finished film yet. You may need proof that the project can work.
+              </p>
+            </div>
+
+            <div class="proof-meaning-pill">
+              <h3>
+                Built for action.
+              </h3>
+
+              <p>
+                The asset should help someone understand faster and make the next yes easier.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
   </div>
 </section>
 
 <!-- ===================================================== -->
 <!-- PAIN / PROJECT STUCK -->
 <!-- ===================================================== -->
-<section id="problem" class="proof-section-border py-16 md:py-28 bg-[#0A0A0A]">
+<section id="problem" class="proof-section-border py-24 bg-[#0A0A0A]">
   <div class="max-w-6xl mx-auto px-4">
-
-    <div class="max-w-4xl mx-auto md:mx-0 mb-10 md:mb-14 text-center md:text-left">
+    <div class="max-w-4xl mb-12">
       <p class="proof-eyebrow mb-5">
         The Real Problem
       </p>
 
-      <h2 class="text-3xl md:text-6xl leading-tight tracking-[-0.045em] mb-6 max-w-3xl mx-auto md:mx-0">
-        Your project is not dead. People just cannot see it fast enough.
+      <h2 class="text-3xl md:text-6xl leading-tight tracking-[-0.045em] mb-6">
+        Your project is not stuck because you need to explain it harder.
       </h2>
 
-      <p class="text-gray-300 text-base md:text-xl leading-relaxed max-w-3xl mx-auto md:mx-0">
-        They skim. They nod. Then they disappear. Not because the idea is bad. Because the pitch still asks them to imagine too much.
+      <p class="text-gray-300 text-lg md:text-xl leading-relaxed max-w-3xl">
+        It is stuck because the people you need are not seeing the movie, show, world, tone, or emotional hook fast enough.
       </p>
     </div>
 
-    <div class="rounded-[2rem] border border-white/10 bg-white/[0.035] overflow-hidden shadow-[0_30px_110px_rgba(0,0,0,0.45)]">
-      <div class="px-5 py-6 md:px-8 md:py-7 border-b border-white/10">
-        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 text-center md:text-left">
-          <div class="max-w-3xl mx-auto md:mx-0">
-            <p class="text-[11px] md:text-xs uppercase tracking-[0.34em] text-white/40 font-semibold mb-3">
-              How It Gets Stuck
-            </p>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="proof-card p-7">
+        <p class="text-xs uppercase tracking-[0.32em] text-gray-500 mb-5">
+          Pain 01
+        </p>
 
-            <h3 class="text-2xl md:text-3xl text-white font-semibold leading-tight tracking-[-0.04em]">
-              The project may be clear to you. It is not clear to them yet.
-            </h3>
-          </div>
+        <h3 class="text-2xl mb-4">
+          They skim the deck.
+        </h3>
 
-          <div class="hidden md:flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-white/50">
-            <span class="h-2 w-2 rounded-full bg-[#0066FF] shadow-[0_0_14px_rgba(0,102,255,0.9)]"></span>
-            Common
-          </div>
-        </div>
+        <p class="text-gray-400 leading-relaxed">
+          You send the materials. They glance. They do not feel the project. Then the conversation goes quiet.
+        </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-px bg-white/10">
-        <div class="bg-[#080A0F] px-5 py-6 md:px-7 md:py-8 text-center md:text-left">
-          <p class="text-[11px] uppercase tracking-[0.32em] text-[#0066FF] font-semibold mb-5">
-            01
-          </p>
+      <div class="proof-card p-7">
+        <p class="text-xs uppercase tracking-[0.32em] text-gray-500 mb-5">
+          Pain 02
+        </p>
 
-          <h3 class="text-2xl text-white font-semibold leading-tight tracking-[-0.04em] mb-4">
-            They skim the deck.
-          </h3>
+        <h3 class="text-2xl mb-4">
+          They cannot picture it.
+        </h3>
 
-          <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-            The PDF may look good. But it still asks them to stop, focus, and imagine the whole project in their head.
-          </p>
-        </div>
-
-        <div class="bg-[#0B1220] px-5 py-6 md:px-7 md:py-8 border-y md:border-y-0 md:border-x border-[#0066FF]/50 text-center md:text-left">
-          <p class="text-[11px] uppercase tracking-[0.32em] text-[#0066FF] font-semibold mb-5">
-            02
-          </p>
-
-          <h3 class="text-2xl text-white font-semibold leading-tight tracking-[-0.04em] mb-4">
-            They cannot picture it.
-          </h3>
-
-          <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-            Tone, pace, world, character, and emotion are hard to explain. They are much easier to show.
-          </p>
-        </div>
-
-        <div class="bg-[#080A0F] px-5 py-6 md:px-7 md:py-8 text-center md:text-left">
-          <p class="text-[11px] uppercase tracking-[0.32em] text-[#0066FF] font-semibold mb-5">
-            03
-          </p>
-
-          <h3 class="text-2xl text-white font-semibold leading-tight tracking-[-0.04em] mb-4">
-            They go quiet.
-          </h3>
-
-          <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-            When the project feels abstract, saying yes feels risky. Silence becomes the easy answer.
-          </p>
-        </div>
+        <p class="text-gray-400 leading-relaxed">
+          Tone, pace, world, character, and emotional weight are hard to explain in a PDF. They are easier to show.
+        </p>
       </div>
 
-      <div class="px-5 py-6 md:px-8 md:py-7 border-t border-white/10 bg-black/25">
-        <div class="rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-5 md:px-7 md:py-6 text-center md:text-left">
-          <p class="text-[11px] uppercase tracking-[0.3em] text-[#0066FF] font-semibold mb-3">
-            The Fix
-          </p>
+      <div class="proof-card p-7">
+        <p class="text-xs uppercase tracking-[0.32em] text-gray-500 mb-5">
+          Pain 03
+        </p>
 
-          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5">
-            <h3 class="text-2xl md:text-3xl text-white font-semibold leading-tight tracking-[-0.045em] max-w-2xl mx-auto md:mx-0">
-              Stop making them imagine the project. Show them what it feels like.
-            </h3>
+        <h3 class="text-2xl mb-4">
+          They do not move.
+        </h3>
 
-            <a
-              href="project-review.html"
-              class="proof-btn bg-[#0066FF] px-6 py-4 rounded-md font-semibold text-center hover:bg-[#0052cc] transition w-full lg:w-auto"
-            >
-              Get Free Review
-            </a>
-          </div>
-        </div>
+        <p class="text-gray-400 leading-relaxed">
+          If the project feels abstract, the answer is usually silence. Proof makes the next conversation easier.
+        </p>
       </div>
     </div>
-
   </div>
 </section>
 
 <!-- ===================================================== -->
 <!-- FREE PROJECT FIT REVIEW -->
 <!-- ===================================================== -->
-<section id="project-fit-review" class="proof-section-border py-16 md:py-28 bg-black">
+<section id="project-fit-review" class="proof-section-border py-24 bg-black">
   <div class="max-w-6xl mx-auto px-4">
-
-    <div class="max-w-4xl mx-auto md:mx-0 mb-10 md:mb-14 text-center md:text-left">
-      <p class="proof-eyebrow mb-5">
-        Start Here
-      </p>
-
-      <h2 class="text-3xl md:text-6xl leading-tight tracking-[-0.045em] mb-6 max-w-3xl mx-auto md:mx-0">
-        Stop guessing. Start planning.
-      </h2>
-
-      <p class="text-gray-300 text-base md:text-xl leading-relaxed max-w-3xl mx-auto md:mx-0">
-        Send us the project. We&rsquo;ll review it and tell you the clearest path to real money.
-      </p>
-    </div>
-
-    <div class="grid lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
-
-      <!-- MAIN REVIEW CARD -->
+    <div class="grid lg:grid-cols-12 gap-10 items-center">
       <div class="lg:col-span-7">
-        <div class="h-full rounded-[2rem] border border-white/10 bg-white/[0.035] overflow-hidden shadow-[0_30px_110px_rgba(0,0,0,0.45)]">
-          <div class="px-5 py-6 md:px-8 md:py-7 border-b border-white/10 text-center md:text-left">
-            <p class="text-[11px] md:text-xs uppercase tracking-[0.34em] text-white/40 font-semibold mb-3">
-              Free Project Review
+        <p class="proof-eyebrow mb-5">
+          Start Here
+        </p>
+
+        <h2 class="text-3xl md:text-6xl leading-tight tracking-[-0.045em] mb-6">
+          Send us the project. We will tell you what kind of proof it needs.
+        </h2>
+
+        <p class="text-gray-300 text-lg leading-relaxed max-w-3xl mb-8">
+          Do not guess between a sizzle, trailer, scene, or larger package. Send your materials first. We will review the project and recommend the clearest next move.
+        </p>
+
+        <div class="grid sm:grid-cols-3 gap-4 mb-8">
+          <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+            <p class="text-white font-semibold mb-2">
+              Submit
             </p>
 
-            <h3 class="text-2xl md:text-4xl text-white font-semibold leading-tight tracking-[-0.045em] max-w-3xl mx-auto md:mx-0">
-              Send the material. Get a plain recommendation.
-            </h3>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              Logline, script, deck, treatment, scene, or short summary.
+            </p>
           </div>
 
-          <div class="grid md:grid-cols-3 gap-px bg-white/10">
-            <div class="bg-[#080A0F] px-5 py-6 md:px-6 md:py-7 text-center md:text-left">
-              <p class="text-[11px] uppercase tracking-[0.32em] text-[#0066FF] font-semibold mb-5">
-                01
-              </p>
+          <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+            <p class="text-white font-semibold mb-2">
+              Review
+            </p>
 
-              <h3 class="text-xl md:text-2xl text-white font-semibold leading-tight tracking-[-0.04em] mb-4">
-                Submit
-              </h3>
-
-              <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                Send a logline, deck, script, treatment, scene, or short summary.
-              </p>
-            </div>
-
-            <div class="bg-[#0B1220] px-5 py-6 md:px-6 md:py-7 border-y md:border-y-0 md:border-x border-[#0066FF]/50 text-center md:text-left">
-              <p class="text-[11px] uppercase tracking-[0.32em] text-[#0066FF] font-semibold mb-5">
-                02
-              </p>
-
-              <h3 class="text-xl md:text-2xl text-white font-semibold leading-tight tracking-[-0.04em] mb-4">
-                Review
-              </h3>
-
-              <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                We look for what is not clear, what needs to be shown, and what would help the pitch land faster.
-              </p>
-            </div>
-
-            <div class="bg-[#080A0F] px-5 py-6 md:px-6 md:py-7 text-center md:text-left">
-              <p class="text-[11px] uppercase tracking-[0.32em] text-[#0066FF] font-semibold mb-5">
-                03
-              </p>
-
-              <h3 class="text-xl md:text-2xl text-white font-semibold leading-tight tracking-[-0.04em] mb-4">
-                Recommend
-              </h3>
-
-              <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-                We tell you whether it needs a sizzle, trailer, scene, concept piece, or something custom.
-              </p>
-            </div>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              We look for what is not landing and what needs to be shown.
+            </p>
           </div>
 
-          <div class="px-5 py-6 md:px-8 md:py-7 border-t border-white/10 bg-black/25">
-            <div class="rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-5 md:px-7 md:py-6 text-center md:text-left">
-              <p class="text-[11px] uppercase tracking-[0.3em] text-[#0066FF] font-semibold mb-3">
-                The Point
-              </p>
+          <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+            <p class="text-white font-semibold mb-2">
+              Recommend
+            </p>
 
-              <h3 class="text-2xl md:text-3xl text-white font-semibold leading-tight tracking-[-0.045em] max-w-3xl mx-auto md:mx-0">
-                You should know what to make before you pay to make it.
-              </h3>
-
-              <div class="mt-6 flex flex-col sm:flex-row gap-4">
-                <a
-                  href="project-review.html"
-                  class="proof-btn inline-flex items-center justify-center bg-[#0066FF] px-7 py-4 rounded-md font-semibold text-center hover:bg-[#0052cc] transition w-full sm:w-[220px]"
-                >
-                  Request Free Review
-                </a>
-
-                <a
-                  href="products.html"
-                  class="inline-flex items-center justify-center border border-white px-7 py-4 rounded-md text-white hover:bg-white hover:text-black transition font-semibold text-center w-full sm:w-[220px]"
-                >
-                  See Products
-                </a>
-              </div>
-            </div>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              You get a plain next-step recommendation before spending money.
+            </p>
           </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="project-review.html"
+            class="proof-btn inline-flex items-center justify-center bg-[#0066FF] px-7 py-4 rounded-md font-semibold text-center hover:bg-[#0052cc] transition w-full sm:w-[220px]"
+          >
+            Request Free Review
+          </a>
+
+          <a
+            href="products.html"
+            class="inline-flex items-center justify-center border border-white px-7 py-4 rounded-md text-white hover:bg-white hover:text-black transition font-semibold text-center w-full sm:w-[220px]"
+          >
+            See Product Page
+          </a>
         </div>
       </div>
 
-      <!-- WHAT YOU GET CARD -->
       <div class="lg:col-span-5">
-        <div class="h-full rounded-[2rem] border border-[#0066FF]/30 bg-[#101014] overflow-hidden shadow-[0_0_70px_rgba(0,102,255,0.10)]">
-          <div class="px-5 py-6 md:px-8 md:py-7 border-b border-white/10 text-center md:text-left">
-            <p class="text-[11px] md:text-xs uppercase tracking-[0.34em] text-[#0066FF] font-semibold mb-3">
-              What You Get
-            </p>
+        <div class="rounded-3xl border border-[#0066FF]/30 bg-[#101014] p-7 md:p-9 shadow-[0_0_70px_rgba(0,102,255,0.10)]">
+          <p class="text-xs uppercase tracking-[0.35em] text-[#0066FF] mb-6">
+            What You Get
+          </p>
 
-            <h3 class="text-2xl md:text-3xl text-white font-semibold leading-tight tracking-[-0.04em]">
-              A clear next move.
-            </h3>
-          </div>
-
-          <div class="px-5 py-6 md:px-8 md:py-7 space-y-5">
-            <div class="rounded-2xl border border-white/10 bg-black/35 px-5 py-5 text-center md:text-left">
-              <h3 class="text-lg md:text-xl text-white font-semibold mb-2">
-                What to make.
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-xl mb-2">
+                A direct recommendation.
               </h3>
 
-              <p class="text-sm md:text-base text-gray-400 leading-relaxed">
-                We tell you which type of visual proof makes the most sense for the project.
+              <p class="text-gray-400 leading-relaxed">
+                We tell you whether your project needs a sizzle, trailer, scene, or custom proof-of-concept path.
               </p>
             </div>
 
-            <div class="rounded-2xl border border-white/10 bg-black/35 px-5 py-5 text-center md:text-left">
-              <h3 class="text-lg md:text-xl text-white font-semibold mb-2">
-                What to show.
+            <div>
+              <h3 class="text-xl mb-2">
+                A clearer pitch path.
               </h3>
 
-              <p class="text-sm md:text-base text-gray-400 leading-relaxed">
-                We identify the tone, world, character, hook, or scene that needs to be seen first.
+              <p class="text-gray-400 leading-relaxed">
+                You will know what to show, who it is for, and why it matters before you pitch again.
               </p>
             </div>
 
-            <div class="rounded-2xl border border-white/10 bg-black/35 px-5 py-5 text-center md:text-left">
-              <h3 class="text-lg md:text-xl text-white font-semibold mb-2">
-                What not to waste money on.
+            <div>
+              <h3 class="text-xl mb-2">
+                No forced purchase.
               </h3>
 
-              <p class="text-sm md:text-base text-gray-400 leading-relaxed">
+              <p class="text-gray-400 leading-relaxed">
                 The review is free. You decide whether to move forward after the recommendation.
               </p>
             </div>
           </div>
 
-          <div class="px-5 pb-6 md:px-8 md:pb-8">
-            <div class="rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-5 text-center md:text-left">
-              <p class="text-white font-semibold mb-2">
-                Best for:
-              </p>
+          <div class="mt-8 rounded-2xl bg-black border border-white/10 p-5">
+            <p class="text-white font-semibold mb-2">
+              Best for:
+            </p>
 
-              <p class="text-gray-400 text-sm leading-relaxed">
-                Writers, filmmakers, producers, artists, founders, and creators trying to pitch, fund, package, sell, or explain a project.
-              </p>
-            </div>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Writers, filmmakers, producers, founders, artists, and creators trying to make a project easier to understand, pitch, fund, package, or sell.
+            </p>
           </div>
         </div>
       </div>
-
     </div>
-
   </div>
 </section>
 
 <!-- ===================================================== -->
 <!-- PROOF FIELD GUIDE EXAMPLES -->
 <!-- ===================================================== -->
-<section id="examples" class="proof-section-border proof-field-guide py-16 md:py-28">
-  <div class="max-w-6xl mx-auto px-4 relative z-10">
-
-    <div class="max-w-4xl mx-auto md:mx-0 text-center md:text-left mb-10 md:mb-14">
+<section id="examples" class="proof-section-border proof-field-guide py-24">
+  <div class="max-w-7xl mx-auto px-4 relative z-10">
+    <div class="max-w-4xl mx-auto text-center mb-16">
       <p class="proof-eyebrow mb-5">
         The PROOF Field Guide
       </p>
 
-      <h2 class="text-3xl md:text-6xl leading-tight tracking-[-0.045em] mb-6 max-w-4xl mx-auto md:mx-0">
-        Different projects need different proof.
+      <h2 class="text-3xl md:text-5xl leading-tight mb-6">
+        Your project does not need a product menu. It needs the right kind of visual proof.
       </h2>
 
-      <p class="text-gray-300 text-base md:text-xl leading-relaxed max-w-3xl mx-auto md:mx-0">
-        A sizzle creates momentum. A trailer shows the stakes. A scene proves the moment. Watch the examples without leaving the page.
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Explore the three most common proof formats. Tap or hover an entry to change the guide.
       </p>
     </div>
 
-    <!-- ===================================================== -->
-    <!-- MOBILE FIELD GUIDE CAROUSEL -->
-    <!-- ===================================================== -->
-    <div class="lg:hidden">
-      <div class="rounded-[2rem] border border-white/10 bg-white/[0.035] overflow-hidden shadow-[0_30px_110px_rgba(0,0,0,0.45)]">
-        <div class="px-5 py-6 border-b border-white/10 text-center">
-          <p class="text-[11px] uppercase tracking-[0.34em] text-white/40 font-semibold mb-3">
-            Choose The Asset
-          </p>
+    <div class="field-shell">
+      <div class="field-guide-grid">
+        <div class="field-cinema">
+          <video
+            id="fieldVideoSizzle"
+            data-field-video="sizzle"
+            data-hls="https://videodelivery.net/238de8025285e57b0ad563bdaeca85da/manifest/video.m3u8"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            class="js-hls-video field-video is-active"
+          ></video>
 
-          <h3 class="text-2xl text-white font-semibold leading-tight tracking-[-0.04em] max-w-sm mx-auto">
-            Pick the proof that fixes the pitch problem.
-          </h3>
-        </div>
+          <video
+            id="fieldVideoTrailer"
+            data-field-video="trailer"
+            data-hls="https://videodelivery.net/0ab0b9b0bc81d018f5a645d2d9069632/manifest/video.m3u8"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            class="js-hls-video field-video"
+          ></video>
 
-        <div id="mobileFieldCarousel" class="relative overflow-hidden">
-          <div
-            id="mobileFieldTrack"
-            class="flex transition-transform duration-500 ease-out"
-          >
+          <video
+            id="fieldVideoScene"
+            data-field-video="scene"
+            data-hls="https://videodelivery.net/ffd865d79dcdf2b9a958e43a3bf208df/manifest/video.m3u8"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            class="js-hls-video field-video"
+          ></video>
 
-            <!-- MOBILE SLIDE 01 -->
-            <article class="w-full shrink-0 px-5 py-6">
-              <div class="rounded-[1.75rem] border border-[#0066FF]/50 bg-[#0B1220] overflow-hidden shadow-[0_0_50px_rgba(0,102,255,0.12)]">
-                <div class="relative aspect-[4/5] overflow-hidden bg-black">
-                  <video
-                    id="fieldMobileVideoSizzle"
-                    data-hls="https://videodelivery.net/238de8025285e57b0ad563bdaeca85da/manifest/video.m3u8"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
-                    preload="metadata"
-                    class="js-hls-video absolute inset-0 w-full h-full object-cover opacity-70"
-                  ></video>
+          <div class="field-cinema-copy">
+            <p class="field-case-label">
+              <span class="field-case-dot"></span>
+              <span id="fieldCaseLabel">Case File 01 / Sizzle</span>
+            </p>
 
-                  <div class="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-black/10"></div>
+            <h3 id="fieldActiveTitle" class="field-active-title">
+              Sizzle
+            </h3>
 
-                  <div class="absolute left-5 right-5 bottom-5 text-left">
-                    <p class="flex items-center gap-2 text-[11px] uppercase tracking-[0.28em] text-white/70 font-semibold mb-3">
-                      <span class="h-2 w-2 rounded-full bg-[#0066FF] shadow-[0_0_14px_rgba(0,102,255,0.9)]"></span>
-                      Case File 01
-                    </p>
-
-                    <h3 class="text-4xl text-white font-semibold tracking-[-0.06em] leading-none">
-                      Sizzle
-                    </h3>
-                  </div>
-                </div>
-
-                <div class="px-5 py-5 text-left">
-                  <p class="text-[11px] uppercase tracking-[0.3em] text-[#0066FF] font-semibold mb-3">
-                    When to use it
-                  </p>
-
-                  <h3 class="text-xl text-white font-semibold leading-tight mb-3">
-                    When the project needs momentum.
-                  </h3>
-
-                  <p class="text-sm text-gray-300 leading-relaxed">
-                    Use a sizzle when people need to feel the tone, world, energy, and hook fast.
-                  </p>
-
-                  <button
-                    type="button"
-                    class="mt-5 inline-flex items-center justify-center rounded-md border border-white/15 bg-white/[0.06] px-5 py-3 text-sm text-white font-semibold hover:bg-white hover:text-black transition w-full"
-                    data-example-modal-open
-                    data-example-title="Sizzle"
-                    data-example-hls="https://videodelivery.net/fb3e37e4bd61bc95a165a0410818ebe4/manifest/video.m3u8"
-                  >
-                    Watch Full Example
-                  </button>
-                </div>
-              </div>
-            </article>
-
-            <!-- MOBILE SLIDE 02 -->
-            <article class="w-full shrink-0 px-5 py-6">
-              <div class="rounded-[1.75rem] border border-white/10 bg-[#080A0F] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
-                <div class="relative aspect-[4/5] overflow-hidden bg-black">
-                  <video
-                    id="fieldMobileVideoTrailer"
-                    data-hls="https://videodelivery.net/0ab0b9b0bc81d018f5a645d2d9069632/manifest/video.m3u8"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
-                    preload="metadata"
-                    class="js-hls-video absolute inset-0 w-full h-full object-cover opacity-70"
-                  ></video>
-
-                  <div class="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-black/10"></div>
-
-                  <div class="absolute left-5 right-5 bottom-5 text-left">
-                    <p class="flex items-center gap-2 text-[11px] uppercase tracking-[0.28em] text-white/70 font-semibold mb-3">
-                      <span class="h-2 w-2 rounded-full bg-[#0066FF] shadow-[0_0_14px_rgba(0,102,255,0.9)]"></span>
-                      Case File 02
-                    </p>
-
-                    <h3 class="text-4xl text-white font-semibold tracking-[-0.06em] leading-none">
-                      Trailer
-                    </h3>
-                  </div>
-                </div>
-
-                <div class="px-5 py-5 text-left">
-                  <p class="text-[11px] uppercase tracking-[0.3em] text-[#0066FF] font-semibold mb-3">
-                    When to use it
-                  </p>
-
-                  <h3 class="text-xl text-white font-semibold leading-tight mb-3">
-                    When the pitch needs stakes.
-                  </h3>
-
-                  <p class="text-sm text-gray-300 leading-relaxed">
-                    Use a trailer when people need to understand the story, the danger, the promise, and why it matters.
-                  </p>
-
-                  <button
-                    type="button"
-                    class="mt-5 inline-flex items-center justify-center rounded-md border border-white/15 bg-white/[0.06] px-5 py-3 text-sm text-white font-semibold hover:bg-white hover:text-black transition w-full"
-                    data-example-modal-open
-                    data-example-title="Trailer"
-                    data-example-hls="https://videodelivery.net/0304618be91b7130f2cd851db3a46a47/manifest/video.m3u8"
-                  >
-                    Watch Full Example
-                  </button>
-                </div>
-              </div>
-            </article>
-
-            <!-- MOBILE SLIDE 03 -->
-            <article class="w-full shrink-0 px-5 py-6">
-              <div class="rounded-[1.75rem] border border-white/10 bg-[#080A0F] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.35)]">
-                <div class="relative aspect-[4/5] overflow-hidden bg-black">
-                  <video
-                    id="fieldMobileVideoScene"
-                    data-hls="https://videodelivery.net/ffd865d79dcdf2b9a958e43a3bf208df/manifest/video.m3u8"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
-                    preload="metadata"
-                    class="js-hls-video absolute inset-0 w-full h-full object-cover opacity-70"
-                  ></video>
-
-                  <div class="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-black/10"></div>
-
-                  <div class="absolute left-5 right-5 bottom-5 text-left">
-                    <p class="flex items-center gap-2 text-[11px] uppercase tracking-[0.28em] text-white/70 font-semibold mb-3">
-                      <span class="h-2 w-2 rounded-full bg-[#0066FF] shadow-[0_0_14px_rgba(0,102,255,0.9)]"></span>
-                      Case File 03
-                    </p>
-
-                    <h3 class="text-4xl text-white font-semibold tracking-[-0.06em] leading-none">
-                      Scene
-                    </h3>
-                  </div>
-                </div>
-
-                <div class="px-5 py-5 text-left">
-                  <p class="text-[11px] uppercase tracking-[0.3em] text-[#0066FF] font-semibold mb-3">
-                    When to use it
-                  </p>
-
-                  <h3 class="text-xl text-white font-semibold leading-tight mb-3">
-                    When one moment can sell the whole thing.
-                  </h3>
-
-                  <p class="text-sm text-gray-300 leading-relaxed">
-                    Use a scene when character, emotion, performance, or execution needs to be proven.
-                  </p>
-
-                  <button
-                    type="button"
-                    class="mt-5 inline-flex items-center justify-center rounded-md border border-white/15 bg-white/[0.06] px-5 py-3 text-sm text-white font-semibold hover:bg-white hover:text-black transition w-full"
-                    data-example-modal-open
-                    data-example-title="Scene"
-                    data-example-hls="https://videodelivery.net/712a22d84f232a7ca4ca8f23bd37fc0a/manifest/video.m3u8"
-                  >
-                    Watch Full Example
-                  </button>
-                </div>
-              </div>
-            </article>
-
+            <p id="fieldActiveCopy" class="field-active-copy">
+              A fast-strike proof asset built to make the project feel immediate, alive, and worth a second conversation.
+            </p>
           </div>
         </div>
 
-        <div class="flex items-center justify-center gap-2 pb-6">
-          <button
-            type="button"
-            class="mobile-field-dot h-2.5 w-6 rounded-full bg-[#0066FF] transition-all duration-300"
-            data-mobile-field-dot="0"
-            aria-label="Show Sizzle"
-            aria-current="true"
-          ></button>
+        <aside class="field-side">
+          <div class="field-side-header">
+            <p>
+              Select Format
+            </p>
+          </div>
 
           <button
             type="button"
-            class="mobile-field-dot h-2.5 w-2.5 rounded-full bg-white/25 transition-all duration-300"
-            data-mobile-field-dot="1"
-            aria-label="Show Trailer"
-            aria-current="false"
-          ></button>
+            class="field-format-button is-active"
+            data-field-format="sizzle"
+            aria-pressed="true"
+          >
+            <span class="field-format-top">
+              <span class="field-format-label">What is a Sizzle?</span>
+              <span class="field-format-number">01</span>
+            </span>
+
+            <span class="field-format-question">
+              When the idea needs momentum.
+            </span>
+
+            <span class="field-format-use">
+              Best for early projects that need energy, tone, and desire fast.
+            </span>
+          </button>
 
           <button
             type="button"
-            class="mobile-field-dot h-2.5 w-2.5 rounded-full bg-white/25 transition-all duration-300"
-            data-mobile-field-dot="2"
-            aria-label="Show Scene"
-            aria-current="false"
-          ></button>
-        </div>
+            class="field-format-button"
+            data-field-format="trailer"
+            aria-pressed="false"
+          >
+            <span class="field-format-top">
+              <span class="field-format-label">What is a Trailer?</span>
+              <span class="field-format-number">02</span>
+            </span>
 
-        <div class="px-5 pb-6 text-center">
-          <div class="rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-5">
-            <h3 class="text-xl text-white font-semibold tracking-[-0.03em]">
-              Not sure which one fits?
-            </h3>
+            <span class="field-format-question">
+              When the pitch needs stakes.
+            </span>
 
-            <p class="mt-2 text-sm text-gray-400 leading-relaxed">
-              Start with the free review. We will tell you what kind of proof your project needs.
+            <span class="field-format-use">
+              Best for producers, investors, talent, and bigger story conversations.
+            </span>
+          </button>
+
+          <button
+            type="button"
+            class="field-format-button"
+            data-field-format="scene"
+            aria-pressed="false"
+          >
+            <span class="field-format-top">
+              <span class="field-format-label">What is a Scene?</span>
+              <span class="field-format-number">03</span>
+            </span>
+
+            <span class="field-format-question">
+              When one moment can sell the whole thing.
+            </span>
+
+            <span class="field-format-use">
+              Best when execution, emotion, and character have to be proven.
+            </span>
+          </button>
+
+          <div class="field-definition-card">
+            <p class="field-dictionary-kicker">
+              PROOF Dictionary
             </p>
 
-            <a
-              href="project-review.html"
-              class="proof-btn mt-5 bg-[#0066FF] px-6 py-4 rounded-md font-semibold text-center hover:bg-[#0052cc] transition w-full block"
-            >
-              Find Out What Yours Needs
+            <div id="fieldDictionaryWord" class="field-dictionary-word">
+              siz&middot;zle <span class="field-dictionary-pos">v.</span>
+            </div>
+
+            <p id="fieldDictionaryPronunciation" class="field-dictionary-pronunciation">
+              /siz-uhl/
+            </p>
+
+            <p id="fieldDictionaryDefinition" class="field-dictionary-definition">
+              <strong>To make a project immediately felt.</strong> To compress tone, world, hook, atmosphere, and emotional charge into a short cinematic signal designed to create momentum before attention disappears.
+            </p>
+
+            <p id="fieldDictionaryUse" class="field-dictionary-use">
+              In PROOF: a sizzle is the fast-strike asset for an early project that needs energy, clarity, and desire before the full pitch begins.
+            </p>
+          </div>
+
+          <div class="field-definition-footer">
+            <a id="fieldProductLink" href="sizzle.html" class="field-product-link">
+              View Sizzle &rarr;
             </a>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- ===================================================== -->
-    <!-- DESKTOP FIELD GUIDE -->
-    <!-- ===================================================== -->
-    <div class="hidden lg:block mt-14">
-      <div class="rounded-[2rem] border border-white/10 bg-white/[0.035] overflow-hidden shadow-[0_30px_110px_rgba(0,0,0,0.45)]">
-
-        <div class="px-8 py-7 border-b border-white/10">
-          <div class="flex items-end justify-between gap-6">
-            <div class="max-w-3xl">
-              <p class="text-xs uppercase tracking-[0.34em] text-white/40 font-semibold mb-3">
-                Choose The Asset
-              </p>
-
-              <h3 class="text-3xl text-white font-semibold leading-tight tracking-[-0.04em]">
-                Choose what the pitch needs to prove first.
-              </h3>
-            </div>
-
-            <div class="flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-white/50">
-              <span class="h-2 w-2 rounded-full bg-[#0066FF] shadow-[0_0_14px_rgba(0,102,255,0.9)]"></span>
-              Field Guide
-            </div>
-          </div>
-        </div>
-
-        <div class="p-6">
-          <div class="field-guide-grid">
-            <div class="field-cinema">
-              <video
-                id="fieldVideoSizzle"
-                data-field-video="sizzle"
-                data-hls="https://videodelivery.net/238de8025285e57b0ad563bdaeca85da/manifest/video.m3u8"
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="metadata"
-                class="js-hls-video field-video is-active"
-              ></video>
-
-              <video
-                id="fieldVideoTrailer"
-                data-field-video="trailer"
-                data-hls="https://videodelivery.net/0ab0b9b0bc81d018f5a645d2d9069632/manifest/video.m3u8"
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="metadata"
-                class="js-hls-video field-video"
-              ></video>
-
-              <video
-                id="fieldVideoScene"
-                data-field-video="scene"
-                data-hls="https://videodelivery.net/ffd865d79dcdf2b9a958e43a3bf208df/manifest/video.m3u8"
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="metadata"
-                class="js-hls-video field-video"
-              ></video>
-
-              <div class="field-cinema-copy">
-                <p class="field-case-label">
-                  <span class="field-case-dot"></span>
-                  <span id="fieldCaseLabel">Case File 01 / Sizzle</span>
-                </p>
-
-                <h3 id="fieldActiveTitle" class="field-active-title">
-                  Sizzle
-                </h3>
-
-                <p id="fieldActiveCopy" class="field-active-copy">
-                  A fast proof asset that makes the project feel alive before attention disappears.
-                </p>
-
-                <button
-                  id="fieldWatchExampleButton"
-                  type="button"
-                  class="mt-5 inline-flex items-center justify-center rounded-md border border-white/15 bg-white/[0.08] px-5 py-3 text-sm text-white font-semibold hover:bg-white hover:text-black transition"
-                  data-example-modal-open
-                  data-example-title="Sizzle"
-                  data-example-hls="https://videodelivery.net/fb3e37e4bd61bc95a165a0410818ebe4/manifest/video.m3u8"
-                >
-                  Watch Full Example
-                </button>
-              </div>
-            </div>
-
-            <aside class="field-side">
-              <div class="field-side-header">
-                <p>
-                  Select Format
-                </p>
-              </div>
-
-              <button
-                type="button"
-                class="field-format-button is-active"
-                data-field-format="sizzle"
-                aria-pressed="true"
-              >
-                <span class="field-format-top">
-                  <span class="field-format-label">Sizzle</span>
-                  <span class="field-format-number">01</span>
-                </span>
-
-                <span class="field-format-question">
-                  When the project needs momentum.
-                </span>
-
-                <span class="field-format-use">
-                  Best when people need to feel the tone, world, energy, and hook fast.
-                </span>
-              </button>
-
-              <button
-                type="button"
-                class="field-format-button"
-                data-field-format="trailer"
-                aria-pressed="false"
-              >
-                <span class="field-format-top">
-                  <span class="field-format-label">Trailer</span>
-                  <span class="field-format-number">02</span>
-                </span>
-
-                <span class="field-format-question">
-                  When the pitch needs stakes.
-                </span>
-
-                <span class="field-format-use">
-                  Best when people need to understand the story, the danger, and why it matters.
-                </span>
-              </button>
-
-              <button
-                type="button"
-                class="field-format-button"
-                data-field-format="scene"
-                aria-pressed="false"
-              >
-                <span class="field-format-top">
-                  <span class="field-format-label">Scene</span>
-                  <span class="field-format-number">03</span>
-                </span>
-
-                <span class="field-format-question">
-                  When one moment can sell the whole thing.
-                </span>
-
-                <span class="field-format-use">
-                  Best when character, emotion, performance, or execution needs to be proven.
-                </span>
-              </button>
-
-              <div class="field-definition-card">
-                <p class="field-dictionary-kicker">
-                  PROOF Dictionary
-                </p>
-
-                <div id="fieldDictionaryWord" class="field-dictionary-word">
-                  siz&middot;zle <span class="field-dictionary-pos">n.</span>
-                </div>
-
-                <p id="fieldDictionaryPronunciation" class="field-dictionary-pronunciation">
-                  /siz-uhl/
-                </p>
-
-                <p id="fieldDictionaryDefinition" class="field-dictionary-definition">
-                  <strong>A short visual proof asset.</strong> Built to make the tone, world, hook, and energy of a project clear fast.
-                </p>
-
-                <p id="fieldDictionaryUse" class="field-dictionary-use">
-                  In PROOF: use a sizzle when the project needs momentum before the full pitch begins.
-                </p>
-              </div>
-
-              <div class="field-definition-footer">
-                <button
-                  id="fieldWatchExampleFooterButton"
-                  type="button"
-                  class="field-product-link"
-                  data-example-modal-open
-                  data-example-title="Sizzle"
-                  data-example-hls="https://videodelivery.net/fb3e37e4bd61bc95a165a0410818ebe4/manifest/video.m3u8"
-                >
-                  Watch Full Example
-                </button>
-
-                <p class="field-help-text">
-                  Hover or tap the format entries.
-                </p>
-              </div>
-            </aside>
-          </div>
-        </div>
-
-        <div class="px-8 py-7 flex items-center justify-between gap-5 border-t border-white/10">
-          <div>
-            <h3 class="text-xl text-white font-semibold tracking-[-0.03em]">
-              Not sure what yours needs?
-            </h3>
-
-            <p class="mt-2 text-gray-400 leading-relaxed">
-              Start with the review. We will tell you which proof format makes the most sense.
+            <p class="field-help-text">
+              Hover or tap the format entries.
             </p>
           </div>
-
-          <a
-            href="project-review.html"
-            class="proof-btn bg-[#0066FF] px-6 py-4 rounded-md font-semibold text-center hover:bg-[#0052cc] transition"
-          >
-            Find Out What Yours Needs
-          </a>
-        </div>
-
+        </aside>
       </div>
     </div>
 
+    <div class="text-center mt-14">
+      <a
+        href="project-review.html"
+        class="proof-btn inline-flex items-center justify-center bg-[#0066FF] px-7 py-4 rounded-md font-semibold text-center hover:bg-[#0052cc] transition"
+      >
+        Find Out What Yours Needs
+      </a>
+    </div>
   </div>
 </section>
 
 <!-- ===================================================== -->
-<!-- FIELD GUIDE EXAMPLE MODAL -->
-<!-- ===================================================== -->
-<div
-  id="fieldExampleModal"
-  class="fixed inset-0 z-[9999] hidden items-center justify-center bg-black/90 px-4 py-6"
-  aria-hidden="true"
->
-  <div class="absolute inset-0" data-example-modal-close></div>
-
-  <div class="relative z-10 w-full max-w-5xl rounded-[1.5rem] border border-white/10 bg-[#050505] shadow-[0_30px_120px_rgba(0,0,0,0.75)] overflow-hidden">
-    <div class="flex items-center justify-between gap-4 border-b border-white/10 px-5 py-4">
-      <div>
-        <p class="text-[11px] uppercase tracking-[0.3em] text-[#0066FF] font-semibold">
-          Full Example
-        </p>
-
-        <h3
-          id="fieldExampleModalTitle"
-          class="mt-1 text-xl md:text-2xl text-white font-semibold tracking-[-0.03em]"
-        >
-          Sizzle
-        </h3>
-      </div>
-
-      <button
-        type="button"
-        class="h-10 w-10 rounded-full border border-white/15 text-white/70 hover:bg-white hover:text-black transition"
-        data-example-modal-close
-        aria-label="Close video"
-      >
-        &times;
-      </button>
-    </div>
-
-    <div class="bg-black">
-      <video
-        id="fieldExampleModalVideo"
-        controls
-        playsinline
-        class="w-full h-auto max-h-[78vh] bg-black"
-      ></video>
-    </div>
-  </div>
-</div>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const guideData = {
-      sizzle: {
-        caseLabel: "Case File 01 / Sizzle",
-        title: "Sizzle",
-        copy: "A fast proof asset that makes the project feel alive before attention disappears.",
-        word: "siz&middot;zle <span class=\"field-dictionary-pos\">n.</span>",
-        pronunciation: "/siz-uhl/",
-        definition: "<strong>A short visual proof asset.</strong> Built to make the tone, world, hook, and energy of a project clear fast.",
-        use: "In PROOF: use a sizzle when the project needs momentum before the full pitch begins.",
-        hls: "https://videodelivery.net/fb3e37e4bd61bc95a165a0410818ebe4/manifest/video.m3u8"
-      },
-      trailer: {
-        caseLabel: "Case File 02 / Trailer",
-        title: "Trailer",
-        copy: "A proof asset that shows the story, stakes, and reason to care.",
-        word: "trail&middot;er <span class=\"field-dictionary-pos\">n.</span>",
-        pronunciation: "/tray-ler/",
-        definition: "<strong>A story-driven proof asset.</strong> Built to make the premise, stakes, tone, and promise easier to understand.",
-        use: "In PROOF: use a trailer when the project needs a stronger story conversation.",
-        hls: "https://videodelivery.net/0304618be91b7130f2cd851db3a46a47/manifest/video.m3u8"
-      },
-      scene: {
-        caseLabel: "Case File 03 / Scene",
-        title: "Scene",
-        copy: "A proof asset that shows one key moment working on screen.",
-        word: "scene <span class=\"field-dictionary-pos\">n.</span>",
-        pronunciation: "/seen/",
-        definition: "<strong>A focused proof asset.</strong> Built to prove character, emotion, performance, style, or execution through one clear moment.",
-        use: "In PROOF: use a scene when one moment can sell the whole project.",
-        hls: "https://videodelivery.net/712a22d84f232a7ca4ca8f23bd37fc0a/manifest/video.m3u8"
-      }
-    };
-
-    const buttons = document.querySelectorAll("[data-field-format]");
-    const videos = document.querySelectorAll("[data-field-video]");
-
-    const caseLabel = document.getElementById("fieldCaseLabel");
-    const activeTitle = document.getElementById("fieldActiveTitle");
-    const activeCopy = document.getElementById("fieldActiveCopy");
-    const dictionaryWord = document.getElementById("fieldDictionaryWord");
-    const dictionaryPronunciation = document.getElementById("fieldDictionaryPronunciation");
-    const dictionaryDefinition = document.getElementById("fieldDictionaryDefinition");
-    const dictionaryUse = document.getElementById("fieldDictionaryUse");
-    const watchExampleButton = document.getElementById("fieldWatchExampleButton");
-    const watchExampleFooterButton = document.getElementById("fieldWatchExampleFooterButton");
-
-    function updateWatchButtons(data) {
-      [watchExampleButton, watchExampleFooterButton].forEach(function (button) {
-        if (!button) return;
-
-        button.setAttribute("data-example-title", data.title);
-        button.setAttribute("data-example-hls", data.hls);
-      });
-    }
-
-    function setFieldGuide(format) {
-      const data = guideData[format];
-
-      if (!data) return;
-
-      buttons.forEach(function (button) {
-        const isActive = button.getAttribute("data-field-format") === format;
-        button.classList.toggle("is-active", isActive);
-        button.setAttribute("aria-pressed", isActive ? "true" : "false");
-      });
-
-      videos.forEach(function (video) {
-        video.classList.toggle("is-active", video.getAttribute("data-field-video") === format);
-      });
-
-      if (caseLabel) caseLabel.textContent = data.caseLabel;
-      if (activeTitle) activeTitle.textContent = data.title;
-      if (activeCopy) activeCopy.textContent = data.copy;
-      if (dictionaryWord) dictionaryWord.innerHTML = data.word;
-      if (dictionaryPronunciation) dictionaryPronunciation.textContent = data.pronunciation;
-      if (dictionaryDefinition) dictionaryDefinition.innerHTML = data.definition;
-      if (dictionaryUse) dictionaryUse.textContent = data.use;
-
-      updateWatchButtons(data);
-    }
-
-    buttons.forEach(function (button) {
-      button.addEventListener("click", function () {
-        setFieldGuide(button.getAttribute("data-field-format"));
-      });
-
-      button.addEventListener("mouseenter", function () {
-        setFieldGuide(button.getAttribute("data-field-format"));
-      });
-    });
-
-    setFieldGuide("sizzle");
-
-    const mobileTrack = document.getElementById("mobileFieldTrack");
-    const mobileDots = document.querySelectorAll("[data-mobile-field-dot]");
-    const mobileCarousel = document.getElementById("mobileFieldCarousel");
-
-    let mobileIndex = 0;
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    function setMobileSlide(index) {
-      const totalSlides = mobileDots.length;
-
-      if (!mobileTrack || !totalSlides) return;
-
-      if (index < 0) {
-        mobileIndex = totalSlides - 1;
-      } else if (index >= totalSlides) {
-        mobileIndex = 0;
-      } else {
-        mobileIndex = index;
-      }
-
-      mobileTrack.style.transform = "translateX(-" + mobileIndex * 100 + "%)";
-
-      mobileDots.forEach(function (dot, dotIndex) {
-        const isActive = dotIndex === mobileIndex;
-
-        dot.classList.toggle("bg-[#0066FF]", isActive);
-        dot.classList.toggle("bg-white/25", !isActive);
-        dot.classList.toggle("w-6", isActive);
-        dot.classList.toggle("w-2.5", !isActive);
-        dot.setAttribute("aria-current", isActive ? "true" : "false");
-      });
-    }
-
-    mobileDots.forEach(function (dot) {
-      dot.addEventListener("click", function () {
-        const index = parseInt(dot.getAttribute("data-mobile-field-dot"), 10);
-        setMobileSlide(index);
-      });
-    });
-
-    if (mobileCarousel) {
-      mobileCarousel.addEventListener("touchstart", function (event) {
-        touchStartX = event.changedTouches[0].screenX;
-      }, { passive: true });
-
-      mobileCarousel.addEventListener("touchend", function (event) {
-        touchEndX = event.changedTouches[0].screenX;
-
-        if (touchStartX - touchEndX > 45) {
-          setMobileSlide(mobileIndex + 1);
-        }
-
-        if (touchEndX - touchStartX > 45) {
-          setMobileSlide(mobileIndex - 1);
-        }
-      }, { passive: true });
-    }
-
-    setMobileSlide(0);
-
-    const modal = document.getElementById("fieldExampleModal");
-    const modalVideo = document.getElementById("fieldExampleModalVideo");
-    const modalTitle = document.getElementById("fieldExampleModalTitle");
-    const modalOpenButtons = document.querySelectorAll("[data-example-modal-open]");
-    const modalCloseButtons = document.querySelectorAll("[data-example-modal-close]");
-
-    let modalHls = null;
-
-    function destroyModalHls() {
-      if (modalHls) {
-        modalHls.destroy();
-        modalHls = null;
-      }
-    }
-
-    function openExampleModal(title, hlsUrl) {
-      if (!modal || !modalVideo || !hlsUrl) return;
-
-      if (modalTitle) {
-        modalTitle.textContent = title || "Full Example";
-      }
-
-      destroyModalHls();
-
-      modal.classList.remove("hidden");
-      modal.classList.add("flex");
-      modal.setAttribute("aria-hidden", "false");
-
-      modalVideo.pause();
-      modalVideo.removeAttribute("src");
-      modalVideo.load();
-
-      modalVideo.muted = false;
-      modalVideo.controls = true;
-
-      if (window.Hls && window.Hls.isSupported()) {
-        modalHls = new window.Hls();
-        modalHls.loadSource(hlsUrl);
-        modalHls.attachMedia(modalVideo);
-        modalHls.on(window.Hls.Events.MANIFEST_PARSED, function () {
-          modalVideo.play().catch(function () {});
-        });
-      } else if (modalVideo.canPlayType("application/vnd.apple.mpegurl")) {
-        modalVideo.src = hlsUrl;
-        modalVideo.addEventListener("loadedmetadata", function () {
-          modalVideo.play().catch(function () {});
-        }, { once: true });
-      }
-    }
-
-    function closeExampleModal() {
-      if (!modal || !modalVideo) return;
-
-      modalVideo.pause();
-      modalVideo.removeAttribute("src");
-      modalVideo.load();
-
-      destroyModalHls();
-
-      modal.classList.add("hidden");
-      modal.classList.remove("flex");
-      modal.setAttribute("aria-hidden", "true");
-    }
-
-    modalOpenButtons.forEach(function (button) {
-      button.addEventListener("click", function () {
-        openExampleModal(
-          button.getAttribute("data-example-title"),
-          button.getAttribute("data-example-hls")
-        );
-      });
-    });
-
-    modalCloseButtons.forEach(function (button) {
-      button.addEventListener("click", closeExampleModal);
-    });
-
-    document.addEventListener("keydown", function (event) {
-      if (event.key === "Escape") {
-        closeExampleModal();
-      }
-    });
-  });
-</script>
-
-<!-- ===================================================== -->
 <!-- HOW IT WORKS -->
 <!-- ===================================================== -->
-<section id="how-it-works" class="proof-section-border py-16 md:py-28 bg-black">
+<section id="how-it-works" class="proof-section-border py-24 bg-black">
   <div class="max-w-6xl mx-auto px-4">
-
-    <div class="max-w-4xl mx-auto md:mx-0 text-center md:text-left mb-10 md:mb-14">
+    <div class="max-w-4xl mx-auto text-center mb-14">
       <p class="proof-eyebrow mb-5">
         How It Works
       </p>
 
-      <h2 class="text-3xl md:text-6xl leading-tight tracking-[-0.045em] mb-6 max-w-3xl mx-auto md:mx-0">
-        Send the project. Get the next move.
+      <h2 class="text-3xl md:text-5xl leading-tight mb-6">
+        Simple. Fast. No guessing.
       </h2>
 
-      <p class="text-gray-300 text-base md:text-xl leading-relaxed max-w-3xl mx-auto md:mx-0">
-        You do not need to shop first. Send us what you have. We&rsquo;ll tell you what kind of proof makes sense.
+      <p class="text-gray-300 text-lg leading-relaxed">
+        The goal is not to make you shop. The goal is to tell you what your project needs next.
       </p>
     </div>
 
-    <div class="rounded-[2rem] border border-white/10 bg-white/[0.035] overflow-hidden shadow-[0_30px_110px_rgba(0,0,0,0.45)]">
-      <div class="px-5 py-6 md:px-8 md:py-7 border-b border-white/10">
-        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 text-center md:text-left">
-          <div class="max-w-3xl mx-auto md:mx-0">
-            <p class="text-[11px] md:text-xs uppercase tracking-[0.34em] text-white/40 font-semibold mb-3">
-              The Process
-            </p>
+    <div class="grid md:grid-cols-4 gap-6">
+      <div class="proof-process-card p-7">
+        <p class="text-xs uppercase tracking-[0.35em] text-[#0066FF] mb-6">
+          Step 01
+        </p>
 
-            <h3 class="text-2xl md:text-3xl text-white font-semibold leading-tight tracking-[-0.04em]">
-              Four simple steps. No pressure. No guessing.
-            </h3>
-          </div>
+        <h3 class="text-2xl mb-4">
+          Send your project.
+        </h3>
 
-          <div class="hidden md:flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-white/50">
-            <span class="h-2 w-2 rounded-full bg-[#0066FF] shadow-[0_0_14px_rgba(0,102,255,0.9)]"></span>
-            Free Review
-          </div>
-        </div>
+        <p class="text-gray-400 leading-relaxed">
+          Submit the logline, deck, script, scene, treatment, or short summary.
+        </p>
       </div>
 
-      <div class="grid md:grid-cols-4 gap-px bg-white/10">
-        <div class="bg-[#080A0F] px-5 py-6 md:px-6 md:py-8 text-center md:text-left">
-          <p class="text-[11px] uppercase tracking-[0.32em] text-[#0066FF] font-semibold mb-5">
-            01
-          </p>
+      <div class="proof-process-card p-7">
+        <p class="text-xs uppercase tracking-[0.35em] text-[#0066FF] mb-6">
+          Step 02
+        </p>
 
-          <h3 class="text-xl md:text-2xl text-white font-semibold leading-tight tracking-[-0.04em] mb-4">
-            Send what you have.
-          </h3>
+        <h3 class="text-2xl mb-4">
+          We review it.
+        </h3>
 
-          <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-            Logline, deck, script, treatment, scene, or short summary.
-          </p>
-        </div>
-
-        <div class="bg-[#0B1220] px-5 py-6 md:px-6 md:py-8 border-y md:border-y-0 md:border-x border-[#0066FF]/50 text-center md:text-left">
-          <p class="text-[11px] uppercase tracking-[0.32em] text-[#0066FF] font-semibold mb-5">
-            02
-          </p>
-
-          <h3 class="text-xl md:text-2xl text-white font-semibold leading-tight tracking-[-0.04em] mb-4">
-            We look at the pitch.
-          </h3>
-
-          <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-            We look for what is clear, what is missing, and what needs to be shown.
-          </p>
-        </div>
-
-        <div class="bg-[#080A0F] px-5 py-6 md:px-6 md:py-8 text-center md:text-left">
-          <p class="text-[11px] uppercase tracking-[0.32em] text-[#0066FF] font-semibold mb-5">
-            03
-          </p>
-
-          <h3 class="text-xl md:text-2xl text-white font-semibold leading-tight tracking-[-0.04em] mb-4">
-            We tell you what to make.
-          </h3>
-
-          <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-            Sizzle, trailer, scene, concept piece, or something custom.
-          </p>
-        </div>
-
-        <div class="bg-[#080A0F] px-5 py-6 md:px-6 md:py-8 text-center md:text-left">
-          <p class="text-[11px] uppercase tracking-[0.32em] text-[#0066FF] font-semibold mb-5">
-            04
-          </p>
-
-          <h3 class="text-xl md:text-2xl text-white font-semibold leading-tight tracking-[-0.04em] mb-4">
-            You decide.
-          </h3>
-
-          <p class="text-sm md:text-base text-gray-300 leading-relaxed">
-            Move forward, wait, revise, or use the recommendation however you want.
-          </p>
-        </div>
+        <p class="text-gray-400 leading-relaxed">
+          We look at the pitch goal, stage, hook, tone, and what needs to be shown.
+        </p>
       </div>
 
-      <div class="px-5 py-6 md:px-8 md:py-7 border-t border-white/10 bg-black/25">
-        <div class="rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-5 md:px-7 md:py-6 text-center md:text-left">
-          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5">
-            <div>
-              <p class="text-[11px] uppercase tracking-[0.3em] text-[#0066FF] font-semibold mb-3">
-                Start Here
-              </p>
+      <div class="proof-process-card p-7">
+        <p class="text-xs uppercase tracking-[0.35em] text-[#0066FF] mb-6">
+          Step 03
+        </p>
 
-              <h3 class="text-2xl md:text-3xl text-white font-semibold leading-tight tracking-[-0.045em] max-w-2xl mx-auto md:mx-0">
-                The first step is free.
-              </h3>
-            </div>
+        <h3 class="text-2xl mb-4">
+          You get the recommendation.
+        </h3>
 
-            <a
-              href="project-review.html"
-              class="proof-btn bg-[#0066FF] px-6 py-4 rounded-md font-semibold text-center hover:bg-[#0052cc] transition w-full lg:w-auto"
-            >
-              Get Free Project Review
-            </a>
-          </div>
-        </div>
+        <p class="text-gray-400 leading-relaxed">
+          We tell you whether a sizzle, trailer, scene, or custom proof path makes sense.
+        </p>
+      </div>
+
+      <div class="proof-process-card p-7">
+        <p class="text-xs uppercase tracking-[0.35em] text-[#0066FF] mb-6">
+          Step 04
+        </p>
+
+        <h3 class="text-2xl mb-4">
+          You decide.
+        </h3>
+
+        <p class="text-gray-400 leading-relaxed">
+          Move forward, wait, revise, or use the recommendation however you want.
+        </p>
       </div>
     </div>
-
   </div>
 </section>
 
 <!-- ===================================================== -->
 <!-- FINAL CTA -->
 <!-- ===================================================== -->
-<section class="proof-section-border py-16 md:py-28 bg-black">
-  <div class="max-w-6xl mx-auto px-4">
+<section class="proof-section-border py-24 bg-black">
+  <div class="max-w-5xl mx-auto px-4 text-center">
+    <p class="proof-eyebrow mb-5">
+      The Next Move
+    </p>
 
-    <div class="rounded-[2rem] border border-[#0066FF]/30 bg-[#080A0F] overflow-hidden shadow-[0_0_90px_rgba(0,102,255,0.14)]">
-      <div class="px-5 py-10 md:px-10 md:py-12 text-center md:text-left">
-        <p class="proof-eyebrow mb-5">
-          The Next Move
-        </p>
+    <h2 class="text-4xl md:text-7xl leading-[0.95] tracking-[-0.06em] mb-7">
+      Stop pitching an invisible project.
+    </h2>
 
-        <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-end">
-          <div class="lg:col-span-8">
-            <h2 class="text-4xl md:text-7xl leading-[0.95] tracking-[-0.06em] mb-7 max-w-4xl mx-auto md:mx-0">
-              Stop making people imagine the project.
-            </h2>
+    <p class="text-lg md:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-10">
+      Send it in. Get the review. Know what kind of proof can make people understand it faster.
+    </p>
 
-            <p class="text-base md:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto md:mx-0">
-              Send it in. We&rsquo;ll tell you what kind of proof can help people understand it faster.
-            </p>
-          </div>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a
+        href="project-review.html"
+        class="proof-btn inline-flex items-center justify-center bg-[#0066FF] px-8 py-4 rounded-md font-semibold text-center hover:bg-[#0052cc] transition w-full sm:w-[260px]"
+      >
+        Get Free Project Review
+      </a>
 
-          <div class="lg:col-span-4">
-            <div class="rounded-2xl border border-white/10 bg-black/35 px-5 py-5 md:px-6 md:py-6">
-              <h3 class="text-xl text-white font-semibold tracking-[-0.03em] mb-3">
-                Not sure what to make?
-              </h3>
-
-              <p class="text-sm md:text-base text-gray-400 leading-relaxed mb-5">
-                Start with the review. We will give you a clear recommendation before you spend money.
-              </p>
-
-              <div class="flex flex-col gap-3">
-                <a
-                  href="project-review.html"
-                  class="proof-btn inline-flex items-center justify-center bg-[#0066FF] px-8 py-4 rounded-md font-semibold text-center hover:bg-[#0052cc] transition w-full"
-                >
-                  Get Free Project Review
-                </a>
-
-                <a
-                  href="#examples"
-                  class="inline-flex items-center justify-center border border-white px-8 py-4 rounded-md text-white hover:bg-white hover:text-black transition font-semibold text-center w-full"
-                >
-                  See Examples
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <a
+        href="products.html"
+        class="inline-flex items-center justify-center border border-white px-8 py-4 rounded-md text-white hover:bg-white hover:text-black transition font-semibold text-center w-full sm:w-[260px]"
+      >
+        View Products
+      </a>
     </div>
-
   </div>
 </section>
 
@@ -3538,6 +2711,5 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
-<script defer src="shared-shell.js"></script>
 </body>
 </html>

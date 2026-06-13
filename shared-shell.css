@@ -1,0 +1,8 @@
+﻿html {
+  background: #0A0A0A;
+}
+
+body.menu-open,
+body.modal-open {
+  overflow: hidden;
+}
