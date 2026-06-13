@@ -8,11 +8,11 @@
   <div class="max-w-6xl mx-auto flex justify-between items-center py-3 px-4">
 
     <!-- LOGO -->
-    <img
+    <a href="index.html" aria-label="Go to PROOF home" class="inline-flex items-center shrink-0"><img
       src="proof-logo/Proof_header_good.png"
       alt="PROOF and ProofLab system cinematic proof-of-concept platform"
       class="h-[40px] md:h-[60px] w-auto object-contain scale-[2.5] origin-left"
-    />
+    /></a>
 
     <!-- HAMBURGER -->
     <button id="menuBtn" class="md:hidden text-white text-2xl">
@@ -509,3 +509,4 @@ document.addEventListener("DOMContentLoaded", function () {
   wireMobileWatchPreview();
   window.setTimeout(wireMobileWatchPreview, 300);
 });
+
