@@ -1185,86 +1185,104 @@
 <section class="relative overflow-hidden bg-black">
 
   <!-- ===================================================== -->
-  <!-- DESKTOP HERO -->
-  <!-- ===================================================== -->
-  <div class="hidden lg:flex relative min-h-screen items-center justify-center text-center overflow-hidden">
-    <div class="absolute inset-0 overflow-hidden">
-      <video
-        id="heroBlurVideo"
-        data-hls="https://videodelivery.net/4e195dcb6f423b5d4c01e31fbb52bd4f/manifest/video.m3u8"
-        autoplay
-        muted
-        loop
-        playsinline
-        class="js-hls-video absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-20"
-      ></video>
+<!-- DESKTOP HERO -->
+<!-- ===================================================== -->
+<div class="hidden lg:block relative min-h-screen bg-black overflow-hidden">
 
-      <video
-        id="heroBgVideo"
-        data-hls="https://videodelivery.net/4e195dcb6f423b5d4c01e31fbb52bd4f/manifest/video.m3u8"
-        autoplay
-        muted
-        loop
-        playsinline
-        class="js-hls-video absolute inset-0 w-full h-full object-contain opacity-55"
-      ></video>
+  <div class="absolute inset-0 overflow-hidden">
+    <video
+      id="heroBlurVideo"
+      data-hls="https://videodelivery.net/4e195dcb6f423b5d4c01e31fbb52bd4f/manifest/video.m3u8"
+      autoplay
+      muted
+      loop
+      playsinline
+      class="js-hls-video absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-20"
+    ></video>
 
-      <div class="absolute inset-0 bg-black/45"></div>
-    </div>
+    <video
+      id="heroBgVideo"
+      data-hls="https://videodelivery.net/4e195dcb6f423b5d4c01e31fbb52bd4f/manifest/video.m3u8"
+      autoplay
+      muted
+      loop
+      playsinline
+      class="js-hls-video absolute inset-0 w-full h-full object-contain opacity-58"
+    ></video>
 
-    <div class="relative z-10 w-full px-6 flex flex-col items-center justify-center">
-      <p class="sr-only">
-        PROOF gives filmmakers, writers, producers, and creators a free project review and creates cinematic pitch videos, proof-of-concept trailers, sizzle reels, scenes, and visual story assets for projects that need to be seen, understood, funded, packaged, or sold.
-      </p>
+    <div class="absolute inset-0 bg-black/42"></div>
+    <div class="absolute inset-x-0 top-0 h-48 bg-gradient-to-b from-black via-black/70 to-transparent"></div>
+    <div class="absolute inset-x-0 bottom-0 h-[45vh] bg-gradient-to-t from-black via-black/85 to-transparent"></div>
+  </div>
 
-      <h1 class="sr-only">
-        Free Project Review for Film Sizzles, Trailers, Proof-of-Concept Scenes, and Cinematic Pitch Videos
-      </h1>
+  <div class="relative z-10 min-h-screen w-full px-6 flex flex-col items-center justify-center text-center">
+    <p class="sr-only">
+      PROOF gives filmmakers, writers, producers, and creators a free project review and creates cinematic pitch videos, proof-of-concept trailers, sizzle reels, scenes, and visual story assets for projects that need to be seen, understood, funded, packaged, or sold.
+    </p>
 
-      <img
-        src="proof-logo/Proof_Main.png"
-        alt="PROOF cinematic proof-of-concept studio logo"
-        class="mx-auto w-[550px] lg:w-[750px] mb-[-105px]"
-      />
+    <h1 class="sr-only">
+      Free Project Review for Film Sizzles, Trailers, Proof-of-Concept Scenes, and Cinematic Pitch Videos
+    </h1>
 
-      <div class="mt-10 w-full max-w-3xl mx-auto rounded-2xl border border-white/10 bg-black/55 backdrop-blur-md px-6 py-6 shadow-[0_20px_80px_rgba(0,0,0,0.55)]">
-        <p class="text-xl md:text-3xl text-white font-semibold leading-tight tracking-[-0.04em] drop-shadow-[0_2px_18px_rgba(0,0,0,0.95)]">
-          No one says yes to a project they can&rsquo;t picture.
-        </p>
+    <img
+      src="proof-logo/Proof_Main.png"
+      alt="PROOF cinematic proof-of-concept studio logo"
+      class="mx-auto w-[620px] xl:w-[820px] mb-[-85px] translate-y-[-5vh]"
+    />
 
-        <div class="flex flex-row justify-center gap-4 mt-6 w-full max-w-md mx-auto">
-          <a
-            href="project-review.html"
-            class="proof-btn bg-[#0066FF] px-6 py-4 rounded-md font-semibold text-center hover:bg-[#0052cc] transition w-full"
-          >
-            Get Free Review
-          </a>
+    <button
+      id="openVideoModal"
+      type="button"
+      class="mt-3 inline-flex items-center justify-center gap-3 rounded-full border border-white/15 bg-black/50 backdrop-blur-md px-6 py-3 text-white hover:bg-white hover:text-black hover:border-white transition duration-500 group translate-y-[-5vh]"
+    >
+      <span class="relative flex h-4 w-4 items-center justify-center">
+        <span class="absolute inline-flex h-4 w-4 rounded-full bg-[#0066FF] opacity-75 animate-ping"></span>
+        <span class="relative inline-flex rounded-full h-3 w-3 bg-[#0066FF] shadow-[0_0_14px_rgba(0,102,255,0.9)]"></span>
+      </span>
 
-          <a
-            href="#examples"
-            class="proof-btn border border-white px-6 py-4 rounded-md text-white hover:bg-white hover:text-black transition font-semibold text-center w-full"
-          >
-            See Examples
-          </a>
-        </div>
+      <span class="text-xs uppercase tracking-[0.28em] font-semibold text-white/80 group-hover:text-black transition duration-500">
+        Watch Preview
+      </span>
+    </button>
+  </div>
 
-        <button
-          id="openVideoModal"
-          type="button"
-          class="mt-6 mx-auto flex items-center gap-3 group opacity-80 hover:opacity-100 transition duration-500"
-        >
-          <div class="relative flex items-center justify-center">
-            <span class="absolute inline-flex h-3 w-3 rounded-full bg-[#0066FF] opacity-75 animate-ping"></span>
-            <span class="relative inline-flex rounded-full h-3 w-3 bg-[#0066FF] shadow-[0_0_12px_rgba(0,102,255,0.9)]"></span>
+  <div class="absolute inset-x-0 bottom-8 z-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="rounded-2xl border border-white/10 bg-black/62 backdrop-blur-md px-6 py-6 shadow-[0_24px_90px_rgba(0,0,0,0.62)]">
+        <div class="grid grid-cols-12 gap-8 items-center">
+          <div class="col-span-7 text-left">
+            <p class="text-[11px] uppercase tracking-[0.34em] text-[#0066FF] font-semibold mb-3">
+              Start Here
+            </p>
+
+            <h2 class="text-3xl xl:text-4xl text-white font-semibold leading-tight tracking-[-0.045em]">
+              No one says yes to a project they can&rsquo;t picture.
+            </h2>
           </div>
 
-          <p class="text-[11px] uppercase tracking-[0.32em] text-white/70 group-hover:text-white transition duration-500">
-            Watch Preview
-          </p>
-        </button>
+          <div class="col-span-5">
+            <div class="flex flex-row justify-end gap-4 w-full">
+              <a
+                href="project-review.html"
+                class="proof-btn bg-[#0066FF] px-6 py-4 rounded-md font-semibold text-center hover:bg-[#0052cc] transition w-[210px]"
+              >
+                Get Free Review
+              </a>
+
+              <a
+                href="#examples"
+                class="proof-btn border border-white px-6 py-4 rounded-md text-white hover:bg-white hover:text-black transition font-semibold text-center w-[210px]"
+              >
+                See Examples
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+
+</div>
 
   <!-- ===================================================== -->
 <!-- MOBILE HERO -->
