@@ -139,10 +139,10 @@
     window.$crisp=[];
     window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
     (function(){
-      d=document;
-      s=d.createElement("script");
-      s.src="https://client.crisp.chat/l.js";
-      s.async=1;
+      const d = document;
+      const s = d.createElement("script");
+      s.src = "https://client.crisp.chat/l.js";
+      s.async = 1;
       d.getElementsByTagName("head")[0].appendChild(s);
     })();
   </script>
@@ -175,10 +175,6 @@
     body.menu-open,
     body.modal-open {
       overflow: hidden;
-    }
-
-    .proof-blue {
-      color: #0066FF;
     }
 
     .proof-btn {
@@ -218,137 +214,187 @@
       border-top: 1px solid rgba(255,255,255,0.10);
     }
 
-    .hide-scrollbar::-webkit-scrollbar {
-      display: none;
-    }
-
-    .hide-scrollbar {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
-
     /* ===================================================== */
-    /* TRUST MARQUEE */
+    /* WHAT IS PROOF */
     /* ===================================================== */
 
-    .marquee-track {
-      display: flex;
-      width: max-content;
-      animation: marqueeScroll 55s linear infinite;
+    .proof-meaning-section {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 18% 20%, rgba(0,102,255,0.10), transparent 34%),
+        radial-gradient(circle at 88% 32%, rgba(255,255,255,0.045), transparent 30%),
+        #0A0A0A;
     }
 
-    .marquee-track:hover {
-      animation-play-state: paused;
+    .proof-meaning-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px);
+      background-size: 70px 70px;
+      opacity: 0.25;
+      mask-image: radial-gradient(circle at center, black, transparent 76%);
+      pointer-events: none;
     }
 
-    .marquee-group {
+    .proof-meaning-copy {
+      position: relative;
+      z-index: 2;
+    }
+
+    .proof-meaning-panel {
+      position: relative;
+      z-index: 2;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 2rem;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.018)),
+        rgba(17,17,20,0.88);
+      box-shadow:
+        0 0 0 1px rgba(255,255,255,0.025),
+        0 30px 110px rgba(0,0,0,0.52);
+      overflow: hidden;
+    }
+
+    .proof-meaning-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 35% 22%, rgba(0,102,255,0.16), transparent 34%),
+        linear-gradient(180deg, rgba(255,255,255,0.025), transparent 55%);
+      pointer-events: none;
+    }
+
+    .proof-meaning-header {
+      position: relative;
+      z-index: 2;
+      padding: 1.4rem 1.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.10);
       display: flex;
       align-items: center;
-      gap: 120px;
-      padding-right: 120px;
+      justify-content: space-between;
+      gap: 1rem;
     }
 
-    .logo-item {
-      height: 105px;
-      width: auto;
-      opacity: 0.72;
-      filter: grayscale(100%);
-      transition: all 0.5s ease;
-      flex-shrink: 0;
+    .proof-meaning-header p {
+      font-size: 10px;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.46);
     }
 
-    .logo-item:hover {
-      opacity: 1;
-      filter: grayscale(0%);
-      transform: scale(1.06);
+    .proof-meaning-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: rgba(255,255,255,0.52);
+      font-size: 10px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
     }
 
-    @keyframes marqueeScroll {
-      0% {
-        transform: translateX(0);
-      }
-
-      100% {
-        transform: translateX(-50%);
-      }
+    .proof-meaning-status span {
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 999px;
+      background: #0066FF;
+      box-shadow: 0 0 18px rgba(0,102,255,0.9);
     }
 
-    /* ===================================================== */
-    /* PROOFLAB DELTA */
-    /* ===================================================== */
+    .proof-meaning-stack {
+      position: relative;
+      z-index: 2;
+      padding: 1.5rem;
+      display: grid;
+      gap: 0.9rem;
+    }
 
-    .delta-step-indicator {
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      color: rgb(255, 255, 255);
-      background: transparent;
-      border: 0;
-      padding: 0.25rem 0.35rem;
-      cursor: pointer;
+    .proof-meaning-row {
+      position: relative;
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 1.15rem;
+      background: rgba(0,0,0,0.30);
+      padding: 1.1rem;
+      display: grid;
+      grid-template-columns: 0.7fr 1.35fr;
+      gap: 1.2rem;
+      align-items: start;
       transition:
-        color 0.45s ease,
-        opacity 0.45s ease,
-        text-shadow 0.45s ease,
-        transform 0.45s ease;
+        border-color 450ms ease,
+        box-shadow 450ms ease,
+        transform 450ms ease,
+        background 450ms ease;
     }
 
-    .delta-step-indicator:hover,
-    .delta-step-indicator:focus-visible {
+    .proof-meaning-row:hover {
+      transform: translateY(-2px);
+      border-color: rgba(0,102,255,0.38);
+      background:
+        radial-gradient(circle at 20% 20%, rgba(0,102,255,0.12), transparent 38%),
+        rgba(0,0,0,0.38);
+      box-shadow: 0 0 35px rgba(0,102,255,0.12);
+    }
+
+    .proof-meaning-row-main {
+      border-color: rgba(0,102,255,0.42);
+      background:
+        radial-gradient(circle at 22% 20%, rgba(0,102,255,0.18), transparent 38%),
+        rgba(0,0,0,0.42);
+    }
+
+    .proof-meaning-label {
+      font-size: 10px;
+      letter-spacing: 0.30em;
+      text-transform: uppercase;
       color: #0066FF;
-      outline: none;
-      transform: translateY(-1px);
-      text-shadow:
-        0 0 10px rgba(0,102,255,0.75),
-        0 0 22px rgba(0,102,255,0.45);
+      margin-bottom: 0.55rem;
     }
 
-    .delta-step-indicator.active-step {
-      color: #0066FF;
-      text-shadow:
-        0 0 10px rgba(0,102,255,0.70),
-        0 0 22px rgba(0,102,255,0.38);
+    .proof-meaning-title {
+      font-size: 1.65rem;
+      line-height: 1.05;
+      letter-spacing: -0.045em;
     }
 
-    .proof-grab-handle {
-      font-size: 9px;
-      font-weight: 800;
-      letter-spacing: 0.22em;
-      color: #0066FF;
-      text-shadow:
-        0 0 8px rgba(0,102,255,1),
-        0 0 18px rgba(0,102,255,0.85),
-        0 0 32px rgba(0,102,255,0.55);
-      animation: proofGrabPulse 2.2s ease-in-out infinite;
+    .proof-meaning-text {
+      color: rgba(255,255,255,0.62);
+      line-height: 1.65;
+      font-size: 0.95rem;
     }
 
-    .proof-panel {
-      display: block;
+    .proof-meaning-pills {
+      position: relative;
+      z-index: 2;
+      padding: 0 1.5rem 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.9rem;
     }
 
-    .proof-panel.hidden {
-      display: none;
+    .proof-meaning-pill {
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 1rem;
+      background: rgba(255,255,255,0.035);
+      padding: 1rem;
     }
 
-    @keyframes proofGrabPulse {
-      0%, 100% {
-        opacity: 0.72;
-        text-shadow:
-          0 0 8px rgba(0,102,255,0.85),
-          0 0 18px rgba(0,102,255,0.55);
-      }
+    .proof-meaning-pill h3 {
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+    }
 
-      50% {
-        opacity: 1;
-        text-shadow:
-          0 0 10px rgba(0,102,255,1),
-          0 0 24px rgba(0,102,255,0.95),
-          0 0 44px rgba(0,102,255,0.65);
-      }
+    .proof-meaning-pill p {
+      font-size: 0.82rem;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.48);
     }
 
     /* ===================================================== */
-    /* PROOF FIELD GUIDE EXAMPLES */
+    /* FIELD GUIDE */
     /* ===================================================== */
 
     .proof-field-guide {
@@ -753,21 +799,78 @@
     }
 
     /* ===================================================== */
-    /* FAQ */
+    /* HOW IT WORKS */
     /* ===================================================== */
 
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 350ms ease;
+    .proof-process-card {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.016)),
+        #18181B;
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 1rem;
+      transition:
+        transform 500ms ease,
+        border-color 500ms ease,
+        box-shadow 500ms ease,
+        background 500ms ease;
     }
 
-    .faq-item.active .faq-answer {
-      max-height: 260px;
+    .proof-process-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255,255,255,0.22);
+      background:
+        radial-gradient(circle at 20% 10%, rgba(0,102,255,0.14), transparent 36%),
+        linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.018)),
+        #18181B;
+      box-shadow:
+        0 0 45px rgba(0,102,255,0.14),
+        0 20px 70px rgba(0,0,0,0.38);
     }
 
-    .faq-item.active .faq-icon {
-      transform: rotate(45deg);
+    /* ===================================================== */
+    /* TRUST MARQUEE */
+    /* ===================================================== */
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marqueeScroll 55s linear infinite;
+    }
+
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
+
+    .marquee-group {
+      display: flex;
+      align-items: center;
+      gap: 120px;
+      padding-right: 120px;
+    }
+
+    .logo-item {
+      height: 105px;
+      width: auto;
+      opacity: 0.72;
+      filter: grayscale(100%);
+      transition: all 0.5s ease;
+      flex-shrink: 0;
+    }
+
+    .logo-item:hover {
+      opacity: 1;
+      filter: grayscale(0%);
+      transform: scale(1.06);
+    }
+
+    @keyframes marqueeScroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
     }
 
     /* ===================================================== */
@@ -792,6 +895,24 @@
     }
 
     @media (max-width: 768px) {
+      .proof-meaning-row {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+      }
+
+      .proof-meaning-title {
+        font-size: 1.45rem;
+      }
+
+      .proof-meaning-pills {
+        grid-template-columns: 1fr;
+      }
+
+      .proof-meaning-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
       .logo-item {
         height: 82px;
         opacity: 1 !important;
@@ -811,473 +932,145 @@
         display: none;
       }
 
+      .field-guide-grid {
+        display: block;
+      }
+
       .field-shell {
         border-radius: 1.25rem;
       }
 
       .field-cinema {
-        min-height: 360px;
+        min-height: 315px;
       }
 
       .field-cinema-copy {
-        left: 1.25rem;
-        right: 1.25rem;
-        bottom: 1.25rem;
+        left: 1.15rem;
+        right: 1.15rem;
+        bottom: 1.15rem;
+      }
+
+      .field-case-label {
+        margin-bottom: 0.75rem;
+        font-size: 9px;
+        letter-spacing: 0.28em;
       }
 
       .field-active-title {
-        font-size: 4rem;
+        font-size: 3.15rem;
+        line-height: 0.88;
+        margin-bottom: 0.85rem;
       }
 
       .field-active-copy {
-        font-size: 0.94rem;
-        line-height: 1.65;
+        font-size: 0.86rem;
+        line-height: 1.55;
+        max-width: 95%;
+      }
+
+      .field-side {
+        padding: 0.75rem;
+        gap: 0.65rem;
+      }
+
+      .field-side-header {
+        padding: 0.55rem 0.8rem 0.1rem;
+      }
+
+      .field-side-header p {
+        font-size: 9px;
+        letter-spacing: 0.28em;
       }
 
       .field-format-button {
+        border-radius: 0.95rem;
+        padding: 0.72rem 0.85rem;
         transform: none !important;
+      }
+
+      .field-format-button:hover,
+      .field-format-button:focus-visible,
+      .field-format-button.is-active {
+        transform: none;
+      }
+
+      .field-format-top {
+        margin-bottom: 0.28rem;
+      }
+
+      .field-format-label {
+        font-size: 9px;
+        letter-spacing: 0.28em;
+      }
+
+      .field-format-number {
+        font-size: 0.72rem;
+      }
+
+      .field-format-question {
+        font-size: 1rem;
+        line-height: 1.2;
+        margin-bottom: 0;
+      }
+
+      .field-format-use {
+        display: none;
+        margin-top: 0.38rem;
+        font-size: 0.78rem;
+        line-height: 1.45;
+      }
+
+      .field-format-button.is-active .field-format-use {
+        display: block;
       }
 
       .field-definition-card {
         min-height: auto;
+        padding: 1rem;
+        border-radius: 1rem;
+      }
+
+      .field-definition-card::after {
+        display: none;
+      }
+
+      .field-dictionary-kicker {
+        font-size: 8px;
+        letter-spacing: 0.26em;
+        margin-bottom: 0.55rem;
+      }
+
+      .field-dictionary-word {
+        font-size: 1.95rem;
+        margin-bottom: 0.25rem;
+      }
+
+      .field-dictionary-pronunciation {
+        font-size: 0.78rem;
+        margin-bottom: 0.72rem;
+      }
+
+      .field-dictionary-definition {
+        font-size: 0.84rem;
+        line-height: 1.52;
+      }
+
+      .field-dictionary-use {
+        margin-top: 0.75rem;
+        padding-top: 0.7rem;
+        font-size: 0.76rem;
+        line-height: 1.45;
+      }
+
+      .field-definition-footer {
+        align-items: flex-start;
+        gap: 0.75rem;
+      }
+
+      .field-help-text {
+        display: none;
       }
     }
-    /* ===================================================== */
-/* MOBILE FIELD GUIDE TIGHTENING */
-/* ===================================================== */
-
-@media (max-width: 768px) {
-  .field-guide-grid {
-    display: block;
-  }
-
-  .field-cinema {
-    min-height: 315px;
-  }
-
-  .field-cinema-copy {
-    left: 1.15rem;
-    right: 1.15rem;
-    bottom: 1.15rem;
-  }
-
-  .field-case-label {
-    margin-bottom: 0.75rem;
-    font-size: 9px;
-    letter-spacing: 0.28em;
-  }
-
-  .field-active-title {
-    font-size: 3.15rem;
-    line-height: 0.88;
-    margin-bottom: 0.85rem;
-  }
-
-  .field-active-copy {
-    font-size: 0.86rem;
-    line-height: 1.55;
-    max-width: 95%;
-  }
-
-  .field-side {
-    padding: 0.75rem;
-    gap: 0.65rem;
-  }
-
-  .field-side-header {
-    padding: 0.55rem 0.8rem 0.1rem;
-  }
-
-  .field-side-header p {
-    font-size: 9px;
-    letter-spacing: 0.28em;
-  }
-
-  .field-format-button {
-    border-radius: 0.95rem;
-    padding: 0.72rem 0.85rem;
-  }
-
-  .field-format-button:hover,
-  .field-format-button:focus-visible,
-  .field-format-button.is-active {
-    transform: none;
-  }
-
-  .field-format-top {
-    margin-bottom: 0.28rem;
-  }
-
-  .field-format-label {
-    font-size: 9px;
-    letter-spacing: 0.28em;
-  }
-
-  .field-format-number {
-    font-size: 0.72rem;
-  }
-
-  .field-format-question {
-    font-size: 1rem;
-    line-height: 1.2;
-    margin-bottom: 0;
-  }
-
-  .field-format-use {
-    display: none;
-    margin-top: 0.38rem;
-    font-size: 0.78rem;
-    line-height: 1.45;
-  }
-
-  .field-format-button.is-active .field-format-use {
-    display: block;
-  }
-
-  .field-definition-card {
-    min-height: auto;
-    padding: 1rem;
-    border-radius: 1rem;
-  }
-
-  .field-definition-card::after {
-    display: none;
-  }
-
-  .field-dictionary-kicker {
-    font-size: 8px;
-    letter-spacing: 0.26em;
-    margin-bottom: 0.55rem;
-  }
-
-  .field-dictionary-word {
-    font-size: 1.95rem;
-    margin-bottom: 0.25rem;
-  }
-
-  .field-dictionary-pronunciation {
-    font-size: 0.78rem;
-    margin-bottom: 0.72rem;
-  }
-
-  .field-dictionary-definition {
-    font-size: 0.84rem;
-    line-height: 1.52;
-  }
-
-  .field-dictionary-use {
-    margin-top: 0.75rem;
-    padding-top: 0.7rem;
-    font-size: 0.76rem;
-    line-height: 1.45;
-  }
-
-  .field-definition-footer {
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
-
-  .field-help-text {
-    display: none;
-  }
-}
-/* ===================================================== */
-/* PROCESS / TRANSLATION CARDS */
- /* ===================================================== */
-
-.proof-process-card {
-  background:
-    linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.016)),
-    #18181B;
-  border: 1px solid rgba(255,255,255,0.10);
-  border-radius: 1rem;
-  transition:
-    transform 500ms ease,
-    border-color 500ms ease,
-    box-shadow 500ms ease,
-    background 500ms ease;
-}
-
-.proof-process-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(255,255,255,0.22);
-  background:
-    radial-gradient(circle at 20% 10%, rgba(0,102,255,0.14), transparent 36%),
-    linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.018)),
-    #18181B;
-  box-shadow:
-    0 0 45px rgba(0,102,255,0.14),
-    0 20px 70px rgba(0,0,0,0.38);
-}
-
-.proof-translation-map {
-  position: relative;
-  border: 1px solid rgba(255,255,255,0.11);
-  border-radius: 2rem;
-  background:
-    radial-gradient(circle at 18% 20%, rgba(0,102,255,0.13), transparent 34%),
-    linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.018)),
-    rgba(17,17,20,0.92);
-  overflow: hidden;
-  box-shadow:
-    0 0 0 1px rgba(255,255,255,0.025),
-    0 30px 110px rgba(0,0,0,0.50);
-}
-
-.proof-translation-map::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.026) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.026) 1px, transparent 1px);
-  background-size: 54px 54px;
-  mask-image: radial-gradient(circle at center, black, transparent 78%);
-  opacity: 0.34;
-  pointer-events: none;
-}
-
-.proof-translation-map::after {
-  content: "SCRIPT / DECK / IDEA  \2192  VISUAL PROOF  \2192  NEXT CONVERSATION";
-  position: absolute;
-  left: 2rem;
-  right: 2rem;
-  bottom: 1.1rem;
-  color: rgba(255,255,255,0.18);
-  font-size: 10px;
-  letter-spacing: 0.34em;
-  text-transform: uppercase;
-  pointer-events: none;
-}
-
-.translation-node {
-  position: relative;
-  z-index: 2;
-  border: 1px solid rgba(255,255,255,0.10);
-  border-radius: 1.25rem;
-  background: rgba(0,0,0,0.34);
-  backdrop-filter: blur(16px);
-  padding: 1.25rem;
-}
-
-.translation-node-primary {
-  border-color: rgba(0,102,255,0.42);
-  background:
-    radial-gradient(circle at 20% 10%, rgba(0,102,255,0.20), transparent 38%),
-    rgba(0,0,0,0.46);
-  box-shadow:
-    0 0 55px rgba(0,102,255,0.16),
-    inset 0 0 0 1px rgba(0,102,255,0.08);
-}
-
-.translation-arrow {
-  color: rgba(0,102,255,0.85);
-  text-shadow: 0 0 18px rgba(0,102,255,0.65);
-}
-
-@media (max-width: 768px) {
-  .proof-translation-map::after {
-    display: none;
-  }
-}
-/* ===================================================== */
-/* WHAT IS PROOF - CLEAN TRANSLATION SYSTEM */
-/* ===================================================== */
-
-.proof-meaning-section {
-  position: relative;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at 18% 20%, rgba(0,102,255,0.10), transparent 34%),
-    radial-gradient(circle at 88% 32%, rgba(255,255,255,0.045), transparent 30%),
-    #0A0A0A;
-}
-
-.proof-meaning-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px);
-  background-size: 70px 70px;
-  opacity: 0.25;
-  mask-image: radial-gradient(circle at center, black, transparent 76%);
-  pointer-events: none;
-}
-
-.proof-meaning-copy {
-  position: relative;
-  z-index: 2;
-}
-
-.proof-meaning-panel {
-  position: relative;
-  z-index: 2;
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 2rem;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.018)),
-    rgba(17,17,20,0.88);
-  box-shadow:
-    0 0 0 1px rgba(255,255,255,0.025),
-    0 30px 110px rgba(0,0,0,0.52);
-  overflow: hidden;
-}
-
-.proof-meaning-panel::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 35% 22%, rgba(0,102,255,0.16), transparent 34%),
-    linear-gradient(180deg, rgba(255,255,255,0.025), transparent 55%);
-  pointer-events: none;
-}
-
-.proof-meaning-header {
-  position: relative;
-  z-index: 2;
-  padding: 1.4rem 1.5rem;
-  border-bottom: 1px solid rgba(255,255,255,0.10);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.proof-meaning-header p {
-  font-size: 10px;
-  letter-spacing: 0.34em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.46);
-}
-
-.proof-meaning-status {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: rgba(255,255,255,0.52);
-  font-size: 10px;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-}
-
-.proof-meaning-status span {
-  width: 0.5rem;
-  height: 0.5rem;
-  border-radius: 999px;
-  background: #0066FF;
-  box-shadow: 0 0 18px rgba(0,102,255,0.9);
-}
-
-.proof-meaning-stack {
-  position: relative;
-  z-index: 2;
-  padding: 1.5rem;
-  display: grid;
-  gap: 0.9rem;
-}
-
-.proof-meaning-row {
-  position: relative;
-  border: 1px solid rgba(255,255,255,0.10);
-  border-radius: 1.15rem;
-  background: rgba(0,0,0,0.30);
-  padding: 1.1rem;
-  display: grid;
-  grid-template-columns: 0.7fr 1.35fr;
-  gap: 1.2rem;
-  align-items: start;
-  transition:
-    border-color 450ms ease,
-    box-shadow 450ms ease,
-    transform 450ms ease,
-    background 450ms ease;
-}
-
-.proof-meaning-row:hover {
-  transform: translateY(-2px);
-  border-color: rgba(0,102,255,0.38);
-  background:
-    radial-gradient(circle at 20% 20%, rgba(0,102,255,0.12), transparent 38%),
-    rgba(0,0,0,0.38);
-  box-shadow: 0 0 35px rgba(0,102,255,0.12);
-}
-
-.proof-meaning-row-main {
-  border-color: rgba(0,102,255,0.42);
-  background:
-    radial-gradient(circle at 22% 20%, rgba(0,102,255,0.18), transparent 38%),
-    rgba(0,0,0,0.42);
-}
-
-.proof-meaning-label {
-  font-size: 10px;
-  letter-spacing: 0.30em;
-  text-transform: uppercase;
-  color: #0066FF;
-  margin-bottom: 0.55rem;
-}
-
-.proof-meaning-title {
-  font-size: 1.65rem;
-  line-height: 1.05;
-  letter-spacing: -0.045em;
-}
-
-.proof-meaning-text {
-  color: rgba(255,255,255,0.62);
-  line-height: 1.65;
-  font-size: 0.95rem;
-}
-
-.proof-meaning-pills {
-  position: relative;
-  z-index: 2;
-  padding: 0 1.5rem 1.5rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.9rem;
-}
-
-.proof-meaning-pill {
-  border: 1px solid rgba(255,255,255,0.10);
-  border-radius: 1rem;
-  background: rgba(255,255,255,0.035);
-  padding: 1rem;
-}
-
-.proof-meaning-pill h3 {
-  font-size: 1rem;
-  margin-bottom: 0.35rem;
-}
-
-.proof-meaning-pill p {
-  font-size: 0.82rem;
-  line-height: 1.5;
-  color: rgba(255,255,255,0.48);
-}
-
-@media (max-width: 768px) {
-  .proof-meaning-row {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
-  }
-
-  .proof-meaning-title {
-    font-size: 1.45rem;
-  }
-
-  .proof-meaning-pills {
-    grid-template-columns: 1fr;
-  }
-
-  .proof-meaning-header {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-}
   </style>
 </head>
 
@@ -1288,7 +1081,6 @@
 <!-- ===================================================== -->
 <header class="fixed top-0 w-full bg-black/70 backdrop-blur z-50">
   <div class="max-w-6xl mx-auto flex justify-between items-center py-3 px-4">
-
     <a href="index.html" aria-label="PROOF home" class="block">
       <img
         src="proof-logo/Proof_header_good.png"
@@ -1298,13 +1090,14 @@
     </a>
 
     <button
-  id="menuBtn"
-  class="md:hidden text-white text-3xl leading-none w-10 h-10 flex items-center justify-center"
-  aria-label="Open menu"
-  aria-expanded="false"
->
-  <span id="menuIcon" aria-hidden="true">&#9776;</span>
-</button>
+      id="menuBtn"
+      class="md:hidden text-white text-3xl leading-none w-10 h-10 flex items-center justify-center"
+      aria-label="Open menu"
+      aria-expanded="false"
+      type="button"
+    >
+      <span id="menuIcon" aria-hidden="true">&#9776;</span>
+    </button>
 
     <nav class="hidden md:flex space-x-5 text-sm text-white">
       <a href="index.html#project-fit-review" class="hover:text-gray-300">Free Review</a>
@@ -1316,7 +1109,6 @@
       <a href="development.html" class="hover:text-gray-300">PROOF: Dev</a>
       <a href="project-review.html" class="text-[#0066FF]">Get Reviewed</a>
     </nav>
-
   </div>
 
   <div id="mobileMenu" class="hidden md:hidden bg-black text-center py-6 flex flex-col items-center gap-4">
@@ -1390,7 +1182,6 @@
 <!-- HERO -->
 <!-- ===================================================== -->
 <section class="relative overflow-hidden bg-black">
-
   <div class="hidden lg:flex relative min-h-screen items-center justify-center text-center overflow-hidden">
     <div class="absolute inset-0 overflow-hidden">
       <video
@@ -1536,7 +1327,6 @@
       </div>
     </div>
   </div>
-
 </section>
 
 <!-- ===================================================== -->
@@ -1564,6 +1354,126 @@
     ></video>
   </div>
 </div>
+
+<!-- ===================================================== -->
+<!-- WHAT IS PROOF -->
+<!-- ===================================================== -->
+<section id="what-is-proof" class="proof-section-border proof-meaning-section py-24">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-5 proof-meaning-copy">
+        <p class="proof-eyebrow mb-5">
+          What Is PROOF?
+        </p>
+
+        <h2 class="text-3xl md:text-5xl leading-tight mb-6">
+          PROOF turns the thing you keep explaining into the thing they can finally see.
+        </h2>
+
+        <p class="text-gray-300 text-lg leading-relaxed">
+          A script can be strong. A deck can be beautiful. But if the person across from you cannot feel the project quickly, the pitch stalls. PROOF creates the visual bridge between your materials and the next yes.
+        </p>
+      </div>
+
+      <div class="lg:col-span-7">
+        <div class="proof-meaning-panel">
+          <div class="proof-meaning-header">
+            <p>
+              Translation System
+            </p>
+
+            <div class="proof-meaning-status">
+              <span></span>
+              Active
+            </div>
+          </div>
+
+          <div class="proof-meaning-stack">
+            <div class="proof-meaning-row">
+              <div>
+                <p class="proof-meaning-label">
+                  Input
+                </p>
+
+                <h3 class="proof-meaning-title">
+                  Script. Deck. Idea. Scene.
+                </h3>
+              </div>
+
+              <p class="proof-meaning-text">
+                The raw material already exists. The problem is that it still requires the other person to imagine too much, too quickly.
+              </p>
+            </div>
+
+            <div class="proof-meaning-row proof-meaning-row-main">
+              <div>
+                <p class="proof-meaning-label">
+                  PROOF
+                </p>
+
+                <h3 class="proof-meaning-title">
+                  Tone, world, pace, stakes, emotion.
+                </h3>
+              </div>
+
+              <p class="proof-meaning-text">
+                We extract what matters and shape it into cinematic visual proof: not just motion, but a clearer feeling of what the project is and why it should exist.
+              </p>
+            </div>
+
+            <div class="proof-meaning-row">
+              <div>
+                <p class="proof-meaning-label">
+                  Output
+                </p>
+
+                <h3 class="proof-meaning-title">
+                  A stronger next conversation.
+                </h3>
+              </div>
+
+              <p class="proof-meaning-text">
+                The asset gives producers, investors, collaborators, talent, or audiences something to react to instead of something they have to decode.
+              </p>
+            </div>
+          </div>
+
+          <div class="proof-meaning-pills">
+            <div class="proof-meaning-pill">
+              <h3>
+                Not raw AI output.
+              </h3>
+
+              <p>
+                Raw generation is not enough. Pacing, continuity, emotion, and clarity still need direction.
+              </p>
+            </div>
+
+            <div class="proof-meaning-pill">
+              <h3>
+                Not a full production.
+              </h3>
+
+              <p>
+                You may not need a crew or finished film yet. You may need proof that the project can work.
+              </p>
+            </div>
+
+            <div class="proof-meaning-pill">
+              <h3>
+                Built for action.
+              </h3>
+
+              <p>
+                The asset should help someone understand faster and make the next yes easier.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ===================================================== -->
 <!-- PAIN / PROJECT STUCK -->
@@ -1682,20 +1592,20 @@
         </div>
 
         <div class="flex flex-col sm:flex-row gap-4">
-  <a
-    href="project-review.html"
-    class="proof-btn inline-flex items-center justify-center bg-[#0066FF] px-7 py-4 rounded-md font-semibold text-center hover:bg-[#0052cc] transition w-full sm:w-[220px]"
-  >
-    Request Free Review
-  </a>
+          <a
+            href="project-review.html"
+            class="proof-btn inline-flex items-center justify-center bg-[#0066FF] px-7 py-4 rounded-md font-semibold text-center hover:bg-[#0052cc] transition w-full sm:w-[220px]"
+          >
+            Request Free Review
+          </a>
 
-  <a
-    href="products.html"
-    class="inline-flex items-center justify-center border border-white px-7 py-4 rounded-md text-white hover:bg-white hover:text-black transition font-semibold text-center w-full sm:w-[220px]"
-  >
-    See Product Page
-  </a>
-</div>
+          <a
+            href="products.html"
+            class="inline-flex items-center justify-center border border-white px-7 py-4 rounded-md text-white hover:bg-white hover:text-black transition font-semibold text-center w-full sm:w-[220px]"
+          >
+            See Product Page
+          </a>
+        </div>
       </div>
 
       <div class="lg:col-span-5">
@@ -1746,489 +1656,6 @@
             </p>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================================================== -->
-<!-- TRUST / PROOFLAB DELTA -->
-<!-- ===================================================== -->
-<section class="py-28 border-t border-white/10 bg-[#0A0A0A] overflow-x-hidden">
-  <div class="relative mb-28">
-    <div class="relative overflow-hidden py-2">
-      <div class="absolute left-0 top-0 h-full w-24 md:w-40 z-20 bg-[#0A0A0A]"></div>
-      <div class="absolute right-0 top-0 h-full w-24 md:w-40 z-20 bg-[#0A0A0A]"></div>
-      <div class="absolute left-24 md:left-40 top-0 h-full w-20 z-20 bg-gradient-to-r from-[#0A0A0A] to-transparent pointer-events-none"></div>
-      <div class="absolute right-24 md:right-40 top-0 h-full w-20 z-20 bg-gradient-to-l from-[#0A0A0A] to-transparent pointer-events-none"></div>
-
-      <p class="text-xs uppercase tracking-[0.35em] text-gray-500 text-center mb-10 relative z-30">
-        Built For Projects That Need To Be Seen
-      </p>
-
-      <div class="overflow-hidden whitespace-nowrap">
-        <div class="marquee-track">
-          <div class="marquee-group">
-            <img src="logos/georgia-film-society.png" alt="Georgia Film Society" class="logo-item" />
-            <img src="logos/freckles.png" alt="Freckles" class="logo-item" />
-            <img src="logos/alex.png" alt="Alex Montgomery" class="logo-item" />
-            <img src="logos/eighty-west.jpg" alt="Eighty-West Studios" class="logo-item" />
-            <img src="logos/lumen.png" alt="Lumen" class="logo-item" />
-          </div>
-
-          <div class="marquee-group">
-            <img src="logos/bad-bella.png" alt="Bad Bella Films" class="logo-item" />
-            <img src="logos/nora.png" alt="Nora Bradford" class="logo-item" />
-            <img src="logos/launchbox.png" alt="Story LaunchBox" class="logo-item" />
-            <img src="logos/porchlight.png" alt="Porchlight" class="logo-item" />
-            <img src="logos/riley.png" alt="Riley Morgan" class="logo-item" />
-          </div>
-
-          <div class="marquee-group">
-            <img src="logos/brookhaven.png" alt="Brookhaven" class="logo-item" />
-            <img src="logos/kris-shuman.png" alt="Kris Shuman" class="logo-item" />
-            <img src="logos/taylor.png" alt="Taylor Reese" class="logo-item" />
-            <img src="logos/georgia-film-society.png" alt="Georgia Film Society" class="logo-item" />
-            <img src="logos/birch.png" alt="Simon Birch" class="logo-item" />
-          </div>
-
-          <div class="marquee-group">
-            <img src="logos/eighty-west.jpg" alt="Eighty-West Studios" class="logo-item" />
-            <img src="logos/eliot.png" alt="Elliot Gray" class="logo-item" />
-            <img src="logos/bad-bella.png" alt="Bad Bella Films" class="logo-item" />
-            <img src="logos/launchbox.png" alt="Story LaunchBox" class="logo-item" />
-            <img src="logos/kris-shuman.png" alt="Kris Shuman" class="logo-item" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="relative z-30 mt-16 px-6">
-      <div class="max-w-3xl mx-auto text-center">
-        <div
-          id="testimonialContainer"
-          class="transition-opacity duration-1000 opacity-100"
-        >
-          <p
-            id="testimonialQuote"
-            class="text-xl md:text-2xl leading-relaxed text-white italic mb-6"
-          >
-            &ldquo;Instead of explaining the vision, we could finally show it.&rdquo;
-          </p>
-
-          <p
-            id="testimonialAuthor"
-            class="text-xs uppercase tracking-[0.3em] text-gray-500"
-          >
-            &mdash; Development Client
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="w-full border-t border-white/10 my-24"></div>
-
-  <!-- ===================================================== -->
-<!-- PROOFLAB DELTA -->
-<!-- ===================================================== -->
-<div id="prooflab-delta" class="max-w-7xl mx-auto px-4">
-  <div class="max-w-4xl mx-auto text-center mb-16">
-    <p class="text-xs uppercase tracking-[0.35em] text-[#0066FF] mb-5">
-      The ProofLab Delta
-    </p>
-
-    <h3 class="text-3xl md:text-5xl leading-tight mb-6">
-      Raw output is not enough. Your pitch needs something people can
-      <span class="text-[#0066FF]">actually understand.</span>
-    </h3>
-
-    <p class="text-gray-300 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
-      ProofLab turns rough concepts, scripts, and generated material into cinematic proof that carries tone, pacing, emotion, and story clarity.
-    </p>
-  </div>
-
-    <div class="hidden lg:block">
-      <div class="grid grid-cols-12 gap-10 items-start">
-        <div class="col-span-7">
-          <div class="group relative rounded-3xl overflow-hidden border border-white/10 bg-[#111111] transition-all duration-700 hover:border-white/15 hover:-translate-y-[2px] hover:shadow-[0_20px_80px_rgba(0,0,0,0.55)]">
-            <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 pointer-events-none mix-blend-screen bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.025),transparent_58%)]"></div>
-
-            <div class="proof-panel active-panel" data-panel="1">
-              <div class="aspect-[16/9] relative overflow-hidden">
-                <img
-                  src="images/panel-1.png"
-                  alt="Raw Script"
-                  class="absolute inset-0 w-full h-full object-cover opacity-80 transition-transform duration-[7000ms] ease-out group-hover:scale-[1.03]"
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
-                <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 bg-[radial-gradient(circle_at_center,rgba(255,245,220,0.04),transparent_65%)]"></div>
-              </div>
-            </div>
-
-            <div class="proof-panel hidden" data-panel="2">
-              <div class="aspect-[16/9] relative overflow-hidden">
-                <img
-                  src="images/panel-2.png"
-                  alt="Raw Machine Generation"
-                  class="absolute inset-0 w-full h-full object-cover opacity-82 contrast-[1.03] saturate-[0.92] transition-transform duration-[7000ms] ease-out group-hover:scale-[1.02]"
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
-                <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-[radial-gradient(circle_at_center,rgba(255,0,0,0.035),transparent_70%)]"></div>
-              </div>
-            </div>
-
-            <div class="proof-panel hidden" data-panel="3">
-              <div class="aspect-[16/9] relative overflow-hidden">
-                <video
-                  id="proofDeltaVideo1"
-                  data-hls="https://videodelivery.net/c0f6d21e6379b577d5933cfdda621c9c/manifest/video.m3u8"
-                  autoplay
-                  muted
-                  loop
-                  playsinline
-                  preload="auto"
-                  class="js-hls-video absolute inset-0 w-full h-full object-cover opacity-100 contrast-[1.04] saturate-[0.96]"
-                ></video>
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/3 to-transparent"></div>
-                <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 bg-[radial-gradient(circle_at_center,rgba(0,102,255,0.03),transparent_65%)]"></div>
-              </div>
-            </div>
-
-            <div class="proof-panel hidden" data-panel="4">
-              <div
-                id="proofComparisonDesktop"
-                class="aspect-[16/9] relative overflow-hidden bg-black select-none"
-              >
-                <video
-                  id="proofRawVideoDesktop"
-                  data-hls="https://videodelivery.net/b0cb9d42d534c412cb74dc954380b426/manifest/video.m3u8"
-                  autoplay
-                  muted
-                  loop
-                  playsinline
-                  preload="auto"
-                  class="js-hls-video absolute inset-0 w-full h-full object-cover contrast-[0.9] saturate-[0.72] brightness-[0.92] blur-[0.4px]"
-                ></video>
-
-                <div
-                  id="genericLabelDesktop"
-                  class="absolute top-5 right-5 z-10 text-[10px] uppercase tracking-[0.3em] text-white/45 transition-opacity duration-500 pointer-events-none"
-                >
-                  Raw Output
-                </div>
-
-                <div
-                  id="proofRevealDesktop"
-                  class="absolute inset-y-0 left-0 overflow-hidden z-30"
-                  style="width:50%;"
-                >
-                  <video
-                    id="proofCinematicVideoDesktop"
-                    data-hls="https://videodelivery.net/1a90159d735dc26353423b43d11dade8/manifest/video.m3u8"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
-                    preload="auto"
-                    class="js-hls-video absolute inset-0 w-full h-full object-cover contrast-[1.06] saturate-[1.08] brightness-[0.98]"
-                  ></video>
-
-                  <div
-                    class="absolute top-5 left-5 z-40 text-[10px] uppercase tracking-[0.3em] text-[#0066FF] pointer-events-none"
-                  >
-                    ProofLab
-                  </div>
-                </div>
-
-                <div
-                  id="proofSliderDesktop"
-                  class="absolute top-0 bottom-0 z-30 w-[2px] bg-[#0066FF] shadow-[0_0_18px_rgba(0,102,255,0.45)] hover:shadow-[0_0_24px_rgba(0,102,255,0.38)] cursor-ew-resize transition-shadow duration-300"
-                  style="left:50%; transform:translateX(-1px);"
-                >
-                  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-10 rounded-full border border-[#0066FF]/50 bg-black/70 backdrop-blur flex items-center justify-center shadow-[0_0_24px_rgba(0,102,255,0.45)]">
-                    <span class="proof-grab-handle">
-                      GRAB
-                    </span>
-                  </div>
-                </div>
-
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-black/5 to-transparent pointer-events-none"></div>
-                <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.018),transparent_68%)]"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex justify-center mt-5">
-            <div class="flex items-center gap-10 select-none">
-              <button
-                type="button"
-                class="delta-step-indicator active-step"
-                data-step="1"
-                aria-label="Show ProofLab Delta step 1"
-                aria-pressed="true"
-              >
-                1
-              </button>
-
-              <button
-                type="button"
-                class="delta-step-indicator"
-                data-step="2"
-                aria-label="Show ProofLab Delta step 2"
-                aria-pressed="false"
-              >
-                2
-              </button>
-
-              <button
-                type="button"
-                class="delta-step-indicator"
-                data-step="3"
-                aria-label="Show ProofLab Delta step 3"
-                aria-pressed="false"
-              >
-                3
-              </button>
-
-              <button
-                type="button"
-                class="delta-step-indicator"
-                data-step="4"
-                aria-label="Show ProofLab Delta step 4"
-                aria-pressed="false"
-              >
-                4
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-span-5">
-          <div class="min-h-[420px] flex flex-col justify-between">
-            <div>
-              <p
-                id="desktopStepLabel"
-                class="text-xs uppercase tracking-[0.35em] text-[#0066FF] mb-6"
-              >
-                Step 01
-              </p>
-
-              <h4
-                id="desktopStepTitle"
-                class="text-4xl leading-tight mb-6"
-              >
-                The Project On Paper
-              </h4>
-
-              <p
-                id="desktopStepDescription"
-                class="text-gray-300 leading-relaxed text-lg"
-              >
-                A script, deck, or concept can be strong and still fail to make someone see the project fast enough to move.
-              </p>
-            </div>
-
-            <div class="mt-12">
-              <button
-                id="nextProofStep"
-                type="button"
-                class="group inline-flex items-center gap-4 px-7 py-4 rounded-full bg-[#0066FF] text-white transition duration-500 hover:bg-[#0052cc] hover:shadow-[0_0_40px_rgba(0,102,255,0.22)]"
-              >
-                <span class="text-sm uppercase tracking-[0.2em]">
-                  Next Step
-                </span>
-
-                <span class="text-xl transition-transform duration-500 group-hover:translate-x-1">
-                  &rarr;
-                </span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- MOBILE PROOFLAB -->
-    <div class="lg:hidden">
-      <div
-        id="mobileProofCarousel"
-        class="flex overflow-x-auto snap-x snap-mandatory gap-5 pb-6 hide-scrollbar"
-      >
-        <div class="min-w-[92vw] snap-center">
-          <div class="group rounded-3xl overflow-hidden border border-white/10 bg-[#111111] transition-all duration-700 hover:border-white/15 hover:shadow-[0_16px_60px_rgba(0,0,0,0.45)]">
-            <div class="aspect-[16/9] relative overflow-hidden">
-              <img
-                src="images/panel-1.png"
-                alt="Raw Script"
-                class="absolute inset-0 w-full h-full object-cover opacity-80 transition-transform duration-[7000ms] ease-out group-hover:scale-[1.03]"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
-            </div>
-
-            <div class="p-8">
-              <p class="text-xs uppercase tracking-[0.35em] text-[#0066FF] mb-5">
-                Step 01
-              </p>
-
-              <h4 class="text-3xl mb-5">
-                The Project On Paper
-              </h4>
-
-              <p class="text-gray-300 leading-relaxed">
-                A script, deck, or concept can be strong and still fail to make someone see the project fast enough to move.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="min-w-[92vw] snap-center">
-          <div class="group rounded-3xl overflow-hidden border border-red-500/20 bg-[#111111] transition-all duration-700 hover:border-red-400/30 hover:shadow-[0_18px_70px_rgba(0,0,0,0.5)]">
-            <div class="aspect-[16/9] relative overflow-hidden">
-              <img
-                src="images/panel-2.png"
-                alt="Raw Machine Generation"
-                class="absolute inset-0 w-full h-full object-cover opacity-82 contrast-[1.03] saturate-[0.92] transition-transform duration-[7000ms] ease-out group-hover:scale-[1.02]"
-              />
-              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
-            </div>
-
-            <div class="p-8">
-              <p class="text-xs uppercase tracking-[0.35em] text-red-400 mb-5">
-                Step 02
-              </p>
-
-              <h4 class="text-3xl mb-5">
-                Raw Output
-              </h4>
-
-              <p class="text-gray-300 leading-relaxed">
-                Raw AI output can create motion, but it often lacks continuity, intention, emotional weight, and cinematic clarity.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="min-w-[92vw] snap-center">
-          <div class="group rounded-3xl overflow-hidden border border-white/10 bg-[#111111] transition-all duration-700 hover:border-[#0066FF]/20 hover:shadow-[0_20px_80px_rgba(0,102,255,0.08)]">
-            <div class="aspect-[16/9] relative overflow-hidden">
-              <video
-                id="proofDeltaVideo1Mobile"
-                data-hls="https://videodelivery.net/c0f6d21e6379b577d5933cfdda621c9c/manifest/video.m3u8"
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="auto"
-                class="js-hls-video absolute inset-0 w-full h-full object-cover opacity-100 contrast-[1.04] saturate-[0.96]"
-              ></video>
-              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
-            </div>
-
-            <div class="p-8">
-              <p class="text-xs uppercase tracking-[0.35em] text-[#0066FF] mb-5">
-                Step 03
-              </p>
-
-              <h4 class="text-3xl mb-5">
-                The ProofLab System
-              </h4>
-
-              <p class="text-gray-300 leading-relaxed">
-                PROOF refines pacing, shot language, continuity, atmosphere, sound, and emotional clarity.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="min-w-[92vw] snap-center">
-          <div class="group rounded-3xl overflow-hidden border border-[#0066FF]/20 bg-[#111111] transition-all duration-700 hover:border-white/20 hover:shadow-[0_20px_80px_rgba(255,255,255,0.04)]">
-            <div
-              id="proofComparisonMobile"
-              class="aspect-[16/9] relative overflow-hidden bg-black select-none"
-            >
-              <video
-                id="proofRawVideoMobile"
-                data-hls="https://videodelivery.net/b0cb9d42d534c412cb74dc954380b426/manifest/video.m3u8"
-                autoplay
-                muted
-                loop
-                playsinline
-                preload="auto"
-                class="js-hls-video absolute inset-0 w-full h-full object-cover contrast-[0.9] saturate-[0.72] brightness-[0.92] blur-[0.4px]"
-              ></video>
-
-              <div
-                id="genericLabelMobile"
-                class="absolute top-5 right-5 z-10 text-[10px] uppercase tracking-[0.3em] text-white/45 transition-opacity duration-500 pointer-events-none"
-              >
-                Raw Output
-              </div>
-
-              <div
-                id="proofRevealMobile"
-                class="absolute inset-y-0 left-0 overflow-hidden z-30"
-                style="width:50%;"
-              >
-                <video
-                  id="proofCinematicVideoMobile"
-                  data-hls="https://videodelivery.net/1a90159d735dc26353423b43d11dade8/manifest/video.m3u8"
-                  autoplay
-                  muted
-                  loop
-                  playsinline
-                  preload="auto"
-                  class="js-hls-video absolute inset-0 w-full h-full object-cover contrast-[1.06] saturate-[1.08] brightness-[0.98]"
-                ></video>
-
-                <div
-                  class="absolute top-5 left-5 z-40 text-[10px] uppercase tracking-[0.3em] text-[#0066FF] pointer-events-none"
-                >
-                  ProofLab
-                </div>
-              </div>
-
-              <div
-  id="proofSliderMobile"
-  class="absolute top-0 bottom-0 z-30 w-[2px] bg-[#0066FF] shadow-[0_0_18px_rgba(0,102,255,0.65)] pointer-events-none"
-  style="left:50%; transform:translateX(-1px);"
-  aria-hidden="true"
->
-
-  <!-- MOBILE AUTO-SWEEP GLOW ONLY - NOT INTERACTIVE -->
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-16 rounded-full bg-[#0066FF]/45 blur-[1px] shadow-[0_0_26px_rgba(0,102,255,0.75)]"></div>
-
-</div>
-
-              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/5 to-transparent pointer-events-none"></div>
-            </div>
-
-            <div class="p-8">
-              <p class="text-xs uppercase tracking-[0.35em] text-emerald-400 mb-5">
-                Final Output
-              </p>
-
-              <h4 class="text-3xl mb-5">
-                Cinematic Proof
-              </h4>
-
-              <p class="text-gray-300 leading-relaxed">
-                The final asset helps people understand tone, execution, emotional stakes, and marketable identity faster.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="flex items-center justify-center gap-3 mt-6">
-        <button class="proof-dot w-2 h-2 rounded-full bg-[#0066FF] transition-all duration-300" aria-label="ProofLab step 1"></button>
-        <button class="proof-dot w-2 h-2 rounded-full bg-white/20 transition-all duration-300" aria-label="ProofLab step 2"></button>
-        <button class="proof-dot w-2 h-2 rounded-full bg-white/20 transition-all duration-300" aria-label="ProofLab step 3"></button>
-        <button class="proof-dot w-2 h-2 rounded-full bg-white/20 transition-all duration-300" aria-label="ProofLab step 4"></button>
-      </div>
-
-      <div class="flex items-center justify-center gap-3 mt-6 text-xs uppercase tracking-[0.3em] text-gray-500">
-        <span>Swipe</span>
       </div>
     </div>
   </div>
@@ -2425,11 +1852,8 @@
 <!-- HOW IT WORKS -->
 <!-- ===================================================== -->
 <section id="how-it-works" class="proof-section-border py-24 bg-black">
-
   <div class="max-w-6xl mx-auto px-4">
-
     <div class="max-w-4xl mx-auto text-center mb-14">
-
       <p class="proof-eyebrow mb-5">
         How It Works
       </p>
@@ -2441,13 +1865,10 @@
       <p class="text-gray-300 text-lg leading-relaxed">
         The goal is not to make you shop. The goal is to tell you what your project needs next.
       </p>
-
     </div>
 
     <div class="grid md:grid-cols-4 gap-6">
-
       <div class="proof-process-card p-7">
-
         <p class="text-xs uppercase tracking-[0.35em] text-[#0066FF] mb-6">
           Step 01
         </p>
@@ -2459,11 +1880,9 @@
         <p class="text-gray-400 leading-relaxed">
           Submit the logline, deck, script, scene, treatment, or short summary.
         </p>
-
       </div>
 
       <div class="proof-process-card p-7">
-
         <p class="text-xs uppercase tracking-[0.35em] text-[#0066FF] mb-6">
           Step 02
         </p>
@@ -2475,11 +1894,9 @@
         <p class="text-gray-400 leading-relaxed">
           We look at the pitch goal, stage, hook, tone, and what needs to be shown.
         </p>
-
       </div>
 
       <div class="proof-process-card p-7">
-
         <p class="text-xs uppercase tracking-[0.35em] text-[#0066FF] mb-6">
           Step 03
         </p>
@@ -2491,11 +1908,9 @@
         <p class="text-gray-400 leading-relaxed">
           We tell you whether a sizzle, trailer, scene, or custom proof path makes sense.
         </p>
-
       </div>
 
       <div class="proof-process-card p-7">
-
         <p class="text-xs uppercase tracking-[0.35em] text-[#0066FF] mb-6">
           Step 04
         </p>
@@ -2507,163 +1922,9 @@
         <p class="text-gray-400 leading-relaxed">
           Move forward, wait, revise, or use the recommendation however you want.
         </p>
-
       </div>
-
     </div>
-
   </div>
-
-</section>
-
-<!-- ===================================================== -->
-<!-- WHAT IS PROOF -->
-<!-- ===================================================== -->
-<section id="what-is-proof" class="proof-section-border proof-meaning-section py-24">
-
-  <div class="max-w-6xl mx-auto px-4">
-
-    <div class="grid lg:grid-cols-12 gap-12 items-center">
-
-      <div class="lg:col-span-5 proof-meaning-copy">
-
-        <p class="proof-eyebrow mb-5">
-          What Is PROOF?
-        </p>
-
-        <h2 class="text-3xl md:text-5xl leading-tight mb-6">
-          PROOF turns the thing you keep explaining into the thing they can finally see.
-        </h2>
-
-        <p class="text-gray-300 text-lg leading-relaxed">
-          A script can be strong. A deck can be beautiful. But if the person across from you cannot feel the project quickly, the pitch stalls. PROOF creates the visual bridge between your materials and the next yes.
-        </p>
-
-      </div>
-
-      <div class="lg:col-span-7">
-
-        <div class="proof-meaning-panel">
-
-          <div class="proof-meaning-header">
-
-            <p>
-              Translation System
-            </p>
-
-            <div class="proof-meaning-status">
-              <span></span>
-              Active
-            </div>
-
-          </div>
-
-          <div class="proof-meaning-stack">
-
-            <div class="proof-meaning-row">
-
-              <div>
-                <p class="proof-meaning-label">
-                  Input
-                </p>
-
-                <h3 class="proof-meaning-title">
-                  Script. Deck. Idea. Scene.
-                </h3>
-              </div>
-
-              <p class="proof-meaning-text">
-                The raw material already exists. The problem is that it still requires the other person to imagine too much, too quickly.
-              </p>
-
-            </div>
-
-            <div class="proof-meaning-row proof-meaning-row-main">
-
-              <div>
-                <p class="proof-meaning-label">
-                  PROOF
-                </p>
-
-                <h3 class="proof-meaning-title">
-                  Tone, world, pace, stakes, emotion.
-                </h3>
-              </div>
-
-              <p class="proof-meaning-text">
-                We extract what matters and shape it into cinematic visual proof: not just motion, but a clearer feeling of what the project is and why it should exist.
-              </p>
-
-            </div>
-
-            <div class="proof-meaning-row">
-
-              <div>
-                <p class="proof-meaning-label">
-                  Output
-                </p>
-
-                <h3 class="proof-meaning-title">
-                  A stronger next conversation.
-                </h3>
-              </div>
-
-              <p class="proof-meaning-text">
-                The asset gives producers, investors, collaborators, talent, or audiences something to react to instead of something they have to decode.
-              </p>
-
-            </div>
-
-          </div>
-
-          <div class="proof-meaning-pills">
-
-            <div class="proof-meaning-pill">
-
-              <h3>
-                Not raw AI output.
-              </h3>
-
-              <p>
-                Raw generation is not enough. Pacing, continuity, emotion, and clarity still need direction.
-              </p>
-
-            </div>
-
-            <div class="proof-meaning-pill">
-
-              <h3>
-                Not a full production.
-              </h3>
-
-              <p>
-                You may not need a crew or finished film yet. You may need proof that the project can work.
-              </p>
-
-            </div>
-
-            <div class="proof-meaning-pill">
-
-              <h3>
-                Built for action.
-              </h3>
-
-              <p>
-                The asset should help someone understand faster and make the next yes easier.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
 </section>
 
 <!-- ===================================================== -->
@@ -2684,27 +1945,104 @@
     </p>
 
     <div class="flex flex-col sm:flex-row justify-center gap-4">
-  <a
-    href="project-review.html"
-    class="proof-btn inline-flex items-center justify-center bg-[#0066FF] px-8 py-4 rounded-md font-semibold text-center hover:bg-[#0052cc] transition w-full sm:w-[260px]"
-  >
-    Get Free Project Review
-  </a>
+      <a
+        href="project-review.html"
+        class="proof-btn inline-flex items-center justify-center bg-[#0066FF] px-8 py-4 rounded-md font-semibold text-center hover:bg-[#0052cc] transition w-full sm:w-[260px]"
+      >
+        Get Free Project Review
+      </a>
 
-  <a
-    href="products.html"
-    class="inline-flex items-center justify-center border border-white px-8 py-4 rounded-md text-white hover:bg-white hover:text-black transition font-semibold text-center w-full sm:w-[260px]"
-  >
-    View Products
-  </a>
-</div>
+      <a
+        href="products.html"
+        class="inline-flex items-center justify-center border border-white px-8 py-4 rounded-md text-white hover:bg-white hover:text-black transition font-semibold text-center w-full sm:w-[260px]"
+      >
+        View Products
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===================================================== -->
+<!-- TRUST -->
+<!-- ===================================================== -->
+<section class="py-28 border-t border-white/10 bg-[#0A0A0A] overflow-x-hidden">
+  <div class="relative">
+    <div class="relative overflow-hidden py-2">
+      <div class="absolute left-0 top-0 h-full w-24 md:w-40 z-20 bg-[#0A0A0A]"></div>
+      <div class="absolute right-0 top-0 h-full w-24 md:w-40 z-20 bg-[#0A0A0A]"></div>
+      <div class="absolute left-24 md:left-40 top-0 h-full w-20 z-20 bg-gradient-to-r from-[#0A0A0A] to-transparent pointer-events-none"></div>
+      <div class="absolute right-24 md:right-40 top-0 h-full w-20 z-20 bg-gradient-to-l from-[#0A0A0A] to-transparent pointer-events-none"></div>
+
+      <p class="text-xs uppercase tracking-[0.35em] text-gray-500 text-center mb-10 relative z-30">
+        Built For Projects That Need To Be Seen
+      </p>
+
+      <div class="overflow-hidden whitespace-nowrap">
+        <div class="marquee-track">
+          <div class="marquee-group">
+            <img src="logos/georgia-film-society.png" alt="Georgia Film Society" class="logo-item" />
+            <img src="logos/freckles.png" alt="Freckles" class="logo-item" />
+            <img src="logos/alex.png" alt="Alex Montgomery" class="logo-item" />
+            <img src="logos/eighty-west.jpg" alt="Eighty-West Studios" class="logo-item" />
+            <img src="logos/lumen.png" alt="Lumen" class="logo-item" />
+          </div>
+
+          <div class="marquee-group">
+            <img src="logos/bad-bella.png" alt="Bad Bella Films" class="logo-item" />
+            <img src="logos/nora.png" alt="Nora Bradford" class="logo-item" />
+            <img src="logos/launchbox.png" alt="Story LaunchBox" class="logo-item" />
+            <img src="logos/porchlight.png" alt="Porchlight" class="logo-item" />
+            <img src="logos/riley.png" alt="Riley Morgan" class="logo-item" />
+          </div>
+
+          <div class="marquee-group">
+            <img src="logos/brookhaven.png" alt="Brookhaven" class="logo-item" />
+            <img src="logos/kris-shuman.png" alt="Kris Shuman" class="logo-item" />
+            <img src="logos/taylor.png" alt="Taylor Reese" class="logo-item" />
+            <img src="logos/georgia-film-society.png" alt="Georgia Film Society" class="logo-item" />
+            <img src="logos/birch.png" alt="Simon Birch" class="logo-item" />
+          </div>
+
+          <div class="marquee-group">
+            <img src="logos/eighty-west.jpg" alt="Eighty-West Studios" class="logo-item" />
+            <img src="logos/eliot.png" alt="Elliot Gray" class="logo-item" />
+            <img src="logos/bad-bella.png" alt="Bad Bella Films" class="logo-item" />
+            <img src="logos/launchbox.png" alt="Story LaunchBox" class="logo-item" />
+            <img src="logos/kris-shuman.png" alt="Kris Shuman" class="logo-item" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="relative z-30 mt-16 px-6">
+      <div class="max-w-3xl mx-auto text-center">
+        <div
+          id="testimonialContainer"
+          class="transition-opacity duration-1000 opacity-100"
+        >
+          <p
+            id="testimonialQuote"
+            class="text-xl md:text-2xl leading-relaxed text-white italic mb-6"
+          >
+            &ldquo;Instead of explaining the vision, we could finally show it.&rdquo;
+          </p>
+
+          <p
+            id="testimonialAuthor"
+            class="text-xs uppercase tracking-[0.3em] text-gray-500"
+          >
+            &mdash; Development Client
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- ===================================================== -->
 <!-- FOOTER -->
 <!-- ===================================================== -->
-<footer class="border-t border-white/10 bg-[#0A0A0A] py-12">
+<footer class="bg-[#0A0A0A] py-12 border-t border-white/10">
   <div class="max-w-6xl mx-auto px-4">
     <div class="grid md:grid-cols-3 gap-8 items-start">
       <div>
@@ -2731,7 +2069,7 @@
           <a href="#what-is-proof" class="hover:text-white transition">What Is PROOF?</a>
           <a href="products.html" class="hover:text-white transition">Products</a>
           <a href="development.html" class="hover:text-white transition">PROOF: Dev</a>
-          <a href="#faq" class="hover:text-white transition">FAQ</a>
+          <a href="faq.html" class="hover:text-white transition">FAQ</a>
 
           <button id="openChecklistPopupFooter" type="button" class="text-left hover:text-white transition">
             Checklist
@@ -2847,151 +2185,109 @@
 <!-- SCRIPTS -->
 <!-- ===================================================== -->
 <script>
-const SHOW_PROOF_LABEL = false;
-</script>
-
-<script>
 document.addEventListener("DOMContentLoaded", () => {
-
   /* ===================================================== */
-/* HLS VIDEO SETUP - LAZY LOAD ONLY WHEN VISIBLE */
- /* ===================================================== */
+  /* HLS VIDEO SETUP */
+  /* ===================================================== */
 
-const hlsInstances = new Map();
-const observedVideos = new WeakSet();
+  const hlsInstances = new Map();
+  const observedVideos = new WeakSet();
 
-function attachHls(video, src) {
+  function attachHls(video, src) {
+    if (!video || !src) return;
 
-  if (!video || !src) return;
+    if (video.dataset.hlsLoaded === "true") return;
 
-  if (video.dataset.hlsLoaded === "true") return;
-
-  if (hlsInstances.has(video)) {
-    hlsInstances.get(video).destroy();
-    hlsInstances.delete(video);
-  }
-
-  if (window.Hls && Hls.isSupported()) {
-
-    const hls = new Hls({
-      enableWorker: true,
-      lowLatencyMode: true
-    });
-
-    hls.loadSource(src);
-    hls.attachMedia(video);
-    hlsInstances.set(video, hls);
-
-  } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
-
-    video.src = src;
-
-  }
-
-  video.dataset.hlsLoaded = "true";
-
-}
-
-function ensureVideoLoaded(video) {
-
-  if (!video || !video.dataset.hls) return;
-
-  attachHls(video, video.dataset.hls);
-
-}
-
-function playIfPossible(video) {
-
-  if (!video) return;
-
-  ensureVideoLoaded(video);
-
-  video.play().catch(() => {});
-
-}
-
-const visibilityVideoObserver = new IntersectionObserver(entries => {
-
-  entries.forEach(entry => {
-
-    const video = entry.target;
-
-    if (!video) return;
-
-    const isFieldVideo =
-      video.hasAttribute("data-field-video");
-
-    const isActiveFieldVideo =
-      !isFieldVideo || video.classList.contains("is-active");
-
-    if (entry.isIntersecting && isActiveFieldVideo) {
-
-      playIfPossible(video);
-
-    } else {
-
-      video.pause();
-
+    if (hlsInstances.has(video)) {
+      hlsInstances.get(video).destroy();
+      hlsInstances.delete(video);
     }
 
-  });
+    if (window.Hls && Hls.isSupported()) {
+      const hls = new Hls({
+        enableWorker: true,
+        lowLatencyMode: true
+      });
 
-}, {
-  threshold: 0.24,
-  rootMargin: "160px 0px 160px 0px"
-});
+      hls.loadSource(src);
+      hls.attachMedia(video);
+      hlsInstances.set(video, hls);
+    } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+      video.src = src;
+    }
 
-function setupVisibilityPlayback(video) {
-
-  if (!video || observedVideos.has(video)) return;
-
-  observedVideos.add(video);
-  visibilityVideoObserver.observe(video);
-
-}
-
-/*
-  Important:
-  Field Guide videos are absolute-stacked in the same visual space.
-  We only observe/load the active one at first.
-  The others load later only if the visitor selects them.
-*/
-document.querySelectorAll(".js-hls-video[data-hls]").forEach(video => {
-
-  const isFieldVideo =
-    video.hasAttribute("data-field-video");
-
-  if (isFieldVideo && !video.classList.contains("is-active")) {
-    return;
+    video.dataset.hlsLoaded = "true";
   }
 
-  setupVisibilityPlayback(video);
+  function ensureVideoLoaded(video) {
+    if (!video || !video.dataset.hls) return;
 
-});
+    attachHls(video, video.dataset.hls);
+  }
+
+  function playIfPossible(video) {
+    if (!video) return;
+
+    ensureVideoLoaded(video);
+    video.play().catch(() => {});
+  }
+
+  const visibilityVideoObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const video = entry.target;
+
+      if (!video) return;
+
+      const isFieldVideo = video.hasAttribute("data-field-video");
+      const isActiveFieldVideo = !isFieldVideo || video.classList.contains("is-active");
+
+      if (entry.isIntersecting && isActiveFieldVideo) {
+        playIfPossible(video);
+      } else {
+        video.pause();
+      }
+    });
+  }, {
+    threshold: 0.24,
+    rootMargin: "160px 0px 160px 0px"
+  });
+
+  function setupVisibilityPlayback(video) {
+    if (!video || observedVideos.has(video)) return;
+
+    observedVideos.add(video);
+    visibilityVideoObserver.observe(video);
+  }
+
+  document.querySelectorAll(".js-hls-video[data-hls]").forEach(video => {
+    const isFieldVideo = video.hasAttribute("data-field-video");
+
+    if (isFieldVideo && !video.classList.contains("is-active")) {
+      return;
+    }
+
+    setupVisibilityPlayback(video);
+  });
 
   /* ===================================================== */
   /* HERO VIDEO MODAL */
   /* ===================================================== */
 
   const modal = document.getElementById("videoModal");
-
-  const openBtns = [
+  const openVideoBtns = [
     document.getElementById("openVideoModal"),
     document.getElementById("openVideoModalMobile")
   ];
-
-  const closeBtn = document.getElementById("closeVideoModal");
+  const closeVideoBtn = document.getElementById("closeVideoModal");
   const fullVideo = document.getElementById("fullVideo");
 
-  const heroStream =
-    "https://videodelivery.net/4e195dcb6f423b5d4c01e31fbb52bd4f/manifest/video.m3u8";
+  const heroStream = "https://videodelivery.net/4e195dcb6f423b5d4c01e31fbb52bd4f/manifest/video.m3u8";
 
   function openVideoModal() {
     if (!modal || !fullVideo) return;
 
     modal.classList.remove("hidden");
     modal.classList.add("flex");
-
     document.body.classList.add("modal-open");
 
     attachHls(fullVideo, heroStream);
@@ -3017,325 +2313,86 @@ document.querySelectorAll(".js-hls-video[data-hls]").forEach(video => {
       hlsInstances.delete(fullVideo);
     }
 
+    delete fullVideo.dataset.hlsLoaded;
     fullVideo.removeAttribute("src");
     fullVideo.load();
 
     document.body.classList.remove("modal-open");
   }
 
-  openBtns.forEach(openBtn => {
-    if (!openBtn) return;
-    openBtn.addEventListener("click", openVideoModal);
+  openVideoBtns.forEach(button => {
+    if (!button) return;
+    button.addEventListener("click", openVideoModal);
   });
 
-  if (closeBtn) {
-    closeBtn.addEventListener("click", closeVideoModal);
+  if (closeVideoBtn) {
+    closeVideoBtn.addEventListener("click", closeVideoModal);
   }
 
   if (modal) {
-    modal.addEventListener("click", e => {
-      if (e.target === modal) {
+    modal.addEventListener("click", event => {
+      if (event.target === modal) {
         closeVideoModal();
       }
     });
   }
 
-  document.addEventListener("keydown", e => {
-    if (e.key === "Escape") {
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
       closeVideoModal();
+      setMobileMenu(false);
+      closeChecklistPopup(false);
     }
   });
 
   /* ===================================================== */
-/* MOBILE MENU */
-/* ===================================================== */
-
-const menuBtn = document.getElementById("menuBtn");
-const mobileMenu = document.getElementById("mobileMenu");
-const menuIcon = document.getElementById("menuIcon");
-
-function setMobileMenu(open) {
-  if (!menuBtn || !mobileMenu || !menuIcon) return;
-
-  if (open) {
-    mobileMenu.classList.remove("hidden");
-    menuIcon.innerHTML = "&times;";
-    menuBtn.setAttribute("aria-label", "Close menu");
-    menuBtn.setAttribute("aria-expanded", "true");
-    document.body.classList.add("menu-open");
-  } else {
-    mobileMenu.classList.add("hidden");
-    menuIcon.innerHTML = "&#9776;";
-    menuBtn.setAttribute("aria-label", "Open menu");
-    menuBtn.setAttribute("aria-expanded", "false");
-    document.body.classList.remove("menu-open");
-  }
-}
-
-if (menuBtn && mobileMenu && menuIcon) {
-  menuBtn.addEventListener("click", e => {
-    e.stopPropagation();
-
-    const isOpen = !mobileMenu.classList.contains("hidden");
-
-    setMobileMenu(!isOpen);
-  });
-
-  const links = mobileMenu.querySelectorAll("a");
-
-  links.forEach(link => {
-    link.addEventListener("click", () => {
-      setMobileMenu(false);
-    });
-  });
-
-  document.addEventListener("click", e => {
-    if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
-      setMobileMenu(false);
-    }
-  });
-
-  document.addEventListener("keydown", e => {
-    if (e.key === "Escape") {
-      setMobileMenu(false);
-    }
-  });
-}
-
-  /* ===================================================== */
-  /* DELTA PANEL SWITCHING */
+  /* MOBILE MENU */
   /* ===================================================== */
 
-  const panels = document.querySelectorAll(".proof-panel");
-  const nextBtn = document.getElementById("nextProofStep");
-  const stepLabel = document.getElementById("desktopStepLabel");
-  const stepTitle = document.getElementById("desktopStepTitle");
-  const stepDescription = document.getElementById("desktopStepDescription");
-  const indicators = document.querySelectorAll(".delta-step-indicator");
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
+  const menuIcon = document.getElementById("menuIcon");
 
-  let currentPanel = 0;
+  function setMobileMenu(open) {
+    if (!menuBtn || !mobileMenu || !menuIcon) return;
 
-  const panelContent = [
-    {
-      label: "Step 01",
-      title: "The Project On Paper",
-      description:
-        "A script, deck, or concept can be strong and still fail to make someone see the project fast enough to move."
-    },
-    {
-      label: "Step 02",
-      title: "Raw Output",
-      description:
-        "Raw AI output can create motion, but it often lacks continuity, intention, emotional weight, and cinematic clarity."
-    },
-    {
-      label: "Step 03",
-      title: "The ProofLab System",
-      description:
-        "PROOF refines pacing, shot language, continuity, atmosphere, sound, and emotional clarity."
-    },
-    {
-      label: "Final Output",
-      title: "Cinematic Proof",
-      description:
-        "The result helps people understand tone, execution, emotional stakes, and marketable identity faster."
-    }
-  ];
-
-  function goToProofStep(index) {
-    if (
-      !panels.length ||
-      !stepLabel ||
-      !stepTitle ||
-      !stepDescription ||
-      !panelContent[index]
-    ) return;
-
-    panels.forEach(panel => {
-      panel.classList.add("hidden");
-      panel.classList.remove("active-panel");
-    });
-
-    currentPanel = index;
-
-    panels[currentPanel].classList.remove("hidden");
-    panels[currentPanel].classList.add("active-panel");
-
-    stepLabel.textContent = panelContent[currentPanel].label;
-    stepTitle.textContent = panelContent[currentPanel].title;
-    stepDescription.textContent = panelContent[currentPanel].description;
-
-    indicators.forEach((indicator, indicatorIndex) => {
-      indicator.classList.remove("active-step");
-      indicator.setAttribute(
-        "aria-pressed",
-        indicatorIndex === currentPanel ? "true" : "false"
-      );
-    });
-
-    if (indicators[currentPanel]) {
-      indicators[currentPanel].classList.add("active-step");
+    if (open) {
+      mobileMenu.classList.remove("hidden");
+      menuIcon.innerHTML = "&times;";
+      menuBtn.setAttribute("aria-label", "Close menu");
+      menuBtn.setAttribute("aria-expanded", "true");
+      document.body.classList.add("menu-open");
+    } else {
+      mobileMenu.classList.add("hidden");
+      menuIcon.innerHTML = "&#9776;";
+      menuBtn.setAttribute("aria-label", "Open menu");
+      menuBtn.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("menu-open");
     }
   }
 
-  if (nextBtn && panels.length) {
-    nextBtn.addEventListener("click", () => {
-      let nextPanel = currentPanel + 1;
-
-      if (nextPanel >= panels.length) {
-        nextPanel = 0;
-      }
-
-      goToProofStep(nextPanel);
+  if (menuBtn && mobileMenu && menuIcon) {
+    menuBtn.addEventListener("click", event => {
+      event.stopPropagation();
+      const isOpen = !mobileMenu.classList.contains("hidden");
+      setMobileMenu(!isOpen);
     });
-  }
 
-  indicators.forEach(indicator => {
-    indicator.addEventListener("click", () => {
-      const step = Number(indicator.dataset.step);
-      if (!step) return;
-      goToProofStep(step - 1);
-    });
-  });
-
-  /* ===================================================== */
-  /* MOBILE DELTA DOTS */
-  /* ===================================================== */
-
-  const carousel = document.getElementById("mobileProofCarousel");
-  const dots = document.querySelectorAll(".proof-dot");
-
-  if (carousel && dots.length) {
-    function updateDots() {
-      const scrollLeft = carousel.scrollLeft;
-      const firstCard = carousel.querySelector(".snap-center");
-
-      if (!firstCard) return;
-
-      const cardWidth = firstCard.offsetWidth + 20;
-      const activeIndex = Math.round(scrollLeft / cardWidth);
-
-      dots.forEach((dot, index) => {
-        if (index === activeIndex) {
-          dot.classList.remove("bg-white/20");
-          dot.classList.add("bg-[#0066FF]");
-        } else {
-          dot.classList.remove("bg-[#0066FF]");
-          dot.classList.add("bg-white/20");
-        }
+    mobileMenu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        setMobileMenu(false);
       });
-    }
+    });
 
-    carousel.addEventListener("scroll", updateDots);
-  }
-
-  /* ===================================================== */
-  /* PROOFLAB REVEAL SYSTEM */
-  /* ===================================================== */
-
-  function initProofReveal({
-    comparison,
-    reveal,
-    slider
-  }) {
-    if (!comparison || !reveal || !slider) return;
-
-    let position = 0;
-    let direction = 1;
-    let isDragging = false;
-    let isVisible = false;
-
-    function setSliderPosition(pos) {
-      position = Math.max(0, Math.min(100, pos));
-      reveal.style.width = position + "%";
-      slider.style.left = position + "%";
-
-      slider.style.boxShadow =
-        "0 0 18px rgba(0,102,255,1), 0 0 42px rgba(0,102,255,0.9), -90px 0 140px rgba(0,102,255,0.34), -180px 0 220px rgba(0,102,255,0.16)";
-    }
-
-    function animateSlider() {
-      if (isVisible && !isDragging) {
-        position += direction * 0.25;
-
-        if (position >= 100) {
-          direction = -1;
-        }
-
-        if (position <= 0) {
-          direction = 1;
-        }
-
-        setSliderPosition(position);
+    document.addEventListener("click", event => {
+      if (!mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) {
+        setMobileMenu(false);
       }
-
-      requestAnimationFrame(animateSlider);
-    }
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        isVisible = entry.isIntersecting;
-      });
-    }, {
-      threshold: 0.55
     });
-
-    observer.observe(comparison);
-
-    function updateFromPointer(clientX) {
-      const rect = comparison.getBoundingClientRect();
-      const newPosition = ((clientX - rect.left) / rect.width) * 100;
-      setSliderPosition(newPosition);
-    }
-
-    slider.addEventListener("mousedown", () => {
-      isDragging = true;
-    });
-
-    window.addEventListener("mouseup", () => {
-      isDragging = false;
-    });
-
-    window.addEventListener("mousemove", e => {
-      if (!isDragging) return;
-      updateFromPointer(e.clientX);
-    });
-
-    slider.addEventListener("touchstart", () => {
-      isDragging = true;
-    }, {
-      passive: true
-    });
-
-    window.addEventListener("touchend", () => {
-      isDragging = false;
-    });
-
-    window.addEventListener("touchmove", e => {
-      if (!isDragging || !e.touches.length) return;
-      updateFromPointer(e.touches[0].clientX);
-    }, {
-      passive: true
-    });
-
-    setSliderPosition(0);
-    animateSlider();
   }
 
-  initProofReveal({
-    comparison: document.getElementById("proofComparisonDesktop"),
-    reveal: document.getElementById("proofRevealDesktop"),
-    slider: document.getElementById("proofSliderDesktop")
-  });
-
-  initProofReveal({
-    comparison: document.getElementById("proofComparisonMobile"),
-    reveal: document.getElementById("proofRevealMobile"),
-    slider: document.getElementById("proofSliderMobile")
-  });
-
   /* ===================================================== */
-  /* PROOF FIELD GUIDE */
+  /* FIELD GUIDE */
   /* ===================================================== */
 
   const fieldData = {
@@ -3343,7 +2400,7 @@ if (menuBtn && mobileMenu && menuIcon) {
       label: "Case File 01 / Sizzle",
       title: "Sizzle",
       copy: "A fast-strike proof asset built to make the project feel immediate, alive, and worth a second conversation.",
-      word: "siz\u00B7zle <span class=\"field-dictionary-pos\">v.</span>",
+      word: "siz&middot;zle <span class=\"field-dictionary-pos\">v.</span>",
       pronunciation: "/siz-uhl/",
       definition:
         "<strong>To make a project immediately felt.</strong> To compress tone, world, hook, atmosphere, and emotional charge into a short cinematic signal designed to create momentum before attention disappears.",
@@ -3356,7 +2413,7 @@ if (menuBtn && mobileMenu && menuIcon) {
       label: "Case File 02 / Trailer",
       title: "Trailer",
       copy: "A bigger cinematic argument for why the project should exist, who it is for, and what kind of ride it promises.",
-      word: "trail\u00B7er <span class=\"field-dictionary-pos\">n.</span>",
+      word: "trail&middot;er <span class=\"field-dictionary-pos\">n.</span>",
       pronunciation: "/tray-ler/",
       definition:
         "<strong>A cinematic argument for why the project should exist.</strong> A trailer gives shape to the story, stakes, world, conflict, tone, and audience promise so the project feels bigger than an idea on a page.",
@@ -3391,75 +2448,57 @@ if (menuBtn && mobileMenu && menuIcon) {
   const fieldDictionaryUse = document.getElementById("fieldDictionaryUse");
   const fieldProductLink = document.getElementById("fieldProductLink");
 
- function setFieldGuide(format) {
-  const data = fieldData[format];
-  if (!data) return;
+  function setFieldGuide(format) {
+    const data = fieldData[format];
 
-  fieldButtons.forEach(button => {
-    const isActive = button.dataset.fieldFormat === format;
-    button.classList.toggle("is-active", isActive);
-    button.setAttribute("aria-pressed", isActive ? "true" : "false");
-  });
+    if (!data) return;
 
-  fieldVideos.forEach(video => {
-    const isActive = video.dataset.fieldVideo === format;
+    fieldButtons.forEach(button => {
+      const isActive = button.dataset.fieldFormat === format;
+      button.classList.toggle("is-active", isActive);
+      button.setAttribute("aria-pressed", isActive ? "true" : "false");
+    });
 
-    video.classList.toggle("is-active", isActive);
+    fieldVideos.forEach(video => {
+      const isActive = video.dataset.fieldVideo === format;
 
-    if (isActive) {
-      setupVisibilityPlayback(video);
-      playIfPossible(video);
-    } else {
-      video.pause();
+      video.classList.toggle("is-active", isActive);
+
+      if (isActive) {
+        setupVisibilityPlayback(video);
+        playIfPossible(video);
+      } else {
+        video.pause();
+      }
+    });
+
+    if (fieldCaseLabel) fieldCaseLabel.textContent = data.label;
+    if (fieldActiveTitle) fieldActiveTitle.textContent = data.title;
+    if (fieldActiveCopy) fieldActiveCopy.textContent = data.copy;
+    if (fieldDictionaryWord) fieldDictionaryWord.innerHTML = data.word;
+    if (fieldDictionaryPronunciation) fieldDictionaryPronunciation.textContent = data.pronunciation;
+    if (fieldDictionaryDefinition) fieldDictionaryDefinition.innerHTML = data.definition;
+    if (fieldDictionaryUse) fieldDictionaryUse.innerHTML = data.use;
+
+    if (fieldProductLink) {
+      fieldProductLink.href = data.link;
+      fieldProductLink.textContent = data.linkText;
     }
-  });
-
-  if (fieldCaseLabel) fieldCaseLabel.textContent = data.label;
-  if (fieldActiveTitle) fieldActiveTitle.textContent = data.title;
-  if (fieldActiveCopy) fieldActiveCopy.textContent = data.copy;
-  if (fieldDictionaryWord) fieldDictionaryWord.innerHTML = data.word;
-  if (fieldDictionaryPronunciation) fieldDictionaryPronunciation.textContent = data.pronunciation;
-  if (fieldDictionaryDefinition) fieldDictionaryDefinition.innerHTML = data.definition;
-  if (fieldDictionaryUse) fieldDictionaryUse.innerHTML = data.use;
-
-  if (fieldProductLink) {
-    fieldProductLink.href = data.link;
-    fieldProductLink.textContent = data.linkText;
   }
-}
 
   fieldButtons.forEach(button => {
+    const format = button.dataset.fieldFormat;
+
     button.addEventListener("mouseenter", () => {
-      setFieldGuide(button.dataset.fieldFormat);
+      setFieldGuide(format);
     });
 
     button.addEventListener("focus", () => {
-      setFieldGuide(button.dataset.fieldFormat);
+      setFieldGuide(format);
     });
 
     button.addEventListener("click", () => {
-      setFieldGuide(button.dataset.fieldFormat);
-    });
-  });
-
-  /* ===================================================== */
-  /* FAQ ACCORDION */
-  /* ===================================================== */
-
-  document.querySelectorAll(".faq-button").forEach(button => {
-    button.addEventListener("click", () => {
-      const item = button.closest(".faq-item");
-      if (!item) return;
-
-      const wasActive = item.classList.contains("active");
-
-      document.querySelectorAll(".faq-item").forEach(openItem => {
-        openItem.classList.remove("active");
-      });
-
-      if (!wasActive) {
-        item.classList.add("active");
-      }
+      setFieldGuide(format);
     });
   });
 
@@ -3521,17 +2560,17 @@ if (menuBtn && mobileMenu && menuIcon) {
   const testimonialAuthor = document.getElementById("testimonialAuthor");
 
   if (testimonialContainer && testimonialQuote && testimonialAuthor) {
-    let index = 0;
+    let testimonialIndex = 0;
 
     function changeTestimonial() {
       testimonialContainer.classList.remove("opacity-100");
       testimonialContainer.classList.add("opacity-0");
 
       setTimeout(() => {
-        index = (index + 1) % testimonials.length;
+        testimonialIndex = (testimonialIndex + 1) % testimonials.length;
 
-        testimonialQuote.textContent = "\u201C" + testimonials[index].quote + "\u201D";
-        testimonialAuthor.textContent = "\u2014 " + testimonials[index].author;
+        testimonialQuote.textContent = "\u201C" + testimonials[testimonialIndex].quote + "\u201D";
+        testimonialAuthor.textContent = "\u2014 " + testimonials[testimonialIndex].author;
 
         testimonialContainer.classList.remove("opacity-0");
         testimonialContainer.classList.add("opacity-100");
@@ -3576,10 +2615,7 @@ if (menuBtn && mobileMenu && menuIcon) {
       emailSuccess.classList.add("hidden");
     }
 
-    if (mobileMenu) {
-      mobileMenu.classList.add("hidden");
-      document.body.classList.remove("menu-open");
-    }
+    setMobileMenu(false);
   }
 
   function closeChecklistPopup(storeClosed = true) {
@@ -3605,8 +2641,8 @@ if (menuBtn && mobileMenu && menuIcon) {
   }
 
   if (popup) {
-    popup.addEventListener("click", e => {
-      if (e.target === popup) {
+    popup.addEventListener("click", event => {
+      if (event.target === popup) {
         closeChecklistPopup(true);
       }
     });
@@ -3616,8 +2652,8 @@ if (menuBtn && mobileMenu && menuIcon) {
   const popupSubscribed = localStorage.getItem("proofSubscribed");
 
   if (!popupClosed && !popupSubscribed) {
-    document.addEventListener("mouseleave", e => {
-      if (e.clientY < 10 && !popupShown) {
+    document.addEventListener("mouseleave", event => {
+      if (event.clientY < 10 && !popupShown) {
         openChecklistPopup();
       }
     });
@@ -3630,10 +2666,10 @@ if (menuBtn && mobileMenu && menuIcon) {
   }
 
   if (emailForm) {
-    emailForm.addEventListener("submit", e => {
-      e.preventDefault();
+    emailForm.addEventListener("submit", event => {
+      event.preventDefault();
 
-      const form = e.target;
+      const form = event.target;
       const data = new FormData(form);
 
       fetch(form.action, {
@@ -3672,21 +2708,6 @@ if (menuBtn && mobileMenu && menuIcon) {
       history.replaceState(null, "", window.location.pathname);
     }, 500);
   }
-
-  /* ===================================================== */
-  /* PROOF LABEL TOGGLE */
-  /* ===================================================== */
-
-  const labels = document.querySelectorAll(".proof-label");
-
-  labels.forEach(label => {
-    if (SHOW_PROOF_LABEL) {
-      label.classList.remove("hidden");
-    } else {
-      label.classList.add("hidden");
-    }
-  });
-
 });
 </script>
 
