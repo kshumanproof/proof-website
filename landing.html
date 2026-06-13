@@ -92,7 +92,7 @@
 </div>
 
 <!-- HERO -->
-<section class="relative min-h-screen flex items-center justify-center px-6 py-20">
+<section class="pt-44 md:pt-48 lg:pt-52 relative min-h-screen flex items-center justify-center px-6 py-20">
 
   <div class="relative z-10 max-w-5xl mx-auto text-center">
 
@@ -174,7 +174,7 @@
 </section>
 
 <!-- LOWER INFO SECTION -->
-<section class="relative z-10 pb-20 px-6">
+<section class="pt-44 md:pt-48 lg:pt-52 relative z-10 pb-20 px-6">
 
   <div class="max-w-6xl mx-auto">
 
@@ -419,6 +419,64 @@ function checkPassword() {
 
 </script>
 
+<!-- MOBILE MENU WATCH PREVIEW BRIDGE -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  function wireMobileWatchPreview() {
+    const menuPreviewButtons = document.querySelectorAll("[data-mobile-watch-preview]");
+
+    if (!menuPreviewButtons.length) return;
+
+    const previewOpeners = [
+      document.getElementById("openVideoModalMobile"),
+      document.getElementById("openVideoModal"),
+      document.getElementById("openSizzleVideo"),
+      document.getElementById("openTrailerVideo"),
+      document.getElementById("openSceneVideo"),
+      document.getElementById("openConceptVideo"),
+      document.getElementById("openExamplesVideo")
+    ].filter(Boolean);
+
+    menuPreviewButtons.forEach(function (button) {
+      if (!previewOpeners.length) {
+        button.classList.add("hidden");
+        return;
+      }
+
+      button.classList.remove("hidden");
+
+      if (button.dataset.previewWired === "true") return;
+
+      button.dataset.previewWired = "true";
+
+      button.addEventListener("click", function () {
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuIcon = document.getElementById("menuIcon");
+
+        if (mobileMenu) {
+          mobileMenu.classList.add("hidden");
+        }
+
+        if (menuIcon) {
+          menuIcon.innerHTML = "&#9776;";
+        }
+
+        document.body.classList.remove("menu-open");
+
+        previewOpeners[0].click();
+      });
+    });
+  }
+
+  wireMobileWatchPreview();
+  window.setTimeout(wireMobileWatchPreview, 300);
+});
+</script>
 <script defer src="shared-shell.js"></script>
 </body>
 </html>
+
+
+
+
+

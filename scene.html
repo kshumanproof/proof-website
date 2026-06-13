@@ -73,139 +73,58 @@
   />
 
   <!-- FAVICON -->
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicon.ico" />
 
   <!-- TAILWIND -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- MICROSOFT CLARITY -->
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);
+      t.async=1;
+      t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];
+      y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "wxs26xo463");
-</script>
-<script type="text/javascript">
-window.$crisp=[];
-window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
-(function(){
-  d=document;
-  s=d.createElement("script");
-  s.src="https://client.crisp.chat/l.js";
-  s.async=1;
-  d.getElementsByTagName("head")[0].appendChild(s);
-})();
-</script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-23WNYGS1Y8"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  </script>
 
-  gtag('config', 'G-23WNYGS1Y8');
-</script>
+  <!-- CRISP -->
+  <script type="text/javascript">
+    window.$crisp=[];
+    window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
+    (function(){
+      d=document;
+      s=d.createElement("script");
+      s.src="https://client.crisp.chat/l.js";
+      s.async=1;
+      d.getElementsByTagName("head")[0].appendChild(s);
+    })();
+  </script>
+
+  <!-- GOOGLE TAG -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-23WNYGS1Y8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag(){
+      dataLayer.push(arguments);
+    }
+
+    gtag("js", new Date());
+    gtag("config", "G-23WNYGS1Y8");
+  </script>
+
   <link rel="stylesheet" href="shared-shell.css" />
 </head>
 
 <body class="bg-[#0A0A0A] text-white font-sans">
 
-<!-- NAV -->
-<header class="fixed top-0 w-full bg-black/70 backdrop-blur z-50">
-  <div class="max-w-6xl mx-auto flex justify-between items-center py-3 px-4">
-    
-    <!-- LOGO -->
-    <a href="index.html">
-      <img 
-        src="proof-logo/Proof_header_good.png" 
-        alt="PROOF Logo" 
-        class="h-[40px] md:h-[60px] w-auto object-contain scale-[2.5] origin-left"
-      />
-    </a>
-
-    <!-- HAMBURGER -->
-    <button id="menuBtn" class="md:hidden text-white text-2xl">
-      â˜°
-    </button>
-
-    <!-- DESKTOP NAV -->
-    <nav class="hidden md:flex space-x-6 text-sm text-white">
-
-      <a href="index.html#products" class="hover:text-gray-300">
-        Products
-      </a>
-
-      <a href="index.html#how-it-works" class="hover:text-gray-300">
-        How It Works
-      </a>
-
-      <a href="index.html#what-is-proof" class="hover:text-gray-300">
-        What is PROOF?
-      </a>
-
-      <a href="development.html" class="hover:text-gray-300">
-        PROOF: Dev
-      </a>
-      
-      <a href="index.html#products" class="text-[#0066FF]">
-        Get Started
-      </a>
-
-    </nav>
-
-  </div>
-
-  <!-- MOBILE MENU -->
-<div id="mobileMenu" class="hidden md:hidden bg-black text-center py-6 flex flex-col items-center gap-4">
-
-  <a href="index.html#products" class="block">
-    Products
-  </a>
-
-  <a href="index.html#how-it-works" class="block">
-    How It Works
-  </a>
-
-  <a href="index.html#what-is-proof" class="block">
-    What is PROOF?
-  </a>
-
-  <a href="development.html" class="block hover:text-gray-300">
-    PROOF: Dev
-  </a>
-
-  <a href="index.html#products" class="block text-[#0066FF]">
-    Get Started
-  </a>
-
-  <!-- MOBILE CHECKLIST / PROJECT REVIEW CTA -->
-  <div class="w-[88%] max-w-sm border border-white/10 rounded-2xl px-4 py-4 mt-2 bg-white/[0.02]">
-
-    <p class="text-xs text-gray-400 leading-relaxed mb-4">
-      Before you ask them to believe, get the free checklist or request a project review.
-    </p>
-
-    <a
-      href="index.html#checklist"
-      class="block w-full bg-[#0066FF] text-white text-sm font-semibold py-3 rounded-md hover:bg-[#0052cc] transition mb-3"
-    >
-      Get the 17-point Checklist
-    </a>
-
-    <a
-      href="project-review.html"
-      class="block w-full border border-white/20 text-white text-sm font-semibold py-3 rounded-md hover:bg-white hover:text-black transition"
-    >
-      Free Project Fit Review
-    </a>
-
-  </div>
-
-</div>
-
-</header>
-
+<!-- ===================================================== -->
 <!-- HERO -->
-<section class="pt-28 pb-20 text-center">
+<!-- ===================================================== -->
+<section class="pt-44 md:pt-48 lg:pt-52 pb-20 text-center">
 
   <!-- MEDIA -->
   <div class="max-w-6xl mx-auto px-4 mb-4">
@@ -217,7 +136,7 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
     >
 
       <!-- POSTER IMAGE -->
-      <img 
+      <img
         src="images/proof-scene.png"
         alt="Proof Scene Preview"
         class="absolute inset-0 w-full h-full object-cover opacity-95 transition duration-700 group-hover:opacity-100"
@@ -236,37 +155,25 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
         <div class="absolute inset-0 bg-[#d6be8b]/10 mix-blend-screen"></div>
 
         <!-- SYSTEM BORDER WITH WATCH PREVIEW CUTOUT -->
-
-        <!-- TOP BORDER -->
         <div class="absolute top-6 left-6 right-6 h-[1px] bg-[#0066FF]/25"></div>
-
-        <!-- LEFT BORDER -->
         <div class="absolute top-6 bottom-6 left-6 w-[1px] bg-[#0066FF]/25"></div>
-
-        <!-- RIGHT BORDER - STOPS ABOVE WATCH PREVIEW -->
         <div class="absolute top-6 bottom-24 right-6 w-[1px] bg-[#0066FF]/25"></div>
-
-        <!-- BOTTOM BORDER - STOPS BEFORE WATCH PREVIEW -->
         <div class="absolute bottom-6 left-6 right-56 h-[1px] bg-[#0066FF]/25"></div>
 
-        <!-- TOP LEFT CORNER ACCENT -->
+        <!-- CORNER ACCENTS -->
         <div class="absolute top-6 left-6 w-20 h-[1px] bg-[#0066FF]/70"></div>
         <div class="absolute top-6 left-6 w-[1px] h-20 bg-[#0066FF]/70"></div>
-
-        <!-- BOTTOM LEFT CORNER ACCENT -->
         <div class="absolute bottom-6 left-6 w-20 h-[1px] bg-[#0066FF]/45"></div>
         <div class="absolute bottom-6 left-6 w-[1px] h-20 bg-[#0066FF]/45"></div>
 
-        <!-- CUTOUT RETURN DETAIL NEAR WATCH PREVIEW -->
+        <!-- CUTOUT RETURN DETAIL -->
         <div class="absolute bottom-6 right-56 w-10 h-[1px] bg-[#0066FF]/55"></div>
         <div class="absolute bottom-24 right-6 w-[1px] h-10 bg-[#0066FF]/55"></div>
 
         <!-- CASE FILE CONTENT -->
         <div class="relative z-30 h-full px-12 py-10 font-mono flex flex-col text-left">
 
-          <!-- HEADER -->
           <div class="mb-8">
-
             <p class="text-[13px] uppercase tracking-[0.55em] text-[#0066FF] mb-4">
               PROOF CASE FILE
             </p>
@@ -278,19 +185,16 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
             <p class="text-[11px] uppercase tracking-[0.32em] text-white/45">
               Visual proof asset record / scene classification
             </p>
-
           </div>
 
-          <!-- DIVIDER -->
           <div class="w-full h-[1px] bg-white/10 mb-8"></div>
 
-          <!-- PRIMARY DATA -->
           <div class="grid grid-cols-3 gap-x-12 gap-y-8">
-
             <div>
               <p class="text-[10px] uppercase tracking-[0.32em] text-white/35 mb-3">
                 Asset Type
               </p>
+
               <p class="text-2xl text-white leading-tight">
                 PROOF: Scene
               </p>
@@ -300,6 +204,7 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
               <p class="text-[10px] uppercase tracking-[0.32em] text-white/35 mb-3">
                 Project
               </p>
+
               <p class="text-2xl text-white leading-tight">
                 The Ones Before Us
               </p>
@@ -309,20 +214,19 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
               <p class="text-[10px] uppercase tracking-[0.32em] text-white/35 mb-3">
                 Company
               </p>
+
               <p class="text-2xl text-white leading-tight">
                 Porch Light Films
               </p>
             </div>
-
           </div>
 
-          <!-- SECONDARY DATA -->
           <div class="grid grid-cols-3 gap-x-12 gap-y-8 mt-10">
-
             <div>
               <p class="text-[10px] uppercase tracking-[0.32em] text-white/35 mb-3">
                 Format
               </p>
+
               <p class="text-lg text-white/85 leading-tight">
                 Thriller / Horror
               </p>
@@ -332,6 +236,7 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
               <p class="text-[10px] uppercase tracking-[0.32em] text-white/35 mb-3">
                 Use Case
               </p>
+
               <p class="text-lg text-white/85 leading-tight">
                 Investor Pitch Asset
               </p>
@@ -341,20 +246,17 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
               <p class="text-[10px] uppercase tracking-[0.32em] text-white/35 mb-3">
                 Year
               </p>
+
               <p class="text-lg text-white/85 leading-tight">
                 2026
               </p>
             </div>
-
           </div>
 
-          <!-- FOOTER -->
           <div class="mt-auto pt-8">
-
             <div class="w-full h-[1px] bg-white/10 mb-5"></div>
 
             <div class="flex items-end justify-between gap-8">
-
               <div>
                 <p class="text-[10px] uppercase tracking-[0.32em] text-white/35 mb-2">
                   Developed Through
@@ -374,32 +276,22 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
                   Pitch-Ready Asset
                 </p>
               </div>
-
             </div>
-
           </div>
 
         </div>
-
       </div>
 
-      <!-- VIDEO INDICATOR - ALWAYS ABOVE CASE FILE -->
-      <div class="absolute bottom-5 right-5 flex items-center gap-3 z-[80] pointer-events-none">
-
-        <!-- PULSE DOT -->
+      <!-- VIDEO INDICATOR -->
+      <div class="absolute bottom-5 right-5 flex items-center gap-3 z-20 md:z-30 pointer-events-none">
         <div class="relative flex items-center justify-center">
-
           <span class="absolute inline-flex h-3 w-3 rounded-full bg-[#0066FF] opacity-75 animate-ping"></span>
-
           <span class="relative inline-flex rounded-full h-3 w-3 bg-[#0066FF] shadow-[0_0_12px_rgba(0,102,255,0.9)]"></span>
-
         </div>
 
-        <!-- LABEL -->
         <p class="text-xs uppercase tracking-[0.25em] text-white/80 group-hover:text-white transition duration-500">
           Watch Preview
         </p>
-
       </div>
 
     </div>
@@ -407,14 +299,10 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
     <!-- MOBILE CASE FILE -->
     <div class="md:hidden mt-3 relative overflow-hidden bg-black border border-[#0066FF]/20 rounded-lg px-4 py-2 font-mono text-left">
 
-      <!-- SUBTLE FILE TINT -->
       <div class="absolute inset-0 bg-[#d6be8b]/15 mix-blend-screen pointer-events-none"></div>
 
-      <!-- CONTENT -->
       <div class="relative z-10">
-
         <div class="flex items-start justify-between gap-4 border-b border-white/10 pb-3 mb-3">
-
           <div>
             <p class="text-[9px] uppercase tracking-[0.32em] text-[#0066FF] mb-2">
               PROOF Case File
@@ -428,25 +316,21 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
           <p class="text-[9px] uppercase tracking-[0.24em] text-white/35 text-right leading-relaxed">
             2026
           </p>
-
         </div>
 
         <div class="space-y-2">
-
           <p class="text-sm text-white leading-snug">
             PROOF: Scene <span class="text-white/35">/</span> The Ones Before Us
           </p>
 
           <p class="text-xs text-white/55 leading-snug">
-            Porch Light Films Â· Thriller / Horror Â· Investor Pitch Asset
+            Porch Light Films &middot; Thriller / Horror &middot; Investor Pitch Asset
           </p>
 
           <p class="text-[9px] uppercase tracking-[0.22em] text-white/35 leading-relaxed pt-2">
             Developed through the <span class="text-[#0066FF]">ProofLab System</span>
           </p>
-
         </div>
-
       </div>
 
     </div>
@@ -455,12 +339,9 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
 
   <!-- HERO TEXT -->
   <div class="max-w-6xl mx-auto px-4 mt-6">
-
     <div class="flex flex-col md:flex-row justify-between items-start gap-10 text-left">
 
-      <!-- LEFT SIDE -->
       <div class="flex-1 max-w-xl">
-
         <h1 class="text-5xl mb-4">
           PROOF: Scene
         </h1>
@@ -470,23 +351,20 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
         </p>
 
         <p class="text-sm text-gray-600">
-          Built to demonstrate how your story actually feels â€” not just how it reads.
+          Built to demonstrate how your story actually feels &mdash; not just how it reads.
         </p>
-
       </div>
 
-      <!-- RIGHT SIDE -->
       <div class="flex flex-col w-full md:w-[260px] md:items-end text-left space-y-2">
-
         <p class="text-3xl mb-1">
           $2,400
         </p>
 
         <p class="text-xs text-gray-400 mb-6">
-          Up to 2 script pages â€¢ ~90 seconds runtime
+          Up to 2 script pages &middot; ~90 seconds runtime
         </p>
 
-        <a 
+        <a
           href="https://buy.stripe.com/test_14A9AV4MD6SGg6pbdT18c01"
           target="_blank"
           rel="noopener noreferrer"
@@ -498,66 +376,55 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
         <p class="text-xs text-gray-500 text-center mt-3">
           Secure checkout via Stripe.
         </p>
-
       </div>
 
     </div>
-
   </div>
 
 </section>
 
+<!-- ===================================================== -->
 <!-- VIDEO MODAL -->
-<div 
+<!-- ===================================================== -->
+<div
   id="sceneVideoModal"
   class="fixed inset-0 bg-black/95 z-[9999] hidden items-center justify-center"
 >
-
-  <!-- CLOSE -->
   <button
     id="closeSceneVideo"
+    type="button"
     class="absolute top-6 right-6 text-white text-5xl z-50 hover:text-gray-300 transition"
+    aria-label="Close video"
   >
     &times;
   </button>
 
-  <!-- VIDEO -->
   <div class="w-full h-full flex items-center justify-center px-4">
-
     <video
       id="sceneFullVideo"
       controls
       playsinline
       class="w-full max-w-6xl max-h-[90vh] rounded-xl shadow-2xl"
     ></video>
-
   </div>
-
 </div>
 
+<!-- ===================================================== -->
 <!-- PROOF: SCENE EXPERIENCE -->
-<section class="max-w-6xl mx-auto px-4 pt-12 pb-10">
+<!-- ===================================================== -->
+<section class="pt-44 md:pt-48 lg:pt-52 max-w-6xl mx-auto px-4 pb-10">
 
   <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-[#111111]">
 
-    <!-- BACKGROUND IMAGE -->
     <div class="absolute inset-0">
-
-      <!-- OVERLAYS -->
       <div class="absolute inset-0 bg-black/55"></div>
-
       <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-[#111111]"></div>
-
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.15),transparent_45%)]"></div>
-
     </div>
 
-    <!-- CONTENT -->
     <div class="relative z-10 p-8 md:p-12">
 
-      <!-- TOP -->
       <div class="max-w-3xl">
-
         <p class="text-xs uppercase tracking-[0.28em] text-[#0066FF] mb-5">
           Cinematic Scene
         </p>
@@ -569,19 +436,15 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
         <p class="text-lg text-gray-300 leading-relaxed max-w-2xl">
           PROOF: Scene transforms key moments from your screenplay into emotionally grounded cinematic sequences designed to demonstrate tone, character, atmosphere, and execution before production.
         </p>
-
       </div>
 
       <!-- FEATURE GRID -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
 
-        <!-- ITEM -->
         <div class="group relative overflow-hidden bg-black/30 hover:bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl p-5 transition duration-500 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_40px_rgba(0,102,255,0.18)]">
-
           <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.18),transparent_70%)]"></div>
 
           <div class="relative z-10">
-
             <p class="text-2xl md:text-3xl mb-2 transition duration-500 group-hover:text-white">
               ~90 Sec
             </p>
@@ -589,18 +452,13 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
             <p class="text-sm text-gray-400 leading-relaxed transition duration-500 group-hover:text-gray-300">
               Fully realized cinematic scene
             </p>
-
           </div>
-
         </div>
 
-        <!-- ITEM -->
         <div class="group relative overflow-hidden bg-black/30 hover:bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl p-5 transition duration-500 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_40px_rgba(0,102,255,0.18)]">
-
           <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.18),transparent_70%)]"></div>
 
           <div class="relative z-10">
-
             <p class="text-2xl md:text-3xl mb-2 transition duration-500 group-hover:text-white">
               21 Days
             </p>
@@ -608,18 +466,13 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
             <p class="text-sm text-gray-400 leading-relaxed transition duration-500 group-hover:text-gray-300">
               Performance + atmosphere focused
             </p>
-
           </div>
-
         </div>
 
-        <!-- ITEM -->
         <div class="group relative overflow-hidden bg-black/30 hover:bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl p-5 transition duration-500 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_40px_rgba(0,102,255,0.18)]">
-
           <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.18),transparent_70%)]"></div>
 
           <div class="relative z-10">
-
             <p class="text-2xl md:text-3xl mb-2 transition duration-500 group-hover:text-white">
               3 Rounds
             </p>
@@ -627,18 +480,13 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
             <p class="text-sm text-gray-400 leading-relaxed transition duration-500 group-hover:text-gray-300">
               Collaborative refinement included
             </p>
-
           </div>
-
         </div>
 
-        <!-- ITEM -->
         <div class="group relative overflow-hidden bg-black/30 hover:bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl p-5 transition duration-500 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_0_40px_rgba(0,102,255,0.18)]">
-
           <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-[radial-gradient(circle_at_top,rgba(0,102,255,0.18),transparent_70%)]"></div>
 
           <div class="relative z-10">
-
             <p class="text-2xl md:text-3xl mb-2 transition duration-500 group-hover:text-white">
               Pitch-Ready
             </p>
@@ -646,21 +494,16 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
             <p class="text-sm text-gray-400 leading-relaxed transition duration-500 group-hover:text-gray-300">
               Built for presentations + attachment
             </p>
-
           </div>
-
         </div>
 
       </div>
 
       <!-- PROCESS -->
       <div class="mt-12 pt-8 border-t border-white/10">
-
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
 
-          <!-- LEFT -->
           <div>
-
             <p class="text-xs uppercase tracking-[0.25em] text-gray-500 mb-4">
               Collaborative by design
             </p>
@@ -673,12 +516,9 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
             <p class="text-gray-300 leading-relaxed max-w-2xl">
               Every PROOF: Scene is shaped around the emotional core of your screenplay through guided creative direction, cinematic storytelling design, pacing refinement, and collaborative feedback throughout the process.
             </p>
-
           </div>
 
-          <!-- RIGHT -->
           <div class="flex flex-col gap-3 text-sm text-gray-200 min-w-[260px]">
-
             <div class="bg-black/30 border border-white/10 rounded-lg px-4 py-3 backdrop-blur-sm transition duration-500 hover:border-white/20 hover:shadow-[0_0_25px_rgba(0,102,255,0.14)]">
               Includes 3 collaborative feedback rounds
             </div>
@@ -694,56 +534,44 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
             <div class="bg-black/30 border border-white/10 rounded-lg px-4 py-3 backdrop-blur-sm transition duration-500 hover:border-white/20 hover:shadow-[0_0_25px_rgba(0,102,255,0.14)]">
               Rush timelines available for select projects
             </div>
-
           </div>
 
         </div>
-
       </div>
 
       <!-- SIMPLE PROCESS ROW -->
       <div class="mt-12 pt-8 border-t border-white/10">
-
         <div class="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6 text-sm md:text-base text-gray-300">
-
           <span>Send your script pages</span>
-
-          <span class="hidden md:block text-[#0066FF]">â†’</span>
-
+          <span class="hidden md:block text-[#0066FF]">&rarr;</span>
           <span>We shape the cinematic direction</span>
-
-          <span class="hidden md:block text-[#0066FF]">â†’</span>
-
+          <span class="hidden md:block text-[#0066FF]">&rarr;</span>
           <span>We build your scene</span>
-
-          <span class="hidden md:block text-[#0066FF]">â†’</span>
-
+          <span class="hidden md:block text-[#0066FF]">&rarr;</span>
           <span>Show how the film feels</span>
-
         </div>
-
       </div>
 
     </div>
-
   </div>
 
 </section>
 
+<!-- ===================================================== -->
 <!-- FINAL CTA -->
-<section class="pt-16 pb-12 text-center">
+<!-- ===================================================== -->
+<section class="pt-44 md:pt-48 lg:pt-52 pb-12 text-center">
 
   <h2 class="text-3xl mb-4">
     Not sure if Scene is the right PROOF?
   </h2>
 
   <p class="text-gray-200 mb-8 max-w-xl mx-auto px-4">
-    Start the Scene package if youâ€™re ready, or request a Project Review if you want us to recommend the right asset first.
+    Start the Scene package if you&rsquo;re ready, or request a Project Review if you want us to recommend the right asset first.
   </p>
 
   <div class="flex flex-col sm:flex-row justify-center gap-4 w-full max-w-md mx-auto px-4">
-
-    <a 
+    <a
       href="https://buy.stripe.com/test_14A9AV4MD6SGg6pbdT18c01"
       target="_blank"
       rel="noopener noreferrer"
@@ -752,13 +580,12 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
       Start Your Scene
     </a>
 
-    <a 
+    <a
       href="project-review.html"
       class="border border-white/20 px-6 py-3 rounded-md inline-flex items-center justify-center hover:bg-white hover:text-black transition font-medium w-full"
     >
       Project Review
     </a>
-
   </div>
 
   <p class="text-xs text-gray-500 mt-4">
@@ -767,7 +594,7 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
 
   <p class="text-sm text-gray-300 mt-5">
     Or email:
-    <a 
+    <a
       href="mailto:hello@prooflab.studio"
       class="text-white hover:text-[#0066FF] transition"
     >
@@ -777,192 +604,170 @@ window.CRISP_WEBSITE_ID="bd3865ad-66e1-4f27-90ba-c2a2ae76158f";
 
 </section>
 
-<!-- FOOTER -->
-<section class="py-12 text-center">
-
-  <img
-    src="proof-logo/Proof_lab_footer.png"
-    alt="Built on the Proof Lab system"
-    class="w-full max-w-xl mx-auto opacity-70 mb-6"
-  />
-
-  <p class="text-xs text-gray-600 mb-6">
-    Â© 2026 PROOF, LLC. All Rights Reserved.
-  </p>
-
-  <p class="text-[11px] leading-relaxed text-gray-600 max-w-4xl mx-auto">
-    PROOF and ProofLab, LLC provide creative development, visual storytelling, and proof-of-concept production services intended to support presentation, pitching, audience engagement, and project development efforts. While our materials are designed to help communicate creative vision and project potential, ProofLab, LLC makes no guarantees, representations, or warranties regarding financing, distribution, acquisition, commercial success, audience performance, talent attachment, or the purchase, optioning, licensing, or production of any project. All creative and business outcomes remain dependent on numerous external factors beyond our control.
-  </p>
-
-  <div class="flex justify-center gap-6 text-xs text-gray-500 mt-12">
-
-    <a href="terms.html" class="hover:text-white transition">
-      Terms & Conditions
-    </a>
-
-    <a href="privacy.html" class="hover:text-white transition">
-      Privacy Policy
-    </a>
-
-  </div>
-
-</section>
-
-<!-- TO TOP BUTTON -->
-<button
-  id="toTopBtn"
-  class="fixed bottom-32 right-6 z-[9998] bg-[#0066FF] w-12 h-12 rounded-lg flex items-center justify-center text-white shadow-lg opacity-0 pointer-events-none transition duration-300 hover:bg-blue-500"
->
-  â†‘
-</button>
-
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-  // TO TOP BUTTON
-  const btn = document.getElementById("toTopBtn");
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 400) {
-      btn.classList.remove("opacity-0", "pointer-events-none");
-      btn.classList.add("opacity-100");
-    } else {
-      btn.classList.add("opacity-0", "pointer-events-none");
-      btn.classList.remove("opacity-100");
-    }
-  });
-
-  btn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
-  // HAMBURGER MENU
-  const menuBtn = document.getElementById("menuBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
-
-  if (menuBtn && mobileMenu) {
-
-    // TOGGLE MENU
-    menuBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      mobileMenu.classList.toggle("hidden");
-    });
-
-    // CLOSE WHEN CLICKING LINK
-    const links = mobileMenu.querySelectorAll("a");
-
-    links.forEach(link => {
-      link.addEventListener("click", () => {
-        mobileMenu.classList.add("hidden");
-      });
-    });
-
-    // CLOSE WHEN CLICKING OUTSIDE
-    document.addEventListener("click", (e) => {
-
-      if (
-        !mobileMenu.contains(e.target) &&
-        !menuBtn.contains(e.target)
-      ) {
-        mobileMenu.classList.add("hidden");
-      }
-
-    });
-
-  }
-
-  // ================= VIDEO MODAL =================
-
-  const modal = document.getElementById("sceneVideoModal");
-  const openBtn = document.getElementById("openSceneVideo");
-  const closeBtn = document.getElementById("closeSceneVideo");
-  const video = document.getElementById("sceneFullVideo");
-
-  if (modal && openBtn && closeBtn && video) {
-
-    // OPEN
-    openBtn.addEventListener("click", () => {
-
-      modal.classList.remove("hidden");
-      modal.classList.add("flex");
-
-      video.currentTime = 0;
-
-      video.play();
-
-      document.body.style.overflow = "hidden";
-    });
-
-    // CLOSE
-    function closeModal() {
-
-      modal.classList.add("hidden");
-      modal.classList.remove("flex");
-
-      video.pause();
-
-      document.body.style.overflow = "";
-    }
-
-    closeBtn.addEventListener("click", closeModal);
-
-    // CLOSE ON BACKGROUND CLICK
-    modal.addEventListener("click", (e) => {
-
-      if (e.target === modal) {
-        closeModal();
-      }
-
-    });
-
-    // ESC KEY CLOSE
-    document.addEventListener("keydown", (e) => {
-
-      if (e.key === "Escape") {
-        closeModal();
-      }
-
-    });
-
-  }
-
-});
-</script>
-
 <!-- HLS -->
 <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
-<!-- STREAM INIT -->
+<!-- SCENE MODAL VIDEO -->
 <script>
-document.addEventListener("DOMContentLoaded", () => {
-
-  const video = document.getElementById("sceneFullVideo");
+document.addEventListener("DOMContentLoaded", function () {
+  const openVideo = document.getElementById("openSceneVideo");
+  const videoModal = document.getElementById("sceneVideoModal");
+  const closeVideo = document.getElementById("closeSceneVideo");
+  const fullVideo = document.getElementById("sceneFullVideo");
 
   const streamUrl =
     "https://videodelivery.net/712a22d84f232a7ca4ca8f23bd37fc0a/manifest/video.m3u8";
 
-  if (!video) return;
+  let productHls = null;
 
-  if (Hls.isSupported()) {
-
-    const hls = new Hls({
-      enableWorker: true,
-      lowLatencyMode: true
-    });
-
-    hls.loadSource(streamUrl);
-
-    hls.attachMedia(video);
-
-  } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-
-    video.src = streamUrl;
-
+  function destroyProductHls() {
+    if (productHls) {
+      productHls.destroy();
+      productHls = null;
+    }
   }
 
+  function loadProductVideo() {
+    if (!fullVideo) return;
+
+    destroyProductHls();
+
+    fullVideo.pause();
+    fullVideo.removeAttribute("src");
+    fullVideo.load();
+
+    fullVideo.controls = true;
+    fullVideo.muted = false;
+
+    if (window.Hls && window.Hls.isSupported()) {
+      productHls = new window.Hls({
+        enableWorker: true,
+        lowLatencyMode: true
+      });
+
+      productHls.loadSource(streamUrl);
+      productHls.attachMedia(fullVideo);
+
+      productHls.on(window.Hls.Events.MANIFEST_PARSED, function () {
+        fullVideo.currentTime = 0;
+        fullVideo.play().catch(function () {});
+      });
+    } else if (fullVideo.canPlayType("application/vnd.apple.mpegurl")) {
+      fullVideo.src = streamUrl;
+
+      fullVideo.addEventListener("loadedmetadata", function () {
+        fullVideo.currentTime = 0;
+        fullVideo.play().catch(function () {});
+      }, { once: true });
+    }
+  }
+
+  function openModal() {
+    if (!videoModal) return;
+
+    videoModal.classList.remove("hidden");
+    videoModal.classList.add("flex");
+    document.body.style.overflow = "hidden";
+
+    loadProductVideo();
+  }
+
+  function closeModal() {
+    if (!videoModal || !fullVideo) return;
+
+    videoModal.classList.add("hidden");
+    videoModal.classList.remove("flex");
+    document.body.style.overflow = "";
+
+    fullVideo.pause();
+    fullVideo.removeAttribute("src");
+    fullVideo.load();
+
+    destroyProductHls();
+  }
+
+  if (openVideo) {
+    openVideo.addEventListener("click", openModal);
+  }
+
+  if (closeVideo) {
+    closeVideo.addEventListener("click", closeModal);
+  }
+
+  if (videoModal) {
+    videoModal.addEventListener("click", function (event) {
+      if (event.target === videoModal) {
+        closeModal();
+      }
+    });
+  }
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closeModal();
+    }
+  });
+
+  window.addEventListener("beforeunload", function () {
+    destroyProductHls();
+  });
 });
 </script>
 
+<!-- MOBILE MENU WATCH PREVIEW BRIDGE -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  function wireMobileWatchPreview() {
+    const menuPreviewButtons = document.querySelectorAll("[data-mobile-watch-preview]");
+
+    if (!menuPreviewButtons.length) return;
+
+    const previewOpeners = [
+      document.getElementById("openVideoModalMobile"),
+      document.getElementById("openVideoModal"),
+      document.getElementById("openSizzleVideo"),
+      document.getElementById("openTrailerVideo"),
+      document.getElementById("openSceneVideo"),
+      document.getElementById("openConceptVideo"),
+      document.getElementById("openExamplesVideo")
+    ].filter(Boolean);
+
+    menuPreviewButtons.forEach(function (button) {
+      if (!previewOpeners.length) {
+        button.classList.add("hidden");
+        return;
+      }
+
+      button.classList.remove("hidden");
+
+      if (button.dataset.previewWired === "true") return;
+
+      button.dataset.previewWired = "true";
+
+      button.addEventListener("click", function () {
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuIcon = document.getElementById("menuIcon");
+
+        if (mobileMenu) {
+          mobileMenu.classList.add("hidden");
+        }
+
+        if (menuIcon) {
+          menuIcon.innerHTML = "&#9776;";
+        }
+
+        document.body.classList.remove("menu-open");
+
+        previewOpeners[0].click();
+      });
+    });
+  }
+
+  wireMobileWatchPreview();
+  window.setTimeout(wireMobileWatchPreview, 300);
+});
+</script>
 <script defer src="shared-shell.js"></script>
 </body>
 </html>
+

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
@@ -59,7 +59,60 @@
   <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
   <link rel="stylesheet" href="shared-shell.css" />
-  <script defer src="shared-shell.js"></script>
+  <!-- MOBILE MENU WATCH PREVIEW BRIDGE -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  function wireMobileWatchPreview() {
+    const menuPreviewButtons = document.querySelectorAll("[data-mobile-watch-preview]");
+
+    if (!menuPreviewButtons.length) return;
+
+    const previewOpeners = [
+      document.getElementById("openVideoModalMobile"),
+      document.getElementById("openVideoModal"),
+      document.getElementById("openSizzleVideo"),
+      document.getElementById("openTrailerVideo"),
+      document.getElementById("openSceneVideo"),
+      document.getElementById("openConceptVideo"),
+      document.getElementById("openExamplesVideo")
+    ].filter(Boolean);
+
+    menuPreviewButtons.forEach(function (button) {
+      if (!previewOpeners.length) {
+        button.classList.add("hidden");
+        return;
+      }
+
+      button.classList.remove("hidden");
+
+      if (button.dataset.previewWired === "true") return;
+
+      button.dataset.previewWired = "true";
+
+      button.addEventListener("click", function () {
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuIcon = document.getElementById("menuIcon");
+
+        if (mobileMenu) {
+          mobileMenu.classList.add("hidden");
+        }
+
+        if (menuIcon) {
+          menuIcon.innerHTML = "&#9776;";
+        }
+
+        document.body.classList.remove("menu-open");
+
+        previewOpeners[0].click();
+      });
+    });
+  }
+
+  wireMobileWatchPreview();
+  window.setTimeout(wireMobileWatchPreview, 300);
+});
+</script>
+<script defer src="shared-shell.js"></script>
 
   <!-- ===================================================== -->
   <!-- SCHEMA -->
@@ -384,7 +437,7 @@
   <!-- ===================================================== -->
   <!-- PRODUCTS HERO -->
   <!-- ===================================================== -->
-  <section class="proof-page-glow pt-36 md:pt-52 pb-20 md:pb-28">
+  <section class="pt-44 md:pt-48 lg:pt-52 proof-page-glow pb-20 md:pb-28">
     <div class="relative z-10 max-w-6xl mx-auto px-4">
       <div class="max-w-4xl">
         <p class="proof-eyebrow mb-5">
@@ -753,7 +806,7 @@
   <!-- ===================================================== -->
   <!-- PRODUCT FIT GUIDE -->
   <!-- ===================================================== -->
-  <section class="proof-section-border py-24 bg-[#0A0A0A]">
+  <section class="pt-44 md:pt-48 lg:pt-52 proof-section-border py-24 bg-[#0A0A0A]">
     <div class="max-w-6xl mx-auto px-4">
       <div class="grid lg:grid-cols-12 gap-10 items-start">
         <div class="lg:col-span-5">
@@ -1260,7 +1313,7 @@
   <!-- ===================================================== -->
   <!-- FINAL CTA -->
   <!-- ===================================================== -->
-  <section class="proof-section-border py-24 bg-[#0A0A0A]">
+  <section class="pt-44 md:pt-48 lg:pt-52 proof-section-border py-24 bg-[#0A0A0A]">
     <div class="max-w-5xl mx-auto px-4 text-center">
       <p class="proof-eyebrow mb-5">
         Start Here
@@ -1659,3 +1712,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
+
