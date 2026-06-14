@@ -1,22 +1,29 @@
-﻿document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   document.documentElement.classList.add("scroll-smooth");
 
   const headerHtml = `
 <!-- NAV -->
-<!-- NAV -->
-<header class="fixed top-0 w-full bg-black/70 backdrop-blur z-50">
+<header id="proofSharedHeader" class="fixed top-0 w-full bg-black/70 backdrop-blur z-50">
   <div class="max-w-6xl mx-auto flex justify-between items-center py-3 px-4">
 
     <!-- LOGO -->
-    <a href="index.html" aria-label="Go to PROOF home" class="inline-flex items-center shrink-0"><img
-      src="proof-logo/Proof_header_good.png"
-      alt="PROOF and ProofLab system cinematic proof-of-concept platform"
-      class="h-[40px] md:h-[60px] w-auto object-contain scale-[2.5] origin-left"
-    /></a>
+    <a href="index.html" aria-label="Go to PROOF home" class="inline-flex items-center shrink-0">
+      <img
+        src="proof-logo/Proof_header_good.png"
+        alt="PROOF and ProofLab system cinematic proof-of-concept platform"
+        class="h-[40px] md:h-[60px] w-auto object-contain scale-[2.5] origin-left"
+      />
+    </a>
 
     <!-- HAMBURGER -->
-    <button id="menuBtn" class="md:hidden text-white text-2xl">
-      &#9776;
+    <button
+      id="menuBtn"
+      type="button"
+      class="md:hidden text-white text-2xl leading-none"
+      aria-label="Open menu"
+      aria-expanded="false"
+    >
+      <span id="menuIcon">&#9776;</span>
     </button>
 
     <!-- DESKTOP NAV -->
@@ -32,18 +39,8 @@
   </div>
 
   <!-- MOBILE MENU -->
-  <div id="mobileMenu" class="hidden md:hidden bg-black text-center py-6 flex flex-col items-center gap-4">
-    <a href="project-review.html" class="block text-[#0066FF] font-semibold">Get Free Review</a>
-
-    <button
-      type="button"
-      data-mobile-watch-preview
-      class="hidden text-white/80 hover:text-white transition"
-    >
-      Watch Preview
-    </button>
-
-    <a href="index.html#what-is-proof" class="block">What is PROOF?</a>
+  <div id="mobileMenu" class="hidden md:hidden bg-black text-center py-6 flex-col items-center gap-4">
+<a href="index.html#what-is-proof" class="block">What is PROOF?</a>
     <a href="index.html#examples" class="block">Examples</a>
     <a href="products.html" class="block">Products</a>
     <a href="development.html" class="block hover:text-gray-300">PROOF: Dev</a>
@@ -58,7 +55,7 @@
         href="project-review.html"
         class="block w-full bg-[#0066FF] text-white text-sm font-semibold py-3 rounded-md hover:bg-[#0052cc] transition mb-3"
       >
-        Start Free Review
+        Get Free Review
       </a>
 
       <button
@@ -70,7 +67,6 @@
       </button>
     </div>
   </div>
-
 </header>
 `;
 
@@ -131,7 +127,7 @@
         <div class="grid grid-cols-2 gap-3 text-sm text-gray-400">
           <a href="index.html#project-fit-review" class="hover:text-white transition">Free Review</a>
           <a href="index.html#examples" class="hover:text-white transition">Examples</a>
-          <a href="index.html#how-it-works" class="hover:text-white transition">How It Works</a>
+          <a href="index.html#why-proof" class="hover:text-white transition">Why PROOF</a>
           <a href="index.html#what-is-proof" class="hover:text-white transition">What Is PROOF?</a>
           <a href="products.html" class="hover:text-white transition">Products</a>
           <a href="development.html" class="hover:text-white transition">PROOF: Dev</a>
@@ -261,24 +257,36 @@
   const menuIcon = document.getElementById("menuIcon");
 
   function setMobileMenu(open) {
-    if (!menuBtn || !mobileMenu || !menuIcon) return;
+    if (!menuBtn || !mobileMenu) return;
 
     if (open) {
       mobileMenu.classList.remove("hidden");
-      menuIcon.innerHTML = "&times;";
+      mobileMenu.classList.add("flex");
+
+      if (menuIcon) {
+        menuIcon.innerHTML = "&times;";
+      }
+
       menuBtn.setAttribute("aria-label", "Close menu");
       menuBtn.setAttribute("aria-expanded", "true");
       document.body.classList.add("menu-open");
     } else {
       mobileMenu.classList.add("hidden");
-      menuIcon.innerHTML = "&#9776;";
+      mobileMenu.classList.remove("flex");
+
+      if (menuIcon) {
+        menuIcon.innerHTML = "&#9776;";
+      }
+
       menuBtn.setAttribute("aria-label", "Open menu");
       menuBtn.setAttribute("aria-expanded", "false");
       document.body.classList.remove("menu-open");
     }
   }
 
-  if (menuBtn && mobileMenu && menuIcon) {
+  if (menuBtn && mobileMenu) {
+    menuBtn.dataset.rescueWired = "true";
+
     menuBtn.addEventListener("click", event => {
       event.stopPropagation();
       const isOpen = !mobileMenu.classList.contains("hidden");
@@ -296,9 +304,8 @@
         setMobileMenu(false);
       }
     });
-  }
-
-  const floatingBar = document.getElementById("floatingPitchBar");
+  }
+const floatingBar = document.getElementById("floatingPitchBar");
 
   if (floatingBar) {
     window.addEventListener("scroll", () => {
@@ -393,7 +400,7 @@
       }
     });
 
-    setTimeout(() => {
+    window.setTimeout(() => {
       if (!popupShown) {
         openChecklistPopup();
       }
@@ -430,84 +437,16 @@
 
   if (downloadChecklistBtn) {
     downloadChecklistBtn.addEventListener("click", () => {
-      setTimeout(() => {
+      window.setTimeout(() => {
         closeChecklistPopup(false);
       }, 300);
     });
   }
 
   if (window.location.hash === "#checklist") {
-    setTimeout(() => {
+    window.setTimeout(() => {
       openChecklistPopup();
       history.replaceState(null, "", window.location.pathname);
     }, 500);
   }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// MOBILE MENU WATCH PREVIEW BRIDGE
-document.addEventListener("DOMContentLoaded", function () {
-  function wireMobileWatchPreview() {
-    const menuPreviewButtons = document.querySelectorAll("[data-mobile-watch-preview]");
-
-    if (!menuPreviewButtons.length) return;
-
-    const previewOpeners = [
-      document.getElementById("openVideoModalMobile"),
-      document.getElementById("openVideoModal"),
-      document.getElementById("openSizzleVideo"),
-      document.getElementById("openTrailerVideo"),
-      document.getElementById("openSceneVideo"),
-      document.getElementById("openConceptVideo"),
-      document.getElementById("openExamplesVideo")
-    ].filter(Boolean);
-
-    menuPreviewButtons.forEach(function (button) {
-      if (!previewOpeners.length) {
-        button.classList.add("hidden");
-        return;
-      }
-
-      button.classList.remove("hidden");
-
-      if (button.dataset.previewWired === "true") return;
-
-      button.dataset.previewWired = "true";
-
-      button.addEventListener("click", function () {
-        const mobileMenu = document.getElementById("mobileMenu");
-        const menuIcon = document.getElementById("menuIcon");
-
-        if (mobileMenu) {
-          mobileMenu.classList.add("hidden");
-        }
-
-        if (menuIcon) {
-          menuIcon.innerHTML = "&#9776;";
-        }
-
-        document.body.classList.remove("menu-open");
-
-        previewOpeners[0].click();
-      });
-    });
-  }
-
-  wireMobileWatchPreview();
-  window.setTimeout(wireMobileWatchPreview, 300);
-});
-
-

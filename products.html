@@ -7,16 +7,16 @@
   <!-- ===================================================== -->
   <!-- PRIMARY SEO -->
   <!-- ===================================================== -->
-  <title>PROOF Products | Sizzles, Trailers, Scenes & Proof-of-Concept Packages</title>
+  <title>PROOF Products | Sizzles, Trailers, Scenes & Concept Packages</title>
 
   <meta
     name="description"
-    content="Choose the right PROOF package for your project: cinematic sizzles, trailers, proof-of-concept scenes, and custom visual pitch packages for filmmakers, writers, producers, and creators."
+    content="Choose the right PROOF product for your project: sizzle, trailer, scene, or concept package. Each product helps people see and understand the project faster."
   />
 
   <meta
     name="keywords"
-    content="PROOF products, sizzle reel package, proof of concept trailer, cinematic trailer, pitch video, proof of concept scene, film pitch asset, visual proof package, filmmaker pitch video"
+    content="PROOF products, sizzle reel, proof of concept trailer, cinematic trailer, pitch video, proof of concept scene, film pitch asset, visual proof package, filmmaker pitch video"
   />
 
   <meta name="author" content="PROOF" />
@@ -27,10 +27,10 @@
   <!-- OPEN GRAPH -->
   <!-- ===================================================== -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="PROOF Products | Choose the Right Visual Pitch Asset" />
+  <meta property="og:title" content="PROOF Products | Pick the Proof Your Project Needs" />
   <meta
     property="og:description"
-    content="Explore PROOF sizzles, trailers, scenes, and custom proof-of-concept packages for projects that need to be seen and understood faster."
+    content="Sizzle, Trailer, Scene, or Concept. PROOF helps make your project easier to see, understand, and pitch."
   />
   <meta property="og:url" content="https://prooflab.studio/products.html" />
   <meta property="og:image" content="https://prooflab.studio/images/social-preview.jpg" />
@@ -42,7 +42,7 @@
   <meta name="twitter:title" content="PROOF Products | Sizzles, Trailers, Scenes & Concepts" />
   <meta
     name="twitter:description"
-    content="Choose the right visual proof asset for your project before your next pitch."
+    content="Pick the proof your project needs before the next pitch."
   />
   <meta name="twitter:image" content="https://prooflab.studio/images/social-preview.jpg" />
 
@@ -57,62 +57,8 @@
   <!-- ===================================================== -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-
   <link rel="stylesheet" href="shared-shell.css" />
-  <!-- MOBILE MENU WATCH PREVIEW BRIDGE -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  function wireMobileWatchPreview() {
-    const menuPreviewButtons = document.querySelectorAll("[data-mobile-watch-preview]");
-
-    if (!menuPreviewButtons.length) return;
-
-    const previewOpeners = [
-      document.getElementById("openVideoModalMobile"),
-      document.getElementById("openVideoModal"),
-      document.getElementById("openSizzleVideo"),
-      document.getElementById("openTrailerVideo"),
-      document.getElementById("openSceneVideo"),
-      document.getElementById("openConceptVideo"),
-      document.getElementById("openExamplesVideo")
-    ].filter(Boolean);
-
-    menuPreviewButtons.forEach(function (button) {
-      if (!previewOpeners.length) {
-        button.classList.add("hidden");
-        return;
-      }
-
-      button.classList.remove("hidden");
-
-      if (button.dataset.previewWired === "true") return;
-
-      button.dataset.previewWired = "true";
-
-      button.addEventListener("click", function () {
-        const mobileMenu = document.getElementById("mobileMenu");
-        const menuIcon = document.getElementById("menuIcon");
-
-        if (mobileMenu) {
-          mobileMenu.classList.add("hidden");
-        }
-
-        if (menuIcon) {
-          menuIcon.innerHTML = "&#9776;";
-        }
-
-        document.body.classList.remove("menu-open");
-
-        previewOpeners[0].click();
-      });
-    });
-  }
-
-  wireMobileWatchPreview();
-  window.setTimeout(wireMobileWatchPreview, 300);
-});
-</script>
-<script defer src="shared-shell.js"></script>
+  <script defer src="shared-shell.js"></script>
 
   <!-- ===================================================== -->
   <!-- SCHEMA -->
@@ -121,9 +67,9 @@ document.addEventListener("DOMContentLoaded", function () {
 {
   "@context": "https://schema.org",
   "@type": "OfferCatalog",
-  "name": "PROOF Visual Pitch Asset Packages",
+  "name": "PROOF Products",
   "url": "https://prooflab.studio/products.html",
-  "description": "Cinematic visual proof packages for scripts, decks, concepts, and entertainment pitches.",
+  "description": "Sizzles, trailers, scenes, and concept packages for projects that need visual proof.",
   "itemListElement": [
     {
       "@type": "Offer",
@@ -131,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "price": "900",
       "priceCurrency": "USD",
       "url": "https://prooflab.studio/sizzle.html",
-      "description": "A short cinematic proof asset for early concepts that need energy, tone, and momentum."
+      "description": "A short visual proof asset that shows the tone, world, hook, and energy of a project quickly."
     },
     {
       "@type": "Offer",
@@ -139,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
       "price": "1800",
       "priceCurrency": "USD",
       "url": "https://prooflab.studio/trailer.html",
-      "description": "A cinematic trailer for serious pitches where tone, world, stakes, and market potential need to land."
+      "description": "A cinematic trailer that shows the story, stakes, audience, and promise of a project."
     },
     {
       "@type": "Offer",
@@ -147,13 +93,13 @@ document.addEventListener("DOMContentLoaded", function () {
       "price": "2400",
       "priceCurrency": "USD",
       "url": "https://prooflab.studio/scene.html",
-      "description": "A proof-of-concept scene for projects where one moment can prove execution, character, tone, and emotional weight."
+      "description": "A proof-of-concept scene that shows one key moment, character beat, or execution choice."
     },
     {
       "@type": "Offer",
       "name": "PROOF: Concept",
       "url": "https://prooflab.studio/concept.html",
-      "description": "A custom proof-of-concept package for larger projects that need deeper development or multiple visual pitch assets."
+      "description": "A custom visual proof package for projects that need a larger build."
     }
   ]
 }
@@ -210,6 +156,10 @@ document.addEventListener("DOMContentLoaded", function () {
       font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
+    body.modal-open {
+      overflow: hidden;
+    }
+
     .proof-btn {
       box-shadow: 0 0 0 rgba(0,102,255,0);
     }
@@ -224,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
       letter-spacing: 0.35em;
       text-transform: uppercase;
       color: #0066FF;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .proof-section-border {
@@ -253,14 +203,25 @@ document.addEventListener("DOMContentLoaded", function () {
       pointer-events: none;
     }
 
+    .proof-shell {
+      position: relative;
+      z-index: 2;
+      border: 1px solid rgba(255,255,255,0.10);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.052), rgba(255,255,255,0.018)),
+        rgba(10,10,12,0.92);
+      box-shadow: 0 30px 110px rgba(0,0,0,0.48);
+      overflow: hidden;
+    }
+
     .product-card {
       position: relative;
       overflow: hidden;
       background:
         linear-gradient(180deg, rgba(255,255,255,0.045), rgba(255,255,255,0.016)),
-        #18181B;
+        #111114;
       border: 1px solid rgba(255,255,255,0.10);
-      border-radius: 1rem;
+      border-radius: 1.15rem;
       transition:
         transform 500ms ease,
         border-color 500ms ease,
@@ -270,11 +231,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     .product-card:hover {
       transform: translateY(-4px);
-      border-color: rgba(255,255,255,0.22);
+      border-color: rgba(0,102,255,0.38);
       background:
         radial-gradient(circle at 20% 10%, rgba(0,102,255,0.14), transparent 36%),
         linear-gradient(180deg, rgba(255,255,255,0.055), rgba(255,255,255,0.018)),
-        #18181B;
+        #111114;
       box-shadow:
         0 0 45px rgba(0,102,255,0.14),
         0 20px 70px rgba(0,0,0,0.38);
@@ -285,8 +246,10 @@ document.addEventListener("DOMContentLoaded", function () {
       position: absolute;
       inset: 0;
       opacity: 0;
-      background: radial-gradient(circle at top, rgba(0,102,255,0.14), transparent 55%);
-      transition: opacity 700ms ease;
+      background:
+        radial-gradient(circle at top, rgba(0,102,255,0.15), transparent 55%),
+        linear-gradient(115deg, transparent 0%, rgba(255,255,255,0.05) 42%, transparent 72%);
+      transition: opacity 650ms ease;
       pointer-events: none;
     }
 
@@ -306,9 +269,12 @@ document.addEventListener("DOMContentLoaded", function () {
       border-radius: 999px;
       background: rgba(255,255,255,0.035);
       color: rgba(255,255,255,0.62);
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       line-height: 1rem;
       padding: 0.45rem 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      white-space: nowrap;
     }
 
     .proof-product-compare {
@@ -323,7 +289,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     .proof-product-compare-row {
       display: grid;
-      grid-template-columns: 0.8fr 1.2fr 1fr;
+      grid-template-columns: 0.75fr 1.15fr 1fr;
       gap: 1rem;
       border-top: 1px solid rgba(255,255,255,0.08);
       padding: 1.15rem;
@@ -335,6 +301,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     .proof-product-compare-row:hover {
       background: rgba(255,255,255,0.025);
+    }
+
+    .proof-line-card {
+      position: relative;
+      border-left: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .proof-line-card::before {
+      content: "";
+      position: absolute;
+      left: -0.28rem;
+      top: 0.35rem;
+      width: 0.55rem;
+      height: 0.55rem;
+      border-radius: 999px;
+      background: #0066FF;
+      box-shadow: 0 0 18px rgba(0,102,255,0.80);
     }
 
     .hide-scrollbar::-webkit-scrollbar {
@@ -420,11 +403,76 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
 
+    /* ===================================================== */
+    /* SAVED TRUST MARQUEE - DO NOT DELETE */
+    /* Parked here for later use. Not currently active. */
+    /* ===================================================== */
+
+    /*
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marqueeScroll 55s linear infinite;
+    }
+
+    .marquee-track:hover {
+      animation-play-state: paused;
+    }
+
+    .marquee-group {
+      display: flex;
+      align-items: center;
+      gap: 120px;
+      padding-right: 120px;
+    }
+
+    .logo-item {
+      height: 105px;
+      width: auto;
+      opacity: 0.72;
+      filter: grayscale(100%);
+      transition: all 0.5s ease;
+      flex-shrink: 0;
+    }
+
+    .logo-item:hover {
+      opacity: 1;
+      filter: grayscale(0%);
+      transform: scale(1.06);
+    }
+
+    @keyframes marqueeScroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .marquee-group {
+        gap: 48px;
+        padding-right: 48px;
+      }
+
+      .marquee-track:hover {
+        animation-play-state: running !important;
+      }
+    }
+    */
+
     @media (max-width: 768px) {
       .proof-product-compare-row {
         grid-template-columns: 1fr;
         gap: 0.35rem;
-        padding: 1.25rem;
+        padding: 1.2rem;
+      }
+
+      .product-meta-pill {
+        font-size: 0.62rem;
+        letter-spacing: 0.14em;
       }
     }
   </style>
@@ -437,94 +485,343 @@ document.addEventListener("DOMContentLoaded", function () {
   <!-- ===================================================== -->
   <!-- PRODUCTS HERO -->
   <!-- ===================================================== -->
-  <section class="pt-44 md:pt-48 lg:pt-52 proof-page-glow pb-20 md:pb-28">
+  <section class="pt-40 md:pt-48 lg:pt-52 proof-page-glow pb-12 md:pb-20">
     <div class="relative z-10 max-w-6xl mx-auto px-4">
-      <div class="max-w-4xl">
-        <p class="proof-eyebrow mb-5">
-          Products
-        </p>
 
-        <h1 class="text-4xl md:text-7xl leading-[0.92] tracking-[-0.065em] mb-7">
-          Choose the proof your project needs.
-        </h1>
+      <div class="grid lg:grid-cols-[0.95fr_1.05fr] gap-10 lg:gap-14 items-end">
+        <div class="max-w-4xl">
+          <p class="proof-eyebrow mb-5">
+            Products
+          </p>
 
-        <p class="text-lg md:text-2xl text-gray-300 leading-relaxed max-w-3xl mb-10">
-          A script, deck, or concept can be strong and still fail to land. These products turn the project into something people can see, feel, and react to.
-        </p>
+          <h1 class="text-4xl md:text-7xl leading-[0.92] tracking-[-0.065em] mb-7">
+            Pick the proof your project needs.
+          </h1>
 
-        <div class="flex flex-col sm:flex-row gap-4">
+          <p class="text-lg md:text-2xl text-gray-300 leading-relaxed max-w-3xl">
+            Sizzle, Trailer, Scene, or Concept. Each one helps people see the project faster.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3 lg:gap-4">
           <a
-            href="project-review.html"
-            class="proof-btn inline-flex items-center justify-center bg-[#0066FF] px-8 py-4 rounded-md font-semibold text-center hover:bg-[#0052cc] transition w-full sm:w-[250px]"
+            href="#products"
+            class="group rounded-2xl border border-white/10 bg-white/[0.035] p-4 md:p-5 hover:border-[#0066FF]/45 hover:bg-white/[0.055] transition"
           >
-            Get Free Review
+            <p class="text-[10px] uppercase tracking-[0.28em] text-[#0066FF] font-bold mb-3">
+              01
+            </p>
+
+            <h2 class="text-xl md:text-2xl font-semibold tracking-[-0.045em] mb-2">
+              Sizzle
+            </h2>
+
+            <p class="text-sm text-gray-400 leading-relaxed">
+              Shows the feel.
+            </p>
           </a>
 
-          <button
-            id="openChecklistPopupSection"
-            type="button"
-            class="inline-flex items-center justify-center border border-white px-8 py-4 rounded-md text-white hover:bg-white hover:text-black transition font-semibold text-center w-full sm:w-[250px]"
+          <a
+            href="#products"
+            class="group rounded-2xl border border-white/10 bg-white/[0.035] p-4 md:p-5 hover:border-[#0066FF]/45 hover:bg-white/[0.055] transition"
           >
-            Get Checklist
-          </button>
+            <p class="text-[10px] uppercase tracking-[0.28em] text-[#0066FF] font-bold mb-3">
+              02
+            </p>
+
+            <h2 class="text-xl md:text-2xl font-semibold tracking-[-0.045em] mb-2">
+              Trailer
+            </h2>
+
+            <p class="text-sm text-gray-400 leading-relaxed">
+              Shows the story.
+            </p>
+          </a>
+
+          <a
+            href="#products"
+            class="group rounded-2xl border border-white/10 bg-white/[0.035] p-4 md:p-5 hover:border-[#0066FF]/45 hover:bg-white/[0.055] transition"
+          >
+            <p class="text-[10px] uppercase tracking-[0.28em] text-[#0066FF] font-bold mb-3">
+              03
+            </p>
+
+            <h2 class="text-xl md:text-2xl font-semibold tracking-[-0.045em] mb-2">
+              Scene
+            </h2>
+
+            <p class="text-sm text-gray-400 leading-relaxed">
+              Shows the moment.
+            </p>
+          </a>
+
+          <a
+            href="#products"
+            class="group rounded-2xl border border-white/10 bg-white/[0.035] p-4 md:p-5 hover:border-[#0066FF]/45 hover:bg-white/[0.055] transition"
+          >
+            <p class="text-[10px] uppercase tracking-[0.28em] text-[#0066FF] font-bold mb-3">
+              04
+            </p>
+
+            <h2 class="text-xl md:text-2xl font-semibold tracking-[-0.045em] mb-2">
+              Concept
+            </h2>
+
+            <p class="text-sm text-gray-400 leading-relaxed">
+              Builds the package.
+            </p>
+          </a>
         </div>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-4 mt-14">
-        <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-          <p class="text-white font-semibold mb-2">
-            Start small.
-          </p>
+      <div class="mt-10 flex flex-col sm:flex-row gap-4">
+        <a
+          href="project-review.html"
+          class="proof-btn inline-flex items-center justify-center bg-[#0066FF] px-8 py-4 rounded-md font-semibold text-center hover:bg-[#0052cc] transition w-full sm:w-[250px]"
+        >
+          Get Free Review
+        </a>
 
-          <p class="text-sm text-gray-400 leading-relaxed">
-            Use a sizzle when the project needs momentum, energy, and a faster first impression.
-          </p>
-        </div>
-
-        <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-          <p class="text-white font-semibold mb-2">
-            Make the pitch bigger.
-          </p>
-
-          <p class="text-sm text-gray-400 leading-relaxed">
-            Use a trailer when people need to understand the world, stakes, tone, and market potential.
-          </p>
-        </div>
-
-        <div class="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
-          <p class="text-white font-semibold mb-2">
-            Prove execution.
-          </p>
-
-          <p class="text-sm text-gray-400 leading-relaxed">
-            Use a scene when one moment can prove the writing, feeling, character, and cinematic language.
-          </p>
-        </div>
+        <a
+          href="#products"
+          class="inline-flex items-center justify-center border border-white px-8 py-4 rounded-md text-white hover:bg-white hover:text-black transition font-semibold text-center w-full sm:w-[250px]"
+        >
+          Compare Products
+        </a>
       </div>
+
     </div>
   </section>
 
   <!-- ===================================================== -->
   <!-- PRODUCTS -->
   <!-- ===================================================== -->
-  <section id="products" class="proof-section-border py-24 bg-black">
+  <section id="products" class="proof-section-border py-14 md:py-20 bg-black">
     <div class="max-w-6xl mx-auto px-4">
 
-      <div class="max-w-4xl mx-auto text-center mb-14">
+      <div class="max-w-4xl mx-auto text-center mb-10 md:mb-14">
         <p class="proof-eyebrow mb-5">
-          Choose Your PROOF
+          Compare Products
         </p>
 
-        <h2 class="text-3xl md:text-5xl leading-tight mb-6">
-          Match the asset to the next conversation.
+        <h2 class="text-3xl md:text-5xl leading-tight tracking-[-0.055em] mb-5">
+          Four ways to show the project.
         </h2>
 
-        <p class="text-gray-300 text-lg leading-relaxed">
-          Each product is built for a different pitching problem. Pick the one that fits, or start with the free review and let us tell you.
+        <p class="text-gray-300 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
+          Pick the closest fit, or start with the free review and let us recommend the right next step.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
+      <!-- ===================================================== -->
+<!-- MOBILE PRODUCT ROWS -->
+<!-- ===================================================== -->
+<div class="md:hidden space-y-3">
+
+  <article class="rounded-2xl border border-white/10 bg-white/[0.035] overflow-hidden">
+    <a href="sizzle.html" class="grid grid-cols-[112px_1fr] gap-4 p-3">
+      <div class="relative h-full min-h-[128px] overflow-hidden rounded-xl bg-black">
+        <video
+          data-hls="https://videodelivery.net/238de8025285e57b0ad563bdaeca85da/manifest/video.m3u8"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          class="js-hls-video product-video absolute inset-0 w-full h-full object-cover"
+        ></video>
+      </div>
+
+      <div class="min-w-0 py-1 pr-1">
+        <p class="text-[9px] uppercase tracking-[0.24em] text-[#0066FF] font-bold mb-2">
+          Shows the feel
+        </p>
+
+        <div class="flex items-start justify-between gap-3">
+          <h3 class="text-2xl font-semibold tracking-[-0.045em]">
+            Sizzle
+          </h3>
+
+          <div class="text-right shrink-0">
+            <p class="text-xl tracking-[-0.045em]">
+              $900
+            </p>
+          </div>
+        </div>
+
+        <p class="mt-2 text-sm text-gray-400 leading-relaxed">
+          Tone, world, hook, and energy in a short visual asset.
+        </p>
+
+        <div class="mt-4 flex items-center justify-between gap-4">
+          <p class="text-[11px] text-gray-500">
+            Up to 30 seconds
+          </p>
+
+          <span class="text-sm font-semibold text-[#0066FF]">
+            See Sizzle
+          </span>
+        </div>
+      </div>
+    </a>
+  </article>
+
+  <article class="rounded-2xl border border-white/10 bg-white/[0.035] overflow-hidden">
+    <a href="trailer.html" class="grid grid-cols-[112px_1fr] gap-4 p-3">
+      <div class="relative h-full min-h-[128px] overflow-hidden rounded-xl bg-black">
+        <video
+          data-hls="https://videodelivery.net/0ab0b9b0bc81d018f5a645d2d9069632/manifest/video.m3u8"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          class="js-hls-video product-video absolute inset-0 w-full h-full object-cover"
+        ></video>
+      </div>
+
+      <div class="min-w-0 py-1 pr-1">
+        <p class="text-[9px] uppercase tracking-[0.24em] text-[#0066FF] font-bold mb-2">
+          Shows the story
+        </p>
+
+        <div class="flex items-start justify-between gap-3">
+          <h3 class="text-2xl font-semibold tracking-[-0.045em]">
+            Trailer
+          </h3>
+
+          <div class="text-right shrink-0">
+            <p class="text-xl tracking-[-0.045em]">
+              $1,800
+            </p>
+          </div>
+        </div>
+
+        <p class="mt-2 text-sm text-gray-400 leading-relaxed">
+          Premise, stakes, pressure, tone, and promise.
+        </p>
+
+        <div class="mt-4 flex items-center justify-between gap-4">
+          <p class="text-[11px] text-gray-500">
+            About 45-90 seconds
+          </p>
+
+          <span class="text-sm font-semibold text-[#0066FF]">
+            See Trailer
+          </span>
+        </div>
+      </div>
+    </a>
+  </article>
+
+  <article class="rounded-2xl border border-white/10 bg-white/[0.035] overflow-hidden">
+    <a href="scene.html" class="grid grid-cols-[112px_1fr] gap-4 p-3">
+      <div class="relative h-full min-h-[128px] overflow-hidden rounded-xl bg-black">
+        <video
+          data-hls="https://videodelivery.net/ffd865d79dcdf2b9a958e43a3bf208df/manifest/video.m3u8"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          class="js-hls-video product-video absolute inset-0 w-full h-full object-cover"
+        ></video>
+      </div>
+
+      <div class="min-w-0 py-1 pr-1">
+        <p class="text-[9px] uppercase tracking-[0.24em] text-[#0066FF] font-bold mb-2">
+          Shows the moment
+        </p>
+
+        <div class="flex items-start justify-between gap-3">
+          <h3 class="text-2xl font-semibold tracking-[-0.045em]">
+            Scene
+          </h3>
+
+          <div class="text-right shrink-0">
+            <p class="text-xl tracking-[-0.045em]">
+              $2,400
+            </p>
+          </div>
+        </div>
+
+        <p class="mt-2 text-sm text-gray-400 leading-relaxed">
+          One key moment that shows character, emotion, and execution.
+        </p>
+
+        <div class="mt-4 flex items-center justify-between gap-4">
+          <p class="text-[11px] text-gray-500">
+            Up to 2 script pages
+          </p>
+
+          <span class="text-sm font-semibold text-[#0066FF]">
+            See Scene
+          </span>
+        </div>
+      </div>
+    </a>
+  </article>
+
+  <article class="rounded-2xl border border-white/10 bg-white/[0.035] overflow-hidden">
+  <a href="concept.html" class="grid grid-cols-[112px_1fr] gap-4 p-3">
+    <div class="relative h-full min-h-[128px] overflow-hidden rounded-xl bg-black">
+      <div
+        id="proofConceptMediaMobile"
+        data-media-type="image"
+        data-video-url="https://videodelivery.net/f2d390847b244b605519cc3b7269ebc3/manifest/video.m3u8"
+        class="absolute inset-0"
+      >
+        <img
+          src="images/proof-concept.png"
+          alt="PROOF Concept visual proof package"
+          class="absolute inset-0 w-full h-full object-cover"
+          style="filter: contrast(1.05) saturate(0.9) brightness(0.9);"
+        />
+      </div>
+
+      <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent pointer-events-none"></div>
+    </div>
+
+    <div class="min-w-0 py-1 pr-1">
+      <p class="text-[9px] uppercase tracking-[0.24em] text-[#0066FF] font-bold mb-2">
+        Builds the package
+      </p>
+
+      <div class="flex items-start justify-between gap-3">
+        <h3 class="text-2xl font-semibold tracking-[-0.045em]">
+          Concept
+        </h3>
+
+        <div class="text-right shrink-0">
+          <p class="text-xl tracking-[-0.045em]">
+            Custom
+          </p>
+        </div>
+      </div>
+
+      <p class="mt-2 text-sm text-gray-400 leading-relaxed">
+        A larger visual proof build when one asset is not enough.
+      </p>
+
+      <div class="mt-4 flex items-center justify-between gap-4">
+        <p class="text-[11px] text-gray-500">
+          Larger proof package
+        </p>
+
+        <span class="text-sm font-semibold text-[#0066FF]">
+          See Concept
+        </span>
+      </div>
+    </div>
+  </a>
+</article>
+
+</div>
+
+      <!-- ===================================================== -->
+      <!-- DESKTOP PRODUCT CARDS -->
+      <!-- ===================================================== -->
+      <div class="hidden md:grid md:grid-cols-3 gap-6 lg:gap-8">
 
         <!-- ===================================================== -->
         <!-- SIZZLE -->
@@ -550,19 +847,19 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="relative z-[1] p-6 flex flex-col flex-1">
             <div class="mb-5">
               <p class="product-meta-pill mb-4">
-                Fastest entry point
+                Shows the feel
               </p>
 
-              <h3 class="text-2xl mb-3">
+              <h3 class="text-2xl font-semibold tracking-[-0.04em] mb-3">
                 PROOF: Sizzle
               </h3>
 
               <p class="text-gray-200 leading-relaxed mb-3">
-                For early concepts that need momentum fast.
+                A short visual asset that makes the tone, world, hook, and energy clear fast.
               </p>
 
               <p class="text-sm text-gray-500 leading-relaxed">
-                Best for pitch decks, outreach emails, early investor interest, and concept validation.
+                Best for decks, emails, early outreach, and first conversations.
               </p>
             </div>
 
@@ -576,17 +873,17 @@ document.addEventListener("DOMContentLoaded", function () {
               </p>
 
               <ul class="text-sm text-gray-300 mb-7 space-y-2">
-                <li>&bull; Cinematic visual sequence</li>
-                <li>&bull; Sound, rhythm, and pacing</li>
-                <li>&bull; Delivered in 10 days</li>
+                <li>&bull; Short cinematic visual sequence</li>
+                <li>&bull; Tone, rhythm, and pacing</li>
+                <li>&bull; Delivered in about 10 days</li>
               </ul>
 
               <div class="relative z-20">
                 <a
                   href="sizzle.html"
-                  class="block w-full py-3 rounded-md bg-[#0066FF] text-white text-center transition hover:bg-[#0052cc] hover:shadow-[0_0_35px_rgba(0,102,255,0.28)]"
+                  class="block w-full py-3 rounded-md bg-[#0066FF] text-white text-center font-semibold transition hover:bg-[#0052cc] hover:shadow-[0_0_35px_rgba(0,102,255,0.28)]"
                 >
-                  Start a Sizzle
+                  See Sizzle
                 </a>
               </div>
             </div>
@@ -617,19 +914,19 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="relative z-[1] p-6 flex flex-col flex-1">
             <div class="mb-5">
               <p class="product-meta-pill mb-4">
-                Stronger pitch asset
+                Shows the story
               </p>
 
-              <h3 class="text-2xl mb-3">
+              <h3 class="text-2xl font-semibold tracking-[-0.04em] mb-3">
                 PROOF: Trailer
               </h3>
 
               <p class="text-gray-200 leading-relaxed mb-3">
-                For serious pitches where tone, world, and stakes need to land.
+                A longer visual asset that shows the premise, stakes, tone, and promise.
               </p>
 
               <p class="text-sm text-gray-500 leading-relaxed">
-                Best for producer, investor, and talent packaging conversations.
+                Best when people need to understand what the project is and why it matters.
               </p>
             </div>
 
@@ -639,21 +936,21 @@ document.addEventListener("DOMContentLoaded", function () {
               </p>
 
               <p class="text-xs text-gray-500 mb-5">
-                About 45-90 seconds &bull; Includes creative consult
+                About 45-90 seconds
               </p>
 
               <ul class="text-sm text-gray-300 mb-7 space-y-2">
-                <li>&bull; 45-90 second cinematic trailer</li>
-                <li>&bull; Pitch-ready story argument</li>
+                <li>&bull; Cinematic trailer structure</li>
+                <li>&bull; Story, stakes, and tone</li>
                 <li>&bull; Delivered in about 14 days</li>
               </ul>
 
               <div class="relative z-20">
                 <a
                   href="trailer.html"
-                  class="block w-full py-3 rounded-md bg-[#0066FF] text-white text-center transition hover:bg-[#0052cc] hover:shadow-[0_0_35px_rgba(0,102,255,0.28)]"
+                  class="block w-full py-3 rounded-md bg-[#0066FF] text-white text-center font-semibold transition hover:bg-[#0052cc] hover:shadow-[0_0_35px_rgba(0,102,255,0.28)]"
                 >
-                  Start a Trailer
+                  See Trailer
                 </a>
               </div>
             </div>
@@ -684,19 +981,19 @@ document.addEventListener("DOMContentLoaded", function () {
           <div class="relative z-[1] p-6 flex flex-col flex-1">
             <div class="mb-5">
               <p class="product-meta-pill mb-4">
-                Proof of execution
+                Shows the moment
               </p>
 
-              <h3 class="text-2xl mb-3">
+              <h3 class="text-2xl font-semibold tracking-[-0.04em] mb-3">
                 PROOF: Scene
               </h3>
 
               <p class="text-gray-200 leading-relaxed mb-3">
-                For proving execution, character, and emotional weight.
+                A focused proof-of-concept scene that shows one key moment working on screen.
               </p>
 
               <p class="text-sm text-gray-500 leading-relaxed">
-                Best for projects where one scene can sell the whole thing.
+                Best when character, emotion, tone, or execution needs to be seen.
               </p>
             </div>
 
@@ -706,21 +1003,21 @@ document.addEventListener("DOMContentLoaded", function () {
               </p>
 
               <p class="text-xs text-gray-500 mb-5">
-                Up to 2 script pages &bull; About 90-120 seconds
+                Up to 2 script pages
               </p>
 
               <ul class="text-sm text-gray-300 mb-7 space-y-2">
                 <li>&bull; Narrative-driven scene</li>
-                <li>&bull; Character, tone, and execution proof</li>
+                <li>&bull; Character and execution proof</li>
                 <li>&bull; Delivered in about 21 days</li>
               </ul>
 
               <div class="relative z-20">
                 <a
                   href="scene.html"
-                  class="block w-full py-3 rounded-md bg-[#0066FF] text-white text-center transition hover:bg-[#0052cc] hover:shadow-[0_0_35px_rgba(0,102,255,0.28)]"
+                  class="block w-full py-3 rounded-md bg-[#0066FF] text-white text-center font-semibold transition hover:bg-[#0052cc] hover:shadow-[0_0_35px_rgba(0,102,255,0.28)]"
                 >
-                  Start a Scene
+                  See Scene
                 </a>
               </div>
             </div>
@@ -730,9 +1027,9 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
 
       <!-- ===================================================== -->
-      <!-- CONCEPT -->
+      <!-- CONCEPT DESKTOP -->
       <!-- ===================================================== -->
-      <article class="product-card group mt-8">
+      <article class="hidden md:block product-card group mt-6 lg:mt-8">
         <a
           href="concept.html"
           aria-label="View PROOF Concept details"
@@ -740,7 +1037,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ></a>
 
         <div class="relative z-[1] grid grid-cols-1 md:grid-cols-3">
-          <div class="md:col-span-2 min-h-[280px] md:min-h-[430px] relative overflow-hidden">
+          <div class="md:col-span-2 min-h-[280px] md:min-h-[420px] relative overflow-hidden">
             <div
               id="proofConceptMedia"
               data-media-type="image"
@@ -750,50 +1047,54 @@ document.addEventListener("DOMContentLoaded", function () {
               <img
                 id="proofConceptImage"
                 src="images/proof-concept.png"
-                alt="PROOF Concept cinematic proof-of-concept development"
+                alt="PROOF Concept visual proof package"
                 class="w-full h-full object-cover transition-transform duration-[6000ms] ease-out group-hover:scale-105"
                 style="filter: contrast(1.05) saturate(0.9) brightness(0.9);"
               />
             </div>
 
-            <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent pointer-events-none"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-black/10 to-transparent pointer-events-none"></div>
           </div>
 
           <div class="md:col-span-1 flex flex-col justify-between p-6 md:p-8 relative z-[1]">
             <div>
               <p class="product-meta-pill mb-4">
-                Custom build
+                Builds the package
               </p>
 
-              <h3 class="text-2xl mb-3">
+              <h3 class="text-2xl font-semibold tracking-[-0.04em] mb-3">
                 PROOF: Concept
               </h3>
 
               <p class="text-gray-200 leading-relaxed mb-4">
-                For larger creative packages that need multiple assets, deeper development, or a full proof-of-concept campaign.
+                A custom build for projects that need more than one piece of proof.
+              </p>
+
+              <p class="text-sm text-gray-500 leading-relaxed mb-7">
+                Best when the project needs a bigger visual package, multiple materials, or a more developed pitch system.
               </p>
 
               <p class="text-4xl tracking-[-0.05em] leading-tight mb-1">
-                Custom Pricing
+                Custom
               </p>
 
               <p class="text-xs text-gray-500 mb-6">
-                Scope-based project
+                Scope-based pricing
               </p>
 
               <ul class="text-sm text-gray-300 mb-7 space-y-2">
-                <li>&bull; Multi-scene visual package</li>
-                <li>&bull; Cinematic proof-of-concept execution</li>
-                <li>&bull; Designed for pitching and funding</li>
+                <li>&bull; Larger visual proof package</li>
+                <li>&bull; Multiple materials when needed</li>
+                <li>&bull; Built around the project goal</li>
               </ul>
             </div>
 
             <div class="relative z-20">
               <a
                 href="concept.html"
-                class="block bg-[#0066FF] w-full py-3 rounded-md text-white font-medium text-center transition hover:bg-[#0052cc] hover:shadow-[0_0_35px_rgba(0,102,255,0.28)]"
+                class="block bg-[#0066FF] w-full py-3 rounded-md text-white font-semibold text-center transition hover:bg-[#0052cc] hover:shadow-[0_0_35px_rgba(0,102,255,0.28)]"
               >
-                Request Custom Quote
+                See Concept
               </a>
             </div>
           </div>
@@ -804,119 +1105,21 @@ document.addEventListener("DOMContentLoaded", function () {
   </section>
 
   <!-- ===================================================== -->
-  <!-- PRODUCT FIT GUIDE -->
-  <!-- ===================================================== -->
-  <section class="pt-44 md:pt-48 lg:pt-52 proof-section-border py-24 bg-[#0A0A0A]">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="grid lg:grid-cols-12 gap-10 items-start">
-        <div class="lg:col-span-5">
-          <p class="proof-eyebrow mb-5">
-            Not Sure?
-          </p>
-
-          <h2 class="text-3xl md:text-5xl leading-tight tracking-[-0.045em] mb-6">
-            Do not buy the wrong thing.
-          </h2>
-
-          <p class="text-gray-300 text-lg leading-relaxed mb-8">
-            The right asset depends on the project stage, who you are pitching, and what is not landing yet. That is why the free review exists.
-          </p>
-
-          <a
-            href="project-review.html"
-            class="proof-btn inline-flex items-center justify-center bg-[#0066FF] px-7 py-4 rounded-md font-semibold text-center hover:bg-[#0052cc] transition w-full sm:w-[240px]"
-          >
-            Get Free Review
-          </a>
-        </div>
-
-        <div class="lg:col-span-7">
-          <div class="proof-product-compare">
-            <div class="proof-product-compare-row">
-              <div>
-                <p class="text-white font-semibold">
-                  Sizzle
-                </p>
-              </div>
-
-              <p class="text-gray-400 leading-relaxed">
-                Best when the project needs energy, tone, and a quick emotional signal.
-              </p>
-
-              <p class="text-sm text-gray-500 leading-relaxed">
-                Early outreach, decks, first conversations.
-              </p>
-            </div>
-
-            <div class="proof-product-compare-row">
-              <div>
-                <p class="text-white font-semibold">
-                  Trailer
-                </p>
-              </div>
-
-              <p class="text-gray-400 leading-relaxed">
-                Best when people need to understand the story world, stakes, and audience promise.
-              </p>
-
-              <p class="text-sm text-gray-500 leading-relaxed">
-                Producers, investors, collaborators, talent.
-              </p>
-            </div>
-
-            <div class="proof-product-compare-row">
-              <div>
-                <p class="text-white font-semibold">
-                  Scene
-                </p>
-              </div>
-
-              <p class="text-gray-400 leading-relaxed">
-                Best when one moment can prove the writing, tone, character, and execution.
-              </p>
-
-              <p class="text-sm text-gray-500 leading-relaxed">
-                Narrative proof, director proof, performance proof.
-              </p>
-            </div>
-
-            <div class="proof-product-compare-row">
-              <div>
-                <p class="text-white font-semibold">
-                  Concept
-                </p>
-              </div>
-
-              <p class="text-gray-400 leading-relaxed">
-                Best when the project needs a larger package, multiple proof assets, or deeper development.
-              </p>
-
-              <p class="text-sm text-gray-500 leading-relaxed">
-                Custom pitch campaigns and bigger packages.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================================================== -->
   <!-- PROOFLAB DELTA -->
   <!-- ===================================================== -->
-  <section id="prooflab-delta" class="proof-section-border py-24 bg-black overflow-hidden">
+  <section id="prooflab-delta" class="proof-section-border py-16 md:py-24 bg-black overflow-hidden">
     <div class="max-w-7xl mx-auto px-4">
-      <div class="max-w-4xl mx-auto text-center mb-16">
+      <div class="max-w-4xl mx-auto text-center mb-12 md:mb-16">
         <p class="proof-eyebrow mb-5">
-          The ProofLab Delta
+          ProofLab System
         </p>
 
-        <h2 class="text-3xl md:text-5xl leading-tight mb-6">
-          Raw output is not enough. Your pitch needs something people can actually understand.
+        <h2 class="text-3xl md:text-5xl leading-tight tracking-[-0.055em] mb-6">
+          Raw output is not proof.
         </h2>
 
         <p class="text-gray-300 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
-          ProofLab turns rough concepts, scripts, and generated material into cinematic proof that carries tone, pacing, emotion, and story clarity.
+          Prompting can make footage. PROOF shapes it into a clear pitch asset with tone, pacing, story, and intent.
         </p>
       </div>
 
@@ -933,11 +1136,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="aspect-[16/9] relative overflow-hidden">
                   <img
                     src="images/panel-1.png"
-                    alt="Raw script page"
+                    alt="Project on paper"
                     class="absolute inset-0 w-full h-full object-cover opacity-80 transition-transform duration-[7000ms] ease-out group-hover:scale-[1.03]"
                   />
                   <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
-                  <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 bg-[radial-gradient(circle_at_center,rgba(255,245,220,0.04),transparent_65%)]"></div>
                 </div>
               </div>
 
@@ -945,11 +1147,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="aspect-[16/9] relative overflow-hidden">
                   <img
                     src="images/panel-2.png"
-                    alt="Raw generated output"
+                    alt="Raw output"
                     class="absolute inset-0 w-full h-full object-cover opacity-82 contrast-[1.03] saturate-[0.92] transition-transform duration-[7000ms] ease-out group-hover:scale-[1.02]"
                   />
                   <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
-                  <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 bg-[radial-gradient(circle_at_center,rgba(255,0,0,0.035),transparent_70%)]"></div>
                 </div>
               </div>
 
@@ -967,7 +1168,6 @@ document.addEventListener("DOMContentLoaded", function () {
                   ></video>
 
                   <div class="absolute inset-0 bg-gradient-to-t from-black via-black/3 to-transparent"></div>
-                  <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 bg-[radial-gradient(circle_at_center,rgba(0,102,255,0.03),transparent_65%)]"></div>
                 </div>
               </div>
 
@@ -1029,7 +1229,6 @@ document.addEventListener("DOMContentLoaded", function () {
                   </div>
 
                   <div class="absolute inset-0 bg-gradient-to-t from-black via-black/5 to-transparent pointer-events-none"></div>
-                  <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-1000 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.018),transparent_68%)]"></div>
                 </div>
               </div>
             </div>
@@ -1040,7 +1239,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   type="button"
                   class="delta-step-indicator active-step"
                   data-step="1"
-                  aria-label="Show ProofLab Delta step 1"
+                  aria-label="Show ProofLab step 1"
                   aria-pressed="true"
                 >
                   1
@@ -1050,7 +1249,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   type="button"
                   class="delta-step-indicator"
                   data-step="2"
-                  aria-label="Show ProofLab Delta step 2"
+                  aria-label="Show ProofLab step 2"
                   aria-pressed="false"
                 >
                   2
@@ -1060,7 +1259,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   type="button"
                   class="delta-step-indicator"
                   data-step="3"
-                  aria-label="Show ProofLab Delta step 3"
+                  aria-label="Show ProofLab step 3"
                   aria-pressed="false"
                 >
                   3
@@ -1070,7 +1269,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   type="button"
                   class="delta-step-indicator"
                   data-step="4"
-                  aria-label="Show ProofLab Delta step 4"
+                  aria-label="Show ProofLab step 4"
                   aria-pressed="false"
                 >
                   4
@@ -1080,7 +1279,7 @@ document.addEventListener("DOMContentLoaded", function () {
           </div>
 
           <div class="col-span-5">
-            <div class="min-h-[420px] flex flex-col justify-between">
+            <div class="min-h-[380px] flex flex-col justify-between">
               <div>
                 <p
                   id="desktopStepLabel"
@@ -1091,16 +1290,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 <h3
                   id="desktopStepTitle"
-                  class="text-4xl leading-tight mb-6"
+                  class="text-4xl leading-tight tracking-[-0.045em] mb-6"
                 >
-                  The Project On Paper
+                  Project On Paper
                 </h3>
 
                 <p
                   id="desktopStepDescription"
                   class="text-gray-300 leading-relaxed text-lg"
                 >
-                  A script, deck, or concept can be strong and still fail to make someone see the project fast enough to move.
+                  The idea may be strong, but people still have to imagine it.
                 </p>
               </div>
 
@@ -1133,63 +1332,63 @@ document.addEventListener("DOMContentLoaded", function () {
           class="flex overflow-x-auto snap-x snap-mandatory gap-5 pb-6 hide-scrollbar"
         >
           <div class="min-w-[92vw] snap-center">
-            <div class="group rounded-3xl overflow-hidden border border-white/10 bg-[#111111] transition-all duration-700 hover:border-white/15 hover:shadow-[0_16px_60px_rgba(0,0,0,0.45)]">
+            <div class="rounded-3xl overflow-hidden border border-white/10 bg-[#111111]">
               <div class="aspect-[16/9] relative overflow-hidden">
                 <img
                   src="images/panel-1.png"
                   alt="Project on paper"
-                  class="absolute inset-0 w-full h-full object-cover opacity-80 transition-transform duration-[7000ms] ease-out group-hover:scale-[1.03]"
+                  class="absolute inset-0 w-full h-full object-cover opacity-80"
                 />
 
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
               </div>
 
-              <div class="p-8">
-                <p class="text-xs uppercase tracking-[0.35em] text-[#0066FF] mb-5">
+              <div class="p-6">
+                <p class="text-xs uppercase tracking-[0.35em] text-[#0066FF] mb-4">
                   Step 01
                 </p>
 
-                <h3 class="text-3xl mb-5">
-                  The Project On Paper
+                <h3 class="text-3xl tracking-[-0.045em] mb-4">
+                  Project On Paper
                 </h3>
 
                 <p class="text-gray-300 leading-relaxed">
-                  A script, deck, or concept can be strong and still fail to make someone see the project fast enough to move.
+                  The idea may be strong, but people still have to imagine it.
                 </p>
               </div>
             </div>
           </div>
 
           <div class="min-w-[92vw] snap-center">
-            <div class="group rounded-3xl overflow-hidden border border-red-500/20 bg-[#111111] transition-all duration-700 hover:border-red-400/30 hover:shadow-[0_18px_70px_rgba(0,0,0,0.5)]">
+            <div class="rounded-3xl overflow-hidden border border-red-500/20 bg-[#111111]">
               <div class="aspect-[16/9] relative overflow-hidden">
                 <img
                   src="images/panel-2.png"
                   alt="Raw output"
-                  class="absolute inset-0 w-full h-full object-cover opacity-82 contrast-[1.03] saturate-[0.92] transition-transform duration-[7000ms] ease-out group-hover:scale-[1.02]"
+                  class="absolute inset-0 w-full h-full object-cover opacity-82 contrast-[1.03] saturate-[0.92]"
                 />
 
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
               </div>
 
-              <div class="p-8">
-                <p class="text-xs uppercase tracking-[0.35em] text-red-400 mb-5">
+              <div class="p-6">
+                <p class="text-xs uppercase tracking-[0.35em] text-red-400 mb-4">
                   Step 02
                 </p>
 
-                <h3 class="text-3xl mb-5">
+                <h3 class="text-3xl tracking-[-0.045em] mb-4">
                   Raw Output
                 </h3>
 
                 <p class="text-gray-300 leading-relaxed">
-                  Raw AI output can create motion, but it often lacks continuity, intention, emotional weight, and cinematic clarity.
+                  Raw generation can look interesting, but it can miss continuity, emotion, and point.
                 </p>
               </div>
             </div>
           </div>
 
           <div class="min-w-[92vw] snap-center">
-            <div class="group rounded-3xl overflow-hidden border border-white/10 bg-[#111111] transition-all duration-700 hover:border-[#0066FF]/20 hover:shadow-[0_20px_80px_rgba(0,102,255,0.08)]">
+            <div class="rounded-3xl overflow-hidden border border-white/10 bg-[#111111]">
               <div class="aspect-[16/9] relative overflow-hidden">
                 <video
                   id="proofDeltaVideo1Mobile"
@@ -1205,24 +1404,24 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/10 to-transparent"></div>
               </div>
 
-              <div class="p-8">
-                <p class="text-xs uppercase tracking-[0.35em] text-[#0066FF] mb-5">
+              <div class="p-6">
+                <p class="text-xs uppercase tracking-[0.35em] text-[#0066FF] mb-4">
                   Step 03
                 </p>
 
-                <h3 class="text-3xl mb-5">
-                  The ProofLab System
+                <h3 class="text-3xl tracking-[-0.045em] mb-4">
+                  ProofLab System
                 </h3>
 
                 <p class="text-gray-300 leading-relaxed">
-                  PROOF refines pacing, shot language, continuity, atmosphere, sound, and emotional clarity.
+                  We refine the shots, rhythm, sound, structure, and emotional signal.
                 </p>
               </div>
             </div>
           </div>
 
           <div class="min-w-[92vw] snap-center">
-            <div class="group rounded-3xl overflow-hidden border border-[#0066FF]/20 bg-[#111111] transition-all duration-700 hover:border-white/20 hover:shadow-[0_20px_80px_rgba(255,255,255,0.04)]">
+            <div class="rounded-3xl overflow-hidden border border-[#0066FF]/20 bg-[#111111]">
               <div
                 id="proofComparisonMobile"
                 class="aspect-[16/9] relative overflow-hidden bg-black select-none"
@@ -1279,32 +1478,211 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="absolute inset-0 bg-gradient-to-t from-black via-black/5 to-transparent pointer-events-none"></div>
               </div>
 
-              <div class="p-8">
-                <p class="text-xs uppercase tracking-[0.35em] text-emerald-400 mb-5">
+              <div class="p-6">
+                <p class="text-xs uppercase tracking-[0.35em] text-emerald-400 mb-4">
                   Final Output
                 </p>
 
-                <h3 class="text-3xl mb-5">
+                <h3 class="text-3xl tracking-[-0.045em] mb-4">
                   Cinematic Proof
                 </h3>
 
                 <p class="text-gray-300 leading-relaxed">
-                  The final asset helps people understand tone, execution, emotional stakes, and marketable identity faster.
+                  The final asset helps people understand what the project is and why it matters.
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="flex items-center justify-center gap-3 mt-6">
+        <div class="flex items-center justify-center gap-3 mt-4">
           <button type="button" class="proof-dot w-2 h-2 rounded-full bg-[#0066FF] transition-all duration-300" aria-label="ProofLab step 1"></button>
           <button type="button" class="proof-dot w-2 h-2 rounded-full bg-white/20 transition-all duration-300" aria-label="ProofLab step 2"></button>
           <button type="button" class="proof-dot w-2 h-2 rounded-full bg-white/20 transition-all duration-300" aria-label="ProofLab step 3"></button>
           <button type="button" class="proof-dot w-2 h-2 rounded-full bg-white/20 transition-all duration-300" aria-label="ProofLab step 4"></button>
         </div>
 
-        <div class="flex items-center justify-center gap-3 mt-6 text-xs uppercase tracking-[0.3em] text-gray-500">
+        <div class="flex items-center justify-center gap-3 mt-5 text-xs uppercase tracking-[0.3em] text-gray-500">
           <span>Swipe</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- PRODUCT FIT GUIDE -->
+  <!-- ===================================================== -->
+  <section id="fit-guide" class="proof-section-border py-16 md:py-24 bg-[#0A0A0A]">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid lg:grid-cols-12 gap-10 items-start">
+        <div class="lg:col-span-5">
+          <p class="proof-eyebrow mb-5">
+            Not Sure?
+          </p>
+
+          <h2 class="text-3xl md:text-5xl leading-tight tracking-[-0.055em] mb-6">
+            Start with the review.
+          </h2>
+
+          <p class="text-gray-300 text-base md:text-lg leading-relaxed mb-8">
+            Send what you have. We will review the project and tell you which product makes sense.
+          </p>
+
+          <a
+            href="project-review.html"
+            class="proof-btn inline-flex items-center justify-center bg-[#0066FF] px-7 py-4 rounded-md font-semibold text-center hover:bg-[#0052cc] transition w-full sm:w-[240px]"
+          >
+            Get Free Review
+          </a>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="proof-product-compare">
+            <div class="proof-product-compare-row">
+              <div>
+                <p class="text-white font-semibold">
+                  Sizzle
+                </p>
+              </div>
+
+              <p class="text-gray-400 leading-relaxed">
+                Shows the feel.
+              </p>
+
+              <p class="text-sm text-gray-500 leading-relaxed">
+                Tone, world, hook, and energy.
+              </p>
+            </div>
+
+            <div class="proof-product-compare-row">
+              <div>
+                <p class="text-white font-semibold">
+                  Trailer
+                </p>
+              </div>
+
+              <p class="text-gray-400 leading-relaxed">
+                Shows the story.
+              </p>
+
+              <p class="text-sm text-gray-500 leading-relaxed">
+                Premise, stakes, pressure, and promise.
+              </p>
+            </div>
+
+            <div class="proof-product-compare-row">
+              <div>
+                <p class="text-white font-semibold">
+                  Scene
+                </p>
+              </div>
+
+              <p class="text-gray-400 leading-relaxed">
+                Shows the moment.
+              </p>
+
+              <p class="text-sm text-gray-500 leading-relaxed">
+                Character, emotion, style, and execution.
+              </p>
+            </div>
+
+            <div class="proof-product-compare-row">
+              <div>
+                <p class="text-white font-semibold">
+                  Concept
+                </p>
+              </div>
+
+              <p class="text-gray-400 leading-relaxed">
+                Builds the package.
+              </p>
+
+              <p class="text-sm text-gray-500 leading-relaxed">
+                A larger proof build when one asset is not enough.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- FAQ -->
+  <!-- ===================================================== -->
+  <section id="faq" class="proof-section-border py-16 md:py-24 bg-[#0A0A0A]">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center mb-10">
+        <h2 class="text-3xl md:text-5xl leading-tight tracking-[-0.055em]">
+          Simple answers.
+        </h2>
+      </div>
+
+      <div class="proof-shell rounded-[1.5rem]">
+        <div class="divide-y divide-white/10">
+          <details class="group p-5 md:p-6" open>
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-6">
+              <span class="text-lg md:text-xl font-semibold tracking-[-0.035em]">
+                What if I do not know which product I need?
+              </span>
+
+              <span class="text-[#0066FF] text-2xl leading-none group-open:rotate-45 transition">
+                +
+              </span>
+            </summary>
+
+            <p class="mt-4 text-gray-400 leading-relaxed">
+              Start with the free review. Send what you have and we will recommend the right next step.
+            </p>
+          </details>
+
+          <details class="group p-5 md:p-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-6">
+              <span class="text-lg md:text-xl font-semibold tracking-[-0.035em]">
+                Do I need a finished script?
+              </span>
+
+              <span class="text-[#0066FF] text-2xl leading-none group-open:rotate-45 transition">
+                +
+              </span>
+            </summary>
+
+            <p class="mt-4 text-gray-400 leading-relaxed">
+              No. You can send a script, deck, treatment, scene, logline, or rough concept.
+            </p>
+          </details>
+
+          <details class="group p-5 md:p-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-6">
+              <span class="text-lg md:text-xl font-semibold tracking-[-0.035em]">
+                What is the difference between a sizzle and a trailer?
+              </span>
+
+              <span class="text-[#0066FF] text-2xl leading-none group-open:rotate-45 transition">
+                +
+              </span>
+            </summary>
+
+            <p class="mt-4 text-gray-400 leading-relaxed">
+              A sizzle shows the feel quickly. A trailer shows more of the story, stakes, and promise.
+            </p>
+          </details>
+
+          <details class="group p-5 md:p-6">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-6">
+              <span class="text-lg md:text-xl font-semibold tracking-[-0.035em]">
+                When does Concept make sense?
+              </span>
+
+              <span class="text-[#0066FF] text-2xl leading-none group-open:rotate-45 transition">
+                +
+              </span>
+            </summary>
+
+            <p class="mt-4 text-gray-400 leading-relaxed">
+              Concept makes sense when the project needs a larger visual proof package instead of one isolated asset.
+            </p>
+          </details>
         </div>
       </div>
     </div>
@@ -1313,18 +1691,18 @@ document.addEventListener("DOMContentLoaded", function () {
   <!-- ===================================================== -->
   <!-- FINAL CTA -->
   <!-- ===================================================== -->
-  <section class="pt-44 md:pt-48 lg:pt-52 proof-section-border py-24 bg-[#0A0A0A]">
+  <section class="proof-section-border py-16 md:py-24 bg-black">
     <div class="max-w-5xl mx-auto px-4 text-center">
       <p class="proof-eyebrow mb-5">
         Start Here
       </p>
 
       <h2 class="text-4xl md:text-7xl leading-[0.95] tracking-[-0.06em] mb-7">
-        The product is not the point. The next yes is.
+        Start with the review.
       </h2>
 
       <p class="text-lg md:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-10">
-        Pick the asset that makes the project easier to understand, easier to pitch, and harder to ignore.
+        Send the project. We will tell you which product makes sense.
       </p>
 
       <div class="flex flex-col sm:flex-row justify-center gap-4">
@@ -1351,31 +1729,36 @@ document.addEventListener("DOMContentLoaded", function () {
 <!-- PAGE SCRIPTS -->
 <!-- ===================================================== -->
 <script>
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
   /* ===================================================== */
-  /* CONCEPT MEDIA MODE */
-  /* ===================================================== */
+/* CONCEPT MEDIA MODE */
+/* ===================================================== */
 
-  const conceptMedia = document.getElementById("proofConceptMedia");
+function setupConceptMediaMode(mediaId) {
+  const conceptMedia = document.getElementById(mediaId);
 
-  if (
-    conceptMedia &&
-    conceptMedia.dataset.mediaType === "video" &&
-    conceptMedia.dataset.videoUrl
-  ) {
+  if (!conceptMedia) return;
+
+  const mediaType = (conceptMedia.dataset.mediaType || "image").toLowerCase();
+  const videoUrl = conceptMedia.dataset.videoUrl;
+
+  if (mediaType === "video" && videoUrl) {
     conceptMedia.innerHTML = `
       <video
-        id="proofConceptVideo"
-        data-hls="${conceptMedia.dataset.videoUrl}"
+        data-hls="${videoUrl}"
         autoplay
         muted
         loop
         playsinline
         preload="metadata"
-        class="js-hls-video w-full h-full object-cover transition-transform duration-[6000ms] ease-out group-hover:scale-105 product-video"
+        class="js-hls-video product-video absolute inset-0 w-full h-full object-cover transition-transform duration-[6000ms] ease-out group-hover:scale-105"
       ></video>
     `;
   }
+}
+
+setupConceptMediaMode("proofConceptMedia");
+setupConceptMediaMode("proofConceptMediaMobile");
 
   /* ===================================================== */
   /* HLS VIDEO SETUP */
@@ -1386,7 +1769,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function attachHls(video, src) {
     if (!video || !src) return;
-
     if (video.dataset.hlsLoaded === "true") return;
 
     if (hlsInstances.has(video)) {
@@ -1394,7 +1776,7 @@ document.addEventListener("DOMContentLoaded", () => {
       hlsInstances.delete(video);
     }
 
-    if (window.Hls && Hls.isSupported()) {
+    if (window.Hls && window.Hls.isSupported()) {
       const hls = new Hls({
         enableWorker: true,
         lowLatencyMode: true
@@ -1412,21 +1794,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function ensureVideoLoaded(video) {
     if (!video || !video.dataset.hls) return;
-
     attachHls(video, video.dataset.hls);
   }
 
   function playIfPossible(video) {
     if (!video) return;
-
     ensureVideoLoaded(video);
-    video.play().catch(() => {});
+    video.play().catch(function () {});
   }
 
-  const visibilityVideoObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
+  const visibilityVideoObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
       const video = entry.target;
-
       if (!video) return;
 
       if (entry.isIntersecting) {
@@ -1447,14 +1826,14 @@ document.addEventListener("DOMContentLoaded", () => {
     visibilityVideoObserver.observe(video);
   }
 
-  document.querySelectorAll(".js-hls-video[data-hls]").forEach(video => {
+  document.querySelectorAll(".js-hls-video[data-hls]").forEach(function (video) {
     setupVisibilityPlayback(video);
   });
 
   function playVideosInside(element) {
     if (!element) return;
 
-    element.querySelectorAll(".js-hls-video[data-hls]").forEach(video => {
+    element.querySelectorAll(".js-hls-video[data-hls]").forEach(function (video) {
       setupVisibilityPlayback(video);
       playIfPossible(video);
     });
@@ -1476,27 +1855,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const panelContent = [
     {
       label: "Step 01",
-      title: "The Project On Paper",
-      description:
-        "A script, deck, or concept can be strong and still fail to make someone see the project fast enough to move."
+      title: "Project On Paper",
+      description: "The idea may be strong, but people still have to imagine it."
     },
     {
       label: "Step 02",
       title: "Raw Output",
-      description:
-        "Raw AI output can create motion, but it often lacks continuity, intention, emotional weight, and cinematic clarity."
+      description: "Raw generation can look interesting, but it can miss continuity, emotion, and point."
     },
     {
       label: "Step 03",
-      title: "The ProofLab System",
-      description:
-        "PROOF refines pacing, shot language, continuity, atmosphere, sound, and emotional clarity."
+      title: "ProofLab System",
+      description: "We refine the shots, rhythm, sound, structure, and emotional signal."
     },
     {
       label: "Final Output",
       title: "Cinematic Proof",
-      description:
-        "The result helps people understand tone, execution, emotional stakes, and marketable identity faster."
+      description: "The final asset helps people understand what the project is and why it matters."
     }
   ];
 
@@ -1509,11 +1884,11 @@ document.addEventListener("DOMContentLoaded", () => {
       !panelContent[index]
     ) return;
 
-    panels.forEach(panel => {
+    panels.forEach(function (panel) {
       panel.classList.add("hidden");
       panel.classList.remove("active-panel");
 
-      panel.querySelectorAll("video").forEach(video => {
+      panel.querySelectorAll("video").forEach(function (video) {
         video.pause();
       });
     });
@@ -1527,7 +1902,7 @@ document.addEventListener("DOMContentLoaded", () => {
     stepTitle.textContent = panelContent[currentPanel].title;
     stepDescription.textContent = panelContent[currentPanel].description;
 
-    indicators.forEach((indicator, indicatorIndex) => {
+    indicators.forEach(function (indicator, indicatorIndex) {
       indicator.classList.remove("active-step");
       indicator.setAttribute(
         "aria-pressed",
@@ -1543,7 +1918,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (nextBtn && panels.length) {
-    nextBtn.addEventListener("click", () => {
+    nextBtn.addEventListener("click", function () {
       let nextPanel = currentPanel + 1;
 
       if (nextPanel >= panels.length) {
@@ -1554,8 +1929,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  indicators.forEach(indicator => {
-    indicator.addEventListener("click", () => {
+  indicators.forEach(function (indicator) {
+    indicator.addEventListener("click", function () {
       const step = Number(indicator.dataset.step);
 
       if (!step) return;
@@ -1577,26 +1952,50 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (carousel && dots.length) {
     function updateDots() {
-      const scrollLeft = carousel.scrollLeft;
-      const firstCard = carousel.querySelector(".snap-center");
+      const slides = Array.from(carousel.children);
+      const carouselRect = carousel.getBoundingClientRect();
+      const carouselCenter = carouselRect.left + carouselRect.width / 2;
 
-      if (!firstCard) return;
+      let activeIndex = 0;
+      let closestDistance = Infinity;
 
-      const cardWidth = firstCard.offsetWidth + 20;
-      const activeIndex = Math.round(scrollLeft / cardWidth);
+      slides.forEach(function (slide, index) {
+        const slideRect = slide.getBoundingClientRect();
+        const slideCenter = slideRect.left + slideRect.width / 2;
+        const distance = Math.abs(carouselCenter - slideCenter);
 
-      dots.forEach((dot, index) => {
-        if (index === activeIndex) {
-          dot.classList.remove("bg-white/20");
-          dot.classList.add("bg-[#0066FF]");
-        } else {
-          dot.classList.remove("bg-[#0066FF]");
-          dot.classList.add("bg-white/20");
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          activeIndex = index;
         }
+      });
+
+      dots.forEach(function (dot, index) {
+        const isActive = index === activeIndex;
+
+        dot.classList.toggle("bg-[#0066FF]", isActive);
+        dot.classList.toggle("bg-white/20", !isActive);
+        dot.classList.toggle("w-5", isActive);
+        dot.classList.toggle("w-2", !isActive);
       });
     }
 
-    carousel.addEventListener("scroll", updateDots);
+    carousel.addEventListener("scroll", function () {
+      window.requestAnimationFrame(updateDots);
+    });
+
+    dots.forEach(function (dot, index) {
+      dot.addEventListener("click", function () {
+        const slide = carousel.children[index];
+        if (!slide) return;
+
+        carousel.scrollTo({
+          left: slide.offsetLeft,
+          behavior: "smooth"
+        });
+      });
+    });
+
     updateDots();
   }
 
@@ -1604,11 +2003,11 @@ document.addEventListener("DOMContentLoaded", () => {
   /* PROOFLAB REVEAL SYSTEM */
   /* ===================================================== */
 
-  function initProofReveal({
-    comparison,
-    reveal,
-    slider
-  }) {
+  function initProofReveal(settings) {
+    const comparison = settings.comparison;
+    const reveal = settings.reveal;
+    const slider = settings.slider;
+
     if (!comparison || !reveal || !slider) return;
 
     let position = 0;
@@ -1643,8 +2042,8 @@ document.addEventListener("DOMContentLoaded", () => {
       requestAnimationFrame(animateSlider);
     }
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
         isVisible = entry.isIntersecting;
       });
     }, {
@@ -1660,31 +2059,31 @@ document.addEventListener("DOMContentLoaded", () => {
       setSliderPosition(newPosition);
     }
 
-    slider.addEventListener("mousedown", () => {
+    slider.addEventListener("mousedown", function () {
       isDragging = true;
     });
 
-    window.addEventListener("mouseup", () => {
+    window.addEventListener("mouseup", function () {
       isDragging = false;
     });
 
-    window.addEventListener("mousemove", event => {
+    window.addEventListener("mousemove", function (event) {
       if (!isDragging) return;
 
       updateFromPointer(event.clientX);
     });
 
-    slider.addEventListener("touchstart", () => {
+    slider.addEventListener("touchstart", function () {
       isDragging = true;
     }, {
       passive: true
     });
 
-    window.addEventListener("touchend", () => {
+    window.addEventListener("touchend", function () {
       isDragging = false;
     });
 
-    window.addEventListener("touchmove", event => {
+    window.addEventListener("touchmove", function (event) {
       if (!isDragging || !event.touches.length) return;
 
       updateFromPointer(event.touches[0].clientX);
@@ -1712,4 +2111,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
 </body>
 </html>
-
