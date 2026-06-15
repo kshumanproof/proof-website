@@ -405,14 +405,15 @@
 .trust-mobile-lens summary::after {
   content: "+";
   margin-left: auto;
-  color: rgba(255,255,255,0.45);
+  color: #0066FF;
   font-size: 1.4rem;
   line-height: 1;
 }
 
 .trust-mobile-lens[open] summary::after {
-  content: "−";
-  color: #0066FF;
+content: "+";
+color: #0066FF;
+transform: rotate(45deg);
 }
 
 .trust-strip {
@@ -1235,7 +1236,7 @@
       muted
       loop
       playsinline
-      class="js-hls-video absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-20"
+      class="js-hls-video absolute inset-0 w-full h-full object-cover scale-110 blur-xl opacity-20 -translate-y-[6vh]"
     ></video>
 
     <video
@@ -1342,18 +1343,18 @@
       muted
       loop
       playsinline
-      class="js-hls-video absolute inset-0 w-full h-full object-contain opacity-55"
+      class="js-hls-video absolute inset-0 w-full h-full object-contain opacity-55 -translate-y-[8vh]"
     ></video>
 
     <div class="absolute inset-0 bg-black/45"></div>
   </div>
 
-  <div class="relative z-10 w-full h-screen px-5 flex flex-col items-center justify-center">
-    <img
-      src="proof-logo/Proof_Main.png"
-      alt="PROOF cinematic proof-of-concept studio logo"
-      class="w-[88vw] max-w-[420px] mb-4"
-    />
+  <div class="relative z-10 w-full h-screen px-5 flex flex-col items-center justify-start pt-[28vh]">
+  <img
+  src="proof-logo/Proof_Main.png"
+  alt="PROOF cinematic proof-of-concept studio logo"
+  class="w-[88vw] max-w-[420px] mb-4 translate-y-[3vh]"
+/>
 
     <div class="absolute bottom-16 sm:bottom-20 left-0 right-0 w-[88%] max-w-sm mx-auto">
       <div class="rounded-2xl border border-white/10 bg-black/55 backdrop-blur-md px-5 py-5 shadow-[0_20px_80px_rgba(0,0,0,0.65)]">
@@ -1859,9 +1860,6 @@
   <p class="proof-eyebrow mb-5">
     See What Proof Can Do
   </p>
-
-  
-
   
 </div>
 
