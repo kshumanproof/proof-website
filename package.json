@@ -1,0 +1,13 @@
+{
+  "name": "prooflab-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Build pipeline for compiling Tailwind CSS locally instead of using the Play CDN.",
+  "scripts": {
+    "build:css": "tailwindcss -i ./input.css -o ./styles.css --minify",
+    "watch:css": "tailwindcss -i ./input.css -o ./styles.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

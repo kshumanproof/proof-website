@@ -73,9 +73,109 @@
   />
 
   <!-- FAVICON -->
-  <link rel="icon" href="favicon.ico" />
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+
+  <!-- SCHEMA -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is PROOF trying to replace filmmakers, actors, or traditional production?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. We're not replacing filmmakers, actors, or production — we respect that craft too much. Our goal is simple: help more stories survive long enough to actually get made. We help you show your project early, so it's easier to explain, build momentum, and bring people on board."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does PROOF exist?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most scripts die in development because no one can picture them. A real proof-of-concept short film costs $20,000–$50,000+. PROOF exists to make that affordable — so you can show people what you already see in your head."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What problem does PROOF solve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Scripts ask readers to imagine everything — tone, pacing, world. Most people can't do that from words alone. We turn your idea into something people can actually watch, so they get it faster — and feel it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why not just pitch the script normally?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because pitching is hard — even for great writers. Plenty of people write brilliant scenes but freeze in a pitch meeting, or can't explain tone out loud. PROOF gives you something to show instead of just something to say."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is PROOF \"AI-generated content\"?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We use modern tools, but we're not selling you software output. You're paying for storytelling judgment — the tone, pacing, and editing that make it actually work. The tools help. The story leads."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why not just use AI tools myself?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Anyone can generate images now. Making something that actually feels real is the hard part. Most raw AI output breaks the illusion fast — inconsistent faces, flat emotion, disconnected pacing. We combine the tools with real storytelling judgment so the result feels made, not generated."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What kinds of projects is PROOF best for?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Built for writers, directors, and producers who need to show a project before it's fully made. Common uses include investor or financing presentations, producer or talent outreach, pitch meetings, mood and tone demonstrations, packaging conversations, development-stage visual assets, and audience testing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who owns the rights to my material?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You do. Always. We only use what you send us to build your project — nothing else. Your story stays yours."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does PROOF guarantee financing, distribution, or production?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — and no one honestly can. We help your project communicate better and build momentum. What happens next depends on the market, timing, and a lot of things outside anyone's control."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does \"Don't pitch it. Prove it.\" mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ideas land harder when people can feel them, not just hear them described. A scene can show tone, emotion, and stakes faster than any explanation. We help you turn what's in your head into something people can actually see."
+      }
+    }
+  ]
+}
+  </script>
 
   <!-- TAILWIND -->
+  <!-- RESOURCE HINTS -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+  <link rel="preconnect" href="https://www.googletagmanager.com" />
+  <link rel="preconnect" href="https://www.clarity.ms" />
+  <link rel="preconnect" href="https://client.crisp.chat" />
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+  <link rel="dns-prefetch" href="https://www.clarity.ms" />
+  <link rel="dns-prefetch" href="https://client.crisp.chat" />
+
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
@@ -491,77 +591,4 @@
     href="https://calendly.com/hello-prooflab/30min"
     target="_blank"
     rel="noopener noreferrer"
-    class="bg-[#0066FF] px-6 py-3 rounded-md inline-block hover:bg-[#0052cc]"
-  >
-    Book a Call
-  </a>
-
-  <p class="text-sm text-gray-300 mt-4">
-    Or email:
-    <a
-      href="mailto:hello@prooflab.studio"
-      class="text-white hover:text-[#0066FF] transition"
-    >
-      hello@prooflab.studio
-    </a>
-  </p>
-
-</section>
-
-<!-- MOBILE MENU WATCH PREVIEW BRIDGE -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-  function wireMobileWatchPreview() {
-    const menuPreviewButtons = document.querySelectorAll("[data-mobile-watch-preview]");
-
-    if (!menuPreviewButtons.length) return;
-
-    const previewOpeners = [
-      document.getElementById("openVideoModalMobile"),
-      document.getElementById("openVideoModal"),
-      document.getElementById("openSizzleVideo"),
-      document.getElementById("openTrailerVideo"),
-      document.getElementById("openSceneVideo"),
-      document.getElementById("openConceptVideo"),
-      document.getElementById("openExamplesVideo")
-    ].filter(Boolean);
-
-    menuPreviewButtons.forEach(function (button) {
-      if (!previewOpeners.length) {
-        button.classList.add("hidden");
-        return;
-      }
-
-      button.classList.remove("hidden");
-
-      if (button.dataset.previewWired === "true") return;
-
-      button.dataset.previewWired = "true";
-
-      button.addEventListener("click", function () {
-        const mobileMenu = document.getElementById("mobileMenu");
-        const menuIcon = document.getElementById("menuIcon");
-
-        if (mobileMenu) {
-          mobileMenu.classList.add("hidden");
-        }
-
-        if (menuIcon) {
-          menuIcon.innerHTML = "&#9776;";
-        }
-
-        document.body.classList.remove("menu-open");
-
-        previewOpeners[0].click();
-      });
-    });
-  }
-
-  wireMobileWatchPreview();
-  window.setTimeout(wireMobileWatchPreview, 300);
-});
-</script>
-<script defer src="shared-shell.js"></script>
-</body>
-</html>
-
+    class="bg-[#0066FF] px-6 py-3 rounded-md inline-block hove

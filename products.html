@@ -55,6 +55,20 @@
   <!-- ===================================================== -->
   <!-- TAILWIND / HLS / SHARED SHELL -->
   <!-- ===================================================== -->
+  <!-- RESOURCE HINTS -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+  <link rel="preconnect" href="https://www.googletagmanager.com" />
+  <link rel="preconnect" href="https://www.clarity.ms" />
+  <link rel="preconnect" href="https://client.crisp.chat" />
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+  <link rel="dns-prefetch" href="https://www.clarity.ms" />
+  <link rel="dns-prefetch" href="https://client.crisp.chat" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://videodelivery.net" />
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+  <link rel="dns-prefetch" href="https://videodelivery.net" />
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
   <link rel="stylesheet" href="shared-shell.css" />
@@ -2054,213 +2068,4 @@ setupConceptMediaMode("proofConceptMediaMobile");
   if (carousel && dots.length) {
     function updateDots() {
       const slides = Array.from(carousel.children);
-      const carouselRect = carousel.getBoundingClientRect();
-      const carouselCenter = carouselRect.left + carouselRect.width / 2;
-
-      let activeIndex = 0;
-      let closestDistance = Infinity;
-
-      slides.forEach(function (slide, index) {
-        const slideRect = slide.getBoundingClientRect();
-        const slideCenter = slideRect.left + slideRect.width / 2;
-        const distance = Math.abs(carouselCenter - slideCenter);
-
-        if (distance < closestDistance) {
-          closestDistance = distance;
-          activeIndex = index;
-        }
-      });
-
-      dots.forEach(function (dot, index) {
-        const isActive = index === activeIndex;
-
-        dot.classList.toggle("bg-[#0066FF]", isActive);
-        dot.classList.toggle("bg-white/20", !isActive);
-        dot.classList.toggle("w-5", isActive);
-        dot.classList.toggle("w-2", !isActive);
-      });
-    }
-
-    carousel.addEventListener("scroll", function () {
-      window.requestAnimationFrame(updateDots);
-    });
-
-    dots.forEach(function (dot, index) {
-      dot.addEventListener("click", function () {
-        const slide = carousel.children[index];
-        if (!slide) return;
-
-        carousel.scrollTo({
-          left: slide.offsetLeft,
-          behavior: "smooth"
-        });
-      });
-    });
-
-    updateDots();
-  }
-
-  /* ===================================================== */
-  /* PROOFLAB REVEAL SYSTEM */
-  /* ===================================================== */
-
-  function initProofReveal(settings) {
-    const comparison = settings.comparison;
-    const reveal = settings.reveal;
-    const slider = settings.slider;
-
-    if (!comparison || !reveal || !slider) return;
-
-    let position = 0;
-    let direction = 1;
-    let isDragging = false;
-    let isVisible = false;
-
-    function setSliderPosition(pos) {
-      position = Math.max(0, Math.min(100, pos));
-      reveal.style.width = position + "%";
-      slider.style.left = position + "%";
-
-      slider.style.boxShadow =
-        "0 0 18px rgba(0,102,255,1), 0 0 42px rgba(0,102,255,0.9), -90px 0 140px rgba(0,102,255,0.34), -180px 0 220px rgba(0,102,255,0.16)";
-    }
-
-    function animateSlider() {
-      if (isVisible && !isDragging) {
-        position += direction * 0.25;
-
-        if (position >= 100) {
-          direction = -1;
-        }
-
-        if (position <= 0) {
-          direction = 1;
-        }
-
-        setSliderPosition(position);
-      }
-
-      requestAnimationFrame(animateSlider);
-    }
-
-    const observer = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        isVisible = entry.isIntersecting;
-      });
-    }, {
-      threshold: 0.55
-    });
-
-    observer.observe(comparison);
-
-    function updateFromPointer(clientX) {
-      const rect = comparison.getBoundingClientRect();
-      const newPosition = ((clientX - rect.left) / rect.width) * 100;
-
-      setSliderPosition(newPosition);
-    }
-
-    slider.addEventListener("mousedown", function () {
-      isDragging = true;
-    });
-
-    window.addEventListener("mouseup", function () {
-      isDragging = false;
-    });
-
-    window.addEventListener("mousemove", function (event) {
-      if (!isDragging) return;
-
-      updateFromPointer(event.clientX);
-    });
-
-    slider.addEventListener("touchstart", function () {
-      isDragging = true;
-    }, {
-      passive: true
-    });
-
-    window.addEventListener("touchend", function () {
-      isDragging = false;
-    });
-
-    window.addEventListener("touchmove", function (event) {
-      if (!isDragging || !event.touches.length) return;
-
-      updateFromPointer(event.touches[0].clientX);
-    }, {
-      passive: true
-    });
-
-    setSliderPosition(0);
-    animateSlider();
-  }
-
-  initProofReveal({
-    comparison: document.getElementById("proofComparisonDesktop"),
-    reveal: document.getElementById("proofRevealDesktop"),
-    slider: document.getElementById("proofSliderDesktop")
-  });
-
-  initProofReveal({
-    comparison: document.getElementById("proofComparisonMobile"),
-    reveal: document.getElementById("proofRevealMobile"),
-    slider: document.getElementById("proofSliderMobile")
-  });
-
-  /* ===================================================== */
-  /* TESTIMONIAL ROTATION */
-  /* ===================================================== */
-
-  const testimonials = [
-    {
-      quote: "PROOF helped translate our concept into something tangible we could actually show.",
-      author: "Story LaunchBox"
-    },
-    {
-      quote: "People immediately understood the tone, pacing, and potential.",
-      author: "Bad Bella Films"
-    },
-    {
-      quote: "The proof-of-concept changed the conversation completely.",
-      author: "Eighty-West Studios"
-    },
-    {
-      quote: "Instead of explaining the vision, we could finally show it.",
-      author: "Development Client"
-    },
-    {
-      quote: "The cinematic execution made the project feel real instantly.",
-      author: "Creative Partner"
-    }
-  ];
-
-  const testimonialContainer = document.getElementById("testimonialContainer");
-  const testimonialQuote = document.getElementById("testimonialQuote");
-  const testimonialAuthor = document.getElementById("testimonialAuthor");
-
-  if (testimonialContainer && testimonialQuote && testimonialAuthor) {
-    let testimonialIndex = 0;
-
-    function changeTestimonial() {
-      testimonialContainer.classList.remove("opacity-100");
-      testimonialContainer.classList.add("opacity-0");
-
-      setTimeout(function () {
-        testimonialIndex = (testimonialIndex + 1) % testimonials.length;
-
-        testimonialQuote.textContent = "“" + testimonials[testimonialIndex].quote + "”";
-        testimonialAuthor.textContent = "— " + testimonials[testimonialIndex].author;
-
-        testimonialContainer.classList.remove("opacity-0");
-        testimonialContainer.classList.add("opacity-100");
-      }, 800);
-    }
-
-    setInterval(changeTestimonial, 7000);
-  }
-});
-</script>
-
-</body>
-</html>
+      const carouselRect = carousel.getBou
