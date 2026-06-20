@@ -1,5 +1,4 @@
 User-agent: *
-Disallow: /index-old.html
 Allow: /
 
 Sitemap: https://prooflab.studio/sitemap.xml

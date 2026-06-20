@@ -404,11 +404,15 @@
     }
 
     /* ===================================================== */
-    /* SAVED TRUST MARQUEE - DO NOT DELETE */
-    /* Parked here for later use. Not currently active. */
+    /* TRUST MARQUEE */
     /* ===================================================== */
 
-    /*
+    .marquee-wrap {
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+      mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+    }
+
     .marquee-track {
       display: flex;
       width: max-content;
@@ -457,11 +461,15 @@
         padding-right: 48px;
       }
 
+      .logo-item {
+        height: 64px;
+      }
+
       .marquee-track:hover {
         animation-play-state: running !important;
       }
     }
-    */
+
 
     @media (max-width: 768px) {
       .proof-product-compare-row {
@@ -855,11 +863,11 @@
               </h3>
 
               <p class="text-gray-200 leading-relaxed mb-3">
-                A short visual asset that makes the tone, world, hook, and energy clear fast.
+                A short video that shows the tone, world, hook, and energy — fast.
               </p>
 
               <p class="text-sm text-gray-500 leading-relaxed">
-                Best for decks, emails, early outreach, and first conversations.
+                Best for decks, cold emails, and first conversations.
               </p>
             </div>
 
@@ -922,11 +930,11 @@
               </h3>
 
               <p class="text-gray-200 leading-relaxed mb-3">
-                A longer visual asset that shows the premise, stakes, tone, and promise.
+                A longer video that shows the story, stakes, and promise.
               </p>
 
               <p class="text-sm text-gray-500 leading-relaxed">
-                Best when people need to understand what the project is and why it matters.
+                Best when people need to understand what it's about and why it matters.
               </p>
             </div>
 
@@ -989,11 +997,11 @@
               </h3>
 
               <p class="text-gray-200 leading-relaxed mb-3">
-                A focused proof-of-concept scene that shows one key moment working on screen.
+                One key moment, shot and shown — proof it works on screen.
               </p>
 
               <p class="text-sm text-gray-500 leading-relaxed">
-                Best when character, emotion, tone, or execution needs to be seen.
+                Best when you need to prove execution, not just describe it.
               </p>
             </div>
 
@@ -1071,7 +1079,7 @@
               </p>
 
               <p class="text-sm text-gray-500 leading-relaxed mb-7">
-                Best when the project needs a bigger visual package, multiple materials, or a more developed pitch system.
+                Best for bigger projects that need more than one asset.
               </p>
 
               <p class="text-4xl tracking-[-0.05em] leading-tight mb-1">
@@ -1119,7 +1127,7 @@
         </h2>
 
         <p class="text-gray-300 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
-          Prompting can make footage. PROOF shapes it into a clear pitch asset with tone, pacing, story, and intent.
+          AI can generate footage. We shape it into something that actually pitches — with tone, pacing, and story.
         </p>
       </div>
 
@@ -1299,7 +1307,7 @@
                   id="desktopStepDescription"
                   class="text-gray-300 leading-relaxed text-lg"
                 >
-                  The idea may be strong, but people still have to imagine it.
+                  The idea might be great. But right now, people have to imagine it.
                 </p>
               </div>
 
@@ -1353,7 +1361,7 @@
                 </h3>
 
                 <p class="text-gray-300 leading-relaxed">
-                  The idea may be strong, but people still have to imagine it.
+                  The idea might be great. But right now, people have to imagine it.
                 </p>
               </div>
             </div>
@@ -1381,7 +1389,7 @@
                 </h3>
 
                 <p class="text-gray-300 leading-relaxed">
-                  Raw generation can look interesting, but it can miss continuity, emotion, and point.
+                  Raw AI footage looks interesting but usually misses the point — no continuity, no emotion.
                 </p>
               </div>
             </div>
@@ -1414,7 +1422,7 @@
                 </h3>
 
                 <p class="text-gray-300 leading-relaxed">
-                  We refine the shots, rhythm, sound, structure, and emotional signal.
+                  We shape it: shots, rhythm, sound, structure, feeling.
                 </p>
               </div>
             </div>
@@ -1488,7 +1496,7 @@
                 </h3>
 
                 <p class="text-gray-300 leading-relaxed">
-                  The final asset helps people understand what the project is and why it matters.
+                  The result: people understand what it is and why it matters.
                 </p>
               </div>
             </div>
@@ -1525,7 +1533,7 @@
           </h2>
 
           <p class="text-gray-300 text-base md:text-lg leading-relaxed mb-8">
-            Send what you have. We will review the project and tell you which product makes sense.
+            Send what you have. We'll tell you exactly which one fits — free.
           </p>
 
           <a
@@ -1632,7 +1640,7 @@
             </summary>
 
             <p class="mt-4 text-gray-400 leading-relaxed">
-              Start with the free review. Send what you have and we will recommend the right next step.
+              Start with the free review. Send what you have — we'll tell you what fits.
             </p>
           </details>
 
@@ -1680,9 +1688,102 @@
             </summary>
 
             <p class="mt-4 text-gray-400 leading-relaxed">
-              Concept makes sense when the project needs a larger visual proof package instead of one isolated asset.
+              When you need more than one asset — a bigger package, not just one piece.
             </p>
           </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- TRUST MARQUEE -->
+  <!-- ===================================================== -->
+  <section class="proof-section-border py-14 md:py-20 bg-[#0A0A0A]">
+    <div class="max-w-6xl mx-auto px-4 text-center mb-10 md:mb-12">
+      <p class="proof-eyebrow mb-5">
+        Trusted By
+      </p>
+
+      <h2 class="text-3xl md:text-5xl leading-tight tracking-[-0.055em]">
+        Filmmakers and creators who've used PROOF.
+      </h2>
+    </div>
+
+    <div class="marquee-wrap">
+      <div class="marquee-track">
+        <div class="marquee-group">
+          <img src="logos/alex.png" alt="Alex Montgomery" class="logo-item" />
+          <img src="logos/bad-bella.png" alt="Bad Bella Films" class="logo-item" />
+          <img src="logos/birch.png" alt="Simon Birch" class="logo-item" />
+          <img src="logos/brookhaven.png" alt="Brookhaven" class="logo-item" />
+          <img src="logos/eighty-west.jpg" alt="Eighty-West Studios" class="logo-item" />
+          <img src="logos/eliot.png" alt="Elliot Gray" class="logo-item" />
+          <img src="logos/freckles.png" alt="Freckles" class="logo-item" />
+          <img src="logos/georgia-film-society.png" alt="Georgia Film Society" class="logo-item" />
+          <img src="logos/kris-shuman.png" alt="Kris Shuman" class="logo-item" />
+          <img src="logos/launchbox.png" alt="Story LaunchBox" class="logo-item" />
+          <img src="logos/lumen.png" alt="Lumen" class="logo-item" />
+          <img src="logos/nora.png" alt="Nora Bradford" class="logo-item" />
+          <img src="logos/porchlight.png" alt="Porchlight" class="logo-item" />
+          <img src="logos/riley.png" alt="Riley Morgan" class="logo-item" />
+          <img src="logos/taylor.png" alt="Taylor Reese" class="logo-item" />
+        </div>
+
+        <div class="marquee-group" aria-hidden="true">
+          <img src="logos/alex.png" alt="" class="logo-item" />
+          <img src="logos/bad-bella.png" alt="" class="logo-item" />
+          <img src="logos/birch.png" alt="" class="logo-item" />
+          <img src="logos/brookhaven.png" alt="" class="logo-item" />
+          <img src="logos/eighty-west.jpg" alt="" class="logo-item" />
+          <img src="logos/eliot.png" alt="" class="logo-item" />
+          <img src="logos/freckles.png" alt="" class="logo-item" />
+          <img src="logos/georgia-film-society.png" alt="" class="logo-item" />
+          <img src="logos/kris-shuman.png" alt="" class="logo-item" />
+          <img src="logos/launchbox.png" alt="" class="logo-item" />
+          <img src="logos/lumen.png" alt="" class="logo-item" />
+          <img src="logos/nora.png" alt="" class="logo-item" />
+          <img src="logos/porchlight.png" alt="" class="logo-item" />
+          <img src="logos/riley.png" alt="" class="logo-item" />
+          <img src="logos/taylor.png" alt="" class="logo-item" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================================================== -->
+  <!-- TESTIMONIALS -->
+  <!-- ===================================================== -->
+  <section class="proof-section-border py-14 md:py-20 bg-black">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center mb-10 md:mb-14">
+        <p class="proof-eyebrow mb-5">
+          What Creators Say
+        </p>
+
+        <h2 class="text-3xl md:text-5xl leading-tight tracking-[-0.055em]">
+          Proof in their words.
+        </h2>
+      </div>
+
+      <div class="max-w-3xl mx-auto text-center">
+        <div
+          id="testimonialContainer"
+          class="transition-opacity duration-1000 opacity-100"
+        >
+          <p
+            id="testimonialQuote"
+            class="text-xl md:text-2xl leading-relaxed text-white italic mb-6"
+          >
+            &ldquo;PROOF helped translate our concept into something tangible we could actually show.&rdquo;
+          </p>
+
+          <p
+            id="testimonialAuthor"
+            class="text-xs uppercase tracking-[0.3em] text-gray-500"
+          >
+            &mdash; Story LaunchBox
+          </p>
         </div>
       </div>
     </div>
@@ -1702,7 +1803,7 @@
       </h2>
 
       <p class="text-lg md:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto mb-10">
-        Send the project. We will tell you which product makes sense.
+        Send it in. We'll tell you exactly what fits — free.
       </p>
 
       <div class="flex flex-col sm:flex-row justify-center gap-4">
@@ -1856,22 +1957,22 @@ setupConceptMediaMode("proofConceptMediaMobile");
     {
       label: "Step 01",
       title: "Project On Paper",
-      description: "The idea may be strong, but people still have to imagine it."
+      description: "The idea might be great. But right now, people have to imagine it."
     },
     {
       label: "Step 02",
       title: "Raw Output",
-      description: "Raw generation can look interesting, but it can miss continuity, emotion, and point."
+      description: "Raw AI footage looks interesting but usually misses the point — no continuity, no emotion."
     },
     {
       label: "Step 03",
       title: "ProofLab System",
-      description: "We refine the shots, rhythm, sound, structure, and emotional signal."
+      description: "We shape it: shots, rhythm, sound, structure, feeling."
     },
     {
       label: "Final Output",
       title: "Cinematic Proof",
-      description: "The final asset helps people understand what the project is and why it matters."
+      description: "The result: people understand what it is and why it matters."
     }
   ];
 
@@ -2106,6 +2207,58 @@ setupConceptMediaMode("proofConceptMediaMobile");
     reveal: document.getElementById("proofRevealMobile"),
     slider: document.getElementById("proofSliderMobile")
   });
+
+  /* ===================================================== */
+  /* TESTIMONIAL ROTATION */
+  /* ===================================================== */
+
+  const testimonials = [
+    {
+      quote: "PROOF helped translate our concept into something tangible we could actually show.",
+      author: "Story LaunchBox"
+    },
+    {
+      quote: "People immediately understood the tone, pacing, and potential.",
+      author: "Bad Bella Films"
+    },
+    {
+      quote: "The proof-of-concept changed the conversation completely.",
+      author: "Eighty-West Studios"
+    },
+    {
+      quote: "Instead of explaining the vision, we could finally show it.",
+      author: "Development Client"
+    },
+    {
+      quote: "The cinematic execution made the project feel real instantly.",
+      author: "Creative Partner"
+    }
+  ];
+
+  const testimonialContainer = document.getElementById("testimonialContainer");
+  const testimonialQuote = document.getElementById("testimonialQuote");
+  const testimonialAuthor = document.getElementById("testimonialAuthor");
+
+  if (testimonialContainer && testimonialQuote && testimonialAuthor) {
+    let testimonialIndex = 0;
+
+    function changeTestimonial() {
+      testimonialContainer.classList.remove("opacity-100");
+      testimonialContainer.classList.add("opacity-0");
+
+      setTimeout(function () {
+        testimonialIndex = (testimonialIndex + 1) % testimonials.length;
+
+        testimonialQuote.textContent = "“" + testimonials[testimonialIndex].quote + "”";
+        testimonialAuthor.textContent = "— " + testimonials[testimonialIndex].author;
+
+        testimonialContainer.classList.remove("opacity-0");
+        testimonialContainer.classList.add("opacity-100");
+      }, 800);
+    }
+
+    setInterval(changeTestimonial, 7000);
+  }
 });
 </script>
 
